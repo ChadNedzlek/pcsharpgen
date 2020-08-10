@@ -1,12 +1,11 @@
 SetDataSetInfo({
   Name="Core Rulebook",
-  SourceInfo=SetSource({
+  SourceInfo={
     SourceLong="CR",
     SourceShort="",
     SourceWeb="http://paizo.com/store/downloads/pathfinder/pathfinderRPG/v5748btpy88yj",
     SourceDate="2009-08",
-  })
-  ,
+  },
   GameMode="Pathfinder",
   BookTypes={
     "Core Rules",
