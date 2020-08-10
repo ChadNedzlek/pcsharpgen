@@ -917,7 +917,7 @@ DefineClass({
       },
     },
     {
-      Level="Start=1,Repeat=1",
+      Level="1",
       Definitions={
         {
           Name="ClericSkillPts",
