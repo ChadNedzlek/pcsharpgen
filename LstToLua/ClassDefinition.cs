@@ -15,7 +15,7 @@ namespace Primordially.LstToLua
         public string? ExClass { get; private set; }
         public int HitDie { get; private set; }
         public int MaxLevel { get; private set; } = -1;
-        public string SkillPointsPerLevel { get; private set; }
+        public string? SkillPointsPerLevel { get; private set; }
         public bool Visible { get; private set; } = true;
         public bool Memorize { get; private set; } = true;
         public bool AllowBaseClass { get; private set; } = true;

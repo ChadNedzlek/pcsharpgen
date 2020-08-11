@@ -15,8 +15,19 @@
     <CentralPackagesFile>$(MSBuildThisFileDirectory)/Packages.props</CentralPackagesFile>
     <IsTestProject Condition=" $(MSBuildProjectName.EndsWith('.Tests')) ">true</IsTestProject>
     <RootNamespace>Primordially.$(MSBuildProjectName)</RootNamespace>
+    <!--
+    
+    The following lines cause FluentAssertions to fail to find the "Subject Identification"
+    because the source paths in the PDB are all incorrect.
+    
+    That feature greatly enhances test diagnosability, so this is disabled for now.
+    
+    Perhaps we can have some "I'm building a release" that can set this to make it so
+    our PDB's don't have local paths in them.
+    
     <Deterministic>true</Deterministic>
     <PathMap>$(MSBuildThisFileDirectory)=S:\</PathMap>
+    -->
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
   </PropertyGroup>
 

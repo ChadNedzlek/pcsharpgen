@@ -3,6 +3,9 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Avalonia" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\PluginCore\PluginCore.csproj" />
   </ItemGroup>
 </Project>
