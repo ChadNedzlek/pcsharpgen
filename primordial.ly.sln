@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluginShowcase", "PluginSho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pathfinder.Tests", "GameModes\Pathfinder.Tests\Pathfinder.Tests.csproj", "{A58FAF9B-2FC0-465A-B8AC-57D7F958CFCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginCore.Tests", "PluginCore.Tests\PluginCore.Tests.csproj", "{0DD4030C-B6E0-4581-BD5C-6026A38D47EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluginCore.Tests", "PluginCore.Tests\PluginCore.Tests.csproj", "{0DD4030C-B6E0-4581-BD5C-6026A38D47EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidatePlugin", "ValidatePlugin\ValidatePlugin.csproj", "{DD29A4B4-4D1E-4724-A97A-B73D74176D49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{0DD4030C-B6E0-4581-BD5C-6026A38D47EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DD4030C-B6E0-4581-BD5C-6026A38D47EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DD4030C-B6E0-4581-BD5C-6026A38D47EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD29A4B4-4D1E-4724-A97A-B73D74176D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD29A4B4-4D1E-4724-A97A-B73D74176D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD29A4B4-4D1E-4724-A97A-B73D74176D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD29A4B4-4D1E-4724-A97A-B73D74176D49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,25 +10,20 @@ DefineClass({
   Name="Companion",
   IntModToSkills=false,
   DisplayName="Animal",
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "CMB Output",
+      },
+    },
+  },
   Facts={
     ClassType="Companion",
     Abb="AC",
   },
   SourcePage="p.52",
-  Definitions={
-    {
-      Name="CompanionClassLevel",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AnimalCompanionSkill",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="BaseClassSkillPts",
-      InitialValue=Formula("0"),
-    },
-  },
   ClassSkills={
     "Acrobatics",
     "Climb",
@@ -164,15 +159,6 @@ DefineClass({
         function (character)
           return (character.Variables["UseFractionalSave"] == 1)
         end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "CMB Output",
       },
     },
   },

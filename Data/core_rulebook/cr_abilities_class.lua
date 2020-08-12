@@ -11,28 +11,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Divine_Bond_Mount",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Hunters_Bond_Animal_Companion",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="BypassClassAlignment_All_Class",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="BypassProhibitSpellAlignment_Restriction",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Pool_Rage_Power",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -54,12 +32,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ProhibitSpell_Alignment_Good",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -109,12 +81,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ProhibitSpell_Alignment_Evil",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -164,12 +130,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ProhibitSpell_Alignment_Lawful",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -219,12 +179,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ProhibitSpell_Alignment_Chaotic",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -274,12 +228,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_Bard",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -287,12 +235,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_Cleric",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -300,12 +242,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_Druid",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -313,12 +249,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_Paladin",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -326,12 +256,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_Ranger",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -339,12 +263,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_Sorcerer",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -352,12 +270,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_Wizard",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -365,12 +277,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_Adept",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -378,12 +284,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_BL_Stripped_Bard",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -391,12 +291,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_BL_Stripped_Cleric",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -404,12 +298,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_BL_Stripped_Druid",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -417,12 +305,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_BL_Stripped_Paladin",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -430,12 +312,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_BL_Stripped_Ranger",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -443,12 +319,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_BL_Stripped_Sorcerer",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -456,12 +326,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_BL_Stripped_Wizard",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -469,12 +333,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Caster_Level_BL_Stripped_Adept",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -482,12 +340,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="BypassClassAlignment_Barbarian",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -509,12 +361,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="BypassClassAlignment_Druid",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -536,12 +382,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="BypassClassAlignment_Monk",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -577,12 +417,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="BypassClassAlignment_Paladin",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -604,12 +438,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="BypassClassAlignment_Arcane_Trickster",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -631,12 +459,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="BypassClassAlignment_Assassin",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -658,12 +480,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ClassFeatureDR_ALL",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -671,12 +487,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ClassFeatureDR_Silver",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -1061,7 +871,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Bonuses={
     {
       Category="HP",
@@ -1087,7 +896,6 @@ DefineAbility({
       return ((not (character.Ranks(skill) >= character.MaxSkillRank) and (((skill.IsType("Base"))))))
     end),
   },
-  Selections=nil,
   Bonuses={
     {
       Category="SKILLRANK",
@@ -1107,34 +915,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Barbarian_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="BarbarianClassSelection",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Pool_Barbarian_Class_Selection",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "Barbarian_CFP_Level",
-      },
-      Formula=Formula("BarbarianLVL"),
-      Type={
-        Name="Base",
-        Replace=false,
-        Stack=false,
-      },
-    },
-  },
   Abilities={
     {
       Category="Barbarian Archetype",
@@ -1158,26 +938,13 @@ DefineAbility({
       },
     },
   },
-})
-
-DefineAbility({
-  Name="Bard",
-  Category="Class",
-  AllowMultiple=false,
-  Stackable=false,
-  Definitions={
-    {
-      Name="Bard_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
       Variables={
-        "Bard_CFP_Level",
+        "Barbarian_CFP_Level",
       },
-      Formula=Formula("BardLVL"),
+      Formula=Formula("BarbarianLVL"),
       Type={
         Name="Base",
         Replace=false,
@@ -1185,6 +952,13 @@ DefineAbility({
       },
     },
   },
+})
+
+DefineAbility({
+  Name="Bard",
+  Category="Class",
+  AllowMultiple=false,
+  Stackable=false,
   Abilities={
     {
       Category="Bard Archetype",
@@ -1206,26 +980,13 @@ DefineAbility({
       },
     },
   },
-})
-
-DefineAbility({
-  Name="Cleric",
-  Category="Class",
-  AllowMultiple=false,
-  Stackable=false,
-  Definitions={
-    {
-      Name="Cleric_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
       Variables={
-        "Cleric_CFP_Level",
+        "Bard_CFP_Level",
       },
-      Formula=Formula("ClericLVL"),
+      Formula=Formula("BardLVL"),
       Type={
         Name="Base",
         Replace=false,
@@ -1233,6 +994,13 @@ DefineAbility({
       },
     },
   },
+})
+
+DefineAbility({
+  Name="Cleric",
+  Category="Class",
+  AllowMultiple=false,
+  Stackable=false,
   Abilities={
     {
       Category="Cleric Archetype",
@@ -1254,26 +1022,13 @@ DefineAbility({
       },
     },
   },
-})
-
-DefineAbility({
-  Name="Druid",
-  Category="Class",
-  AllowMultiple=false,
-  Stackable=false,
-  Definitions={
-    {
-      Name="Druid_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
       Variables={
-        "Druid_CFP_Level",
+        "Cleric_CFP_Level",
       },
-      Formula=Formula("DruidLVL"),
+      Formula=Formula("ClericLVL"),
       Type={
         Name="Base",
         Replace=false,
@@ -1281,6 +1036,13 @@ DefineAbility({
       },
     },
   },
+})
+
+DefineAbility({
+  Name="Druid",
+  Category="Class",
+  AllowMultiple=false,
+  Stackable=false,
   Abilities={
     {
       Category="Druid Archetype",
@@ -1302,26 +1064,13 @@ DefineAbility({
       },
     },
   },
-})
-
-DefineAbility({
-  Name="Fighter",
-  Category="Class",
-  AllowMultiple=false,
-  Stackable=false,
-  Definitions={
-    {
-      Name="Fighter_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
       Variables={
-        "Fighter_CFP_Level",
+        "Druid_CFP_Level",
       },
-      Formula=Formula("FighterLVL"),
+      Formula=Formula("DruidLVL"),
       Type={
         Name="Base",
         Replace=false,
@@ -1329,6 +1078,13 @@ DefineAbility({
       },
     },
   },
+})
+
+DefineAbility({
+  Name="Fighter",
+  Category="Class",
+  AllowMultiple=false,
+  Stackable=false,
   Abilities={
     {
       Category="Fighter Archetype",
@@ -1350,6 +1106,20 @@ DefineAbility({
       },
     },
   },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "Fighter_CFP_Level",
+      },
+      Formula=Formula("FighterLVL"),
+      Type={
+        Name="Base",
+        Replace=false,
+        Stack=false,
+      },
+    },
+  },
 })
 
 DefineAbility({
@@ -1357,14 +1127,20 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
+  Abilities={
     {
-      Name="Monk_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Pool_Monk_Class_Selection",
-      InitialValue=Formula("0"),
+      Category="Class",
+      Nature="AUTOMATIC",
+      Names={
+        "Monk ~ Standard Class",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "CLASS" and (ability.Type == "AltMonkChoice")
+          end))
+        end,
+      },
     },
   },
   Bonuses={
@@ -1388,22 +1164,6 @@ DefineAbility({
       Formula=Formula("MonkLVL"),
     },
   },
-  Abilities={
-    {
-      Category="Class",
-      Nature="AUTOMATIC",
-      Names={
-        "Monk ~ Standard Class",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "CLASS" and (ability.Type == "AltMonkChoice")
-          end))
-        end,
-      },
-    },
-  },
 })
 
 DefineAbility({
@@ -1411,26 +1171,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Paladin_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "Paladin_CFP_Level",
-      },
-      Formula=Formula("PaladinLVL"),
-      Type={
-        Name="Base",
-        Replace=false,
-        Stack=false,
-      },
-    },
-  },
   Abilities={
     {
       Category="Paladin Archetype",
@@ -1452,26 +1192,13 @@ DefineAbility({
       },
     },
   },
-})
-
-DefineAbility({
-  Name="Ranger",
-  Category="Class",
-  AllowMultiple=false,
-  Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
       Variables={
-        "Ranger_CFP_Level",
+        "Paladin_CFP_Level",
       },
-      Formula=Formula("RangerLVL"),
+      Formula=Formula("PaladinLVL"),
       Type={
         Name="Base",
         Replace=false,
@@ -1479,6 +1206,13 @@ DefineAbility({
       },
     },
   },
+})
+
+DefineAbility({
+  Name="Ranger",
+  Category="Class",
+  AllowMultiple=false,
+  Stackable=false,
   Abilities={
     {
       Category="Ranger Archetype",
@@ -1500,30 +1234,13 @@ DefineAbility({
       },
     },
   },
-})
-
-DefineAbility({
-  Name="Rogue",
-  Category="Class",
-  AllowMultiple=false,
-  Stackable=false,
-  Definitions={
-    {
-      Name="Rogue_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Pool_Rogue_Class_Selection",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
       Variables={
-        "Rogue_CFP_Level",
+        "Ranger_CFP_Level",
       },
-      Formula=Formula("RogueLVL"),
+      Formula=Formula("RangerLVL"),
       Type={
         Name="Base",
         Replace=false,
@@ -1531,6 +1248,13 @@ DefineAbility({
       },
     },
   },
+})
+
+DefineAbility({
+  Name="Rogue",
+  Category="Class",
+  AllowMultiple=false,
+  Stackable=false,
   Abilities={
     {
       Category="Rogue Archetype",
@@ -1566,26 +1290,13 @@ DefineAbility({
       },
     },
   },
-})
-
-DefineAbility({
-  Name="Sorcerer",
-  Category="Class",
-  AllowMultiple=false,
-  Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
       Variables={
-        "Sorcerer_CFP_Level",
+        "Rogue_CFP_Level",
       },
-      Formula=Formula("SorcererLVL"),
+      Formula=Formula("RogueLVL"),
       Type={
         Name="Base",
         Replace=false,
@@ -1593,6 +1304,13 @@ DefineAbility({
       },
     },
   },
+})
+
+DefineAbility({
+  Name="Sorcerer",
+  Category="Class",
+  AllowMultiple=false,
+  Stackable=false,
   Abilities={
     {
       Category="Sorcerer Archetype",
@@ -1614,6 +1332,20 @@ DefineAbility({
       },
     },
   },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_CFP_Level",
+      },
+      Formula=Formula("SorcererLVL"),
+      Type={
+        Name="Base",
+        Replace=false,
+        Stack=false,
+      },
+    },
+  },
 })
 
 DefineAbility({
@@ -1621,10 +1353,13 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
+  Abilities={
     {
-      Name="Wizard_CFP_Level",
-      InitialValue=Formula("0"),
+      Category="Wizard Archetype",
+      Nature="AUTOMATIC",
+      Names={
+        "Archetype Wizard",
+      },
     },
   },
   Bonuses={
@@ -1641,15 +1376,6 @@ DefineAbility({
       },
     },
   },
-  Abilities={
-    {
-      Category="Wizard Archetype",
-      Nature="AUTOMATIC",
-      Names={
-        "Archetype Wizard",
-      },
-    },
-  },
 })
 
 DefineAbility({
@@ -1657,12 +1383,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ArcaneArcher_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -1684,12 +1404,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ArcaneTrickster_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -1711,12 +1425,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Assassin_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -1738,12 +1446,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="DragonDisciple_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -1765,12 +1467,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Duelist_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -1792,12 +1488,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="EldritchKnight_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -1819,12 +1509,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Loremaster_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -1846,12 +1530,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MysticTheurge_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -1873,12 +1551,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="PathfinderChronicler_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -1900,12 +1572,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Shadowdancer_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -1927,12 +1593,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Adept_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -1954,12 +1614,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Aristocrat_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -1981,12 +1635,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Commoner_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -2008,12 +1656,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Expert_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -2035,12 +1677,6 @@ DefineAbility({
   Category="Class",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Warrior_CFP_Level",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -2182,6 +1818,27 @@ DefineAbility({
   Templates={
     "Monk HD d8",
   },
+  Abilities={
+    {
+      Category="Monk Archetype",
+      Nature="AUTOMATIC",
+      Names={
+        "Archetype Monk",
+      },
+    },
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Class Skills ~ Monk",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Monk_CF_ClassSkills"] == 0)
+        end,
+      },
+    },
+  },
   Bonuses={
     {
       Category="COMBAT",
@@ -2254,27 +1911,6 @@ DefineAbility({
       Conditions={
         function (character)
           return (character.Variables["UseFractionalSave"] == 1)
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Monk Archetype",
-      Nature="AUTOMATIC",
-      Names={
-        "Archetype Monk",
-      },
-    },
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Class Skills ~ Monk",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Monk_CF_ClassSkills"] == 0)
         end,
       },
     },
@@ -7601,19 +7237,6 @@ DefineAbility({
       FormatString="Rage",
     },
   },
-  SourcePage="p.32",
-  Description={
-    Format="You are using an alternative raging method.",
-    Arguments={
-      "PREABILITY:1,CATEGORY=Special Ability,TYPE.RageSelectionAlt",
-    },
-  },
-  Definitions={
-    {
-      Name="Raging",
-      InitialValue=Formula("0"),
-    },
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -7621,6 +7244,13 @@ DefineAbility({
       Names={
         "Standard Rage",
       },
+    },
+  },
+  SourcePage="p.32",
+  Description={
+    Format="You are using an alternative raging method.",
+    Arguments={
+      Formula("PREABILITY:1,CATEGORY=Special Ability,TYPE.RageSelectionAlt"),
     },
   },
   Types={
@@ -7638,70 +7268,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Raging",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RageLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RageDuration",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RageStrBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RageConBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RageSaveBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RageACPenalty",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "RageStrBonus",
-        "RageConBonus",
-      },
-      Formula=Formula("4"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "RageACPenalty",
-      },
-      Formula=Formula("-2"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "RageSaveBonus",
-      },
-      Formula=Formula("2"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "RageDuration",
-      },
-      Formula=Formula("2+var(\"STAT.2.MOD.NOTEMP\")+(2*RageLVL)"),
-    },
-  },
-  Types={
-    "RageSelection",
-  },
   TemporaryBonuses={
     Bonuses={
       {
@@ -7766,6 +7332,40 @@ DefineAbility({
       },
     },
   },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "RageStrBonus",
+        "RageConBonus",
+      },
+      Formula=Formula("4"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "RageACPenalty",
+      },
+      Formula=Formula("-2"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "RageSaveBonus",
+      },
+      Formula=Formula("2"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "RageDuration",
+      },
+      Formula=Formula("2+var(\"STAT.2.MOD.NOTEMP\")+(2*RageLVL)"),
+    },
+  },
+  Types={
+    "RageSelection",
+  },
 })
 
 DefineAbility({
@@ -7824,15 +7424,24 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Rage",
+      },
+    },
+  },
   SourcePage="p.32",
   Description={
     Format="You can call upon inner reserves of strength and ferocity, granting you additional combat prowess. You can rage for %1 rounds per day. You can enter rage as a free action. The total number of rounds of rage per day is renewed after resting for 8 hours, although these hours do not need to be consecutive. While in rage, you gain a +%2 morale bonus to your Strength and a +%3 morale bonus to Constitution, as well as a +%4 morale bonus on Will saves. In addition, you take a -2 penalty to Armor Class. The increase to Constitution grants you %5 hit points, but these disappear when the rage ends and are not lost first like temporary hit points. While in rage, you cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability that requires patience or concentration. You can end your rage as a free action and are fatigued after rage for a number of rounds equal to 2 times the number of rounds spent in the rage. You cannot enter a new rage while fatigued or exhausted but can otherwise enter rage multiple times during a single encounter or combat. If you fall unconscious, your rage immediately ends, placing you in peril of death.",
     Arguments={
-      "RageDuration",
-      "RageStrBonus",
-      "RageConBonus",
-      "RageSaveBonus",
-      "(RageConBonus/2)*TL",
+      Formula("RageDuration"),
+      Formula("RageStrBonus"),
+      Formula("RageConBonus"),
+      Formula("RageSaveBonus"),
+      Formula("(RageConBonus/2)*TL"),
     },
   },
   Bonuses={
@@ -7842,15 +7451,6 @@ DefineAbility({
         "RageLVL",
       },
       Formula=Formula("BarbarianLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Rage",
-      },
     },
   },
   Types={
@@ -7867,16 +7467,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="RagePowersLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RagePowersPrereqLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -7916,10 +7506,13 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
+  Abilities={
     {
-      Name="BarbarianTrapSenseLVL",
-      InitialValue=Formula("0"),
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Trap Sense",
+      },
     },
   },
   Bonuses={
@@ -7938,15 +7531,6 @@ DefineAbility({
       Formula=Formula("BarbarianLVL"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Trap Sense",
-      },
-    },
-  },
   Types={
     "BarbarianClassFeatures",
     "ClassFeatures",
@@ -7963,20 +7547,13 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   SourcePage="p.34",
+  DamageReduction={
+    Value="BarbarianDR/-",
+  },
   Description={
     Format="You gain damage reduction. Subtract %1 from the damage you take each time you are dealt damage from a weapon or natural attack. Damage reduction can reduce damage to 0 but not below 0.",
     Arguments={
-      "BarbarianDR",
-    },
-  },
-  Definitions={
-    {
-      Name="BarbarianDR",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="BarbarianDRLVL",
-      InitialValue=Formula("0"),
+      Formula("BarbarianDR"),
     },
   },
   Bonuses={
@@ -8007,9 +7584,6 @@ DefineAbility({
     "ClassFeatures",
     "SpecialQuality",
     "Extraordinary",
-  },
-  DamageReduction={
-    Value="BarbarianDR/-",
   },
 })
 
@@ -8185,9 +7759,9 @@ ModifyAbility({
     {
       Category="VAR",
       Variables={
-        "BONUS:VAR",
+        "UncannyDodgeFlankingLevel",
       },
-      Formula=Formula("UncannyDodgeFlankingLevel"),
+      Formula=Formula("BarbarianLVL"),
       Conditions={
         function (character)
           return (character.Variables["BarbarianLVL"] >= 2)
@@ -8764,12 +8338,26 @@ DefineAbility({
       FormatString="Rage",
     },
   },
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Bite",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Raging"] == 1)
+        end,
+      },
+    },
+  },
   SourcePage="p.32",
   Description={
     Format="While raging, you gain a bite attack, If uses as a part of a full-attack action, the bite is made at your full base attack bonus-5. If the bite hits, it deals 1d%1+%2 points of damage. You can make a bite attack as part of the action to maintain or break free from a grapple. This attack is resolved before the grapple check is made. If the bite attack hits, any grapple checks you make against the target this round are at a +2 bonus.",
     Arguments={
-      "if(SIZE==4,4,3)",
-      "floor(STR/2)",
+      Formula("if(SIZE==4,4,3)"),
+      Formula("floor(STR/2)"),
     },
   },
   Bonuses={
@@ -8779,20 +8367,6 @@ DefineAbility({
         "TOHIT",
       },
       Formula=Formula("-5"),
-      Conditions={
-        function (character)
-          return (character.Variables["Raging"] == 1)
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Bite",
-      },
       Conditions={
         function (character)
           return (character.Variables["Raging"] == 1)
@@ -8884,7 +8458,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   SourcePage="p.33",
   Conditions={
     function (character)
@@ -8897,13 +8470,7 @@ DefineAbility({
   Description={
     Format="Your damage reduction increases by %1/--. This increase is always active while you are raging.",
     Arguments={
-      "IncreasedDRCount",
-    },
-  },
-  Definitions={
-    {
-      Name="IncreasedDRCount",
-      InitialValue=Formula("0"),
+      Formula("IncreasedDRCount"),
     },
   },
   Bonuses={
@@ -8952,18 +8519,8 @@ DefineAbility({
   Description={
     Format="You gain a +%1 dodge bonus to your Armor Class against melee attacks for %2 rounds. Activating this ability is a move action that does not provoke attacks of opportunity.",
     Arguments={
-      "GuardedStanceACBonus",
-      "GuardedStanceDuration",
-    },
-  },
-  Definitions={
-    {
-      Name="GuardedStanceACBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="GuardedStanceDuration",
-      InitialValue=Formula("0"),
+      Formula("GuardedStanceACBonus"),
+      Formula("GuardedStanceDuration"),
     },
   },
   Bonuses={
@@ -9084,16 +8641,6 @@ DefineAbility({
     },
   },
   SourcePage="p.33",
-  Description={
-    Format="Your senses sharpen and you gain low-light vision while raging.",
-  },
-  Types={
-    "BarbarianClassFeatures",
-    "ClassFeatures",
-    "RagePower",
-    "SpecialQuality",
-    "Extraordinary",
-  },
   Vision={
     {
       Vision="Low-Light Vision",
@@ -9103,6 +8650,16 @@ DefineAbility({
         end,
       },
     },
+  },
+  Description={
+    Format="Your senses sharpen and you gain low-light vision while raging.",
+  },
+  Types={
+    "BarbarianClassFeatures",
+    "ClassFeatures",
+    "RagePower",
+    "SpecialQuality",
+    "Extraordinary",
   },
 })
 
@@ -9174,6 +8731,16 @@ DefineAbility({
     },
   },
   SourcePage="p.33",
+  Vision={
+    {
+      Vision="Darkvision (60')",
+      Conditions={
+        function (character)
+          return (character.Variables["Raging"] == 1)
+        end,
+      },
+    },
+  },
   Conditions={
     function (character)
       local count = 0
@@ -9204,16 +8771,6 @@ DefineAbility({
     "RagePower",
     "SpecialQuality",
     "Extraordinary",
-  },
-  Vision={
-    {
-      Vision="Darkvision (60')",
-      Conditions={
-        function (character)
-          return (character.Variables["Raging"] == 1)
-        end,
-      },
-    },
   },
 })
 
@@ -9258,13 +8815,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on a single damage roll. This power is used as a swift action before the roll to hit is made. This power can only be used once per rage.",
     Arguments={
-      "PowerfulBlowDamageBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="PowerfulBlowDamageBonus",
-      InitialValue=Formula("0"),
+      Formula("PowerfulBlowDamageBonus"),
     },
   },
   Bonuses={
@@ -9326,13 +8877,7 @@ DefineAbility({
   Description={
     Format="While raging you add a +%1 enhancement bonus to all Climb skill checks.",
     Arguments={
-      "RagingClimberBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="RagingClimberBonus",
-      InitialValue=Formula("0"),
+      Formula("RagingClimberBonus"),
     },
   },
   Bonuses={
@@ -9381,13 +8926,7 @@ DefineAbility({
   Description={
     Format="While raging you add a +%1 enhancement bonus to all Acrobatics skill checks made to jump. When making a jump in this way, you are always considered to have a running start.",
     Arguments={
-      "RagingLeaperBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="RagingLeaperBonus",
-      InitialValue=Formula("0"),
+      Formula("RagingLeaperBonus"),
     },
   },
   Bonuses={
@@ -9436,13 +8975,7 @@ DefineAbility({
   Description={
     Format="While raging you add a +%1 enhancement bonus to all Swim skill checks.",
     Arguments={
-      "RagingSwimmerBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="RagingSwimmerBonus",
-      InitialValue=Formula("0"),
+      Formula("RagingSwimmerBonus"),
     },
   },
   Bonuses={
@@ -9496,18 +9029,8 @@ DefineAbility({
   Description={
     Format="As a standard action, you heal %1d8+%2 points of damage. This power is can only be used once per day and only while raging.",
     Arguments={
-      "RenewedVigorDice",
-      "RenewedVigorBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="RenewedVigorDice",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RenewedVigorBonus",
-      InitialValue=Formula("0"),
+      Formula("RenewedVigorDice"),
+      Formula("RenewedVigorBonus"),
     },
   },
   Bonuses={
@@ -9551,18 +9074,8 @@ DefineAbility({
   Description={
     Format="You gain a +%1 dodge bonus to your Armor Class against ranged attacks for %2 round against ranged attacks. Activating this ability is a move action that does not provoke attacks of opportunity.",
     Arguments={
-      "RollingDodgeACBonus",
-      "RollingDodgeDuration",
-    },
-  },
-  Definitions={
-    {
-      Name="RollingDodgeACBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RollingDodgeDuration",
-      InitialValue=Formula("0"),
+      Formula("RollingDodgeACBonus"),
+      Formula("RollingDodgeDuration"),
     },
   },
   Bonuses={
@@ -9656,13 +9169,7 @@ DefineAbility({
   Description={
     Format="You add +%1 on one Strength check or combat maneuver check, or to your Combat Maneuver Defense when an opponent attempts a maneuver against you. This power is used as an immediate action. This power can only be used once per rage.",
     Arguments={
-      "StrengthSurgeBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="StrengthSurgeBonus",
-      InitialValue=Formula("0"),
+      Formula("StrengthSurgeBonus"),
     },
   },
   Bonuses={
@@ -9699,13 +9206,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 morale bonus on saving throws made to resist spells, supernatural abilities, and spell-like abilities. While raging, you cannot be a willing target of any spell and must make saving throws to resist all spells, even those cast by allies.",
     Arguments={
-      "SuperstitionSaveBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="SuperstitionSaveBonus",
-      InitialValue=Formula("0"),
+      Formula("SuperstitionSaveBonus"),
     },
   },
   Bonuses={
@@ -9742,13 +9243,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 morale bonus one attack roll. This power is used as a swift action before the roll to hit is made. This power can only be used once per rage.",
     Arguments={
-      "SurpriseAccuracyAttackBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="SurpriseAccuracyAttackBonus",
-      InitialValue=Formula("0"),
+      Formula("SurpriseAccuracyAttackBonus"),
     },
   },
   Bonuses={
@@ -9784,7 +9279,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   SourcePage="p.34",
   Conditions={
     function (character)
@@ -9794,13 +9288,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1-foot enhancement bonus to your speed. This increase is always active while you are raging.",
     Arguments={
-      "5*SwiftFootCount",
-    },
-  },
-  Definitions={
-    {
-      Name="SwiftFootCount",
-      InitialValue=Formula("0"),
+      Formula("5*SwiftFootCount"),
     },
   },
   Bonuses={
@@ -9859,13 +9347,7 @@ DefineAbility({
   Description={
     Format="You unleash a terrifying howl as a standard action. All shaken enemies within 30 feet must make a Will save (DC %1) or be panicked for 1d4+1 rounds. Once an enemy has made a save versus Terrifying Howl (successful or not), it is immune to this power for 24 hours.",
     Arguments={
-      "TerrifyingHowlDC",
-    },
-  },
-  Definitions={
-    {
-      Name="TerrifyingHowlDC",
-      InitialValue=Formula("0"),
+      Formula("TerrifyingHowlDC"),
     },
   },
   Bonuses={
@@ -9943,17 +9425,7 @@ DefineAbility({
   Description={
     Format="You add +%1 to all Knowledge checks and may make all Knowledge skill checks untrained.",
     Arguments={
-      "BardicKnowledgeSkillBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="BardicKnowledgeSkillBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="BardicKnowledgeLVL",
-      InitialValue=Formula("0"),
+      Formula("BardicKnowledgeSkillBonus"),
     },
   },
   Bonuses={
@@ -10042,36 +9514,6 @@ DefineAbility({
     {
       Name="MasterAbility",
       FormatString="Bardic Performance",
-    },
-  },
-  SourcePage="p.35",
-  Description={
-    Format="You are trained to use the Perform skill to create magical effects on those around you, including yourself if desired.",
-  },
-  Definitions={
-    {
-      Name="BardicPerformanceDuration",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="BardicPerformanceLVL",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "BardicPerformanceDuration",
-      },
-      Formula=Formula("2+CHA+(2*BardicPerformanceLVL)"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "BardicPerformanceLVL",
-      },
-      Formula=Formula("BardLVL"),
     },
   },
   Abilities={
@@ -10256,6 +9698,26 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.35",
+  Description={
+    Format="You are trained to use the Perform skill to create magical effects on those around you, including yourself if desired.",
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "BardicPerformanceDuration",
+      },
+      Formula=Formula("2+CHA+(2*BardicPerformanceLVL)"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "BardicPerformanceLVL",
+      },
+      Formula=Formula("BardLVL"),
+    },
+  },
   Types={
     "BardClassFeatures",
     "SpecialQuality",
@@ -10288,12 +9750,6 @@ DefineAbility({
   Stackable=false,
   Visible=false,
   SourcePage="p.38",
-  Definitions={
-    {
-      Name="VersatilePerformanceLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -10350,17 +9806,7 @@ DefineAbility({
   Description={
     Format="You have become a master of lore and can take 10 on any Knowledge skill check that you have ranks in. You can choose not to take 10 and can instead roll normally. In addition, %1 times per day, you can take 20 on any Knowledge skill check as a standard action.",
     Arguments={
-      "LoreMasterTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="LoreMasterTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="LoreMasterLVL",
-      InitialValue=Formula("0"),
+      Formula("LoreMasterTimes"),
     },
   },
   Bonuses={
@@ -10392,28 +9838,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.38",
-  Description={
-    Format="You can use any skill, even if the skill normally requires you to be trained. You considers all skills to be class skills. You can take 10 on any skill check, even if it is not normally allowed.",
-    Arguments={
-      "PREVARGTEQ:JackOfAllTradesLVL,19",
-    },
-  },
-  Definitions={
-    {
-      Name="JackOfAllTradesLVL",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "JackOfAllTradesLVL",
-      },
-      Formula=Formula("BardLVL"),
-    },
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -10426,6 +9850,22 @@ DefineAbility({
           return (character.Variables["JackOfAllTradesLVL"] >= 16)
         end,
       },
+    },
+  },
+  SourcePage="p.38",
+  Description={
+    Format="You can use any skill, even if the skill normally requires you to be trained. You considers all skills to be class skills. You can take 10 on any skill check, even if it is not normally allowed.",
+    Arguments={
+      Formula("PREVARGTEQ:JackOfAllTradesLVL,19"),
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "JackOfAllTradesLVL",
+      },
+      Formula=Formula("BardLVL"),
     },
   },
   Types={
@@ -10458,8 +9898,8 @@ ModifyAbility({
   Description={
     Format="You are trained to use the Perform skill to create magical effects on those around you, including yourself if desired. You can use this ability for %1 rounds per day. Each round, you can produce any one of the types of bardic performance that you have mastered. Starting a bardic performance is a standard action, but it can be maintained each round as a free action. Changing a bardic performance from one effect to another requires the bard to stop the previous performance and start a new one as a standard action. A bardic performance cannot be disrupted, but it ends immediately if you are killed, paralyzed, stunned, knocked unconscious, or otherwise prevented from taking a free action to maintain it each round. You cannot have more than one bardic performance in effect at one time.",
     Arguments={
-      "BardicPerformanceDuration",
-      "PREVARLT:BardicPerformanceLVL,7",
+      Formula("BardicPerformanceDuration"),
+      Formula("PREVARLT:BardicPerformanceLVL,7"),
     },
   },
 })
@@ -10472,9 +9912,9 @@ ModifyAbility({
   Description={
     Format="You are trained to use the Perform skill to create magical effects on those around you, including yourself if desired. You can use this ability for %1 rounds per day. Each round, you can produce any one of the types of bardic performance that you have mastered. Starting a bardic performance is a move action, but it can be maintained each round as a free action. Changing a bardic performance from one effect to another requires the bard to stop the previous performance and start a new one as a move action. A bardic performance cannot be disrupted, but it ends immediately if you are killed, paralyzed, stunned, knocked unconscious, or otherwise prevented from taking a free action to maintain it each round. You cannot have more than one bardic performance in effect at one time.",
     Arguments={
-      "BardicPerformanceDuration",
-      "PREVARGTEQ:BardicPerformanceLVL,7",
-      "PREVARLT:BardicPerformanceLVL,13",
+      Formula("BardicPerformanceDuration"),
+      Formula("PREVARGTEQ:BardicPerformanceLVL,7"),
+      Formula("PREVARLT:BardicPerformanceLVL,13"),
     },
   },
 })
@@ -10487,8 +9927,8 @@ ModifyAbility({
   Description={
     Format="You are trained to use the Perform skill to create magical effects on those around you, including yourself if desired. You can use this ability for %1 rounds per day. Each round, you can produce any one of the types of bardic performance that you have mastered. Starting a bardic performance is a swift action, but it can be maintained each round as a free action. Changing a bardic performance from one effect to another requires the bard to stop the previous performance and start a new one as a swift action. A bardic performance cannot be disrupted, but it ends immediately if you are killed, paralyzed, stunned, knocked unconscious, or otherwise prevented from taking a free action to maintain it each round. You cannot have more than one bardic performance in effect at one time.",
     Arguments={
-      "BardicPerformanceDuration",
-      "PREVARGTEQ:BardicPerformanceLVL,13",
+      Formula("BardicPerformanceDuration"),
+      Formula("PREVARGTEQ:BardicPerformanceLVL,13"),
     },
   },
 })
@@ -10559,18 +9999,8 @@ DefineAbility({
   Description={
     Format="You can use your performance to cause up to %1 creatures to become fascinated with you. Each creature to be fascinated must be within 90 feet, able to see and hear you, and capable of paying attention to you. You must also be able to see the creatures affected. The distraction of a nearby combat or other dangers prevents this ability from working. Each creature within range receives a Will save (DC %2) to negate the effect. If a creature's saving throw succeeds, you cannot attempt to fascinate that creature again for 24 hours. If its saving throw fails, the creature sits quietly and observes your performance for as long as you continue to maintain it. While fascinated, a target takes a -4 penalty on all skill checks made as reactions, such as Perception checks. Any potential threat to the target allows the target to make a new saving throw against the effect. Any obvious threat, such as someone drawing a weapon, casting a spell, or aiming a weapon at the target, automatically breaks the effect. Fascinate is an enchantment (compulsion), mind-affecting ability. Fascinate relies on audible and visual components in order to function.",
     Arguments={
-      "FascinateCreatures",
-      "FascinateDC",
-    },
-  },
-  Definitions={
-    {
-      Name="FascinateCreatures",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="FascinateDC",
-      InitialValue=Formula("0"),
+      Formula("FascinateCreatures"),
+      Formula("FascinateDC"),
     },
   },
   Bonuses={
@@ -10614,17 +10044,7 @@ DefineAbility({
   Description={
     Format="You can use your performance to inspire courage in your allies (including yourself), bolstering them against fear and improving their combat abilities. To be affected, an ally must be able to perceive your performance. An affected ally receives a +%1 morale bonus on saving throws against charm and fear effects and a +%1 competence bonus on attack and weapon damage rolls. Inspire courage is a mind-affecting ability. Inspire courage can use audible or visual components. The bard must choose which component to use when starting his performance.",
     Arguments={
-      "InspireCourageBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="InspireCourageBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="InspireCourageCount",
-      InitialValue=Formula("0"),
+      Formula("InspireCourageBonus"),
     },
   },
   Bonuses={
@@ -10668,17 +10088,7 @@ DefineAbility({
   Description={
     Format="You can use your performance to help an ally succeed at a task. That ally must be within 30 feet and be able to hear you. The ally gets a +%1 competence bonus on skill checks with a particular skill as long as she continues to hear your performance. Certain uses of this ability are infeasible, such as Stealth, and may be disallowed at the GM's discretion. A bard can't inspire competence in himself. Inspire competence relies on audible components.",
     Arguments={
-      "InspireCompetenceBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="InspireCompetenceBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="InspireCompetenceCount",
-      InitialValue=Formula("0"),
+      Formula("InspireCompetenceBonus"),
     },
   },
   Bonuses={
@@ -10722,13 +10132,7 @@ DefineAbility({
   Description={
     Format="You use your performance to make a Suggestion (as per the spell) to a creature you have already fascinated. Using this ability does not disrupt the Fascinate effect, but it does require a standard action to activate (in addition to the free action to continue the Fascinate effect). You can use this ability more than once against an individual creature during an individual performance. Making a Suggestion does not count against your daily use of Bardic Performance. A Will saving throw (DC %1) negates the effect. This ability affects only a single creature. Suggestion is an enchantment (compulsion), mind affecting, language-dependent ability and relies on audible components.",
     Arguments={
-      "SuggestionDC",
-    },
-  },
-  Definitions={
-    {
-      Name="SuggestionDC",
-      InitialValue=Formula("0"),
+      Formula("SuggestionDC"),
     },
   },
   Bonuses={
@@ -10790,13 +10194,7 @@ DefineAbility({
   Description={
     Format="You can use your performance to inspire greatness in yourself or up to %1 willing allies within 30 feet, granting extra fighting capability. To inspire greatness, all of the targets must be able to see and hear you. A creature inspired with greatness gains 2 bonus Hit Dice (d10s), the commensurate number of temporary hit points (apply the target's Constitution modifier, if any, to these bonus Hit Dice), a +2 competence bonus on attack rolls, and a +1 competence bonus on Fortitude saves. The bonus Hit Dice count as regular Hit Dice for determining the effect of spells that are Hit Dice dependent. Inspire Greatness is a mind-affecting ability and it relies on audible and visual components.",
     Arguments={
-      "InspireGreatnessAllies",
-    },
-  },
-  Definitions={
-    {
-      Name="InspireGreatnessAllies",
-      InitialValue=Formula("0"),
+      Formula("InspireGreatnessAllies"),
     },
   },
   Bonuses={
@@ -10833,13 +10231,7 @@ DefineAbility({
   Description={
     Format="You can use your performance to create an effect equivalent to a Mass Cure Serious Wounds (caster level %1). In addition, this performance removes the fatigued, sickened, and shaken conditions from all those affected. Using this ability requires 4 rounds of continuous performance, and the targets must be able to see and hear you throughout the performance. Soothing performance affects all targets that remain within 30 feet throughout the performance. Soothing performance relies on audible and visual components.",
     Arguments={
-      "SoothingPerformanceLVL",
-    },
-  },
-  Definitions={
-    {
-      Name="SoothingPerformanceLVL",
-      InitialValue=Formula("0"),
+      Formula("SoothingPerformanceLVL"),
     },
   },
   Bonuses={
@@ -10876,13 +10268,7 @@ DefineAbility({
   Description={
     Format="You can use your performance to cause fear in your enemies. To be affected, an enemy must be able to hear you perform and be within 30 feet. Each enemy within range receives a Will save (DC %1) to negate the effect. If the save succeeds, the creature is immune to this ability for 24 hours. If the save fails, the target becomes frightened and flees for as long as the target can hear your performance. Frightening Tune relies on audible components.",
     Arguments={
-      "FrighteningTuneDC",
-    },
-  },
-  Definitions={
-    {
-      Name="FrighteningTuneDC",
-      InitialValue=Formula("0"),
+      Formula("FrighteningTuneDC"),
     },
   },
   Bonuses={
@@ -10919,13 +10305,7 @@ DefineAbility({
   Description={
     Format="You can inspire tremendous heroism in yourself or up to %1 allies within 30 feet. To inspire heroics, all of the targets must be able to see and hear you. Inspired creatures gain a +4 morale bonus on saving throws and a +4 dodge bonus to AC. This effect lasts for as long as the targets are able to witness your performance. Inspire heroics is a mind-affecting ability that relies on audible and visual components.",
     Arguments={
-      "InspireHeroicsAllies",
-    },
-  },
-  Definitions={
-    {
-      Name="InspireHeroicsAllies",
-      InitialValue=Formula("0"),
+      Formula("InspireHeroicsAllies"),
     },
   },
   Bonuses={
@@ -10962,13 +10342,7 @@ DefineAbility({
   Description={
     Format="You use your performance to make a Suggestion (as per the spell) to any number of creatures you have already fascinated. Using this ability does not disrupt the Fascinate effect, but it does require a standard action to activate (in addition to the free action to continue the Fascinate effect). You can use this ability more than once against an individual creature during an individual performance. Making a Mass Suggestion does not count against your daily use of Bardic Performance. A Will saving throw (DC %1) negates the effect. Mass Suggestion is an enchantment (compulsion), mind affecting, language-dependent ability that relies on audible components.",
     Arguments={
-      "MassSuggestionDC",
-    },
-  },
-  Definitions={
-    {
-      Name="MassSuggestionDC",
-      InitialValue=Formula("0"),
+      Formula("MassSuggestionDC"),
     },
   },
   Bonuses={
@@ -11005,13 +10379,7 @@ DefineAbility({
   Description={
     Format="You can use your performance to cause one enemy to die from joy or sorrow. To be affected, the target must be able to see and hear you perform for 1 full round and be within 30 feet. The target receives a Will save (DC %1) to negate the effect. If a creature's saving throw succeeds, the target is staggered for 1d4 rounds, and you cannot use Deadly Performance on that creature again for 24 hours. If a creature's saving throw fails, it dies. Deadly Performance is a mind-affecting death effect that relies on audible and visual components.",
     Arguments={
-      "DeadlyPerformanceDC",
-    },
-  },
-  Definitions={
-    {
-      Name="DeadlyPerformanceDC",
-      InitialValue=Formula("0"),
+      Formula("DeadlyPerformanceDC"),
     },
   },
   Bonuses={
@@ -11875,12 +11243,6 @@ DefineAbility({
       },
     },
   },
-  Description={
-    Format="Weapon and Armor Proficiencies are altered from the base cleric.",
-    Arguments={
-      "PREABILITY:1,CATEGORY=Archetype,TYPE.ClericArmorProficiency.TYPE.ClericWeaponProficiency",
-    },
-  },
   Abilities={
     {
       Category="Internal",
@@ -11939,6 +11301,12 @@ DefineAbility({
       },
     },
   },
+  Description={
+    Format="Weapon and Armor Proficiencies are altered from the base cleric.",
+    Arguments={
+      Formula("PREABILITY:1,CATEGORY=Archetype,TYPE.ClericArmorProficiency.TYPE.ClericWeaponProficiency"),
+    },
+  },
   Types={
     "ClericClassFeatures",
     "SpecialQuality",
@@ -11951,19 +11319,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.",
-  Description={
-    Format="A cleric of a chaotic, evil, good, or lawful deity has a particularly powerful aura corresponding to the deity's alignment (see the detect evil spell for details).",
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "AlignmentAuraLVL",
-      },
-      Formula=Formula("ClericLVL"),
-    },
-  },
   Abilities={
     {
       Category="Cleric Class Feature",
@@ -12012,6 +11367,19 @@ DefineAbility({
           return character.Diety.Alignment == "LG" or character.Diety.Alignment == "LN" or character.Diety.Alignment == "LE"
         end,
       },
+    },
+  },
+  SourcePage="p.",
+  Description={
+    Format="A cleric of a chaotic, evil, good, or lawful deity has a particularly powerful aura corresponding to the deity's alignment (see the detect evil spell for details).",
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "AlignmentAuraLVL",
+      },
+      Formula=Formula("ClericLVL"),
     },
   },
   Types={
@@ -12072,7 +11440,7 @@ DefineAbility({
   Description={
     Format="You can channel stored spell energy into inflict spells that you did not prepare ahead of time. You can \"lose\" any prepared spell that is not an orison or domain spell in order to cast any inflict spell of the same spell level or lower (an inflict spell is any spell with \"Inflict\" in its name).",
     Arguments={
-      "PREABILITY:1,CATEGORY=Special Ability,Cleric ~ Channel Negative Energy",
+      Formula("PREABILITY:1,CATEGORY=Special Ability,Cleric ~ Channel Negative Energy"),
     },
   },
   Types={
@@ -12087,20 +11455,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="DomainLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainPowerTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -12131,20 +11485,6 @@ DefineAbility({
   Stackable=false,
   Visible=false,
   SourcePage="p.22",
-  Definitions={
-    {
-      Name="ClericChannelEnergyLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ClericChannelEnergyTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Pool_Cleric_Channeling",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -12208,6 +11548,15 @@ DefineAbility({
       FormatString="Channel Energy",
     },
   },
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Channel Positive Energy",
+      },
+    },
+  },
   SourcePage="p.40",
   Conditions={
     function (character)
@@ -12234,28 +11583,10 @@ DefineAbility({
   Description={
     Format="You can unleash a wave of positive energy. You must choose to deal %1d%2 points of positive energy damage to undead creatures or to heal living creatures of %1d%2 points of damage. Creatures that take damage from channeled energy receive a DC %3 Will save to halve the damage. You can use this ability %4 times per day.",
     Arguments={
-      "ClericChannelPositiveEnergyDice",
-      "ClericChannelPositiveEnergyDieSize",
-      "ClericChannelPositiveEnergyDC",
-      "ClericChannelEnergyTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="ClericChannelPositiveEnergyDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ClericChannelPositiveEnergyDice",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ClericChannelPositiveEnergyDieSize",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ClericChannelPositiveEnergyLVL",
-      InitialValue=Formula("0"),
+      Formula("ClericChannelPositiveEnergyDice"),
+      Formula("ClericChannelPositiveEnergyDieSize"),
+      Formula("ClericChannelPositiveEnergyDC"),
+      Formula("ClericChannelEnergyTimes"),
     },
   },
   Bonuses={
@@ -12286,15 +11617,6 @@ DefineAbility({
         "ClericChannelPositiveEnergyLVL",
       },
       Formula=Formula("ClericChannelEnergyLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Channel Positive Energy",
-      },
     },
   },
   Types={
@@ -12342,6 +11664,15 @@ DefineAbility({
       FormatString="Channel Energy",
     },
   },
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Channel Negative Energy",
+      },
+    },
+  },
   SourcePage="p.40",
   Conditions={
     function (character)
@@ -12368,28 +11699,10 @@ DefineAbility({
   Description={
     Format="You can unleash a wave of negative energy. You must choose to deal %1d%2 points of negative energy damage to living creatures or to heal undead creatures of %1d%2 points of damage. Creatures that take damage from channeled energy receive a DC %3 Will save to halve the damage. You can use this ability %4 times per day.",
     Arguments={
-      "ClericChannelNegativeEnergyDice",
-      "ClericChannelNegativeEnergyDieSize",
-      "ClericChannelNegativeEnergyDC",
-      "ClericChannelEnergyTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="ClericChannelNegativeEnergyDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ClericChannelNegativeEnergyDice",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ClericChannelNegativeEnergyDieSize",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ClericChannelNegativeEnergyLVL",
-      InitialValue=Formula("0"),
+      Formula("ClericChannelNegativeEnergyDice"),
+      Formula("ClericChannelNegativeEnergyDieSize"),
+      Formula("ClericChannelNegativeEnergyDC"),
+      Formula("ClericChannelEnergyTimes"),
     },
   },
   Bonuses={
@@ -12420,15 +11733,6 @@ DefineAbility({
         "ClericChannelNegativeEnergyLVL",
       },
       Formula=Formula("ClericChannelEnergyLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Channel Negative Energy",
-      },
     },
   },
   Types={
@@ -14099,28 +13403,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="AirDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAirLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAirAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAirDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAirTimes",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -14193,28 +13475,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="AnimalDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAnimalLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAnimalDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAnimalTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAnimalAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -14287,28 +13547,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ArtificeDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainArtificeLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainArtificeDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainArtificeTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainArtificeAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -14381,28 +13619,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ChaosDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainChaosLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainChaosDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainChaosTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainChaosAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -14475,28 +13691,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="CharmDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCharmLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCharmDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCharmTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCharmAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -14569,28 +13763,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="CommunityDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCommunityLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCommunityDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCommunityTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCommunityAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -14663,28 +13835,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="DarknessDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDarknessLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDarknessDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDarknessTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDarknessAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -14757,28 +13907,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="DeathDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDeathLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDeathDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDeathTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDeathAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -14851,28 +13979,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="DestructionDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDestructionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDestructionDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDestructionTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDestructionAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -14945,28 +14051,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="EarthDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEarthLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEarthDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEarthTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEarthAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -15039,28 +14123,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="EvilDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEvilLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEvilDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEvilTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEvilAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -15133,28 +14195,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FireDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainFireLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainFireDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainFireTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainFireAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -15227,28 +14267,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="GloryDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGloryLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGloryDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGloryTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGloryAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -15328,28 +14346,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="GoodDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGoodLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGoodDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGoodTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGoodAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -15422,28 +14418,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="HealingDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainHealingLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainHealingDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainHealingTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainHealingAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -15516,28 +14490,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="KnowledgeDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainKnowledgeLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainKnowledgeDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainKnowledgeTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainKnowledgeAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -15610,28 +14562,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="LawDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLawLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLawDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLawTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLawAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -15704,28 +14634,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="LiberationDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLiberationLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLiberationDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLiberationTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLiberationAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -15798,28 +14706,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="LuckDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLuckLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLuckDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLuckTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLuckAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -15892,28 +14778,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MadnessDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMadnessLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMadnessDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMadnessTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMadnessAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -15986,28 +14850,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MagicDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMagicLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMagicDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMagicTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMagicAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -16080,28 +14922,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="NobilityDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainNobilityLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainNobilityDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainNobilityTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainNobilityAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -16174,28 +14994,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="PlantDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainPlantLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainPlantDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainPlantTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainPlantAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -16268,32 +15066,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ProtectionDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainProtectionSaveBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainProtectionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainProtectionDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainProtectionTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainProtectionAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -16373,28 +15145,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ReposeDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainReposeLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainReposeDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainReposeTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainReposeAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -16467,28 +15217,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="RuneDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainRuneLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainRuneDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainRuneTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainRuneAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -16561,28 +15289,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="StrengthDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainStrengthLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainStrengthDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainStrengthTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainStrengthAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -16655,28 +15361,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="SunDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainSunLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainSunDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainSunTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainSunAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -16749,28 +15433,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="TravelDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTravelLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTravelDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTravelTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTravelAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -16843,28 +15505,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="TrickeryDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTrickeryLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTrickeryDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTrickeryTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTrickeryAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -16937,28 +15577,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WarDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWarLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWarDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWarTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWarAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -17031,28 +15649,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WaterDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWaterLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWaterDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWaterTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWaterAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -17125,28 +15721,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeatherDomain",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWeatherLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWeatherDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWeatherTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWeatherAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -17219,27 +15793,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Lightning Arc",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Air)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainAirAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Electricity Resistance",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainAirAbilityTriggerLVL"] >= 6)
+        end,
+      },
+    },
+  },
   SourcePage="p.41",
   Description={
     Format="You can manipulate lightning, mist, and wind, traffic with air creatures, and are resistant to electricity damage.",
-  },
-  Definitions={
-    {
-      Name="DomainAirLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAirAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAirDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAirTimes",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -17283,37 +15870,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Lightning Arc",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Air)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainAirAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Electricity Resistance",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainAirAbilityTriggerLVL"] >= 6)
-        end,
       },
     },
   },
@@ -17392,27 +15948,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Speak with Animals",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Animal)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainAnimalAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Animal Companion",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainAnimalAbilityTriggerLVL"] >= 4)
+        end,
+      },
+    },
+  },
   SourcePage="p.41",
   Description={
     Format="You can speak with and befriend animals with ease. In addition, you treat Knowledge (Nature) as a class skill.",
-  },
-  Definitions={
-    {
-      Name="DomainAnimalLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAnimalDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAnimalTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAnimalAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   ClassSkills={
     "Knowledge (Nature)",
@@ -17459,37 +16028,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Speak with Animals",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Animal)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainAnimalAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Animal Companion",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainAnimalAbilityTriggerLVL"] >= 4)
-        end,
       },
     },
   },
@@ -17568,27 +16106,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Artificer's Touch",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Artifice)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainArtificeAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Dancing Weapons",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainArtificeAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.41",
   Description={
     Format="You can repair damage to objects, animate objects with life, and create objects from nothing.",
-  },
-  Definitions={
-    {
-      Name="DomainArtificeLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainArtificeDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainArtificeTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainArtificeAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -17632,37 +16183,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Artificer's Touch",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Artifice)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainArtificeAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Dancing Weapons",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainArtificeAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -17741,6 +16261,37 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Touch of Chaos",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Chaos)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainChaosAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Chaos Blade",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainChaosAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.42",
   Conditions={
     function (character)
@@ -17749,24 +16300,6 @@ DefineAbility({
   },
   Description={
     Format="Your touch infuses life and weapons with chaos, and you revel in all things anarchic.",
-  },
-  Definitions={
-    {
-      Name="DomainChaosLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainChaosDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainChaosTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainChaosAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -17810,37 +16343,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Touch of Chaos",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Chaos)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainChaosAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Chaos Blade",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainChaosAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -17919,27 +16421,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Dazing Touch",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Charm)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainCharmAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Charming Smile",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainCharmAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.42",
   Description={
     Format="You can baffle and befuddle foes with a touch or a smile, and your beauty and grace are divine.",
-  },
-  Definitions={
-    {
-      Name="DomainCharmLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCharmDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCharmTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCharmAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -17983,37 +16498,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Dazing Touch",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Charm)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainCharmAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Charming Smile",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainCharmAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -18092,27 +16576,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Calming Touch",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Community)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainCommunityAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Unity",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainCommunityAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.42",
   Description={
     Format="Your touch can heal wounds, and your presence instills unity and strengthens emotional bonds.",
-  },
-  Definitions={
-    {
-      Name="DomainCommunityLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCommunityDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCommunityTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainCommunityAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -18156,37 +16653,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Calming Touch",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Community)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainCommunityAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Unity",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainCommunityAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -18265,27 +16731,47 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Blind-Fight",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Touch of Darkness",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Darkness)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainDarknessAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Eyes of Darkness",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainDarknessAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.42",
   Description={
     Format="You manipulate shadows and darkness. In addition, you receive Blind-Fight as a bonus feat.",
-  },
-  Definitions={
-    {
-      Name="DomainDarknessLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDarknessDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDarknessTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDarknessAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -18329,44 +16815,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Blind-Fight",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Touch of Darkness",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Darkness)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainDarknessAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Eyes of Darkness",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainDarknessAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -18445,27 +16893,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Bleeding Touch",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Death)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainDeathAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Death's Embrace",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainDeathAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.42",
   Description={
     Format="You can cause the living to bleed at a touch, and find comfort in the presence of the dead.",
-  },
-  Definitions={
-    {
-      Name="DomainDeathLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDeathDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDeathTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDeathAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -18509,37 +16970,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Bleeding Touch",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Death)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainDeathAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Death's Embrace",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainDeathAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -18618,27 +17048,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Destructive Smite",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Destruction)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainDestructionAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Destructive Aura",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainDestructionAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.43",
   Description={
     Format="You revel in ruin and devastation, and can deliver particularly destructive attacks.",
-  },
-  Definitions={
-    {
-      Name="DomainDestructionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDestructionDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDestructionTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainDestructionAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -18682,37 +17125,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Destructive Smite",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Destruction)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainDestructionAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Destructive Aura",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainDestructionAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -18791,27 +17203,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Acid Dart",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Earth)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainEarthAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Acid Resistance",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainEarthAbilityTriggerLVL"] >= 6)
+        end,
+      },
+    },
+  },
   SourcePage="p.43",
   Description={
     Format="You have mastery over earth, metal, and stone, can fire darts of acid, and command earth creatures.",
-  },
-  Definitions={
-    {
-      Name="DomainEarthLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEarthDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEarthTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEarthAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -18855,37 +17280,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Acid Dart",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Earth)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainEarthAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Acid Resistance",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainEarthAbilityTriggerLVL"] >= 6)
-        end,
       },
     },
   },
@@ -18964,6 +17358,37 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Touch of Evil",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Evil)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainEvilAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Scythe of Evil",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainEvilAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.43",
   Conditions={
     function (character)
@@ -18972,24 +17397,6 @@ DefineAbility({
   },
   Description={
     Format="You are sinister and cruel, and have wholly pledged your soul to the cause of evil.",
-  },
-  Definitions={
-    {
-      Name="DomainEvilLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEvilDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEvilTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEvilAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -19033,37 +17440,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Touch of Evil",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Evil)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainEvilAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Scythe of Evil",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainEvilAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -19142,27 +17518,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Fire Bolt",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Fire)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainFireAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Fire Resistance",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainFireAbilityTriggerLVL"] >= 6)
+        end,
+      },
+    },
+  },
   SourcePage="p.44",
   Description={
     Format="You can call forth fire, command creatures of the inferno, and your flesh does not burn.",
-  },
-  Definitions={
-    {
-      Name="DomainFireLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainFireDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainFireTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainFireAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -19206,37 +17595,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Fire Bolt",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Fire)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainFireAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Fire Resistance",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainFireAbilityTriggerLVL"] >= 6)
-        end,
       },
     },
   },
@@ -19315,27 +17673,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Touch of Glory",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Glory)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainGloryAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Divine Presence",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainGloryAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.44",
   Description={
     Format="You are infused with the glory of the divine, and are a true foe of the undead. In addition, when you channel positive energy to harm undead creatures, the save DC to halve the damage is increased by 2.",
-  },
-  Definitions={
-    {
-      Name="DomainGloryLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGloryDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGloryTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGloryAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -19386,37 +17757,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Touch of Glory",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Glory)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainGloryAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Divine Presence",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainGloryAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -19495,6 +17835,37 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Touch of Good",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Good)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainGoodAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Holy Lance",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainGoodAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.44",
   Conditions={
     function (character)
@@ -19503,24 +17874,6 @@ DefineAbility({
   },
   Description={
     Format="You have pledged your life and soul to goodness and purity.",
-  },
-  Definitions={
-    {
-      Name="DomainGoodLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGoodDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGoodTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainGoodAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -19564,37 +17917,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Touch of Good",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Good)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainGoodAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Holy Lance",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainGoodAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -19673,27 +17995,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Rebuke Death",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Healing)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainHealingAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Healer's Blessing",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainHealingAbilityTriggerLVL"] >= 6)
+        end,
+      },
+    },
+  },
   SourcePage="p.44",
   Description={
     Format="Your touch staves off pain and death, and your healing magic is particularly vital and potent.",
-  },
-  Definitions={
-    {
-      Name="DomainHealingLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainHealingDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainHealingTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainHealingAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -19737,37 +18072,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Rebuke Death",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Healing)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainHealingAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Healer's Blessing",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainHealingAbilityTriggerLVL"] >= 6)
-        end,
       },
     },
   },
@@ -19846,27 +18150,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Lore Keeper",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Knowledge)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainKnowledgeAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Remote Viewing",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainKnowledgeAbilityTriggerLVL"] >= 6)
+        end,
+      },
+    },
+  },
   SourcePage="p.45",
   Description={
     Format="You are a scholar and a sage of legends. In addition, you treat all Knowledge skills as class skills.",
-  },
-  Definitions={
-    {
-      Name="DomainKnowledgeLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainKnowledgeDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainKnowledgeTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainKnowledgeAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   ClassSkills={
     "TYPE=Knowledge",
@@ -19913,37 +18230,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Lore Keeper",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Knowledge)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainKnowledgeAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Remote Viewing",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainKnowledgeAbilityTriggerLVL"] >= 6)
-        end,
       },
     },
   },
@@ -20022,6 +18308,37 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Touch of Law",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Law)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainLawAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Staff of Order",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainLawAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.45",
   Conditions={
     function (character)
@@ -20030,24 +18347,6 @@ DefineAbility({
   },
   Description={
     Format="You follow a strict and ordered code of laws, and in so doing, achieve enlightenment.",
-  },
-  Definitions={
-    {
-      Name="DomainLawLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLawDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLawTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLawAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -20091,37 +18390,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Touch of Law",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Law)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainLawAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Staff of Order",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainLawAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -20200,27 +18468,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Liberation",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Liberation)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainLiberationAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Freedom's Call",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainLiberationAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.45",
   Description={
     Format="You are a spirit of freedom and a staunch foe against all who would enslave and oppress.",
-  },
-  Definitions={
-    {
-      Name="DomainLiberationLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLiberationDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLiberationTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLiberationAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -20264,37 +18545,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Liberation",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Liberation)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainLiberationAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Freedom's Call",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainLiberationAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -20373,27 +18623,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Bit of Luck",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Luck)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainLuckAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Good Fortune",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainLuckAbilityTriggerLVL"] >= 6)
+        end,
+      },
+    },
+  },
   SourcePage="p.45",
   Description={
     Format="You are infused with luck, and your mere presence can spread good fortune.",
-  },
-  Definitions={
-    {
-      Name="DomainLuckLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLuckDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLuckTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainLuckAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -20437,37 +18700,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Bit of Luck",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Luck)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainLuckAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Good Fortune",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainLuckAbilityTriggerLVL"] >= 6)
-        end,
       },
     },
   },
@@ -20546,27 +18778,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Vision of Madness",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Madness)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainMadnessAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Aura of Madness",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainMadnessAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.45",
   Description={
     Format="You embrace the madness that lurks deep in your heart, and can unleash it to drive your foes insane or to sacrifice certain abilities to hone others.",
-  },
-  Definitions={
-    {
-      Name="DomainMadnessLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMadnessDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMadnessTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMadnessAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -20610,37 +18855,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Vision of Madness",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Madness)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainMadnessAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Aura of Madness",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainMadnessAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -20719,27 +18933,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Hand of the Acolyte",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Magic)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainMagicAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Dispelling Touch",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainMagicAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.46",
   Description={
     Format="You are a true student of all things mystical, and see divinity in the purity of magic.",
-  },
-  Definitions={
-    {
-      Name="DomainMagicLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMagicDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMagicTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainMagicAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -20783,37 +19010,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Hand of the Acolyte",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Magic)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainMagicAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Dispelling Touch",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainMagicAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -20892,27 +19088,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Inspiring Word",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Nobility)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainNobilityAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Leadership",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainNobilityAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.46",
   Description={
     Format="You are a great leader, an inspiration to all who follow the teachings of your faith.",
-  },
-  Definitions={
-    {
-      Name="DomainNobilityLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainNobilityDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainNobilityTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainNobilityAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -20956,37 +19165,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Inspiring Word",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Nobility)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainNobilityAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Leadership",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainNobilityAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -21065,27 +19243,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Wooden Fist",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Plant)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainPlantAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Bramble Armor",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainPlantAbilityTriggerLVL"] >= 6)
+        end,
+      },
+    },
+  },
   SourcePage="p.46",
   Description={
     Format="You find solace in the green, can grow defensive thorns, and can communicate with plants.",
-  },
-  Definitions={
-    {
-      Name="DomainPlantLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainPlantDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainPlantTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainPlantAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -21129,37 +19320,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Wooden Fist",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Plant)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainPlantAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Bramble Armor",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainPlantAbilityTriggerLVL"] >= 6)
-        end,
       },
     },
   },
@@ -21238,31 +19398,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Resistant Touch",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Protection)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainProtectionAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Aura of Protection",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainProtectionAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.46",
   Description={
     Format="Your faith is your greatest source of protection, and you can use that faith to defend others. In addition, you receive a +1 resistance bonus on saving throws. This bonus increases by 1 for every 5 levels you possess.",
-  },
-  Definitions={
-    {
-      Name="DomainProtectionSaveBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainProtectionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainProtectionDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainProtectionTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainProtectionAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -21325,37 +19494,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Resistant Touch",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Protection)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainProtectionAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Aura of Protection",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainProtectionAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -21434,27 +19572,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Gentle Rest",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Repose)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainReposeAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Ward Against Death",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainReposeAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.46",
   Description={
     Format="You see death not as something to be feared, but as a final rest and reward for a life well spent. The taint of undeath is a mockery of what you hold dear.",
-  },
-  Definitions={
-    {
-      Name="DomainReposeLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainReposeDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainReposeTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainReposeAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -21498,37 +19649,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Gentle Rest",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Repose)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainReposeAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Ward Against Death",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainReposeAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -21607,27 +19727,47 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Scribe Scroll",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Blast Rune",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Rune)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainRuneAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Spell Rune",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainRuneAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.47",
   Description={
     Format="In strange and eldritch runes you find potent magic. You gain Scribe Scroll as a bonus feat.",
-  },
-  Definitions={
-    {
-      Name="DomainRuneLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainRuneDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainRuneTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainRuneAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -21671,44 +19811,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Scribe Scroll",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Blast Rune",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Rune)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainRuneAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Spell Rune",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainRuneAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -21787,27 +19889,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Strength Surge",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Strength)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainStrengthAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Might of the Gods",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainStrengthAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.47",
   Description={
     Format="In strength and brawn there is truth - your faith gives you incredible might and power.",
-  },
-  Definitions={
-    {
-      Name="DomainStrengthLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainStrengthDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainStrengthTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainStrengthAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -21851,37 +19966,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Strength Surge",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Strength)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainStrengthAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Might of the Gods",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainStrengthAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -21960,27 +20044,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Sun's Blessing",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Sun)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainSunAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Nimbus of Light",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainSunAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.47",
   Description={
     Format="You see truth in the pure and burning light of the sun, and can call upon its blessing or wrath to work great deeds.",
-  },
-  Definitions={
-    {
-      Name="DomainSunLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainSunDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainSunTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainSunAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -22024,37 +20121,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Sun's Blessing",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Sun)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainSunAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Nimbus of Light",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainSunAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -22133,27 +20199,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Agile Feet",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Travel)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainTravelAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Dimensional Hop",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainTravelAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.47",
   Description={
     Format="You are an explorer and find enlightenment in the simple joy of travel, be it by foot or conveyance or magic. Increase your base speed by 10 feet.",
-  },
-  Definitions={
-    {
-      Name="DomainTravelLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTravelDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTravelTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTravelAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -22204,37 +20283,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Agile Feet",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Travel)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainTravelAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Dimensional Hop",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainTravelAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -22313,27 +20361,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Copycat",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Trickery)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainTrickeryAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Master's Illusion",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainTrickeryAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.48",
   Description={
     Format="You are a master of illusions and deceptions. Bluff, Disguise, and Stealth are class skills.",
-  },
-  Definitions={
-    {
-      Name="DomainTrickeryLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTrickeryDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTrickeryTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainTrickeryAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   ClassSkills={
     "Bluff",
@@ -22382,37 +20443,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Copycat",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Trickery)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainTrickeryAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Master's Illusion",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainTrickeryAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -22491,27 +20521,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Battle Rage",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (War)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainWarAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Weapon Master",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainWarAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.48",
   Description={
     Format="You are a crusader for your god, always ready and willing to fight to defend your faith.",
-  },
-  Definitions={
-    {
-      Name="DomainWarLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWarDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWarTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWarAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -22555,37 +20598,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Battle Rage",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (War)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainWarAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Weapon Master",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainWarAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -22664,27 +20676,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Icicle",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Water)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainWaterAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Cold Resistance",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainWaterAbilityTriggerLVL"] >= 6)
+        end,
+      },
+    },
+  },
   SourcePage="p.48",
   Description={
     Format="You can manipulate water and mist and ice, conjure creatures of water, and resist cold.",
-  },
-  Definitions={
-    {
-      Name="DomainWaterLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWaterDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWaterTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWaterAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -22728,37 +20753,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Icicle",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Water)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainWaterAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Cold Resistance",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainWaterAbilityTriggerLVL"] >= 6)
-        end,
       },
     },
   },
@@ -22837,27 +20831,40 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Storm Burst",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Weather)")
+          end))
+        end,
+        function (character)
+          return (character.Variables["DomainWeatherAbilityTriggerLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domain Power ~ Lightning Lord",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainWeatherAbilityTriggerLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.48",
   Description={
     Format="With power over storm and sky, you can call down the wrath of the gods upon the world below.",
-  },
-  Definitions={
-    {
-      Name="DomainWeatherLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWeatherDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWeatherTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWeatherAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -22901,37 +20908,6 @@ DefineAbility({
         Name="Domain",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Storm Burst",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Name == "DisableDomainLVL1 (Weather)")
-          end))
-        end,
-        function (character)
-          return (character.Variables["DomainWeatherAbilityTriggerLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domain Power ~ Lightning Lord",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainWeatherAbilityTriggerLVL"] >= 8)
-        end,
       },
     },
   },
@@ -23027,15 +21003,9 @@ DefineAbility({
   Description={
     Format="As a standard action you can unleash an arc of electricity targeting any foe within 30 feet as a ranged touch attack. This arc of electricity deals 1d6+%1 points of electricity damage. You can use this ability %2 times per day.",
     Arguments={
-      "DomainAirLVL/2",
-      "LightningArcTimes",
-      "PREVARGTEQ:DomainAirLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="LightningArcTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainAirLVL/2"),
+      Formula("LightningArcTimes"),
+      Formula("PREVARGTEQ:DomainAirLVL,2"),
     },
   },
   Bonuses={
@@ -23063,13 +21033,33 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  SourcePage="p.41",
-  Definitions={
+  Abilities={
     {
-      Name="DomainAirResistanceBonus",
-      InitialValue=Formula("0"),
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Resistance to Electricity",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainAirLVL"] >= 6)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Electricity",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainAirLVL"] >= 20)
+        end,
+      },
     },
   },
+  SourcePage="p.41",
   Bonuses={
     {
       Category="VAR",
@@ -23104,32 +21094,6 @@ DefineAbility({
       Conditions={
         function (character)
           return (character.Variables["DomainAirLVL"] >= 12)
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Resistance to Electricity",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainAirLVL"] >= 6)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Electricity",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainAirLVL"] >= 20)
         end,
       },
     },
@@ -23173,13 +21137,7 @@ DefineAbility({
   Description={
     Format="You can Speak with Animals, as per the spell, for %1 rounds per day.",
     Arguments={
-      "SpeakWithAnimalsRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="SpeakWithAnimalsRounds",
-      InitialValue=Formula("0"),
+      Formula("SpeakWithAnimalsRounds"),
     },
   },
   Bonuses={
@@ -23213,12 +21171,6 @@ DefineAbility({
   SourcePage="p.41",
   Description={
     Format="You gain the service of an animal companion.",
-  },
-  Definitions={
-    {
-      Name="AnimalCompanionMasterLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -23269,15 +21221,9 @@ DefineAbility({
   Description={
     Format="You can cast Mending at will (CL %1) to repair damaged objects. In addition, you can cause damage to objects and construct creatures by striking them with a melee touch attack. Objects and constructs take 1d6 points of damage. This attack bypasses up to %1 points of damage reduction and hardness. You can use this ability %2 times per day.",
     Arguments={
-      "DomainArtificeLVL",
-      "ArtificersTouchTimes",
-      "PREVARLT:DomainArtificeLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="ArtificersTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainArtificeLVL"),
+      Formula("ArtificersTouchTimes"),
+      Formula("PREVARLT:DomainArtificeLVL,2"),
     },
   },
   Bonuses={
@@ -23328,13 +21274,7 @@ DefineAbility({
   Description={
     Format="You can give a weapon toched the Dancing special weapon quality for 4 rounds. You can use this ability %1 times per day.",
     Arguments={
-      "DancingWeaponTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="DancingWeaponTimes",
-      InitialValue=Formula("0"),
+      Formula("DancingWeaponTimes"),
     },
   },
   Bonuses={
@@ -23385,13 +21325,7 @@ DefineAbility({
   Description={
     Format="You can imbue a target with chaos as a melee touch attack. For the next round, any time the target rolls a d20, he must roll twice and take the less favorable result. You can use this ability %1 times per day.",
     Arguments={
-      "TouchofChaosTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TouchofChaosTimes",
-      InitialValue=Formula("0"),
+      Formula("TouchofChaosTimes"),
     },
   },
   Bonuses={
@@ -23443,14 +21377,8 @@ DefineAbility({
   Description={
     Format="You can give a weapon tocuhed the Anarchic special weapon quality for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "DomainChaosLVL/2",
-      "ChaosBladeTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="ChaosBladeTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainChaosLVL/2"),
+      Formula("ChaosBladeTimes"),
     },
   },
   Bonuses={
@@ -23501,14 +21429,8 @@ DefineAbility({
   Description={
     Format="You can cause a living creature to become dazed for 1 round as a melee touch attack. Creatures with more thatn %1 Hit Dice are unaffected. You can use this ability %2 times per day.",
     Arguments={
-      "DomainCharmLVL",
-      "DazingTouchTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="DazingTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainCharmLVL"),
+      Formula("DazingTouchTimes"),
     },
   },
   Bonuses={
@@ -23552,14 +21474,8 @@ DefineAbility({
   Description={
     Format="You can cast Charm Person as a swift action with a DC of %1. You can only have one creature charmed in this way at a time. The total duration of this effect is %2 round per day. These rounds do not need to be consecutive, and you can dismiss the charm anytime as a free action. Each attempt to use this ability consumes 1 round of its duration, whether or not the creature succeeds on its save to resist the effect.",
     Arguments={
-      "DomainCharmDC",
-      "CharmCharmingSmileRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="CharmCharmingSmileRounds",
-      InitialValue=Formula("0"),
+      Formula("DomainCharmDC"),
+      Formula("CharmCharmingSmileRounds"),
     },
   },
   Bonuses={
@@ -23610,14 +21526,8 @@ DefineAbility({
   Description={
     Format="You can touch a creature as a standard action to heal it of 1d6+%1 points of nonlethal damage. This touch also removes the fatigued, shaken, and sickened conditions (but has no effect on more severe conditions). You can use this ability %2 times per day.",
     Arguments={
-      "DomainCommunityLVL",
-      "CalmingTouchTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="CalmingTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainCommunityLVL"),
+      Formula("CalmingTouchTimes"),
     },
   },
   Bonuses={
@@ -23668,13 +21578,7 @@ DefineAbility({
   Description={
     Format="Whenever a spell targets you and one or more allies within 30 feet, you can use this ability to allow your allies to use your saving throw against the effect instead of their own. Each ally must decide individually before the rolls are made. Using this ability is an immediate action. You can use this ability %1 times per day.",
     Arguments={
-      "UnityTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="UnityTimes",
-      InitialValue=Formula("0"),
+      Formula("UnityTimes"),
     },
   },
   Bonuses={
@@ -23725,14 +21629,8 @@ DefineAbility({
   Description={
     Format="As a melee touch attack, you can cause a creature's vision to be fraught with shadows and darkness. The creature touched treats all other creatures as if they had concealment, suffering a 20%% miss chance on all attack rolls. This effect lasts for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainDarknessLVL/2,1)",
-      "TouchofDarknessTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TouchofDarknessTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainDarknessLVL/2,1)"),
+      Formula("TouchofDarknessTimes"),
     },
   },
   Bonuses={
@@ -23783,13 +21681,7 @@ DefineAbility({
   Description={
     Format="Your vision is not impaired by lighting conditions, even in absolute darkness and magic darkness. You can use this ability for %1 rounds per day. These rounds do not need to be consecutive.",
     Arguments={
-      "EyesOfDarknessRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="EyesOfDarknessRounds",
-      InitialValue=Formula("0"),
+      Formula("EyesOfDarknessRounds"),
     },
   },
   Bonuses={
@@ -23841,14 +21733,8 @@ DefineAbility({
   Description={
     Format="As a melee touch attack, you can cause a living creature to take 1d6 points of damage per round. This effect persists for %1 rounds or until stopped with a DC 15 Heal check or any spell or effect that heals damage. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainDeathLVL/2,1)",
-      "BleedingTouchTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="BleedingTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainDeathLVL/2,1)"),
+      Formula("BleedingTouchTimes"),
     },
   },
   Bonuses={
@@ -23918,14 +21804,8 @@ DefineAbility({
   Description={
     Format="You gain the destructive smite power; the supernatural ability to make a single melee attack with a +%1 morale bonus on damage rolls. You must declare the destructive smite before making the attack. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainDestructionLVL/2,1)",
-      "DestructiveSmiteTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="DestructiveSmiteTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainDestructionLVL/2,1)"),
+      Formula("DestructiveSmiteTimes"),
     },
   },
   Bonuses={
@@ -23976,14 +21856,8 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura of destruction for %1 rounds per day. All attacks made against targets in this aura (including you) gain a +%2 morale bonus on damage and all critical threats are automatically confirmed. These rounds do not need to be consecutive.",
     Arguments={
-      "DestructiveAuraRounds",
-      "DomainDestructionLVL/2",
-    },
-  },
-  Definitions={
-    {
-      Name="DestructiveAuraRounds",
-      InitialValue=Formula("0"),
+      Formula("DestructiveAuraRounds"),
+      Formula("DomainDestructionLVL/2"),
     },
   },
   Bonuses={
@@ -24035,15 +21909,9 @@ DefineAbility({
   Description={
     Format="As a standard action, you can unleash an acid dart targeting any foe within 30 feet as a ranged touch attack. This acid dart deals 1d6+%1 points of acid damage. You can use this ability %2 times per day.",
     Arguments={
-      "DomainEarthLVL/2",
-      "AcidDartTimes",
-      "PREVARGTEQ:DomainEarthLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="AcidDartTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainEarthLVL/2"),
+      Formula("AcidDartTimes"),
+      Formula("PREVARGTEQ:DomainEarthLVL,2"),
     },
   },
   Bonuses={
@@ -24071,13 +21939,33 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  SourcePage="p.43",
-  Definitions={
+  Abilities={
     {
-      Name="DomainEarthResistanceBonus",
-      InitialValue=Formula("0"),
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Resistance to Acid",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainEarthLVL"] >= 6)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Acid",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainEarthLVL"] >= 20)
+        end,
+      },
     },
   },
+  SourcePage="p.43",
   Bonuses={
     {
       Category="VAR",
@@ -24112,32 +22000,6 @@ DefineAbility({
       Conditions={
         function (character)
           return (character.Variables["DomainEarthLVL"] >= 12)
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Resistance to Acid",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainEarthLVL"] >= 6)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Acid",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainEarthLVL"] >= 20)
         end,
       },
     },
@@ -24181,14 +22043,8 @@ DefineAbility({
   Description={
     Format="You can cause a creature to become sickened as a melee touch attack. Creatures sickened by your touch count as good for the purposes of spells with the Evil descriptor. This ability lasts for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainEvilLVL/2,1)",
-      "TouchofEvilTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TouchofEvilTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainEvilLVL/2,1)"),
+      Formula("TouchofEvilTimes"),
     },
   },
   Bonuses={
@@ -24239,14 +22095,8 @@ DefineAbility({
   Description={
     Format="You can give a weapon you touch the Unholy special weapon quality for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "DomainEvilLVL/2",
-      "ScytheOfEvilTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="ScytheOfEvilTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainEvilLVL/2"),
+      Formula("ScytheOfEvilTimes"),
     },
   },
   Bonuses={
@@ -24297,15 +22147,9 @@ DefineAbility({
   Description={
     Format="As a standard action, you can unleash a scorching bolt of divine fire from your hand. You can target any single foe within 30 feet as a ranged touch attack with this bolt of fire. If you hit the foe, the fire bolt deals 1d6+%1 points of fire damage. You can use this ability %2 times per day.",
     Arguments={
-      "DomainFireLVL/2",
-      "FireBoltTimes",
-      "PREVARGTEQ:DomainFireLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="FireBoltTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainFireLVL/2"),
+      Formula("FireBoltTimes"),
+      Formula("PREVARGTEQ:DomainFireLVL,2"),
     },
   },
   Bonuses={
@@ -24333,13 +22177,33 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  SourcePage="p.44",
-  Definitions={
+  Abilities={
     {
-      Name="DomainFireResistanceBonus",
-      InitialValue=Formula("0"),
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Resistance to Fire",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainFireLVL"] >= 6)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Fire",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainFireLVL"] >= 20)
+        end,
+      },
     },
   },
+  SourcePage="p.44",
   Bonuses={
     {
       Category="VAR",
@@ -24374,32 +22238,6 @@ DefineAbility({
       Conditions={
         function (character)
           return (character.Variables["DomainFireLVL"] >= 12)
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Resistance to Fire",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainFireLVL"] >= 6)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Fire",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainFireLVL"] >= 20)
         end,
       },
     },
@@ -24443,14 +22281,8 @@ DefineAbility({
   Description={
     Format="You can cause your hand to shimmer with divine radiance, allowing you to touch a creature as a standard action and give it a +%1 bonus to a single Charisma-based skill check or Charisma ability check. This ability lasts for one hour or until the creature touched elects to apply the bonus to a roll. You can use this ability to grant the bonus %2 times per day.",
     Arguments={
-      "DomainGloryLVL",
-      "TouchofGloryTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TouchofGloryTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainGloryLVL"),
+      Formula("TouchofGloryTimes"),
     },
   },
   Bonuses={
@@ -24494,14 +22326,8 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura of divine presence for %1 rounds. All allies within this aura are treated as if under the effects of a Sanctuary spell with a DC of %2. These rounds do not need to be consecutive. Activating this ability is a standard action. If an ally leaves the area or makes an attack, the effect ends for that ally. If you make an attack, the effect ends for you and your allies.",
     Arguments={
-      "GloryDivinePresenceRounds",
-      "DomainGloryDC",
-    },
-  },
-  Definitions={
-    {
-      Name="GloryDivinePresenceRounds",
-      InitialValue=Formula("0"),
+      Formula("GloryDivinePresenceRounds"),
+      Formula("DomainGloryDC"),
     },
   },
   Bonuses={
@@ -24553,14 +22379,8 @@ DefineAbility({
   Description={
     Format="You can touch a creature as a standard action, granting giving it a +%1 sacred bonus on attack rolls, skill checks, ability checks, and saving throws for 1 round. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainGoodLVL/2,1)",
-      "TouchofGoodTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TouchofGoodTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainGoodLVL/2,1)"),
+      Formula("TouchofGoodTimes"),
     },
   },
   Bonuses={
@@ -24611,14 +22431,8 @@ DefineAbility({
   Description={
     Format="You can give a weapon you touch the Holy special weapon quality for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "DomainGoodLVL",
-      "HolyLanceTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="HolyLanceTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainGoodLVL"),
+      Formula("HolyLanceTimes"),
     },
   },
   Bonuses={
@@ -24669,15 +22483,9 @@ DefineAbility({
   Description={
     Format="You can touch a living creature as a standard action, healing it of 1d4+%1 points of damage. You can only use this ability on a creature that is below 0 hit points. You can use this ability %2 times per day.",
     Arguments={
-      "DomainHealingLVL/2",
-      "RebukeDeathTimes",
-      "PREVARGTEQ:DomainHealingLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="RebukeDeathTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainHealingLVL/2"),
+      Formula("RebukeDeathTimes"),
+      Formula("PREVARGTEQ:DomainHealingLVL,2"),
     },
   },
   Bonuses={
@@ -24727,13 +22535,7 @@ DefineAbility({
   Description={
     Format="You can touch a creature to learn about its abilities and weaknesses. With a successful touch attack, you gain information as if you made the appropriate Knowledge skill check with a result equal to %1.",
     Arguments={
-      "LoreKeeperDomainSkillBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="LoreKeeperDomainSkillBonus",
-      InitialValue=Formula("0"),
+      Formula("LoreKeeperDomainSkillBonus"),
     },
   },
   Bonuses={
@@ -24784,13 +22586,7 @@ DefineAbility({
   Description={
     Format="You can use Clairaudience/Clairvoyance as a spell-like ability (CL %1). You can use this ability for %1 rounds per day. These rounds do not need to be consecutive.",
     Arguments={
-      "RemoteViewingRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="RemoteViewingRounds",
-      InitialValue=Formula("0"),
+      Formula("RemoteViewingRounds"),
     },
   },
   Bonuses={
@@ -24841,13 +22637,7 @@ DefineAbility({
   Description={
     Format="You can touch a willing creature as a standard action, infusing it with the power of divine order and allowing it to treat all attack rolls, skill checks, ability checks, and saving throws for 1 round as if the natural d20 roll resulted in an 11. You can use this ability %1 times per day.",
     Arguments={
-      "TouchofLawTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TouchofLawTimes",
-      InitialValue=Formula("0"),
+      Formula("TouchofLawTimes"),
     },
   },
   Bonuses={
@@ -24898,14 +22688,8 @@ DefineAbility({
   Description={
     Format="You can give a weapon touched the Axiomatic special weapon quality for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "DomainLawLVL/2",
-      "StaffOfOrderTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="StaffOfOrderTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainLawLVL/2"),
+      Formula("StaffOfOrderTimes"),
     },
   },
   Bonuses={
@@ -24956,13 +22740,7 @@ DefineAbility({
   Description={
     Format="You have the ability to ignore impediments to your mobility. For %1 rounds per day, you can move normally regardless of magical effects that impede movement, as if you were affected by Freedom of Movement. This effect  occurs automatically as soon as it applies. These rounds do not need to be consecutive.",
     Arguments={
-      "LiberationRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="LiberationRounds",
-      InitialValue=Formula("0"),
+      Formula("LiberationRounds"),
     },
   },
   Bonuses={
@@ -25014,13 +22792,7 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura of freedom for %1 rounds per day. Allies within this aura are not affected by the confused, grappled, frightened, panicked, paralyzed, pinned, or shaken conditions. This aura only suppresses these effects, and they return once a creature leaves the aura or when the aura ends, if applicable. These rounds do not need to be consecutive.",
     Arguments={
-      "FreedomsCallRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="FreedomsCallRounds",
-      InitialValue=Formula("0"),
+      Formula("FreedomsCallRounds"),
     },
   },
   Bonuses={
@@ -25072,13 +22844,7 @@ DefineAbility({
   Description={
     Format="You can touch a willing creature as a standard action, giving it a bit of luck. For the next round, any time the target rolls a d20, he may roll twice and take the more favorable result. You can use this ability %1 times per day.",
     Arguments={
-      "BitofLuckTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="BitofLuckTimes",
-      InitialValue=Formula("0"),
+      Formula("BitofLuckTimes"),
     },
   },
   Bonuses={
@@ -25130,13 +22896,7 @@ DefineAbility({
   Description={
     Format="As an immediate action, you can reroll any one d20 roll that you have just made before the results of the roll are revealed. You must take the result of the reroll, even if it's worse than the original roll. You can use this ability %1 times per day.",
     Arguments={
-      "GoodFortuneTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="GoodFortuneTimes",
-      InitialValue=Formula("0"),
+      Formula("GoodFortuneTimes"),
     },
   },
   Bonuses={
@@ -25188,14 +22948,8 @@ DefineAbility({
   Description={
     Format="You can give a creature a vision of madness as a melee touch attack. Choose one of the following; attack rolls, saving throws, or skill checks. The target receives a +%1 bonus to the chosen rolls and a -%1 penalty to the other two types of rolls. This effect fades after 3 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainMadnessLVL/2,1)",
-      "VisionofMadnessTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="VisionofMadnessTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainMadnessLVL/2,1)"),
+      Formula("VisionofMadnessTimes"),
     },
   },
   Bonuses={
@@ -25246,14 +23000,8 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura of madness for %1 rounds per day. Enemies within this aura are affected by Confusion unless they make a Will save (DC %2). The Confusion effect ends immediately when the creature leaves the area or the aura expires. Creatures that succeed on their saving throw are immune to this aura for 24 hours. These rounds do not need to be consecutive.",
     Arguments={
-      "AuraOfMadnessRounds",
-      "DomainMadnessDC",
-    },
-  },
-  Definitions={
-    {
-      Name="AuraOfMadnessRounds",
-      InitialValue=Formula("0"),
+      Formula("AuraOfMadnessRounds"),
+      Formula("DomainMadnessDC"),
     },
   },
   Bonuses={
@@ -25305,13 +23053,7 @@ DefineAbility({
   Description={
     Format="You can cause your melee weapon to fly from your grasp and strike a foe before instantly returning. As a standard action, you can make a single attack with a melee weapon at a range of 30 feet. This attack is treated as a ranged attack with a thrown weapon, except that you add your Wisdom modifier instead of your Dexterity modifier (damage still relies on Strength). This ability cannot be used to perform a combat maneuver. You can use this ability %1 times per day.",
     Arguments={
-      "HandoftheAcolyteTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="HandoftheAcolyteTimes",
-      InitialValue=Formula("0"),
+      Formula("HandoftheAcolyteTimes"),
     },
   },
   Bonuses={
@@ -25362,13 +23104,7 @@ DefineAbility({
   Description={
     Format="You can use a targeted Dispel Magic effect as a melee touch attack. You can use this ability %1 times per day.",
     Arguments={
-      "DispellingTouchTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="DispellingTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("DispellingTouchTimes"),
     },
   },
   Bonuses={
@@ -25399,8 +23135,8 @@ DefineAbility({
   Description={
     Format="As a standard action, you can speak an inspiring word to a creature within 30 feet. That creature receives a +2 morale bonus on attack rolls, skill checks, ability checks, and saving throws for %1 rounds. You can use this power %2 times per day.",
     Arguments={
-      "max(DomainNobilityLVL/2,1)",
-      "DomainNobilityTimes",
+      Formula("max(DomainNobilityLVL/2,1)"),
+      Formula("DomainNobilityTimes"),
     },
   },
   Types={
@@ -25418,10 +23154,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.46",
-  Description={
-    Format="You receive Leadership as a bonus feat. In addition, you gain a +2 bonus on your leadership score as long as you uphold the tenets of your deity (or divine concept if you do not venerate a deity).",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -25430,6 +23162,10 @@ DefineAbility({
         "Leadership",
       },
     },
+  },
+  SourcePage="p.46",
+  Description={
+    Format="You receive Leadership as a bonus feat. In addition, you gain a +2 bonus on your leadership score as long as you uphold the tenets of your deity (or divine concept if you do not venerate a deity).",
   },
   Types={
     "ClericClassFeatures",
@@ -25470,14 +23206,8 @@ DefineAbility({
   Description={
     Format="As a free action, your hands can become as hard as wood, covered in tiny thorns. While you have wooden fists, your unarmed strikes do not provoke attacks of opportunity, deal lethal damage, and gain a +%1 bonus on damage rolls. You can use this ability for %2 rounds per day. These rounds do not need to be consecutive.",
     Arguments={
-      "max(DomainPlantLVL/2,1)",
-      "WoodenFistRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="WoodenFistRounds",
-      InitialValue=Formula("0"),
+      Formula("max(DomainPlantLVL/2,1)"),
+      Formula("WoodenFistRounds"),
     },
   },
   Bonuses={
@@ -25528,14 +23258,8 @@ DefineAbility({
   Description={
     Format="You can cause a host of wooden thorns to burst from your skin as a free action. While Bramble Armor is in effect, any foe striking you with an unarmed strike or a melee weapon without reach takes 1d6+%1 points of piercing damage. You can use this ability for %2 rounds per day. These rounds do not need to be consecutive.",
     Arguments={
-      "DomainPlantLVL/2",
-      "BrambleArmorRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="BrambleArmorRounds",
-      InitialValue=Formula("0"),
+      Formula("DomainPlantLVL/2"),
+      Formula("BrambleArmorRounds"),
     },
   },
   Bonuses={
@@ -25587,14 +23311,8 @@ DefineAbility({
   Description={
     Format="As a standard action, you can touch an ally and grant them your +%1 resistance bonus for 1 minute. When you use this ability, you lose your resistance bonus granted by the Protection domain for 1 minute. You can use this ability %2 times per day.",
     Arguments={
-      "DomainProtectionSaveBonus",
-      "ResistantTouchTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="ResistantTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainProtectionSaveBonus"),
+      Formula("ResistantTouchTimes"),
     },
   },
   Bonuses={
@@ -25646,14 +23364,8 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura of protection for %1 rounds per day. You and your allies within this aura gain a +%2 deflection to AC resistance 5 against all elements (acid, cold, electricity, fire, and sonic). These rounds do not need to be consecutive.",
     Arguments={
-      "AuraOfProtectionRounds",
-      "(DomainProtectionLVL-4)/4",
-    },
-  },
-  Definitions={
-    {
-      Name="AuraOfProtectionRounds",
-      InitialValue=Formula("0"),
+      Formula("AuraOfProtectionRounds"),
+      Formula("(DomainProtectionLVL-4)/4"),
     },
   },
   Bonuses={
@@ -25705,14 +23417,8 @@ DefineAbility({
   Description={
     Format="Your touch can fill a creature with lethargy, causing a living creature to become staggered for 1 round as a melee touch attack. If you touch a staggered living creatures, that creature falls asleep for 1 round instead. Undead creatures touched by you are staggered for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "WIS",
-      "GentleRestTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="GentleRestTimes",
-      InitialValue=Formula("0"),
+      Formula("WIS"),
+      Formula("GentleRestTimes"),
     },
   },
   Bonuses={
@@ -25763,13 +23469,7 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura that wards against death for %1 rounds per day. Living creatures in this area are immune to death effects, energy drain, and effects that cause negative levels. This ward does not remove negative levels that a creature has already gained, but the negative levels have no effect while the creature is inside the warded area. These rounds do not need to be consecutive.",
     Arguments={
-      "WardAgainstDeathRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="WardAgainstDeathRounds",
-      InitialValue=Formula("0"),
+      Formula("WardAgainstDeathRounds"),
     },
   },
   Bonuses={
@@ -25821,16 +23521,10 @@ DefineAbility({
   Description={
     Format="As a standard action, you can create a Blast Rune in any adjacent square. Any creature entering this square takes 1d6+%1 points of damage. This rune deals either acid, cold, electricity, or fire damage, decided when you create the rune. The rune is invisible and lasts %2 rounds or until discharged. You cannot create a Blast Rune in a square occupied by another creature. This rune counts as a 1st-level spell for the purposes of dispelling. It can be discovered with at DC 26 Perception skill check and disarmed with a DC 26 Disable Device skill check. You can use this ability %3 times per day.",
     Arguments={
-      "DomainRuneLVL/2",
-      "DomainRuneLVL",
-      "BlastRuneTimes",
-      "PREVARGTEQ:DomainRuneLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="BlastRuneTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainRuneLVL/2"),
+      Formula("DomainRuneLVL"),
+      Formula("BlastRuneTimes"),
+      Formula("PREVARGTEQ:DomainRuneLVL,2"),
     },
   },
   Bonuses={
@@ -25900,14 +23594,8 @@ DefineAbility({
   Description={
     Format="As a standard action, you can touch a creature to give it great strength. For 1 round, the target gains a +%1 enhancement bonus to melee attacks. combat maneuver checks that rely on Strength, Stregth-based skills, and Strength checks. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainStrengthLVL/2,1)",
-      "StrengthSurgeTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="StrengthSurgeTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainStrengthLVL/2,1)"),
+      Formula("StrengthSurgeTimes"),
     },
   },
   Bonuses={
@@ -25958,13 +23646,7 @@ DefineAbility({
   Description={
     Format="You can add a +%1 enhancement bonus to your Strength score for %1 rounds per day. That bonus only applies on Strength checks and Strength-based skill checks. These rounds do not need to be consecutive.",
     Arguments={
-      "MightOfTheGodsRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="MightOfTheGodsRounds",
-      InitialValue=Formula("0"),
+      Formula("MightOfTheGodsRounds"),
     },
   },
   Bonuses={
@@ -25995,7 +23677,7 @@ DefineAbility({
   Description={
     Format="Whenever you channel positive energy to harm undead creatures, add a +%1 bonus to the damage dealt. Undead do not add their channel resistance to their saves when you channel positive energy.",
     Arguments={
-      "DomainSunLVL",
+      Formula("DomainSunLVL"),
     },
   },
   Types={
@@ -26037,13 +23719,7 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot nimbus of light for %1 rounds per day. This acts as a Daylight spell. In addition, undead within this radius take %1 points of damage each round that they remain inside the nimbus. Spells and spell-like abilities with the Darkness descriptor are automatically dispelled if brought inside this nimbus. These rounds do not need to be consecutive.",
     Arguments={
-      "SunNimbusOfLightRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="SunNimbusOfLightRounds",
-      InitialValue=Formula("0"),
+      Formula("SunNimbusOfLightRounds"),
     },
   },
   Bonuses={
@@ -26095,13 +23771,7 @@ DefineAbility({
   Description={
     Format="As a free action, you can gain increased mobility for 1 round. For the next round, you ignore all difficult terrain and do not take any penalties for moving through it. You can use this ability %1 times per day.",
     Arguments={
-      "AgileFeetTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="AgileFeetTimes",
-      InitialValue=Formula("0"),
+      Formula("AgileFeetTimes"),
     },
   },
   Bonuses={
@@ -26153,13 +23823,7 @@ DefineAbility({
   Description={
     Format="You can teleport up to %1 feet per day as a move action. This teleportation must be used in 5-foot increments and such movement does not provoke attacks of opportunity. You must have line of sight to your destination to use this ability. You can bring other willing creatures with you, but you must expend an equal amount of distance for each creature brought.",
     Arguments={
-      "TravelDimensionalHop",
-    },
-  },
-  Definitions={
-    {
-      Name="TravelDimensionalHop",
-      InitialValue=Formula("0"),
+      Formula("TravelDimensionalHop"),
     },
   },
   Bonuses={
@@ -26211,14 +23875,8 @@ DefineAbility({
   Description={
     Format="You can create an illusory double of yourself as a move action. This double functions as a single Mirror Image and lasts for %1 rounds, or until the illusory duplicate is dispelled or destroyed. You can have no more than one Copycat at a time. This ability does not stack with the Mirror Image spell. You can use this ability %2 times per day.",
     Arguments={
-      "DomainTrickeryLVL",
-      "CopycatTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="CopycatTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainTrickeryLVL"),
+      Formula("CopycatTimes"),
     },
   },
   Bonuses={
@@ -26262,18 +23920,8 @@ DefineAbility({
   Description={
     Format="You can create an illusion that hides the appearance of yourself and any number of allies within 30 feet for %1 rounds. This ability otherwise functions like the spell Veil. The save DC to disbelieve this effect is %2. The rounds do not need to be consecutive.",
     Arguments={
-      "TrickeryMastersIllusionRounds",
-      "TrickeryMastersIllusionDC",
-    },
-  },
-  Definitions={
-    {
-      Name="TrickeryMastersIllusionDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="TrickeryMastersIllusionRounds",
-      InitialValue=Formula("0"),
+      Formula("TrickeryMastersIllusionRounds"),
+      Formula("TrickeryMastersIllusionDC"),
     },
   },
   Bonuses={
@@ -26329,17 +23977,25 @@ DefineAbility({
     },
   },
   SourcePage="p.48",
+  TemporaryBonuses={
+    Bonuses={
+      {
+        Target="EQ|Melee",
+        Bonus={
+          Category="WEAPON",
+          Variables={
+            "DAMAGE",
+          },
+          Formula=Formula("max(DomainWarLVL/2,1)"),
+        },
+      },
+    },
+  },
   Description={
     Format="You can touch a creature as a standard action to give it a +%1 bonus on melee damage rolls for 1 round. You can do so %2 times per day.",
     Arguments={
-      "max(DomainWarLVL/2,1)",
-      "BattleRageTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="BattleRageTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainWarLVL/2,1)"),
+      Formula("BattleRageTimes"),
     },
   },
   Bonuses={
@@ -26357,20 +24013,6 @@ DefineAbility({
     "SpellLike",
     "DomainPower",
     "War Domain",
-  },
-  TemporaryBonuses={
-    Bonuses={
-      {
-        Target="EQ|Melee",
-        Bonus={
-          Category="WEAPON",
-          Variables={
-            "DAMAGE",
-          },
-          Formula=Formula("max(DomainWarLVL/2,1)"),
-        },
-      },
-    },
   },
 })
 
@@ -26404,13 +24046,7 @@ DefineAbility({
   Description={
     Format="As a swift action, you gain the use of one combat feat for %1 rounds per day. These rounds do not need to be consecutive and you can change the feat chosen each time you use this ability. You must meet the prerequisites to use these feats.",
     Arguments={
-      "WeaponMasterRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="WeaponMasterRounds",
-      InitialValue=Formula("0"),
+      Formula("WeaponMasterRounds"),
     },
   },
   Bonuses={
@@ -26461,15 +24097,9 @@ DefineAbility({
   Description={
     Format="As a standard action, you can fire an icicle from your finger, targeting any foe within 30 feet as a ranged touch attack. The icicle deals 1d6+%1 points of cold damage. You can use this ability %2 times per day.",
     Arguments={
-      "DomainWaterLVL/2",
-      "IcicleTimes",
-      "PREVARGTEQ:DomainWaterLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="IcicleTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainWaterLVL/2"),
+      Formula("IcicleTimes"),
+      Formula("PREVARGTEQ:DomainWaterLVL,2"),
     },
   },
   Bonuses={
@@ -26497,13 +24127,33 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  SourcePage="p.48",
-  Definitions={
+  Abilities={
     {
-      Name="DomainWaterResistanceBonus",
-      InitialValue=Formula("0"),
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Resistance to Cold",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainWaterLVL"] >= 6)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Cold",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainWaterLVL"] >= 20)
+        end,
+      },
     },
   },
+  SourcePage="p.48",
   Bonuses={
     {
       Category="VAR",
@@ -26538,32 +24188,6 @@ DefineAbility({
       Conditions={
         function (character)
           return (character.Variables["DomainWaterLVL"] >= 12)
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Resistance to Cold",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainWaterLVL"] >= 6)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Cold",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainWaterLVL"] >= 20)
         end,
       },
     },
@@ -26607,15 +24231,9 @@ DefineAbility({
   Description={
     Format="As a standard action, you can create a storm burst targeting any foe within 30 feet as a ranged touch attack. The storm burst deals 1d6+%1 points of nonlethal damage. In addition, the target is buffeted by winds and rain, causing it to take a -2 penalty on attack rolls for 1 round. You can use this ability %2 times per day",
     Arguments={
-      "DomainWeatherLVL/2",
-      "StormBurstTimes",
-      "PREVARGTEQ:DomainWeatherLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="StormBurstTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainWeatherLVL/2"),
+      Formula("StormBurstTimes"),
+      Formula("PREVARGTEQ:DomainWeatherLVL,2"),
     },
   },
   Bonuses={
@@ -26659,13 +24277,7 @@ DefineAbility({
   Description={
     Format="You can call down %1 bolts of lightning per day. You can call down as many bolts as you want with a single standard action, but no creature can be the target of more than one bolt and no two targets can be more than 30 feet apart. This ability otherwise functions as Call Lightning.",
     Arguments={
-      "WeatherLightningLordTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="WeatherLightningLordTimes",
-      InitialValue=Formula("0"),
+      Formula("WeatherLightningLordTimes"),
     },
   },
   Bonuses={
@@ -26751,15 +24363,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "WildEmpathyLVL",
-      },
-      Formula=Formula("DruidLVL"),
-    },
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -26767,6 +24370,15 @@ DefineAbility({
       Names={
         "Wild Empathy",
       },
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "WildEmpathyLVL",
+      },
+      Formula=Formula("DruidLVL"),
     },
   },
   Types={
@@ -26923,33 +24535,34 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Animal Companion ~ Standard Companions",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Special Ability" and (ability.Type == "NatureBondAnimalCompanion" or ability.Type == "NaturesBondAnimalCompanion")
+          end))
+        end,
+      },
+    },
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Animal Companion ~ Base",
+      },
+    },
+  },
   SourcePage="p.51",
   Conditions={
     function (character)
       return (character.Variables["Druid_CF_AnimalCompanion"] == 0)
     end,
-  },
-  Definitions={
-    {
-      Name="AnimalCompanionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AnimalCompanionMasterLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AnimalCompanionGranted",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CompanionDisable_AnimalCompanion",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CompanionMasterLVL_Druid",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -26986,29 +24599,6 @@ DefineAbility({
       },
     },
   },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Animal Companion ~ Standard Companions",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Special Ability" and (ability.Type == "NatureBondAnimalCompanion" or ability.Type == "NaturesBondAnimalCompanion")
-          end))
-        end,
-      },
-    },
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Animal Companion ~ Base",
-      },
-    },
-  },
   Types={
     "DruidClassFeatures",
     "SpecialQuality",
@@ -27024,28 +24614,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="AnimalCompanionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AnimalCompanionMasterLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AnimalCompanionGranted",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CompanionDisable_AnimalCompanion",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CompanionMasterLVL_Druid",
-      InitialValue=Formula("0"),
-    },
-  },
   Abilities={
     {
       Category="Internal",
@@ -27075,6 +24643,29 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Domains",
+      },
+    },
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Druid Domain ~ Base",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Special Ability" and (ability.Type == "NatureBondDruidDomain" or ability.Type == "NaturesBondDruidDomain")
+          end))
+        end,
+      },
+    },
+  },
   SourcePage="p.50",
   Conditions={
     function (character)
@@ -27116,29 +24707,6 @@ DefineAbility({
         "DomainLVL",
       },
       Formula=Formula("DruidLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Domains",
-      },
-    },
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Druid Domain ~ Base",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Special Ability" and (ability.Type == "NatureBondDruidDomain" or ability.Type == "NaturesBondDruidDomain")
-          end))
-        end,
-      },
     },
   },
   Types={
@@ -27183,36 +24751,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="DruidAirAllowed",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DruidAnimalAllowed",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DruidEarthAllowed",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DruidFireAllowed",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DruidPlantAllowed",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DruidWaterAllowed",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DruidWeatherAllowed",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 DefineAbility({
@@ -27230,24 +24768,6 @@ DefineAbility({
   },
   Description={
     Format="You can manipulate lightning, mist, and wind, traffic with air creatures, and are resistant to electricity damage.",
-  },
-  Definitions={
-    {
-      Name="DomainAirLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAirAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAirDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAirTimes",
-      InitialValue=Formula("0"),
-    },
   },
   Types={
     "DruidDomainSelection",
@@ -27333,24 +24853,6 @@ DefineAbility({
   Description={
     Format="You can speak with and befriend animals with ease. In addition, you treat Knowledge (Nature) as a class skill.",
   },
-  Definitions={
-    {
-      Name="DomainAnimalLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAnimalDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAnimalTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainAnimalAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Types={
     "DruidDomainSelection",
     "SpecialQuality",
@@ -27434,24 +24936,6 @@ DefineAbility({
   },
   Description={
     Format="You have mastery over earth, metal, and stone, can fire darts of acid, and command earth creatures.",
-  },
-  Definitions={
-    {
-      Name="DomainEarthLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEarthDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEarthTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainEarthAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Types={
     "DruidDomainSelection",
@@ -27537,24 +25021,6 @@ DefineAbility({
   Description={
     Format="You can call forth fire, command creatures of the inferno, and your flesh does not burn.",
   },
-  Definitions={
-    {
-      Name="DomainFireLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainFireDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainFireTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainFireAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Types={
     "DruidDomainSelection",
     "SpecialQuality",
@@ -27638,24 +25104,6 @@ DefineAbility({
   },
   Description={
     Format="You find solace in the green, can grow defensive thorns, and can communicate with plants.",
-  },
-  Definitions={
-    {
-      Name="DomainPlantLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainPlantDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainPlantTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainPlantAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Types={
     "DruidDomainSelection",
@@ -27741,24 +25189,6 @@ DefineAbility({
   Description={
     Format="You can manipulate water and mist and ice, conjure creatures of water, and resist cold.",
   },
-  Definitions={
-    {
-      Name="DomainWaterLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWaterDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWaterTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWaterAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Types={
     "DruidDomainSelection",
     "SpecialQuality",
@@ -27843,24 +25273,6 @@ DefineAbility({
   Description={
     Format="With power over storm and sky, you can call down the wrath of the gods upon the world below.",
   },
-  Definitions={
-    {
-      Name="DomainWeatherLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWeatherDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWeatherTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DomainWeatherAbilityTriggerLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Types={
     "DruidDomainSelection",
     "SpecialQuality",
@@ -27934,26 +25346,22 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Druid Wild Shape Progression",
+        "Druid Wild Shape Times",
+      },
+    },
+  },
   SourcePage="p.51",
   Description={
     Format="You can change shape at will for up to %1 hours",
     Arguments={
-      "WildShapeDuration",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,9],[PREVAREQ:Druid_CF_WildShapeUses20,0]",
-    },
-  },
-  Definitions={
-    {
-      Name="WildShapeTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="WildShapeDuration",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="WildShapeProgression",
-      InitialValue=Formula("0"),
+      Formula("WildShapeDuration"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,9],[PREVAREQ:Druid_CF_WildShapeUses20,0]"),
     },
   },
   Bonuses={
@@ -27963,16 +25371,6 @@ DefineAbility({
         "DruidWildShape",
       },
       Formula=Formula("DruidLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Druid Wild Shape Progression",
-        "Druid Wild Shape Times",
-      },
     },
   },
   Types={
@@ -27991,8 +25389,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Small or Medium animal.",
     Arguments={
-      "PREVAREQ:NoAnimalShape,0",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,1],[PREVARGTEQ:WildShapeAbilityLevel,1]",
+      Formula("PREVAREQ:NoAnimalShape,0"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,1],[PREVARGTEQ:WildShapeAbilityLevel,1]"),
     },
   },
 })
@@ -28005,8 +25403,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Tiny, Small, Medium or Large animal, or a Small elemental.",
     Arguments={
-      "PREMULT:2,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0]",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,2],[PREVARGTEQ:WildShapeAbilityLevel,2]",
+      Formula("PREMULT:2,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0]"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,2],[PREVARGTEQ:WildShapeAbilityLevel,2]"),
     },
   },
 })
@@ -28019,8 +25417,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Tiny, Small, Medium or Large animal.",
     Arguments={
-      "PREMULT:2,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1]",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,2],[PREVARGTEQ:WildShapeAbilityLevel,2]",
+      Formula("PREMULT:2,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1]"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,2],[PREVARGTEQ:WildShapeAbilityLevel,2]"),
     },
   },
 })
@@ -28033,8 +25431,8 @@ ModifyAbility({
   Description={
     Format="You can change into a Small elemental.",
     Arguments={
-      "PREMULT:2,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0]",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,2],[PREVARGTEQ:WildShapeAbilityLevel,2]",
+      Formula("PREMULT:2,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0]"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,2],[PREVARGTEQ:WildShapeAbilityLevel,2]"),
     },
   },
 })
@@ -28047,8 +25445,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Diminutive, Tiny, Small, Medium, Large or Huge animal, a Small or Medium elemental, or a Small or Medium plant creature.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,0]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,0]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]"),
     },
   },
 })
@@ -28061,8 +25459,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Diminutive, Tiny, Small, Medium, Large or Huge animal, or a Small or Medium elemental.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,1]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,1]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]"),
     },
   },
 })
@@ -28075,8 +25473,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Diminutive, Tiny, Small, Medium, Large or Huge animal, or a Small or Medium plant creature.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,0]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,0]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]"),
     },
   },
 })
@@ -28089,8 +25487,8 @@ ModifyAbility({
   Description={
     Format="You can change into a Small or Medium elemental, or a Small or Medium plant creature.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,0]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,0]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]"),
     },
   },
 })
@@ -28103,8 +25501,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Diminutive, Tiny, Small, Medium, Large or Huge animal.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,1]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,1]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]"),
     },
   },
 })
@@ -28117,8 +25515,8 @@ ModifyAbility({
   Description={
     Format="You can change into a Small or Medium elemental.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,1]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,1]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]"),
     },
   },
 })
@@ -28131,8 +25529,8 @@ ModifyAbility({
   Description={
     Format="You can change into a Small or Medium plant creature.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,0]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,0]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]"),
     },
   },
 })
@@ -28145,8 +25543,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Diminutive, Tiny, Small, Medium, Large or Huge animal, a Small, Medium or Large elemental, or a Small, Medium or Large plant creature.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,0]",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,0]"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]"),
     },
   },
 })
@@ -28159,8 +25557,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Diminutive, Tiny, Small, Medium, Large or Huge animal, or a Small, Medium or Large elemental.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,1]",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,1]"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]"),
     },
   },
 })
@@ -28173,8 +25571,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Diminutive, Tiny, Small, Medium, Large or Huge animal, or a Small, Medium or Large plant creature.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,0]",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,0]"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]"),
     },
   },
 })
@@ -28187,8 +25585,8 @@ ModifyAbility({
   Description={
     Format="You can change into a Small, Medium or Large elemental, or a Small, Medium or Large plant creature.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,0]",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,0]"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]"),
     },
   },
 })
@@ -28201,8 +25599,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Diminutive, Tiny, Small, Medium, Large or Huge animal.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,1]",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,1]"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]"),
     },
   },
 })
@@ -28215,8 +25613,8 @@ ModifyAbility({
   Description={
     Format="You can change into a Small, Medium or Large elemental.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,1]",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,1]"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]"),
     },
   },
 })
@@ -28229,8 +25627,8 @@ ModifyAbility({
   Description={
     Format="You can change into a Small, Medium or Large plant creature.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,0]",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,0]"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]"),
     },
   },
 })
@@ -28243,8 +25641,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Diminutive, Tiny, Small, Medium, Large or Huge animal, a Small, Medium, Large or Huge elemental, or a Small, Medium, Large or Huge plant creature.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,0]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,0]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]"),
     },
   },
 })
@@ -28257,8 +25655,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Diminutive, Tiny, Small, Medium, Large or Huge animal, or a Small, Medium, Large or Huge elemental.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,1]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,1]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]"),
     },
   },
 })
@@ -28271,8 +25669,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Diminutive, Tiny, Small, Medium, Large or Huge animal, or a Small, Medium, Large or Huge plant creature.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,0]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,0]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]"),
     },
   },
 })
@@ -28285,8 +25683,8 @@ ModifyAbility({
   Description={
     Format="You can change into a Small, Medium, Large or Huge elemental, or a Small, Medium, Large or Huge plant creature.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,0]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,0]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]"),
     },
   },
 })
@@ -28299,8 +25697,8 @@ ModifyAbility({
   Description={
     Format="You can change into any Diminutive, Tiny, Small, Medium, Large or Huge animal.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,1]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,0],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,1]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]"),
     },
   },
 })
@@ -28313,8 +25711,8 @@ ModifyAbility({
   Description={
     Format="You can change into a Small, Medium, Large or Huge elemental.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,1]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,0],[PREVAREQ:NoPlantShape,1]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]"),
     },
   },
 })
@@ -28327,8 +25725,8 @@ ModifyAbility({
   Description={
     Format="You can change into a Small, Medium, Large or Huge plant creature.",
     Arguments={
-      "PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,0]",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]",
+      Formula("PREMULT:3,[PREVAREQ:NoAnimalShape,1],[PREVAREQ:NoElementalShape,1],[PREVAREQ:NoPlantShape,0]"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]"),
     },
   },
 })
@@ -28341,8 +25739,8 @@ ModifyAbility({
   Description={
     Format="When changing into an animal, this functions as Beast Shape I",
     Arguments={
-      "PREVAREQ:NoAnimalShape,0",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,1],[PREVARGTEQ:WildShapeAbilityLevel,1]",
+      Formula("PREVAREQ:NoAnimalShape,0"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,1],[PREVARGTEQ:WildShapeAbilityLevel,1]"),
     },
   },
 })
@@ -28355,8 +25753,8 @@ ModifyAbility({
   Description={
     Format="When changing into an animal, this functions as Beast Shape II",
     Arguments={
-      "PREVAREQ:NoAnimalShape,0",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,2],[PREVARGTEQ:WildShapeAbilityLevel,2]",
+      Formula("PREVAREQ:NoAnimalShape,0"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,2],[PREVARGTEQ:WildShapeAbilityLevel,2]"),
     },
   },
 })
@@ -28369,8 +25767,8 @@ ModifyAbility({
   Description={
     Format="When changing into an animal, this functions as Beast Shape III",
     Arguments={
-      "PREVAREQ:NoAnimalShape,0",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]",
+      Formula("PREVAREQ:NoAnimalShape,0"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]"),
     },
   },
 })
@@ -28383,8 +25781,8 @@ ModifyAbility({
   Description={
     Format="When changing into a plant, this functions as Plant Shape I",
     Arguments={
-      "PREVAREQ:NoPlantShape,0",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]",
+      Formula("PREVAREQ:NoPlantShape,0"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]"),
     },
   },
 })
@@ -28397,8 +25795,8 @@ ModifyAbility({
   Description={
     Format="When changing into a plant, this functions as Plant Shape II",
     Arguments={
-      "PREVAREQ:NoPlantShape,0",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]",
+      Formula("PREVAREQ:NoPlantShape,0"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]"),
     },
   },
 })
@@ -28411,8 +25809,8 @@ ModifyAbility({
   Description={
     Format="When changing into a plant, this functions as Plant Shape III",
     Arguments={
-      "PREVAREQ:NoPlantShape,0",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]",
+      Formula("PREVAREQ:NoPlantShape,0"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]"),
     },
   },
 })
@@ -28425,8 +25823,8 @@ ModifyAbility({
   Description={
     Format="When changing into an elemental, this functions as Elemental Body I",
     Arguments={
-      "PREVAREQ:NoElementalShape,0",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,2],[PREVARGTEQ:WildShapeAbilityLevel,2]",
+      Formula("PREVAREQ:NoElementalShape,0"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,2],[PREVARGTEQ:WildShapeAbilityLevel,2]"),
     },
   },
 })
@@ -28439,8 +25837,8 @@ ModifyAbility({
   Description={
     Format="When changing into an elemental, this functions as Elemental Body II",
     Arguments={
-      "PREVAREQ:NoElementalShape,0",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]",
+      Formula("PREVAREQ:NoElementalShape,0"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,3],[PREVARGTEQ:WildShapeAbilityLevel,3]"),
     },
   },
 })
@@ -28453,8 +25851,8 @@ ModifyAbility({
   Description={
     Format="When changing into an elemental, this functions as Elemental Body III",
     Arguments={
-      "PREVAREQ:NoElementalShape,0",
-      "PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]",
+      Formula("PREVAREQ:NoElementalShape,0"),
+      Formula("PREMULT:2,[PREVAREQ:WildShapeProgression,4],[PREVARGTEQ:WildShapeAbilityLevel,4]"),
     },
   },
 })
@@ -28467,8 +25865,8 @@ ModifyAbility({
   Description={
     Format="When changing into an elemental, this functions as Elemental Body IV",
     Arguments={
-      "PREVAREQ:NoElementalShape,0",
-      "PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]",
+      Formula("PREVAREQ:NoElementalShape,0"),
+      Formula("PREMULT:2,[PREVARGTEQ:WildShapeProgression,5],[PREVARGTEQ:WildShapeAbilityLevel,5]"),
     },
   },
 })
@@ -28544,17 +25942,20 @@ DefineAbility({
       },
     },
   },
+  Abilities={
+    {
+      Category="Ability Focus",
+      Nature="AUTOMATIC",
+      Names={
+        "Poison",
+      },
+    },
+  },
   SourcePage="p.194",
   Description={
     Format="Bite--injury; save Fort DC %1; onset 1 minute; frequency 1/hour for 6 hours; effect 1d2 Dexterity damage; cure 1 save.",
     Arguments={
-      "PoisonSaveDC",
-    },
-  },
-  Definitions={
-    {
-      Name="PoisonSaveDC",
-      InitialValue=Formula("0"),
+      Formula("PoisonSaveDC"),
     },
   },
   Bonuses={
@@ -28570,15 +25971,6 @@ DefineAbility({
             return ability.Category == "FEAT" and (ability.Name == "Ability Focus (Poison)")
           end)
         end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Ability Focus",
-      Nature="AUTOMATIC",
-      Names={
-        "Poison",
       },
     },
   },
@@ -28630,21 +26022,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="DruidWildShape",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "WildShapeDuration",
-      },
-      Formula=Formula("DruidWildShape"),
-    },
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -28654,6 +26031,15 @@ DefineAbility({
         "Druid Wild Shape Times",
         "Wild Shape",
       },
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "WildShapeDuration",
+      },
+      Formula=Formula("DruidWildShape"),
     },
   },
   Types={
@@ -28669,12 +26055,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="WildShapeTimes",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -28703,12 +26083,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="WildShapeProgression",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -28736,12 +26110,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WildShapeAbilityLevel",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -29240,12 +26608,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="FighterWeaponQualifyLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -29276,16 +26638,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="WeapSpecQualify",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="WeaponSpecQualifyLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -29313,16 +26665,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="DisruptiveQualify",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DisruptiveQualifyLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -29350,16 +26692,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="GreatShieldFocusQualify",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="GreatShieldFocusQualifyLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -29387,16 +26719,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="GreatWeapFocusQualify",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="GreatWeapFocusQualifyLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -29424,16 +26746,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="SpellbreakerQualify",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SpellbreakerQualifyLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -29461,16 +26773,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="GreatWeapSpecQualify",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="GreatWeapSpecQualifyLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -29498,16 +26800,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="PenetratingStrikeQualify",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="PenetratingStrikeQualifyLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -29535,16 +26827,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="CriticalMasteryQualify",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CriticalMasteryQualifyLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -29572,16 +26854,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="GreatPenetratingStrikeQualify",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="GreatPenetratingStrikeQualifyLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -29622,17 +26894,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus to Will saves against fear effects.",
     Arguments={
-      "Bravery",
-    },
-  },
-  Definitions={
-    {
-      Name="Bravery",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="BraveryLVL",
-      InitialValue=Formula("0"),
+      Formula("Bravery"),
     },
   },
   Bonuses={
@@ -29661,25 +26923,25 @@ DefineAbility({
   UnencumberedMove={
     "MediumArmor",
   },
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Armor Training ~ Heavy Armor",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["ArmorTrainingLVL"] >= 7)
+        end,
+      },
+    },
+  },
   SourcePage="p.55",
   Description={
     Format="You are more maneuverable while wearing armor. Whenever you are wearing armor, you reduce the armor check penalty by %1 and increase the maximum Dexterity bonus allowed by your armor by +%1",
     Arguments={
-      "ArmorTrainingTier",
-    },
-  },
-  Definitions={
-    {
-      Name="ArmorTraining",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ArmorTrainingLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ArmorTrainingTier",
-      InitialValue=Formula("0"),
+      Formula("ArmorTrainingTier"),
     },
   },
   Bonuses={
@@ -29814,20 +27076,6 @@ DefineAbility({
       Formula=Formula("min((ArmorTrainingLVL+1)/4,4)"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Armor Training ~ Heavy Armor",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["ArmorTrainingLVL"] >= 7)
-        end,
-      },
-    },
-  },
   Types={
     "FighterClassFeatures",
     "SpecialQuality",
@@ -29857,14 +27105,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   SourcePage="p.56",
-  Description={
-    Format="You gain DR 5/-- whenever you are wearing armor or using a shield.",
-  },
-  Types={
-    "FighterClassFeatures",
-    "SpecialQuality",
-    "Extraordinary",
-  },
   DamageReduction={
     Value="5/-",
     Conditions={
@@ -29872,6 +27112,14 @@ DefineAbility({
         return ((character.HasEquipped(function (item) return item.IsType("Armor") end)) + (character.HasEquipped(function (item) return item.IsType("Shield") end))) >= 1
       end,
     },
+  },
+  Description={
+    Format="You gain DR 5/-- whenever you are wearing armor or using a shield.",
+  },
+  Types={
+    "FighterClassFeatures",
+    "SpecialQuality",
+    "Extraordinary",
   },
 })
 
@@ -29886,12 +27134,11 @@ DefineAbility({
       return ((character.IsProficientWith(weapon)))
     end),
   },
-  Selections=nil,
   SourcePage="p.56",
   Description={
     Format="Any attacks made a %1 automatically confirm all critical threats and have their damage multiplier increased by 1 (x2 becomes x3, for example). In addition, you cannot be disarmed while wielding a weapon of this type.",
     Arguments={
-      "%CHOICE",
+      Formula("%CHOICE"),
     },
   },
   Bonuses={
@@ -30462,18 +27709,8 @@ DefineAbility({
   Description={
     Format="Thrown Weapons +%1",
     Arguments={
-      "WeaponTrainingThrown",
-      "PREVARGT:WeaponTrainingThrown,0",
-    },
-  },
-  Definitions={
-    {
-      Name="WeaponTrainingBase",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="FighterWeaponTrainingLVL",
-      InitialValue=Formula("0"),
+      Formula("WeaponTrainingThrown"),
+      Formula("PREVARGT:WeaponTrainingThrown,0"),
     },
   },
   Bonuses={
@@ -30545,12 +27782,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingTierOne",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -30567,12 +27798,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingTierTwo",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -30589,12 +27814,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingTierThree",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -30611,12 +27830,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingTierFour",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -30633,12 +27846,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingAxes",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30646,12 +27853,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingBladesHeavy",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30659,12 +27860,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingBladesLight",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30672,12 +27867,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingBows",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30685,12 +27874,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingClose",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30698,12 +27881,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingCrossbows",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30711,12 +27888,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingDouble",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30724,12 +27895,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingFlails",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30737,12 +27902,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingHammers",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30750,12 +27909,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingMonk",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30763,12 +27916,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingNatural",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30776,12 +27923,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingPoleArms",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30789,12 +27930,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingSpears",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -30802,12 +27937,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="WeaponTrainingThrown",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -34304,16 +31433,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeatLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="MonkBonusFeatLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -34347,21 +31466,7 @@ DefineAbility({
   Description={
     Format="When unarmored and unencumbered, you add +%1 to your AC and your CMD. These bonuses apply even against touch attacks or when you are flat-footed. You lose these bonuses when you are immobilized or helpless, when you wear any armor, when you carry a shield, or when you carry a medium or heavy load.",
     Arguments={
-      "MonkACBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="MonkACBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="MonkACLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="MonkACWisBonus",
-      InitialValue=Formula("0"),
+      Formula("MonkACBonus"),
     },
   },
   Bonuses={
@@ -34453,15 +31558,18 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Stunning Fist",
+      },
+    },
+  },
   SourcePage="p.59",
   Description={
     Format="You gain Stunning Fist as a bonus feat.",
-  },
-  Definitions={
-    {
-      Name="StunningFistMonkLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -34470,15 +31578,6 @@ DefineAbility({
         "StunningFistMonkLVL",
       },
       Formula=Formula("MonkLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Stunning Fist",
-      },
     },
   },
   Types={
@@ -34499,17 +31598,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 feet enhancement bonus to your land speed. If you wear armor or carry a medium or heavy load, you lose this extra speed.",
     Arguments={
-      "MonkFastMovementBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="MonkFastMovementLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="MonkFastMovementBonus",
-      InitialValue=Formula("0"),
+      Formula("MonkFastMovementBonus"),
     },
   },
   Bonuses={
@@ -34557,16 +31646,6 @@ DefineAbility({
   SourcePage="p.59",
   Description={
     Format="A monk uses his monk level in place of his base attack bonus when calculating his combat maneuver bonus. Base attack bonuses granted from other classes are unaffected and are added normally.",
-  },
-  Definitions={
-    {
-      Name="ManeuverTrainingLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ManeuverTrainingBAB",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -34629,11 +31708,20 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Ki Pool Tracker",
+      },
+    },
+  },
   SourcePage="p.59",
   Description={
     Format="You have a pool of %1 ki points, supernatural energy he can use to accomplish amazing feats.",
     Arguments={
-      "KiPoints",
+      Formula("KiPoints"),
     },
   },
   Bonuses={
@@ -34643,15 +31731,6 @@ DefineAbility({
         "KiPoolLVL",
       },
       Formula=Formula("MonkLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Ki Pool Tracker",
-      },
     },
   },
   Types={
@@ -34673,16 +31752,6 @@ DefineAbility({
   SourcePage="p.59",
   Description={
     Format="You can use a nearby wall to slow your descent.",
-  },
-  Definitions={
-    {
-      Name="SlowFall",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SlowFallLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -34718,17 +31787,7 @@ DefineAbility({
   Description={
     Format="You can adds +%1 to all Acrobatics checks made to jump, both for vertical jumps and horizontal jumps. In addition, you always count as having a running start when making jump checks using Acrobatics. By spending 1 point from your ki pool as a swift action, you gain a +20 bonus on Acrobatics checks made to jump for 1 round.",
     Arguments={
-      "HighJumpBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="HighJumpLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="HighJumpBonus",
-      InitialValue=Formula("0"),
+      Formula("HighJumpBonus"),
     },
   },
   Bonuses={
@@ -34768,10 +31827,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.59",
-  Description={
-    Format="You are immune to all diseases, including supernatural and magical diseases.",
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -34780,6 +31835,10 @@ DefineAbility({
         "Immunity to Disease",
       },
     },
+  },
+  SourcePage="p.59",
+  Description={
+    Format="You are immune to all diseases, including supernatural and magical diseases.",
   },
   Types={
     "MonkClassFeatures",
@@ -34799,17 +31858,7 @@ DefineAbility({
   Description={
     Format="You can heal your own wounds as a standard action. You can heal %1 hit points of damage by using 2 points from your ki pool.",
     Arguments={
-      "WholenessOfBody",
-    },
-  },
-  Definitions={
-    {
-      Name="WholenessOfBody",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="WholenessOfBodyLVL",
-      InitialValue=Formula("0"),
+      Formula("WholenessOfBody"),
     },
   },
   Bonuses={
@@ -34843,10 +31892,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.59",
-  Description={
-    Format="You are immune to poisons of all kinds.",
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -34855,6 +31900,10 @@ DefineAbility({
         "Immunity to Poison",
       },
     },
+  },
+  SourcePage="p.59",
+  Description={
+    Format="You are immune to poisons of all kinds.",
   },
   Types={
     "MonkClassFeatures",
@@ -34874,17 +31923,7 @@ DefineAbility({
   Description={
     Format="You can slip magically between spaces, as if using the spell Dimension Door. Using this Ability is a move action that consumes 2 points from your Ki pool. Your caster level is %1. You cannot take other creatures with you when you use this ability.",
     Arguments={
-      "AbundantStepCasterLVL",
-    },
-  },
-  Definitions={
-    {
-      Name="AbundantStepCasterLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AbundantStepLVL",
-      InitialValue=Formula("0"),
+      Formula("AbundantStepCasterLVL"),
     },
   },
   Bonuses={
@@ -34920,20 +31959,11 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   SourcePage="p.59",
+  SpellResistance="DiamondSoul",
   Description={
     Format="You gain spell resistance %1. In order to affect the monk with a spell, a spellcaster must get a result on a caster level check (1d20 + caster level) that equals or exceeds the monk's spell resistance.",
     Arguments={
-      "DiamondSoul",
-    },
-  },
-  Definitions={
-    {
-      Name="DiamondSoul",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DiamondSoulLVL",
-      InitialValue=Formula("0"),
+      Formula("DiamondSoul"),
     },
   },
   Bonuses={
@@ -34958,7 +31988,6 @@ DefineAbility({
     "Extraordinary",
     "Diamond Soul",
   },
-  SpellResistance="DiamondSoul",
 })
 
 DefineAbility({
@@ -34971,22 +32000,8 @@ DefineAbility({
   Description={
     Format="You can set up vibrations within the body of another creature that can thereafter be fatal if you so desire. You can use this attack once per day, and you must announce your intent before making your attack roll. Creatures immune to critical hits cannot be affected. Otherwise, if you strike successfully and the target takes damage from the blow, the quivering palm attack succeeds. Thereafter, you can try to slay the victim at any later time, as long as the attempt is made within a %1 days. To make such an attempt, you merely will the target to die (a free action), and unless the target makes a Fortitude saving throw (DC %2), it dies. If the saving throw is successful, the target is no longer in danger from that particular quivering palm attack, but it may still be affected by another one at a later time. You can have no more than 1 quivering palm attack at one time. If you use quivering palm while another is still in effect, the previous effect is negated.",
     Arguments={
-      "QuiveringPalmDuration",
-      "QuiveringPalmDC",
-    },
-  },
-  Definitions={
-    {
-      Name="QuiveringPalmDuration",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="QuiveringPalmDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="QuiveringPalmLVL",
-      InitialValue=Formula("0"),
+      Formula("QuiveringPalmDuration"),
+      Formula("QuiveringPalmDC"),
     },
   },
   Bonuses={
@@ -35066,6 +32081,9 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   SourcePage="p.60",
+  DamageReduction={
+    Value="10/Chaotic",
+  },
   Description={
     Format="You are treated as an Outsider for the purpose of spells and magical effects. Additionally gain Damage Reduction 10/Chaotic. Unlike other outsiders, you can still be brought back from the dead as if you were a member of your previous creature type.",
   },
@@ -35073,9 +32091,6 @@ DefineAbility({
     "MonkClassFeatures",
     "SpecialQuality",
     "Perfect Self",
-  },
-  DamageReduction={
-    Value="10/Chaotic",
   },
 })
 
@@ -35154,10 +32169,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.58",
-  Description={
-    Format="At 1st level, a monk gains Improved Unarmed Strike as a bonus feat. A monk's attacks may be with fist, elbows, knees, and feet. This means that a monk may make unarmed strikes with his hands full. There is no such thing as an off-hand attack for a monk striking unarmed. A monk may thus apply his full Strength bonus on damage rolls for all his unarmed strikes. Usually a monk's unarmed strikes deal lethal damage, but he can choose to deal nonlethal damage instead with no penalty on his attack roll. He has the same choice to deal lethal or nonlethal damage while grappling. A monk's unarmed strike is treated as both a manufactured weapon and a natural weapon for the purpose of spells and effects that enhance or improve either manufactured weapons or natural weapons. A monk also deals more damage with his unarmed strikes than a normal person would, as shown above on Table 3-10. The unarmed damage values listed on Table 3-10 is for Medium monks. A Small monk deals less damage than the amount given there with his unarmed attacks, while a Large monk deals more damage; see Small or Large Monk Unarmed Damage on the table given below.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -35173,6 +32184,10 @@ DefineAbility({
         "Monk ~ Unarmed Damage",
       },
     },
+  },
+  SourcePage="p.58",
+  Description={
+    Format="At 1st level, a monk gains Improved Unarmed Strike as a bonus feat. A monk's attacks may be with fist, elbows, knees, and feet. This means that a monk may make unarmed strikes with his hands full. There is no such thing as an off-hand attack for a monk striking unarmed. A monk may thus apply his full Strength bonus on damage rolls for all his unarmed strikes. Usually a monk's unarmed strikes deal lethal damage, but he can choose to deal nonlethal damage instead with no penalty on his attack roll. He has the same choice to deal lethal or nonlethal damage while grappling. A monk's unarmed strike is treated as both a manufactured weapon and a natural weapon for the purpose of spells and effects that enhance or improve either manufactured weapons or natural weapons. A monk also deals more damage with his unarmed strikes than a normal person would, as shown above on Table 3-10. The unarmed damage values listed on Table 3-10 is for Medium monks. A Small monk deals less damage than the amount given there with his unarmed attacks, while a Large monk deals more damage; see Small or Large Monk Unarmed Damage on the table given below.",
   },
   Types={
     "MonkClassFeatures",
@@ -35649,12 +32664,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FlurryLVL",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35662,12 +32671,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FlurryExtraAttacks",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35675,12 +32678,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FlurryBABBonus",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35688,12 +32685,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FlurryBAB",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35701,12 +32692,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FlurryAttackBonus",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35714,12 +32699,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FlurryAttacks",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35727,12 +32706,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FAB",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35740,12 +32713,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FAB_1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35753,12 +32720,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FAB_2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35766,12 +32727,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FAB_3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35779,12 +32734,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FAB_4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35792,12 +32741,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FAB_5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35805,12 +32748,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FAB_6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35818,12 +32755,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FAB_7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35831,12 +32762,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FlurryBABRaw",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -35844,12 +32769,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="FlurryDiff",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 DefineAbility({
@@ -35857,37 +32776,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="KiPoints",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="KiPoolLVL",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="ABILITYPOOL",
-      Variables={
-        "Ki Pool Stat Choice",
-      },
-      Formula=Formula("1"),
-      Conditions={
-        function (character)
-          return (character.Variables["KiPool"] >= 2)
-        end,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "KiPoints",
-      },
-      Formula=Formula("KiPoolLVL/2"),
-    },
-  },
   Abilities={
     {
       Category="Internal",
@@ -35926,6 +32814,27 @@ DefineAbility({
       },
     },
   },
+  Bonuses={
+    {
+      Category="ABILITYPOOL",
+      Variables={
+        "Ki Pool Stat Choice",
+      },
+      Formula=Formula("1"),
+      Conditions={
+        function (character)
+          return (character.Variables["KiPool"] >= 2)
+        end,
+      },
+    },
+    {
+      Category="VAR",
+      Variables={
+        "KiPoints",
+      },
+      Formula=Formula("KiPoolLVL/2"),
+    },
+  },
 })
 
 ModifyAbility({
@@ -35933,12 +32842,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="KiPool",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 DefineAbility({
@@ -36021,8 +32924,8 @@ ModifyAbility({
   Description={
     Format="You can make a flurry of blows as a full-attack action. When doing so, you may make one additional attack, taking a -2 penalty on all of your attacks, as if using the Two-Weapon Fighting feat. These attacks can be any combination of unarmed strikes and attacks with a monk speciak weapon (you do not need to use two weapons to utlilize this ability). For the purpose of these attacks, your base attack bonus is equal to your monk level. For all other purposes, such as qualifying for a feat or a prestige class, you use your normal base attack bonus.",
     Arguments={
-      "PREVARGTEQ:FlurryLVL,1",
-      "PREVARLT:FlurryLVL,8",
+      Formula("PREVARGTEQ:FlurryLVL,1"),
+      Formula("PREVARLT:FlurryLVL,8"),
     },
   },
 })
@@ -36035,8 +32938,8 @@ ModifyAbility({
   Description={
     Format="You can make a flurry of blows as a full-attack action. When doing so, you may make two additional attacks using any combination of unarmed strikes or attack with a special monk weapon (kama, nunchaku, quarterstaff, sai, shuriken, and siangham) as if using the Two-Weapon Fighting and Improved Two-Weapon Fighting feats. For the purpose of these attacks, your base attack bonus is equal to your monk level. For all other purposes, such as qualifying for a feat or a prestige class, you use your normal base attack bonus.",
     Arguments={
-      "PREVARGTEQ:FlurryLVL,8",
-      "PREVARLT:FlurryLVL,15",
+      Formula("PREVARGTEQ:FlurryLVL,8"),
+      Formula("PREVARLT:FlurryLVL,15"),
     },
   },
 })
@@ -36049,7 +32952,7 @@ ModifyAbility({
   Description={
     Format="You can make a flurry of blows as a full-attack action. When doing so, you may make three additional attacks using any combination of unarmed strikes or attack with a special monk weapon (kama, nunchaku, quarterstaff, sai, shuriken, and siangham) as if using the Two-Weapon Fighting, Improved Two-Weapon Fighting, and Greater Two-Weapon Fighting feats. For the purpose of these attacks, your base attack bonus is equal to your monk level. For all other purposes, such as qualifying for a feat or a prestige class, you use your normal base attack bonus.",
     Arguments={
-      "PREVARGTEQ:FlurryLVL,15",
+      Formula("PREVARGTEQ:FlurryLVL,15"),
     },
   },
 })
@@ -36062,8 +32965,8 @@ ModifyAbility({
   Description={
     Format="You gain Stunning Fist as a bonus feat. You can choose to make the target of your Stunning Fist fatigued. This condition replaces stunning the target for 1 round, and a successful saving throw still negates the effect. You must choose which condition will apply before the attack roll is made. These effects do not stack with themselves, but additional hits do increase the duration.",
     Arguments={
-      "PREVARGTEQ:StunningFistMonkLVL,4",
-      "PREVARLT:StunningFistMonkLVL,8",
+      Formula("PREVARGTEQ:StunningFistMonkLVL,4"),
+      Formula("PREVARLT:StunningFistMonkLVL,8"),
     },
   },
 })
@@ -36076,8 +32979,8 @@ ModifyAbility({
   Description={
     Format="You gain Stunning Fist as a bonus feat. You can choose to make the target of your Stunning Fist fatigued, or sickened for 1 minute. This condition replaces stunning the target for 1 round, and a successful saving throw still negates the effect. You must choose which condition will apply before the attack roll is made. These effects do not stack with themselves, but additional hits do increase the duration.",
     Arguments={
-      "PREVARGTEQ:StunningFistMonkLVL,8",
-      "PREVARLT:StunningFistMonkLVL,12",
+      Formula("PREVARGTEQ:StunningFistMonkLVL,8"),
+      Formula("PREVARLT:StunningFistMonkLVL,12"),
     },
   },
 })
@@ -36090,8 +32993,8 @@ ModifyAbility({
   Description={
     Format="You gain Stunning Fist as a bonus feat. You can choose to make the target of your Stunning Fist fatigued, sickened for 1 minute, or staggered for 1d6+1 rounds. This condition replaces stunning the target for 1 round, and a successful saving throw still negates the effect. You must choose which condition will apply before the attack roll is made. These effects do not stack with themselves, but additional hits do increase the duration.",
     Arguments={
-      "PREVARGTEQ:StunningFistMonkLVL,12",
-      "PREVARLT:StunningFistMonkLVL,16",
+      Formula("PREVARGTEQ:StunningFistMonkLVL,12"),
+      Formula("PREVARLT:StunningFistMonkLVL,16"),
     },
   },
 })
@@ -36104,8 +33007,8 @@ ModifyAbility({
   Description={
     Format="You gain Stunning Fist as a bonus feat. You can choose to make the target of your Stunning Fist fatigued, sickened for 1 minute, staggered for 1d6+1 rounds, or permanently blinded or deafened. This condition replaces stunning the target for 1 round, and a successful saving throw still negates the effect. You must choose which condition will apply before the attack roll is made. These effects do not stack with themselves, but additional hits do increase the duration.",
     Arguments={
-      "PREVARGTEQ:MonkStunningFistLVL,16",
-      "PREVARLT:StunningFistMonkLVL,20",
+      Formula("PREVARGTEQ:MonkStunningFistLVL,16"),
+      Formula("PREVARLT:StunningFistMonkLVL,20"),
     },
   },
 })
@@ -36118,7 +33021,7 @@ ModifyAbility({
   Description={
     Format="You gain Stunning Fist as a bonus feat. You can choose to make the target of your Stunning Fist fatigued, sickened for 1 minute, staggered for 1d6+1 rounds, permanently blinded or deafened, or paralyzed for 1d6+1 rounds. This condition replaces stunning the target for 1 round, and a successful saving throw still negates the effect. You must choose which condition will apply before the attack roll is made. These effects do not stack with themselves, but additional hits do increase the duration.",
     Arguments={
-      "PREVARGTEQ:StunningFistMonkLVL,20",
+      Formula("PREVARGTEQ:StunningFistMonkLVL,20"),
     },
   },
 })
@@ -36128,12 +33031,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="KiPoolProgression",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36237,8 +33134,8 @@ ModifyAbility({
   Description={
     Format="You have a pool of %1 ki points, supernatural energy you can use to accomplish amazing feats. As long as you have at least 1 point in your ki pool, you can make a ki strike. Ki Strike allows your unarmed attacks to be treated as magic weapons for the purpose of overcoming damage reduction. By spending 1 point from your ki pool, you can make one additional attack at your highest attack bonus when making a Flurry of Blows attack. In addition, you can spend 1 point to increase your speed by 20 feet for 1 round. Finally, you can spend 1 point from your ki pool to give yourself a +4 dodge bonus to AC for 1 round. Each use of these powers is activated as a swift action. The ki pool is replenished after 8 hours of rest or meditation; these hours do not need to be consecutive.",
     Arguments={
-      "KiPoints",
-      "PREVAREQ:KiPoolProgression,1",
+      Formula("KiPoints"),
+      Formula("PREVAREQ:KiPoolProgression,1"),
     },
   },
 })
@@ -36251,8 +33148,8 @@ ModifyAbility({
   Description={
     Format="You have a pool of %1 ki points, supernatural energy you can use to accomplish amazing feats. As long as you have at least 1 point in your ki pool, you can make a ki strike. Ki Strike allows your unarmed attacks to be treated as magic, cold iron and silver weapons for the purpose of overcoming damage reduction. By spending 1 point from your ki pool, you can make one additional attack at your highest attack bonus when making a Flurry of Blows attack. In addition, you can spend 1 point to increase your speed by 20 feet for 1 round. Finally, you can spend 1 point from your ki pool to give yourself a +4 dodge bonus to AC for 1 round. Each use of these powers is activated as a swift action. The ki pool is replenished after 8 hours of rest or meditation; these hours do not need to be consecutive.",
     Arguments={
-      "KiPoints",
-      "PREVAREQ:KiPoolProgression,2",
+      Formula("KiPoints"),
+      Formula("PREVAREQ:KiPoolProgression,2"),
     },
   },
 })
@@ -36265,8 +33162,8 @@ ModifyAbility({
   Description={
     Format="You have a pool of %1 ki points, supernatural energy you can use to accomplish amazing feats. As long as you have at least 1 point in your ki pool, you can make a ki strike. Ki strike allows your unarmed attacks to be treated as magic, cold iron, silver and lawful weapons for the purpose of overcoming damage reduction. By spending 1 point from your ki pool, you can make one additional attack at your highest attack bonus when making a Flurry of Blows attack. In addition, you can spend 1 point to increase your speed by 20 feet for 1 round. Finally, you can spend 1 point from your ki pool to give yourself a +4 dodge bonus to AC for 1 round. Each use of these powers is activated as a swift action. The ki pool is replenished after 8 hours of rest or meditation; these hours do not need to be consecutive.",
     Arguments={
-      "KiPoints",
-      "PREVAREQ:KiPoolProgression,3",
+      Formula("KiPoints"),
+      Formula("PREVAREQ:KiPoolProgression,3"),
     },
   },
 })
@@ -36279,8 +33176,8 @@ ModifyAbility({
   Description={
     Format="You have a pool of %1 ki points, supernatural energy you can use to accomplish amazing feats. As long as you have at least 1 point in your ki pool, you can make a ki strike. Ki strike allows your unarmed attacks to be treated as magic, cold iron, silver, lawful, and adamantine weapons for the purpose of overcoming damage reduction and bypassing hardness. By spending 1 point from your ki pool, you can make one additional attack at your highest attack bonus when making a Flurry of Blows attack. In addition, you can spend 1 point to increase your speed by 20 feet for 1 round. Finally, you can spend 1 point from your ki pool to give yourself a +4 dodge bonus to AC for 1 round. Each use of these powers is activated as a swift action. The ki pool is replenished after 8 hours of rest or meditation; these hours do not need to be consecutive.",
     Arguments={
-      "KiPoints",
-      "PREVAREQ:KiPoolProgression,4",
+      Formula("KiPoints"),
+      Formula("PREVAREQ:KiPoolProgression,4"),
     },
   },
 })
@@ -36293,8 +33190,8 @@ ModifyAbility({
   Description={
     Format="If you are within arm's reach of a wall, you can use it to slow your descent. You take damage as if the fall were %1 feet shorter than it actually is.",
     Arguments={
-      "SlowFall",
-      "PREVARLT:SlowFallLVL,20",
+      Formula("SlowFall"),
+      Formula("PREVARLT:SlowFallLVL,20"),
     },
   },
 })
@@ -36307,7 +33204,7 @@ ModifyAbility({
   Description={
     Format="You can use a nearby wall to slow your descent and fall any distance without harm.",
     Arguments={
-      "PREVAREQ:SlowFallLVL,20",
+      Formula("PREVAREQ:SlowFallLVL,20"),
     },
   },
 })
@@ -36338,12 +33235,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeatCount",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -36504,12 +33395,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_CatchOffGuard",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36517,12 +33402,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_CombatReflexes",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36530,12 +33409,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_DeflectArrows",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36543,12 +33416,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_Dodge",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36556,12 +33423,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_ImprovedGrapple",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36569,12 +33430,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_ScorpionStyle",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36582,12 +33437,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_ThrowAnything",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36595,12 +33444,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_GorgonsFist",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36608,12 +33451,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_ImprovedBullRush",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36621,12 +33458,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_ImprovedDisarm",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36634,12 +33465,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_ImprovedFeint",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36647,12 +33472,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_ImprovedTrip",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36660,12 +33479,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_Mobility",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36673,12 +33486,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_ImprovedCritical",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36686,12 +33493,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_MedusasWrath",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36699,12 +33500,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_SnatchArrows",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -36712,12 +33507,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="MonkBonusFeat_SpringAttack",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 DefineAbility({
@@ -37090,6 +33879,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Catch Off-Guard",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37103,15 +33901,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_CatchOffGuard"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Catch Off-Guard",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37123,6 +33912,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Combat Reflexes",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37136,15 +33934,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_CombatReflexes"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Combat Reflexes",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37156,6 +33945,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Deflect Arrows",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37169,15 +33967,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_DeflectArrows"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Deflect Arrows",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37189,6 +33978,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Dodge",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37202,15 +34000,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_Dodge"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Dodge",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37222,6 +34011,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Improved Grapple",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37235,15 +34033,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_ImprovedGrapple"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Improved Grapple",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37255,6 +34044,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Scorpion Style",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37268,15 +34066,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_ScorpionStyle"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Scorpion Style",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37288,6 +34077,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Throw Anything",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37301,15 +34099,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_ThrowAnything"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Throw Anything",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37321,6 +34110,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Gorgon's Fist",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37334,15 +34132,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_GorgonsFist"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Gorgon's Fist",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37354,6 +34143,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Improved Bull Rush",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37367,15 +34165,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_ImprovedBullRush"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Improved Bull Rush",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37387,6 +34176,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Improved Disarm",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37400,15 +34198,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_ImprovedDisarm"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Improved Disarm",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37420,6 +34209,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Improved Feint",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37433,15 +34231,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_ImprovedFeint"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Improved Feint",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37453,6 +34242,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Improved Trip",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37466,15 +34264,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_ImprovedTrip"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Improved Trip",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37486,6 +34275,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Mobility",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37498,15 +34296,6 @@ DefineAbility({
     function (character)
       return (character.Variables["MonkBonusFeat_Mobility"] >= 1)
     end,
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Mobility",
-      },
-    },
   },
   Types={
     "MonkBonusFeat",
@@ -37524,7 +34313,6 @@ DefineAbility({
       return ((character.IsProficientWith(weapon)))
     end),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return (character.Variables["MonkBonusFeatLVL"] >= 10)
@@ -37558,6 +34346,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Medusa's Wrath",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37571,15 +34368,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_MedusasWrath"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Medusa's Wrath",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37591,6 +34379,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Snatch Arrows",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37604,15 +34401,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_SnatchArrows"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Snatch Arrows",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37624,6 +34412,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="VIRTUAL",
+      Names={
+        "Spring Attack",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -37637,15 +34434,6 @@ DefineAbility({
       return (character.Variables["MonkBonusFeat_SpringAttack"] >= 1)
     end,
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="VIRTUAL",
-      Names={
-        "Spring Attack",
-      },
-    },
-  },
   Types={
     "MonkBonusFeat",
   },
@@ -37656,18 +34444,78 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
+  Abilities={
     {
-      Name="MonkUnarmedDamageProgression",
-      InitialValue=Formula("0"),
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Monk Unarmed Damage LVL 1",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["MonkUnarmedDamageProgression"] == 0)
+        end,
+      },
     },
     {
-      Name="MonkUnarmedDamageLVL",
-      InitialValue=Formula("0"),
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Monk Unarmed Damage LVL 4",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["MonkUnarmedDamageProgression"] == 1)
+        end,
+      },
     },
     {
-      Name="UDAMAttackSize",
-      InitialValue=Formula("0"),
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Monk Unarmed Damage LVL 8",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["MonkUnarmedDamageProgression"] == 2)
+        end,
+      },
+    },
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Monk Unarmed Damage LVL 12",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["MonkUnarmedDamageProgression"] == 3)
+        end,
+      },
+    },
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Monk Unarmed Damage LVL 16",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["MonkUnarmedDamageProgression"] == 4)
+        end,
+      },
+    },
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Monk Unarmed Damage LVL 20",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["MonkUnarmedDamageProgression"] == 5)
+        end,
+      },
     },
   },
   Bonuses={
@@ -37790,80 +34638,6 @@ DefineAbility({
       Conditions={
         function (character)
           return character.BaseSize == "C"
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Monk Unarmed Damage LVL 1",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["MonkUnarmedDamageProgression"] == 0)
-        end,
-      },
-    },
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Monk Unarmed Damage LVL 4",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["MonkUnarmedDamageProgression"] == 1)
-        end,
-      },
-    },
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Monk Unarmed Damage LVL 8",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["MonkUnarmedDamageProgression"] == 2)
-        end,
-      },
-    },
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Monk Unarmed Damage LVL 12",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["MonkUnarmedDamageProgression"] == 3)
-        end,
-      },
-    },
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Monk Unarmed Damage LVL 16",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["MonkUnarmedDamageProgression"] == 4)
-        end,
-      },
-    },
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Monk Unarmed Damage LVL 20",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["MonkUnarmedDamageProgression"] == 5)
         end,
       },
     },
@@ -40596,6 +37370,7 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  SourcePage="p.60",
   SpellLikeAbilities={
     {
       Name="Detect Evil",
@@ -40606,15 +37381,8 @@ DefineAbility({
       CasterLevel="DetectEvilLVL",
     },
   },
-  SourcePage="p.60",
   Description={
     Format="At will, you can use Detect Evil, as the Spell. You can, as a move action, concentrate on a single individual or item within 60 feet and determine if it is evil, learning the strength of its aura as if having studied it for 3 rounds. While focusing on one individual or object, you do not detect evil in any other object or individual within range.",
-  },
-  Definitions={
-    {
-      Name="DetectEvilLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -40656,33 +37424,11 @@ DefineAbility({
   Description={
     Format="You can call out to the powers of good to aid you in your struggle against evil %1 times per day. As a swift action, you choose one target within sight to smite. If this target is evil, you add +%2 to your attack rolls and +%3 to all damage rolls made against the target of your smite. If the target of Smite Evil is an outsider with the evil subtype, an evil-aligned dragon, or an undead creature, the bonus to damage on the first successful attack increases to +%4. Regardless of the target, Smite Evil attacks automatically bypass any DR the creature might possess. In addition, while smite evil is in effect, you gain a +%5 deflection bonus to your AC against attacks made by the target of the smite. If you target a creature that is not evil, the smite is wasted with no effect. The Smite Evil effect remains until the target of the smite is dead or the next time you rest and regain your uses of this ability.",
     Arguments={
-      "SmiteEvilTimes",
-      "SmiteEvilAttackBonus",
-      "SmiteEvilDamageBonus",
-      "SmiteEvilDamageBonus*2",
-      "SmiteEvilACBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="SmiteEvilTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SmiteEvilAttackBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SmiteEvilDamageBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SmiteEvilACBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SmiteEvilLVL",
-      InitialValue=Formula("0"),
+      Formula("SmiteEvilTimes"),
+      Formula("SmiteEvilAttackBonus"),
+      Formula("SmiteEvilDamageBonus"),
+      Formula("SmiteEvilDamageBonus*2"),
+      Formula("SmiteEvilACBonus"),
     },
   },
   Bonuses={
@@ -40732,12 +37478,6 @@ DefineAbility({
   Stackable=false,
   Visible=false,
   SourcePage="p.61",
-  Definitions={
-    {
-      Name="DivineGrace",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="SAVE",
@@ -40788,22 +37528,8 @@ DefineAbility({
   Description={
     Format="You can heal wounds (your own or those of others) by touch. Each day you can use this ability %1 times per day. With one use of this ability, you can heal %2d6 hit points of damage. Using this ability is a standard action, unless you target yourself, in which case it is a swift action. Despite the name of this ability, you only need one free hand to use this ability. Alternatively, you can use this healing power to deal damage to undead creatures, dealing %2d6 points of damage. Using Lay on Hands in this way requires a melee touch attack and doesn't provide an attack of opportunity. Undead do not receive a saving throw against this damage.",
     Arguments={
-      "LayOnHandsTimes",
-      "LayOnHandsDice",
-    },
-  },
-  Definitions={
-    {
-      Name="LayOnHandsTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="LayOnHandsDice",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="LayOnHandsLVL",
-      InitialValue=Formula("0"),
+      Formula("LayOnHandsTimes"),
+      Formula("LayOnHandsDice"),
     },
   },
   Bonuses={
@@ -40862,16 +37588,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="Mercies",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="MercyLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -40928,30 +37644,21 @@ DefineAbility({
       FormatString="Channel Energy",
     },
   },
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Channel Positive Energy",
+      },
+    },
+  },
   Description={
     Format="You can unleash a wave of positive energy. You must choose to deal %1d%2 points of positive energy damage to undead creatures or to heal living creatures of %1d%2 points of damage. Creatures that take damage from channeled energy receive a DC %3 Will save to halve the damage. Using this ability consumes two uses of her lay on hands ability.",
     Arguments={
-      "PaladinChannelDice",
-      "PaladinChannelDieSize",
-      "PaladinChannelDC",
-    },
-  },
-  Definitions={
-    {
-      Name="PaladinChannelDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="PaladinChannelDice",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="PaladinChannelDieSize",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="PaladinChannelLVL",
-      InitialValue=Formula("0"),
+      Formula("PaladinChannelDice"),
+      Formula("PaladinChannelDieSize"),
+      Formula("PaladinChannelDC"),
     },
   },
   Bonuses={
@@ -40984,15 +37691,6 @@ DefineAbility({
       Formula=Formula("PaladinLVL"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Channel Positive Energy",
-      },
-    },
-  },
   Types={
     "PaladinClassFeatures",
     "SpecialAttack",
@@ -41013,17 +37711,7 @@ DefineAbility({
   Description={
     Format="You are a conduit for the power of your god. Your DR increases to 10/Evil. Whenever you use Smite Evil and successfully strike an evil outsider, the outsider is also subject to a Banishment at caster level %1 (your weapon and holy symbol automatically count as objects that the subject hates). After the Banishment effect and the damage from the attack is resolved, the smite immediately ends. In addition, whenever you channel positive energy or uses Lay on Hands to heal a creature, you heal the maximum possible amount.",
     Arguments={
-      "HolyChampionCasterLevel",
-    },
-  },
-  Definitions={
-    {
-      Name="HolyChampionCasterLevel",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="HolyChampionLVL",
-      InitialValue=Formula("0"),
+      Formula("HolyChampionCasterLevel"),
     },
   },
   Bonuses={
@@ -41283,6 +37971,9 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   SourcePage="p.63",
+  DamageReduction={
+    Value="5/Evil",
+  },
   Description={
     Format="You gain DR 5/Evil and immunity to compulsion spells and spell-like abilities. Each ally within 10 feet or you gains a +4 morale bonus on saving throws against fear compulsion . This ability functions only while you are conscious, not if you are unconscious or dead.",
   },
@@ -41293,9 +37984,6 @@ DefineAbility({
     "Aura",
     "Aura of Righteousness",
   },
-  DamageReduction={
-    Value="5/Evil",
-  },
 })
 
 DefineAbility({
@@ -41305,16 +37993,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="DivineBondLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DivineBondTimes",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -41374,19 +38052,9 @@ DefineAbility({
   Description={
     Format="Your divine bond allows you to enhance your weapon as a standard action by calling upon the aid of a celestial spirit for %1 minutes. When called, the spirit causes the weapon to shed light as a torch. This spirit grants the weapon a +%2 enhancement bonus. This bonus can be added to the weapon, stacking with existing weapon bonuses to a maximum of +5, or it can be used to add any of the following weapon properties: defending, flaming, keen, merciful (+1), axiomatic, disruption, flaming burst, holy (+2), speed (+3), and brilliant energy (+4). Adding these properties consumes an amount of bonus equal to the property's cost. These bonuses are added to any properties the weapon already has, but duplicate abilities do not stack. If the weapon is not magical, at least a +1 enhancement bonus must be added before any other properties can be added. The bonus and properties granted by the spirit are determined when the spirit is called and cannot be changed until the spirit is called again. The celestial spirit imparts no bonuses if the weapon is held by anyone other than you but resumes giving bonuses if returned to you. These bonuses apply to only one end of a double weapon. You can use this ability %3 times per day. If a weapon bonded with a celestial spirit is destroyed, you lose the use of this ability for 30 days, or until you gain a level, whichever comes first. During this 30-day period, you take a -1 penalty on attack and weapon damage rolls.",
     Arguments={
-      "CelestialSpiritDuration",
-      "CelestialSpiritBonus",
-      "DivineBondTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="CelestialSpiritDuration",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CelestialSpiritBonus",
-      InitialValue=Formula("0"),
+      Formula("CelestialSpiritDuration"),
+      Formula("CelestialSpiritBonus"),
+      Formula("DivineBondTimes"),
     },
   },
   Bonuses={
@@ -41433,6 +38101,39 @@ DefineAbility({
       FormatString="Uses per day",
     },
   },
+  Abilities={
+    {
+      Category="Special Mount Choice",
+      Nature="AUTOMATIC",
+      Names={
+        "Special Mount ~ Standard Choices",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Internal" and (ability.Type == "SpecialMountAlternate")
+          end))
+        end,
+        function (character)
+          return 1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Special Ability" and (ability.Type == "Special Mount")
+          end)
+        end,
+      },
+    },
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Companion ~ Special Mount",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["CompanionDisable_PaladinMount"] == 0)
+        end,
+      },
+    },
+  },
   SourcePage="p.63",
   Conditions={
     function (character)
@@ -41441,32 +38142,6 @@ DefineAbility({
   },
   Description={
     Format="Your divine bond allows you to gain the service of an unusually intelligent, strong, and loyal steed to serve you in your crusade against evil.",
-  },
-  Definitions={
-    {
-      Name="SpecialMountLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SpecialMountSpellLevel",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SpecialMountSR",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Divine_Bond_Mount",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CompanionDisable_PaladinMount",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CompanionMasterLVL_Paladin",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -41508,39 +38183,6 @@ DefineAbility({
         "CompanionMasterLVL_Paladin",
       },
       Formula=Formula("DivineBondLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Mount Choice",
-      Nature="AUTOMATIC",
-      Names={
-        "Special Mount ~ Standard Choices",
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Type == "SpecialMountAlternate")
-          end))
-        end,
-        function (character)
-          return 1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Special Ability" and (ability.Type == "Special Mount")
-          end)
-        end,
-      },
-    },
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Companion ~ Special Mount",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["CompanionDisable_PaladinMount"] == 0)
-        end,
-      },
     },
   },
   Types={
@@ -41586,10 +38228,10 @@ ModifyAbility({
   Description={
     Format="Your divine bond allows you to gain the service of an unusually intelligent, strong, and loyal steed to serve you in your crusade against evil. This mount is usually a heavy horse (for a Medium paladin) or a pony (for a Small paladin), although more exotic mounts, such as a boar, camel, or dog are also suitable. This mount functions as a druid's animal companion, with an effective druid level of 1. Bonded mounts have an Intelligence of at least 6. %1 times day, as a full-round action, you may magically call your mount to your side. This ability is the equivalent of a spell of level %2. The mount immediately appears adjacent to you. Should your mount die, you may not summon another mount for 30 days, or until you gain a level, whichever comes first. During this 30-day period, you take a -1 penalty on attack and weapon damage rolls.",
     Arguments={
-      "DivineBondTimes",
-      "SpecialMountSpellLevel",
-      "PREVARGTEQ:DivineBondLVL,5",
-      "PREVARLT:DivineBondLVL,11",
+      Formula("DivineBondTimes"),
+      Formula("SpecialMountSpellLevel"),
+      Formula("PREVARGTEQ:DivineBondLVL,5"),
+      Formula("PREVARLT:DivineBondLVL,11"),
     },
   },
 })
@@ -41602,10 +38244,10 @@ ModifyAbility({
   Description={
     Format="Your divine bond allows you to gain the service of an unusually intelligent, strong, and loyal steed to serve you in your crusade against evil. This mount is usually a heavy horse (for a Medium paladin) or a pony (for a Small paladin), although more exotic mounts, such as a boar, camel, or dog are also suitable. The mount gains the celestial template and becomes a magical beast for the purposes of which spells affect it. This mount functions as a druid's animal companion, with an effective druid level of 1. Bonded mounts have an Intelligence of at least 6. %1 times day, as a full-round action, you may magically call your mount to your side. This ability is the equivalent of a spell of level %2. The mount immediately appears adjacent to you. Should your mount die, you may not summon another mount for 30 days, or until you gain a level, whichever comes first. During this 30-day period, you take a -1 penalty on attack and weapon damage rolls.",
     Arguments={
-      "DivineBondTimes",
-      "SpecialMountSpellLevel",
-      "PREVARGTEQ:DivineBondLVL,11",
-      "PREVARLT:DivineBondLVL,15",
+      Formula("DivineBondTimes"),
+      Formula("SpecialMountSpellLevel"),
+      Formula("PREVARGTEQ:DivineBondLVL,11"),
+      Formula("PREVARLT:DivineBondLVL,15"),
     },
   },
 })
@@ -41618,11 +38260,11 @@ ModifyAbility({
   Description={
     Format="Your divine bond allows you to gain the service of an unusually intelligent, strong, and loyal steed to serve you in your crusade against evil. This mount is usually a heavy horse (for a Medium paladin) or a pony (for a Small paladin), although more exotic mounts, such as a boar, camel, or dog are also suitable. The mount gains the celestial template and becomes a magical beast for the purposes of which spells affect it, and it has spell resistance %2. This mount functions as a druid's animal companion, with an effective druid level of 1. Bonded mounts have an Intelligence of at least 6. %1 times day, as a full-round action, you may magically call your mount to your side. This ability is the equivalent of a spell of level %3. The mount immediately appears adjacent to you. Should your mount die, you may not summon another mount for 30 days, or until you gain a level, whichever comes first. During this 30-day period, you take a -1 penalty on attack and weapon damage rolls.",
     Arguments={
-      "DivineBondTimes",
-      "SpecialMountSR",
-      "SpecialMountSpellLevel",
-      "PREVARGTEQ:DivineBondLVL,11",
-      "PREVARLT:DivineBondLVL,15",
+      Formula("DivineBondTimes"),
+      Formula("SpecialMountSR"),
+      Formula("SpecialMountSpellLevel"),
+      Formula("PREVARGTEQ:DivineBondLVL,11"),
+      Formula("PREVARLT:DivineBondLVL,15"),
     },
   },
 })
@@ -41743,7 +38385,7 @@ DefineAbility({
   Description={
     Format="Whenever you use Lay on Hands to heal damage to one target, the ability also acts as Remove Disease with a caster level of %1.",
     Arguments={
-      "MercyLVL",
+      Formula("MercyLVL"),
     },
   },
   Types={
@@ -41796,7 +38438,7 @@ DefineAbility({
   Description={
     Format="Whenever you use Lay on Hands to heal damage to one target, the ability also acts as Remove Curse with a caster level of %1.",
     Arguments={
-      "MercyLVL",
+      Formula("MercyLVL"),
     },
   },
   Types={
@@ -41914,7 +38556,7 @@ DefineAbility({
   Description={
     Format="Whenever you use Lay on Hands to heal damage to one target, the ability also acts as Neutralize Poison with a caster level of %1.",
     Arguments={
-      "MercyLVL",
+      Formula("MercyLVL"),
     },
   },
   Types={
@@ -42041,11 +38683,20 @@ DefineAbility({
       },
     },
   },
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Track Bonus",
+      },
+    },
+  },
   SourcePage="p.64",
   Description={
     Format="You gain +%1 to Survival checks made to follow tracks.",
     Arguments={
-      "TrackBonus",
+      Formula("TrackBonus"),
     },
   },
   Bonuses={
@@ -42055,15 +38706,6 @@ DefineAbility({
         "TrackLVL",
       },
       Formula=Formula("RangerLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Track Bonus",
-      },
     },
   },
   Types={
@@ -42193,17 +38835,7 @@ DefineAbility({
   Description={
     Format="You can always move at full speed while using Survival to follow tracks without penalty. You can, as a standard action, make a single attack against a favored enemy at your full attack bonus. If the attack hits, the target takes damage normally and must make a Fortitude save or die (DC %1). You can choose instead to deal an amount of nonlethal damage equal to the creature's current hit points. A successful save negates this damage. You can use this ability once per day against each favored enemy type you possess, but not against the same creature more than once in a 24-hour period.",
     Arguments={
-      "MasterHunterDC",
-    },
-  },
-  Definitions={
-    {
-      Name="MasterHunterLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="MasterHunterDC",
-      InitialValue=Formula("0"),
+      Formula("MasterHunterDC"),
     },
   },
   Bonuses={
@@ -42278,15 +38910,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "WildEmpathy",
-      },
-      Formula=Formula("RangerLVL"),
-    },
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -42294,6 +38917,15 @@ DefineAbility({
       Names={
         "Wild Empathy",
       },
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "WildEmpathy",
+      },
+      Formula=Formula("RangerLVL"),
     },
   },
   Types={
@@ -42332,24 +38964,6 @@ DefineAbility({
   SourcePage="p.65",
   Description={
     Format="At 2nd level, a ranger must select one of two combat styles to pursue: archery or two weapon combat. The ranger's expertise manifests in the form of bonus feats at 2nd, 6th, 10th, 14th, and 18th level. He can choose feats from his selected combat style, even if he does not have the normal prerequisites. If the ranger selects archery, he can choose from the following list whenever he gains a combat style feat: Far Shot, Point-Blank Shot, Precise Shot, and Rapid Shot. At 6th level, he adds Improved Precise Shot and Manyshot to the list. At 10th level, he adds Pinpoint Targeting and Shot on the Run to the list. If the ranger selects two-weapon combat, he can choose from the following list whenever he gains a combat style feat: Double Slice, Improved Shield Bash, Quick Draw, and Two-Weapon Fighting. At 6th level, he adds Improved Two-Weapon Fighting and Two-Weapon Defense to the list. At 10th level, he adds Greater Two-Weapon Fighting and Two- Weapon Rend to the list. The benefits of the ranger's chosen style feats apply only when he wears light, medium, or no armor. He loses all benefits of his combat style feats when wearing heavy armor. Once a ranger selects a combat style, it cannot be changed.",
-  },
-  Definitions={
-    {
-      Name="CombatStyleLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RangerDefaultCombatStyle",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RangerBonusFeatCount",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RangerCombatStyleFeatCount",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -42400,16 +39014,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="TrackLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="TrackBonus",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="SITUATION",
@@ -42438,12 +39042,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="HuntersBondLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -42478,7 +39076,7 @@ DefineAbility({
   Description={
     Format="You form a powerful bond with your companions. You may spend a move action to grant half your favored enemy bonus against a single target to all allies within 30 feet who can see or hear you for %1 rounds. This bonus does not stack with any favored enemy bonuses possessed by your allies; they use whichever bonus is higher.",
     Arguments={
-      "max(1,WIS)",
+      Formula("max(1,WIS)"),
     },
   },
   Types={
@@ -42495,6 +39093,20 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Companion ~ Animal Companion",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["CompanionDisable_AnimalCompanion"] == 0)
+        end,
+      },
+    },
+  },
   SourcePage="p.51",
   Conditions={
     function (character)
@@ -42506,25 +39118,7 @@ DefineAbility({
   Description={
     Format="This is not Allowed with the Archetype you selected.",
     Arguments={
-      "PREABILITY:1,CATEGORY=Archetype,TYPE.RangerAnimalCompanion",
-    },
-  },
-  Definitions={
-    {
-      Name="AnimalCompanionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AnimalCompanionMasterLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CompanionDisable_AnimalCompanion",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CompanionMasterLVL_Ranger",
-      InitialValue=Formula("0"),
+      Formula("PREABILITY:1,CATEGORY=Archetype,TYPE.RangerAnimalCompanion"),
     },
   },
   Bonuses={
@@ -42555,20 +39149,6 @@ DefineAbility({
       Formula=Formula("RangerLVL-3"),
     },
   },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Companion ~ Animal Companion",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["CompanionDisable_AnimalCompanion"] == 0)
-        end,
-      },
-    },
-  },
   Types={
     "RangerClassFeatures",
     "SpecialQuality",
@@ -42585,57 +39165,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="RangerFavoredEnemyLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RangerFavoredEnemyCount",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="FavoredEnemyBonusCount",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="ABILITYPOOL",
-      Variables={
-        "Favored Enemy",
-      },
-      Formula=Formula("RangerFavoredEnemyCount"),
-    },
-    {
-      Category="ABILITYPOOL",
-      Variables={
-        "Favored Enemy Bonus",
-      },
-      Formula=Formula("FavoredEnemyBonusCount"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "RangerFavoredEnemyCount",
-      },
-      Formula=Formula("RangerFavoredEnemyLVL/5+1"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "FavoredEnemyBonusCount",
-      },
-      Formula=Formula("RangerFavoredEnemyLVL/5"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "RangerFavoredEnemyLVL",
-      },
-      Formula=Formula("RangerLVL"),
-    },
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -42644,11 +39173,6 @@ DefineAbility({
         "Basic Favored Enemy",
       },
     },
-  },
-  Types={
-    "RangerClassFeatures",
-    "Internal",
-    "ClassFeatures",
   },
   TemporaryBonuses={
     Bonuses={
@@ -42698,6 +39222,48 @@ DefineAbility({
       },
     },
   },
+  Bonuses={
+    {
+      Category="ABILITYPOOL",
+      Variables={
+        "Favored Enemy",
+      },
+      Formula=Formula("RangerFavoredEnemyCount"),
+    },
+    {
+      Category="ABILITYPOOL",
+      Variables={
+        "Favored Enemy Bonus",
+      },
+      Formula=Formula("FavoredEnemyBonusCount"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "RangerFavoredEnemyCount",
+      },
+      Formula=Formula("RangerFavoredEnemyLVL/5+1"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "FavoredEnemyBonusCount",
+      },
+      Formula=Formula("RangerFavoredEnemyLVL/5"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "RangerFavoredEnemyLVL",
+      },
+      Formula=Formula("RangerLVL"),
+    },
+  },
+  Types={
+    "RangerClassFeatures",
+    "Internal",
+    "ClassFeatures",
+  },
 })
 
 DefineAbility({
@@ -42707,10 +39273,20 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
+  Abilities={
     {
-      Name="RangerFavoredTerrainLVL",
-      InitialValue=Formula("0"),
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Common Favored Terrain",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Basic Favored Terrain",
+      },
     },
   },
   Bonuses={
@@ -42729,22 +39305,6 @@ DefineAbility({
       Formula=Formula("RangerLVL"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Common Favored Terrain",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Basic Favored Terrain",
-      },
-    },
-  },
   Types={
     "RangerClassFeatures",
     "Internal",
@@ -42757,12 +39317,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Far_Shot",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42770,12 +39324,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Point_Blank_Shot",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42783,12 +39331,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Precise_Shot",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42796,12 +39338,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Rapid_Shot",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42809,12 +39345,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Improved_Precise_Shot",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42822,12 +39352,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Manyshot",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42835,12 +39359,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Pinpoint_Targeting",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42848,12 +39366,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Shot_on_the_Run",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42861,12 +39373,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Double_Slice",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42874,12 +39380,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Improved_Shield_Bash",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42887,12 +39387,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Quick_Draw",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42900,12 +39394,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Two_Weapon_Fighting",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42913,12 +39401,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Improved_Two_Weapon_Fighting",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42926,12 +39408,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Two_Weapon_Defense",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42939,12 +39415,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Greater_Two_Weapon_Fighting",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -42952,12 +39422,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Ranger_Combat_Style_Feat_Two_Weapon_Rend",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -43514,20 +39978,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.124",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Far Shot")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Far_Shot"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are more accurate at longer ranges.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -43542,6 +39992,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.124",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Far Shot")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Far_Shot"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are more accurate at longer ranges.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -43553,20 +40017,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.131",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Point-Blank Shot")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Point_Blank_Shot"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are especially accurate when making ranged attacks against close target.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -43581,6 +40031,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.131",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Point-Blank Shot")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Point_Blank_Shot"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are especially accurate when making ranged attacks against close target.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -43592,20 +40056,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.131",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Precise Shot")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Precise_Shot"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are adept at firing ranged attacks into melee.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -43620,6 +40070,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.131",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Precise Shot")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Precise_Shot"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are adept at firing ranged attacks into melee.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -43631,20 +40095,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.132",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Rapid Shot")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Rapid_Shot"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can make an additional ranged attack.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -43659,6 +40109,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.132",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Rapid Shot")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Rapid_Shot"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can make an additional ranged attack.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -43670,20 +40134,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.128",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Precise Shot")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Improved_Precise_Shot"] >= 1)
-    end,
-  },
-  Description={
-    Format="Your ranged attacks ignore anything but total concealment and cover.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -43698,6 +40148,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.128",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Improved Precise Shot")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Improved_Precise_Shot"] >= 1)
+    end,
+  },
+  Description={
+    Format="Your ranged attacks ignore anything but total concealment and cover.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -43709,20 +40173,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.130",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Manyshot")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Manyshot"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can fire multiple arrows at a single target.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -43737,6 +40187,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.130",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Manyshot")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Manyshot"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can fire multiple arrows at a single target.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -43748,20 +40212,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.131",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Pinpoint Targeting")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Pinpoint_Targeting"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can target the weak points in your opponent's armor.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -43776,6 +40226,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.131",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Pinpoint Targeting")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Pinpoint_Targeting"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can target the weak points in your opponent's armor.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -43787,20 +40251,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.133",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Shot on the Run")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Shot_on_the_Run"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can move, fire a ranged weapon, and move again before your foes can react.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -43815,6 +40265,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.133",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Shot on the Run")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Shot_on_the_Run"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can move, fire a ranged weapon, and move again before your foes can react.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -43826,20 +40290,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.122",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Double Slice")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Double_Slice"] >= 1)
-    end,
-  },
-  Description={
-    Format="Your off-hand weapon while dual-wielding strikes with greater power.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -43854,6 +40304,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.122",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Double Slice")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Double_Slice"] >= 1)
+    end,
+  },
+  Description={
+    Format="Your off-hand weapon while dual-wielding strikes with greater power.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -43865,20 +40329,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.128",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Shield Bash")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Improved_Shield_Bash"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can protect yourself with your shield, even if you use it to attack.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -43893,6 +40343,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.128",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Improved Shield Bash")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Improved_Shield_Bash"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can protect yourself with your shield, even if you use it to attack.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -43904,20 +40368,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.131",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Quick Draw")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Quick_Draw"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can draw weapons faster than most.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -43932,6 +40382,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.131",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Quick Draw")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Quick_Draw"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can draw weapons faster than most.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -43943,20 +40407,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.136",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Two-Weapon Fighting")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Two_Weapon_Fighting"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can fight with a weapon in each of your hands. You can make one extra attack each round with the secondary weapon.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -43971,6 +40421,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.136",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Two-Weapon Fighting")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Two_Weapon_Fighting"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can fight with a weapon in each of your hands. You can make one extra attack each round with the secondary weapon.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -43982,20 +40446,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.128",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Two-Weapon Fighting")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Improved_Two_Weapon_Fighting"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are skilled at fighting with two weapons.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -44010,6 +40460,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.128",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Improved Two-Weapon Fighting")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Improved_Two_Weapon_Fighting"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are skilled at fighting with two weapons.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -44021,20 +40485,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.136",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Two-Weapon Defense")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Two_Weapon_Defense"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are skilled at defending yourself while fighting with two weapons.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -44049,6 +40499,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.136",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Two-Weapon Defense")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Two_Weapon_Defense"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are skilled at defending yourself while fighting with two weapons.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -44060,20 +40524,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.126",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Greater Two-Weapon Fighting")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Greater_Two_Weapon_Fighting"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are incredibly skilled at fighting with two weapons at the same time.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -44088,6 +40538,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.126",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Greater Two-Weapon Fighting")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Greater_Two_Weapon_Fighting"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are incredibly skilled at fighting with two weapons at the same time.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -44099,20 +40563,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.136",
-  Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Two-Weapon Rend")
-      end))
-    end,
-    function (character)
-      return (character.Variables["Ranger_Combat_Style_Feat_Two_Weapon_Rend"] >= 1)
-    end,
-  },
-  Description={
-    Format="Striking with both your weapons simultaneously, you can use them to deliver devastating wounds.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -44127,6 +40577,20 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.136",
+  Conditions={
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "FEAT" and (ability.Name == "Two-Weapon Rend")
+      end))
+    end,
+    function (character)
+      return (character.Variables["Ranger_Combat_Style_Feat_Two_Weapon_Rend"] >= 1)
+    end,
+  },
+  Description={
+    Format="Striking with both your weapons simultaneously, you can use them to deliver devastating wounds.",
+  },
   Types={
     "RangerBonusFeat",
   },
@@ -44138,12 +40602,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="FavoredBaseBonus",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -44193,13 +40651,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against aberrations. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredAberration",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredAberration",
-      InitialValue=Formula("0"),
+      Formula("FavoredAberration"),
     },
   },
   Bonuses={
@@ -44253,13 +40705,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against animals. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredAnimal",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredAnimal",
-      InitialValue=Formula("0"),
+      Formula("FavoredAnimal"),
     },
   },
   Bonuses={
@@ -44313,13 +40759,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against constructs. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredConstruct",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredConstruct",
-      InitialValue=Formula("0"),
+      Formula("FavoredConstruct"),
     },
   },
   Bonuses={
@@ -44373,13 +40813,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against dragons. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredDragon",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredDragon",
-      InitialValue=Formula("0"),
+      Formula("FavoredDragon"),
     },
   },
   Bonuses={
@@ -44433,13 +40867,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against fey. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredFey",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredFey",
-      InitialValue=Formula("0"),
+      Formula("FavoredFey"),
     },
   },
   Bonuses={
@@ -44493,13 +40921,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against aquatic humanoids. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredHumanoidAquatic",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredHumanoidAquatic",
-      InitialValue=Formula("0"),
+      Formula("FavoredHumanoidAquatic"),
     },
   },
   Bonuses={
@@ -44553,13 +40975,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against dwarves. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredHumanoidDwarf",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredHumanoidDwarf",
-      InitialValue=Formula("0"),
+      Formula("FavoredHumanoidDwarf"),
     },
   },
   Bonuses={
@@ -44613,13 +41029,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against elves. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredHumanoidElf",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredHumanoidElf",
-      InitialValue=Formula("0"),
+      Formula("FavoredHumanoidElf"),
     },
   },
   Bonuses={
@@ -44673,13 +41083,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against giants. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredHumanoidGiant",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredHumanoidGiant",
-      InitialValue=Formula("0"),
+      Formula("FavoredHumanoidGiant"),
     },
   },
   Bonuses={
@@ -44733,13 +41137,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against goblinoids. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredHumanoidGoblinoid",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredHumanoidGoblinoid",
-      InitialValue=Formula("0"),
+      Formula("FavoredHumanoidGoblinoid"),
     },
   },
   Bonuses={
@@ -44793,13 +41191,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against gnolls. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredHumanoidGnoll",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredHumanoidGnoll",
-      InitialValue=Formula("0"),
+      Formula("FavoredHumanoidGnoll"),
     },
   },
   Bonuses={
@@ -44853,13 +41245,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against gnomes. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredHumanoidGnome",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredHumanoidGnome",
-      InitialValue=Formula("0"),
+      Formula("FavoredHumanoidGnome"),
     },
   },
   Bonuses={
@@ -44913,13 +41299,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against halflings. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredHumanoidHalfling",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredHumanoidHalfling",
-      InitialValue=Formula("0"),
+      Formula("FavoredHumanoidHalfling"),
     },
   },
   Bonuses={
@@ -44973,13 +41353,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against humans. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredHumanoidHuman",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredHumanoidHuman",
-      InitialValue=Formula("0"),
+      Formula("FavoredHumanoidHuman"),
     },
   },
   Bonuses={
@@ -45033,13 +41407,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against orcs. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredHumanoidOrc",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredHumanoidOrc",
-      InitialValue=Formula("0"),
+      Formula("FavoredHumanoidOrc"),
     },
   },
   Bonuses={
@@ -45093,13 +41461,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against reptilian humanoids. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredHumanoidReptilian",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredHumanoidReptilian",
-      InitialValue=Formula("0"),
+      Formula("FavoredHumanoidReptilian"),
     },
   },
   Bonuses={
@@ -45153,13 +41515,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against magical beasts. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredMagicalBeast",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredMagicalBeast",
-      InitialValue=Formula("0"),
+      Formula("FavoredMagicalBeast"),
     },
   },
   Bonuses={
@@ -45213,13 +41569,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against monstrous humanoids. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredMonstrousHumanoid",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredMonstrousHumanoid",
-      InitialValue=Formula("0"),
+      Formula("FavoredMonstrousHumanoid"),
     },
   },
   Bonuses={
@@ -45273,13 +41623,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against oozes. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredOoze",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredOoze",
-      InitialValue=Formula("0"),
+      Formula("FavoredOoze"),
     },
   },
   Bonuses={
@@ -45333,13 +41677,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against outsiders with the air subtype. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredOutsiderAir",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredOutsiderAir",
-      InitialValue=Formula("0"),
+      Formula("FavoredOutsiderAir"),
     },
   },
   Bonuses={
@@ -45393,13 +41731,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against chaotic outsiders. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredOutsiderChaotic",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredOutsiderChaotic",
-      InitialValue=Formula("0"),
+      Formula("FavoredOutsiderChaotic"),
     },
   },
   Bonuses={
@@ -45453,13 +41785,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against outsiders with the earth subtype. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredOutsiderEarth",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredOutsiderEarth",
-      InitialValue=Formula("0"),
+      Formula("FavoredOutsiderEarth"),
     },
   },
   Bonuses={
@@ -45513,13 +41839,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against evil outsiders. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredOutsiderEvil",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredOutsiderEvil",
-      InitialValue=Formula("0"),
+      Formula("FavoredOutsiderEvil"),
     },
   },
   Bonuses={
@@ -45573,13 +41893,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against outsiders with the fire subtype. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredOutsiderFire",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredOutsiderFire",
-      InitialValue=Formula("0"),
+      Formula("FavoredOutsiderFire"),
     },
   },
   Bonuses={
@@ -45633,13 +41947,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against good outsiders. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredOutsiderGood",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredOutsiderGood",
-      InitialValue=Formula("0"),
+      Formula("FavoredOutsiderGood"),
     },
   },
   Bonuses={
@@ -45693,13 +42001,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against lawful outsiders. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredOutsiderLawful",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredOutsiderLawful",
-      InitialValue=Formula("0"),
+      Formula("FavoredOutsiderLawful"),
     },
   },
   Bonuses={
@@ -45753,13 +42055,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against native outsiders. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredOutsiderNative",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredOutsiderNative",
-      InitialValue=Formula("0"),
+      Formula("FavoredOutsiderNative"),
     },
   },
   Bonuses={
@@ -45813,13 +42109,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against outsiders with the water subtype. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredOutsiderWater",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredOutsiderWater",
-      InitialValue=Formula("0"),
+      Formula("FavoredOutsiderWater"),
     },
   },
   Bonuses={
@@ -45873,13 +42163,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against plant creatures. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredPlant",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredPlant",
-      InitialValue=Formula("0"),
+      Formula("FavoredPlant"),
     },
   },
   Bonuses={
@@ -45933,13 +42217,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against undead. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredUndead",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredUndead",
-      InitialValue=Formula("0"),
+      Formula("FavoredUndead"),
     },
   },
   Bonuses={
@@ -45993,13 +42271,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks when using these skills against vermin. Likewise, you get a +%1 bonus on weapon attack and damage rolls against such creatures. You may make Knowledge Skill checks untrained to identify such creatures.",
     Arguments={
-      "FavoredVermin",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredVermin",
-      InitialValue=Formula("0"),
+      Formula("FavoredVermin"),
     },
   },
   Bonuses={
@@ -46029,7 +42301,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46061,7 +42332,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46093,7 +42363,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46125,7 +42394,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46157,7 +42425,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46189,7 +42456,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46221,7 +42487,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46253,7 +42518,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46285,7 +42549,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46317,7 +42580,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46349,7 +42611,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46381,7 +42642,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46413,7 +42673,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46445,7 +42704,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46477,7 +42735,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46509,7 +42766,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46541,7 +42797,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46573,7 +42828,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46605,7 +42859,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46637,7 +42890,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46669,7 +42921,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46701,7 +42952,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46733,7 +42983,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46765,7 +43014,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46797,7 +43045,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46829,7 +43076,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46861,7 +43107,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46893,7 +43138,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46925,7 +43169,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46957,7 +43200,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -46989,7 +43231,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -47018,12 +43259,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="FavoredTerrainBaseBonus",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -47065,13 +43300,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Knowledge (Geography), Perception, Stealth, and Survival checks when using these skills in cold terrain (ice, glaciers, snow, and tundra). Likewise, you get a +%1 bonus on initiative checks when in this terrain. If you desire, you leave no trail in this terrain and cannot be tracked.",
     Arguments={
-      "FavoredTerrainCold",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredTerrainCold",
-      InitialValue=Formula("0"),
+      Formula("FavoredTerrainCold"),
     },
   },
   Bonuses={
@@ -47117,13 +43346,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Knowledge (Geography), Perception, Stealth, and Survival checks when using these skills in desert terrain (sand and wastelands). Likewise, you get a +%1 bonus on initiative checks when in this terrain. If you desire, you leave no trail in this terrain and cannot be tracked.",
     Arguments={
-      "FavoredTerrainDesert",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredTerrainDesert",
-      InitialValue=Formula("0"),
+      Formula("FavoredTerrainDesert"),
     },
   },
   Bonuses={
@@ -47169,13 +43392,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Knowledge (Geography), Perception, Stealth, and Survival checks when using these skills in forest terrain (coniferous and deciduous). Likewise, you get a +%1 bonus on initiative checks when in this terrain. If you desire, you leave no trail in this terrain and cannot be tracked.",
     Arguments={
-      "FavoredTerrainForest",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredTerrainForest",
-      InitialValue=Formula("0"),
+      Formula("FavoredTerrainForest"),
     },
   },
   Bonuses={
@@ -47221,13 +43438,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Knowledge (Geography), Perception, Stealth, and Survival checks when using these skills in jungle terrain . Likewise, you get a +%1 bonus on initiative checks when in this terrain. If you desire, you leave no trail in this terrain and cannot be tracked.",
     Arguments={
-      "FavoredTerrainJungle",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredTerrainJungle",
-      InitialValue=Formula("0"),
+      Formula("FavoredTerrainJungle"),
     },
   },
   Bonuses={
@@ -47273,13 +43484,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Knowledge (Geography), Perception, Stealth, and Survival checks when using these skills in mountain terrain (including hills). Likewise, you get a +%1 bonus on initiative checks when in this terrain. If you desire, you leave no trail in this terrain and cannot be tracked.",
     Arguments={
-      "FavoredTerrainMountains",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredTerrainMountains",
-      InitialValue=Formula("0"),
+      Formula("FavoredTerrainMountains"),
     },
   },
   Bonuses={
@@ -47325,13 +43530,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Knowledge (Geography), Perception, Stealth, and Survival checks when using these skills in plains terrain. Likewise, you get a +%1 bonus on initiative checks when in this terrain. If you desire, you leave no trail in this terrain and cannot be tracked.",
     Arguments={
-      "FavoredTerrainPlains",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredTerrainPlains",
-      InitialValue=Formula("0"),
+      Formula("FavoredTerrainPlains"),
     },
   },
   Bonuses={
@@ -47377,13 +43576,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Knowledge (Geography), Perception, Stealth, and Survival checks when using these skills on your chosen plane. Likewise, you get a +%1 bonus on initiative checks when on that plane. If you desire, you leave no trail on that plane and cannot be tracked.",
     Arguments={
-      "FavoredTerrainPlanes",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredTerrainPlanes",
-      InitialValue=Formula("0"),
+      Formula("FavoredTerrainPlanes"),
     },
   },
   Bonuses={
@@ -47429,13 +43622,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Knowledge (Geography), Perception, Stealth, and Survival checks when using these skills in swamp terrain. Likewise, you get a +%1 bonus on initiative checks when in this terrain. If you desire, you leave no trail in this terrain and cannot be tracked.",
     Arguments={
-      "FavoredTerrainSwamp",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredTerrainSwamp",
-      InitialValue=Formula("0"),
+      Formula("FavoredTerrainSwamp"),
     },
   },
   Bonuses={
@@ -47481,13 +43668,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Knowledge (Geography), Perception, Stealth, and Survival checks when using these skills in underground terrain (caves and dungeons). Likewise, you get a +%1 bonus on initiative checks when in this terrain. If you desire, you leave no trail in this terrain and cannot be tracked.",
     Arguments={
-      "FavoredTerrainUnderground",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredTerrainUnderground",
-      InitialValue=Formula("0"),
+      Formula("FavoredTerrainUnderground"),
     },
   },
   Bonuses={
@@ -47533,13 +43714,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Knowledge (Geography), Perception, Stealth, and Survival checks when using these skills in urban terrain (buildings, streets, and sewers). Likewise, you get a +%1 bonus on initiative checks when in this terrain. If you desire, you leave no trail in this terrain and cannot be tracked.",
     Arguments={
-      "FavoredTerrainUrban",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredTerrainUrban",
-      InitialValue=Formula("0"),
+      Formula("FavoredTerrainUrban"),
     },
   },
   Bonuses={
@@ -47585,13 +43760,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Knowledge (Geography), Perception, Stealth, and Survival checks when using these skills above or below the water surface. Likewise, you get a +%1 bonus on initiative checks when in this terrain. If you desire, you leave no trail in this terrain and cannot be tracked.",
     Arguments={
-      "FavoredTerrainWater",
-    },
-  },
-  Definitions={
-    {
-      Name="FavoredTerrainWater",
-      InitialValue=Formula("0"),
+      Formula("FavoredTerrainWater"),
     },
   },
   Bonuses={
@@ -47620,7 +43789,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -47652,7 +43820,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -47684,7 +43851,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -47716,7 +43882,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -47748,7 +43913,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -47780,7 +43944,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -47812,7 +43975,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -47844,7 +44006,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -47876,7 +44037,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -47908,7 +44068,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -47940,7 +44099,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -47969,10 +44127,13 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
+  Abilities={
     {
-      Name="RogueSneakAttackLVL",
-      InitialValue=Formula("0"),
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sneak Attack",
+      },
     },
   },
   Bonuses={
@@ -47982,15 +44143,6 @@ DefineAbility({
         "RogueSneakAttackLVL",
       },
       Formula=Formula("RogueLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sneak Attack",
-      },
     },
   },
   Types={
@@ -48007,12 +44159,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="RogueTalentLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -48045,17 +44191,7 @@ DefineAbility({
   Description={
     Format="You add +%1 to Perception skill checks made to locate traps and to Disable Device skill checks. You can use the Disable Device skill to disarm magical traps.",
     Arguments={
-      "TrapfindingBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="TrapfindingLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="TrapfindingBonus",
-      InitialValue=Formula("0"),
+      Formula("TrapfindingBonus"),
     },
   },
   Bonuses={
@@ -48118,10 +44254,13 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
+  Abilities={
     {
-      Name="RogueTrapSenseLVL",
-      InitialValue=Formula("0"),
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Trap Sense",
+      },
     },
   },
   Bonuses={
@@ -48140,15 +44279,6 @@ DefineAbility({
       Formula=Formula("RogueLVL"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Trap Sense",
-      },
-    },
-  },
   Types={
     "Internal",
     "RogueClassFeatures",
@@ -48165,17 +44295,7 @@ DefineAbility({
   Description={
     Format="You are incredibly deadly when dealing sneak attack damage. Each time you deal sneak attack damage, you can choose one of the following three effects: the target can be put to sleep for 1d4 hours, paralyzed for 2d6 rounds, or slain. Regardless of the effect chosen, the target receives a Fortitude save to negate the additional effect. The DC of this save is %1. Once a creature has been the target of a master strike, regardless of whether or not the save is made, that creature is immune to your master strike for 24 hours. Creatures that are immune to sneak attack damage are also immune to this ability.",
     Arguments={
-      "MasterStrikeDC",
-    },
-  },
-  Definitions={
-    {
-      Name="MasterStrikeDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="MasterStrikeLVL",
-      InitialValue=Formula("0"),
+      Formula("MasterStrikeDC"),
     },
   },
   Bonuses={
@@ -48266,21 +44386,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="RogueTalentTaken",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "RogueTalentTaken",
-      },
-      Formula=Formula("count(\"ABILITIES\",\"CATEGORY=Special Ability\",\"TYPE=RogueTalent\")+count(\"ABILITIES\",\"CATEGORY=Special Ability\",\"TYPE=NinjaTrick\")"),
-    },
-  },
   Abilities={
     {
       Category="Internal",
@@ -48297,6 +44402,15 @@ ModifyAbility({
       },
     },
   },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "RogueTalentTaken",
+      },
+      Formula=Formula("count(\"ABILITIES\",\"CATEGORY=Special Ability\",\"TYPE=RogueTalent\")+count(\"ABILITIES\",\"CATEGORY=Special Ability\",\"TYPE=NinjaTrick\")"),
+    },
+  },
 })
 
 DefineAbility({
@@ -48304,42 +44418,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "RogueSneakAttackLVL",
-      },
-      Formula=Formula("-2"),
-      Conditions={
-        function (character)
-          return (character.Variables["RogueLvl"] >= 3)
-        end,
-        function (character)
-          return 1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Archetype" and (ability.Type == "RogueSneakAttack")
-          end)
-        end,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "UncannyDodgeLVL",
-      },
-      Formula=Formula("-4"),
-      Conditions={
-        function (character)
-          return (character.Variables["RogueLvl"] >= 8)
-        end,
-        function (character)
-          return 1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Archetype" and (ability.Type == "RogueUncannyDodge" or ability.Type == "RogueImprovedUncannyDodge")
-          end)
-        end,
-      },
-    },
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -48372,6 +44450,42 @@ DefineAbility({
         end,
         function (character)
           return (character.Variables["RogueLvl"] >= 8)
+        end,
+      },
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "RogueSneakAttackLVL",
+      },
+      Formula=Formula("-2"),
+      Conditions={
+        function (character)
+          return (character.Variables["RogueLvl"] >= 3)
+        end,
+        function (character)
+          return 1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Archetype" and (ability.Type == "RogueSneakAttack")
+          end)
+        end,
+      },
+    },
+    {
+      Category="VAR",
+      Variables={
+        "UncannyDodgeLVL",
+      },
+      Formula=Formula("-4"),
+      Conditions={
+        function (character)
+          return (character.Variables["RogueLvl"] >= 8)
+        end,
+        function (character)
+          return 1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Archetype" and (ability.Type == "RogueUncannyDodge" or ability.Type == "RogueImprovedUncannyDodge")
+          end)
         end,
       },
     },
@@ -48705,16 +44819,6 @@ ModifyAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="CombatTrickAllowed",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CombatTrickTaken",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -48741,7 +44845,7 @@ DefineAbility({
   Description={
     Format="You can cause living opponents to bleed when hitting them with a sneak attack. This attack causes the target to take %1 additional points of damage each round. Bleeding creatures that amount of damage every round at the start of their turns. The bleeding can be stopped by a DC 15 Heal check or the application of any effect that heals hit point damage. Bleeding damage from this ability does not stack with itself. Bleeding damage bypasses any damage reduction the creature might possess.",
     Arguments={
-      "SneakAttackDice",
+      Formula("SneakAttackDice"),
     },
   },
   Types={
@@ -48762,7 +44866,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   SourcePage="p.68",
   Conditions={
     function (character)
@@ -48820,10 +44923,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.68",
-  Description={
-    Format="You gain Weapon Finesse as a bonus feat.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -48832,6 +44931,10 @@ DefineAbility({
         "Weapon Finesse",
       },
     },
+  },
+  SourcePage="p.68",
+  Description={
+    Format="You gain Weapon Finesse as a bonus feat.",
   },
   Types={
     "RogueClassFeatures",
@@ -48871,7 +44974,6 @@ DefineAbility({
     end),
     MaxTimes=1,
   },
-  Selections=nil,
   SourcePage="p.68",
   Conditions={
     function (character)
@@ -48886,9 +44988,9 @@ DefineAbility({
   Description={
     Format="You can cast %1 two times a day as a spell-like ability. The caster level for this ability is %2. The save DC for this spell is %3.",
     Arguments={
-      "%CHOICE",
-      "RogueCasterLevel",
-      "11+INT",
+      Formula("%CHOICE"),
+      Formula("RogueCasterLevel"),
+      Formula("11+INT"),
     },
   },
   Types={
@@ -48911,7 +45013,6 @@ DefineAbility({
     end),
     MaxTimes=1,
   },
-  Selections=nil,
   SourcePage="p.68",
   Conditions={
     function (character)
@@ -48921,15 +45022,9 @@ DefineAbility({
   Description={
     Format="You can cast %1. This spell can be cast three times a day as a spell-like ability. The caster level for this ability is %2. The save DC for this spell is %3.",
     Arguments={
-      "%CHOICE",
-      "RogueCasterLevel",
-      "10+INT",
-    },
-  },
-  Definitions={
-    {
-      Name="RogueCasterLevel",
-      InitialValue=Formula("0"),
+      Formula("%CHOICE"),
+      Formula("RogueCasterLevel"),
+      Formula("10+INT"),
     },
   },
   Bonuses={
@@ -48994,13 +45089,7 @@ DefineAbility({
   Description={
     Format="Once per day, you can gain %1 temporary hit points. Activating this ability is an immediate action that can only be performed when you are brought to below 0 hit points. This ability can be used to prevent yourself from dying. These temporary hit points last for 1 minute. If your hit points drop below 0 due to the loss of these temporary hit points, you fall unconscious and are dying as normal.",
     Arguments={
-      "ResiliencyHitPoints",
-    },
-  },
-  Definitions={
-    {
-      Name="ResiliencyHitPoints",
-      InitialValue=Formula("0"),
+      Formula("ResiliencyHitPoints"),
     },
   },
   Bonuses={
@@ -49103,13 +45192,7 @@ DefineAbility({
   Description={
     Format="Whenever you come within %1 feet of a trap, you receive an immediate Perception skill check to notice the trap. This check should be made in secret by the GM.",
     Arguments={
-      "TrapSpotterDistance",
-    },
-  },
-  Definitions={
-    {
-      Name="TrapSpotterDistance",
-      InitialValue=Formula("0"),
+      Formula("TrapSpotterDistance"),
     },
   },
   Bonuses={
@@ -49165,7 +45248,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return (character.Variables["RogueTalentLVL"] >= 10)
@@ -49262,13 +45344,7 @@ DefineAbility({
   Description={
     Format="Opponents that are dealt sneak attack damage by you are affected by a targeted Dispel Magic, targeting the lowest-level spell effect active on the target. The caster level for this ability is %1.",
     Arguments={
-      "DispellingAttackCasterLevel",
-    },
-  },
-  Definitions={
-    {
-      Name="DispellingAttackCasterLevel",
-      InitialValue=Formula("0"),
+      Formula("DispellingAttackCasterLevel"),
     },
   },
   Bonuses={
@@ -49294,15 +45370,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.70",
-  Conditions={
-    function (character)
-      return (character.Variables["RogueTalentLVL"] >= 10)
-    end,
-  },
-  Description={
-    Format="This works like Evasion, except that while you still take no damage on a successful Reflex saving throw against attacks, you henceforth take only half damage on a failed save. If you are helpless, you do not gain the benefit of Improved Evasion.",
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -49311,6 +45378,15 @@ DefineAbility({
         "Improved Evasion",
       },
     },
+  },
+  SourcePage="p.70",
+  Conditions={
+    function (character)
+      return (character.Variables["RogueTalentLVL"] >= 10)
+    end,
+  },
+  Description={
+    Format="This works like Evasion, except that while you still take no damage on a successful Reflex saving throw against attacks, you henceforth take only half damage on a failed save. If you are helpless, you do not gain the benefit of Improved Evasion.",
   },
   Types={
     "RogueClassFeatures",
@@ -49377,6 +45453,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Slippery Mind",
+      },
+    },
+  },
   SourcePage="p.70",
   Conditions={
     function (character)
@@ -49386,14 +45471,8 @@ DefineAbility({
   Description={
     Format=" You get %1 extra chances to succeed on your saving throw.",
     Arguments={
-      "SlipperymindTimes",
-      "PREVARGTEQ:SlipperymindTimes,1",
-    },
-  },
-  Definitions={
-    {
-      Name="SlipperymindTimes",
-      InitialValue=Formula("0"),
+      Formula("SlipperymindTimes"),
+      Formula("PREVARGTEQ:SlipperymindTimes,1"),
     },
   },
   Bonuses={
@@ -49403,15 +45482,6 @@ DefineAbility({
         "SlipperymindTimes",
       },
       Formula=Formula("1"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Slippery Mind",
-      },
     },
   },
   Types={
@@ -49459,7 +45529,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Description={
     Format="Select a regular Rogue Talent.",
   },
@@ -49483,7 +45552,6 @@ DefineAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.70",
   Abilities={
     {
       Category="Class Skill",
@@ -49501,6 +45569,7 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.70",
 })
 
 DefineAbility({
@@ -49509,10 +45578,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.70",
-  Description={
-    Format="Sorcerers are proficient with all simple weapons. They are not proficient with any type of armor or shield. Armor interferes with a sorcerer's gestures, which can cause her spells with somatic components to fail.",
-  },
   Abilities={
     {
       Category="Internal",
@@ -49522,6 +45587,10 @@ DefineAbility({
         "Weapon Prof ~ Simple",
       },
     },
+  },
+  SourcePage="p.70",
+  Description={
+    Format="Sorcerers are proficient with all simple weapons. They are not proficient with any type of armor or shield. Armor interferes with a sorcerer's gestures, which can cause her spells with somatic components to fail.",
   },
   Types={
     "Class Feature",
@@ -49540,13 +45609,7 @@ DefineAbility({
   Description={
     Format="A sorcerer casts arcane spells drawn primarily from the sorcerer/wizard spell list. She can cast any spell she knows without preparing it ahead of time. To learn or cast a spell, a sorcerer must have a Charisma score equal to at least 10 + the spell level. The Difficulty Class for a saving throw against a sorcerer's spell is %1 + the spell level.",
     Arguments={
-      "Sorcerer_Spells_SpellDCBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Spells_SpellDCBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_Spells_SpellDCBonus"),
     },
   },
   Bonuses={
@@ -49571,15 +45634,18 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Bloodline Tracker",
+      },
+    },
+  },
   SourcePage="p.71",
   Description={
     Format="Each sorcerer has a source of magic somewhere in her heritage that grants her spells, bonus feats, an additional class skill, and other special abilities. This source can represent a blood relation or an extreme event involving a creature somewhere in the family's past. For example, a sorcerer might have a dragon as a distant relative or her grandfather might have signed a terrible contract with a devil. Regardless of the source, this influence manifests in a number of ways as the sorcerer gains levels. A sorcerer must pick one bloodline upon taking her first level of sorcerer. Once made, this choice cannot be changed.",
-  },
-  Definitions={
-    {
-      Name="HasSorcererBloodline",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -49599,15 +45665,6 @@ DefineAbility({
         Name="Base",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Bloodline Tracker",
       },
     },
   },
@@ -49641,10 +45698,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.71",
-  Description={
-    Format="A sorcerer gains Eschew Materials as a bonus feat at 1st level.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -49653,6 +45706,10 @@ DefineAbility({
         "Eschew Materials",
       },
     },
+  },
+  SourcePage="p.71",
+  Description={
+    Format="A sorcerer gains Eschew Materials as a bonus feat at 1st level.",
   },
   Types={
     "Class Feature",
@@ -49673,12 +45730,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="BloodlineLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -49700,12 +45751,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="BloodlineCasterLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -49727,12 +45772,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="BloodlineProgressionLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -49754,12 +45793,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="BloodlinePowerTimes",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -49781,12 +45814,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="BloodlineFeatProgression",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -49808,12 +45835,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="BloodlineFeatCount",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -49907,12 +45928,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_AcrobaticSteps",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -49920,12 +45935,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_AgileManeuvers",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -49933,12 +45942,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_Alertness",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -49946,12 +45949,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ArcaneArmorMastery",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -49959,12 +45956,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ArcaneArmorTraining",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -49972,12 +45963,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ArcaneStrike",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -49985,12 +45970,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_AugmentSummoning",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -49998,12 +45977,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_BlindFight",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50011,12 +45984,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_Cleave",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50024,12 +45991,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_CombatCasting",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50037,12 +45998,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_CombatExpertise",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50050,12 +46005,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_CombatReflexes",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50063,12 +46012,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_CraftRod",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50076,12 +46019,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_CraftStaff",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50089,12 +46026,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_CraftWondrousItem",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50102,12 +46033,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_DeadlyAim",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50115,12 +46040,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_Deceitful",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50128,12 +46047,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_DefensiveCombatTraining",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50141,12 +46054,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_DeftHands",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50154,12 +46061,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_Diehard",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50167,12 +46068,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_Dodge",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50180,12 +46075,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_EmpowerSpell",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50193,12 +46082,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_Endurance",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50206,12 +46089,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_EnlargeSpell",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50219,12 +46096,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ExtendSpell",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50232,12 +46103,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_FarShot",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50245,12 +46110,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_Fleet",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50258,12 +46117,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ForgeRing",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50271,12 +46124,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_GreaterSpellFocusEnchantment",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50284,12 +46131,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_GreatFortitude",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50297,12 +46138,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_HeightenSpell",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50310,12 +46145,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ImprovedBullRush",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50323,12 +46152,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ImprovedCounterspell",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50336,12 +46159,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ImprovedDisarm",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50349,12 +46166,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ImprovedFeint",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50362,12 +46173,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ImprovedGrapple",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50375,12 +46180,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ImprovedGreatFortitude",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50388,12 +46187,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ImprovedInitiative",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50401,12 +46194,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ImprovedIronWill",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50414,12 +46201,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ImprovedOverrun",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50427,12 +46208,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ImprovedSunder",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50440,12 +46215,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ImprovedUnarmedStrike",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50453,12 +46222,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_IntimidatingProwess",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50466,12 +46229,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_IronWill",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50479,12 +46236,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_Leadership",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50492,12 +46243,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_LightArmorProficiency",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50505,12 +46250,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_LightningReflexes",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50518,12 +46257,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_MagicalAptitude",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50531,12 +46264,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_MartialWeaponProficiency",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50544,12 +46271,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_MaximizeSpell",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50557,12 +46278,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_Mobility",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50570,12 +46285,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_MountedCombat",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50583,12 +46292,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_NimbleMoves",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50596,12 +46299,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_Persuasive",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50609,12 +46306,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_PointBlankShot",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50622,12 +46313,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_PowerAttack",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50635,12 +46320,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_PreciseShot",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50648,12 +46327,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_QuickDraw",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50661,12 +46334,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_QuickenSpell",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50674,12 +46341,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_RideByAttack",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50687,12 +46348,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_ScribeScroll",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50700,12 +46355,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SilentSpell",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50713,12 +46362,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusAcrobatics",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50726,12 +46369,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusBluff",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50739,12 +46376,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusCraft",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50752,12 +46383,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusFly",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50765,12 +46390,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusIntimidate",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50778,12 +46397,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusKnowledgeArcana",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50791,12 +46404,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusKnowledgeDungeoneering",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50804,12 +46411,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusKnowledgeEngineering",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50817,12 +46418,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusKnowledgeHistory",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50830,12 +46425,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusKnowledgeNature",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50843,12 +46432,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusKnowledgePlanes",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50856,12 +46439,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusKnowledgeReligion",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50869,12 +46446,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusPerception",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50882,12 +46453,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusPerform",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50895,12 +46460,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusSenseMotive",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50908,12 +46467,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusStealth",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50921,12 +46474,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SkillFocusSwim",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50934,12 +46481,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SpellFocus",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50947,12 +46488,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SpellFocusEnchantment",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50960,12 +46495,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SpellFocusNecromancy",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50973,12 +46502,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_SpellPenetration",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50986,12 +46509,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_Stealthy",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -50999,12 +46516,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_StillSpell",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51012,12 +46523,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_Toughness",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51025,12 +46530,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_WeaponFinesse",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51038,12 +46537,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_WeaponFocus",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51051,12 +46544,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_WidenSpell",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51064,12 +46551,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BloodlineFeat_WindStance",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51077,12 +46558,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Alarm_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51090,12 +46565,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_AnimateDead_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51103,12 +46572,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_AnimateObjects_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51116,12 +46579,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_AnimatePlants_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51129,12 +46586,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_AstralProjection_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51142,12 +46593,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Augury_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51155,12 +46600,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Banishment_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51168,12 +46607,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Barkskin_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51181,12 +46614,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_BeastShapeIV_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51194,12 +46621,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_BestowCurse_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51207,12 +46628,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_BlackTentacles_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51220,12 +46635,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Bless_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51233,12 +46642,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Blight_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51246,12 +46649,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Blink_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51259,12 +46656,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Blur_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51272,12 +46663,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_BreakEnchantment_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51285,12 +46670,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_BullsStrength_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51298,12 +46677,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_BurningHands_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51311,12 +46684,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_BurningHandsAcid_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51324,12 +46691,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_BurningHandsCold_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51337,12 +46698,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_BurningHandsElectricity_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51350,12 +46705,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_CauseFear_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51363,12 +46712,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ChainLightning_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51376,12 +46719,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_CharmMonster_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51389,12 +46726,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ChillTouch_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51402,12 +46733,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_CircleofDeath_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51415,12 +46740,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Cloudkill_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51428,12 +46747,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_CommandGreater_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51441,12 +46754,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_CommandPlants_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51454,12 +46761,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ConeofCold_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51467,12 +46768,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Confusion_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51480,12 +46775,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ConfusionLesser_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51493,12 +46782,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Contagion_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51506,12 +46789,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ControlUndead_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51519,12 +46796,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ControlWater_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51532,12 +46803,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ControlWeather_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51545,12 +46810,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Darkvision_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51558,12 +46817,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_DeeperDarkness_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51571,12 +46824,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_DeepSlumber_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51584,12 +46831,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_DelayedBlastFireball_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51597,12 +46838,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_DelayPoison_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51610,12 +46845,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_DimensionalLock_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51623,12 +46852,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_DimensionDoor_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51636,12 +46859,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_DisguiseSelf_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51649,12 +46866,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Disintegrate_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51662,12 +46873,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Dismissal_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51675,12 +46880,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_DispelMagic_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51688,12 +46887,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_DispelMagicGreater_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51701,12 +46894,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Divination_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51714,12 +46901,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_DominateMonster_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51727,12 +46908,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_DominatePerson_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51740,12 +46915,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Dream_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51753,12 +46922,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_EaglesSplendor_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51766,12 +46929,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Earthquake_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51779,12 +46936,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ElementalBodyI_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51792,12 +46943,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ElementalBodyII_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51805,12 +46950,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ElementalBodyIII_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51818,12 +46957,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ElementalBodyIV_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51831,12 +46964,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ElementalSwarm_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51844,12 +46971,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_EndureElements_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51857,12 +46978,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_EnergyDrain_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51870,12 +46985,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_EnlargePerson_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51883,12 +46992,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Entangle_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51896,12 +46999,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_EntropicShield_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51909,12 +47006,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_EtherealJaunt_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51922,12 +47013,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Etherealness_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51935,12 +47020,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ExplosiveRunes_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51948,12 +47027,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Eyebite_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51961,12 +47034,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Fabricate_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51974,12 +47041,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_FalseLife_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -51987,12 +47048,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Fear_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52000,12 +47055,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Feeblemind_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52013,12 +47062,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_FingerofDeath_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52026,12 +47069,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Fireball_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52039,12 +47076,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_FireShieldwarm_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52052,12 +47083,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_FlameStrike_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52065,12 +47090,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Fly_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52078,12 +47097,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Foresight_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52091,12 +47104,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_FormoftheDragonI_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52104,12 +47111,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_FormoftheDragonII_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52117,12 +47118,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_FormoftheDragonIII_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52130,12 +47125,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_FreedomofMovement_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52143,12 +47132,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_GaseousForm_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52156,12 +47139,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Gate_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52169,12 +47146,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_GiantFormI_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52182,12 +47153,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_GiantFormII_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52195,12 +47160,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Glitterdust_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52208,12 +47167,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_GuardsandWards_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52221,12 +47174,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_GustofWind_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52234,12 +47181,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Heroism_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52247,12 +47188,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_HeroismGreater_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52260,12 +47195,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_HideousLaughter_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52273,12 +47202,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_HoldMonster_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52286,12 +47209,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_HorridWilting_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52299,12 +47216,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Hypnotism_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52312,12 +47223,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Identify_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52325,12 +47230,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Imprisonment_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52338,12 +47237,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Insanity_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52351,12 +47244,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_InsectPlague_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52364,12 +47251,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Invisibility_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52377,12 +47258,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_IronBody_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52390,12 +47265,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_IrresistibleDance_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52403,12 +47272,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_LightningBolt_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52416,12 +47279,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_MageArmor_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52429,12 +47286,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_MagicCircleagainstEvil_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52442,12 +47293,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_MagicVestment_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52455,12 +47300,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_MagicWeapon_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52468,12 +47307,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_MagicWeaponGreater_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52481,12 +47314,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_MajorCreation_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52494,12 +47321,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_MakeWhole_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52507,12 +47328,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_MeteorSwarm_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52520,12 +47335,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_MindBlank_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52533,12 +47342,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_MinorCreation_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52546,12 +47349,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Mislead_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52559,12 +47356,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_MomentofPrescience_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52572,12 +47363,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_MoveEarth_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52585,12 +47370,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ObscuringMist_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52598,12 +47377,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_OverlandFlight_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52611,12 +47384,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PersistentImage_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52624,12 +47391,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PhaseDoor_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52637,12 +47398,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PlanarBinding_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52650,12 +47405,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PlanarBindingDevilsAndFiendishCreaturesOnly_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52663,12 +47412,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PlanarBindingGreater_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52676,12 +47419,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PlaneShift_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52689,12 +47426,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PlantShapeIII_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52702,12 +47433,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Poison_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52715,12 +47440,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PolarRay_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52728,12 +47447,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PolymorphAnyObject_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52741,12 +47454,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PolymorphGreater_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52754,12 +47461,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PowerWordBlind_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52767,12 +47468,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PowerWordStun_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52780,12 +47475,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ProtectionfromEnergy_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52793,12 +47482,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ProtectionfromGood_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52806,12 +47489,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_PryingEyesGreater_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52819,12 +47496,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Rage_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52832,12 +47503,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_RayofEnfeeblement_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52845,12 +47510,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_RayofExhaustion_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52858,12 +47517,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_RemoveCurse_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52871,12 +47524,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_RepelMetalorStone_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52884,12 +47531,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Repulsion_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52897,12 +47538,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ResistEnergy_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52910,12 +47545,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ReverseGravity_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52923,12 +47552,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ScorchingRay_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52936,12 +47559,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ScorchingRayAcid_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52949,12 +47566,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ScorchingRayCold_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52962,12 +47573,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ScorchingRayElectricity_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52975,12 +47580,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_SeeInvisibility_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -52988,12 +47587,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Shades_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53001,12 +47594,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ShadowConjuration_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53014,12 +47601,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ShadowEvocation_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53027,12 +47608,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ShadowEvocationGreater_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53040,12 +47615,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ShadowWalk_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53053,12 +47622,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Shambler_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53066,12 +47629,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Shapechange_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53079,12 +47636,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ShockingGrasp_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53092,12 +47643,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Shout_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53105,12 +47650,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ShoutGreater_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53118,12 +47657,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_ShrinkItem_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53131,12 +47664,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Sleep_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53144,12 +47671,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_SoulBind_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53157,12 +47678,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_SpeakwithPlants_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53170,12 +47685,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_SpellResistance_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53183,12 +47692,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_SpellTurning_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53196,12 +47699,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_SpikeStones_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53209,12 +47706,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Stoneskin_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53222,12 +47713,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_StoneTell_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53235,12 +47720,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_StormofVengeance_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53248,12 +47727,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Suggestion_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53261,12 +47734,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_SuggestionMass_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53274,12 +47741,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_SummonMonsterIX_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53287,12 +47748,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_SummonMonsterVII_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53300,12 +47755,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_SummonMonsterVIIIElementalsOnly_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53313,12 +47762,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Sunburst_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53326,12 +47769,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_TeleportGreater_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53339,12 +47776,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Tongues_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53352,12 +47783,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_TouchofIdiocy_L2",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53365,12 +47790,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Transformation_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53378,12 +47797,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_TransmuteRocktoMud_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53391,12 +47804,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_TransportviaPlants_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53404,12 +47811,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_TraptheSoul_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53417,12 +47818,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_TreeStride_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53430,12 +47825,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_TrueSeeing_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53443,12 +47832,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_TrueStrike_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53456,12 +47839,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_UndeathToDeath_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53469,12 +47846,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_UnholyAura_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53482,12 +47853,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_UnseenServant_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53495,12 +47860,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_VampiricTouch_L3",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53508,12 +47867,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Veil_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53521,12 +47874,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Ventriloquism_L1",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53534,12 +47881,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Vision_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53547,12 +47888,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_WailoftheBanshee_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53560,12 +47895,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_WallofFire_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53573,12 +47902,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_WallOfIce_L4",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53586,12 +47909,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_WallofIron_L6",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53599,12 +47916,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_WallofStone_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53612,12 +47923,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_WallOfThorns_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53625,12 +47930,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_WavesofExhaustion_L7",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53638,12 +47937,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_WavesOfFatigue_L5",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53651,12 +47944,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Whirlwind_L8",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -53664,12 +47951,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="Sorcerer_BonusSpell_Wish_L9",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 DefineAbility({
@@ -53681,6 +47962,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="Whenever you move, you may move through up to 15 feet of difficult terrain each round as if it were normal terrain. The effects of this feat stack with those provided by Nimble Moves (allowing you to move normally through a total of 20 feet of difficult terrain each round).",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Acrobatic Steps",
+      },
     },
   },
   SourcePage="p.113",
@@ -53714,15 +48004,6 @@ DefineAbility({
   Description={
     Format="You can easily move over and through obstacles.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Acrobatic Steps",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -53739,15 +48020,6 @@ DefineAbility({
       FormatString="You add your Dexterity bonus to your base attack bonus and size bonus when determining your Combat Maneuver Bonus instead of your Strength bonus.",
     },
   },
-  SourcePage="p.117",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_AgileManeuvers"] >= 1)
-    end,
-  },
-  Description={
-    Format="You learned to use your quickness in place of brute force when performing combat maneuvers.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -53756,6 +48028,15 @@ DefineAbility({
         "Agile Maneuvers",
       },
     },
+  },
+  SourcePage="p.117",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_AgileManeuvers"] >= 1)
+    end,
+  },
+  Description={
+    Format="You learned to use your quickness in place of brute force when performing combat maneuvers.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -53773,15 +48054,6 @@ DefineAbility({
       FormatString="You get a +2 bonus on Perception and Sense Motive skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.",
     },
   },
-  SourcePage="p.117",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_Alertness"] >= 1)
-    end,
-  },
-  Description={
-    Format="You often notice things that others might miss.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -53790,6 +48062,15 @@ DefineAbility({
         "Alertness",
       },
     },
+  },
+  SourcePage="p.117",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_Alertness"] >= 1)
+    end,
+  },
+  Description={
+    Format="You often notice things that others might miss.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -53805,6 +48086,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="As a swift action, reduce the arcane spell failure chance due to the armor you are wearing by 20%% for any spells you cast this round. This bonus replaces, and does not stack with, the bonus granted by Arcane Armor Training.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Arcane Armor Mastery",
+      },
     },
   },
   SourcePage="p.118",
@@ -53860,15 +48150,6 @@ DefineAbility({
   Description={
     Format="You have mastered the ability to cast spells while wearing armor.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Arcane Armor Mastery",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -53883,6 +48164,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="As a swift action, reduce the arcane spell failure chance due to the armor you are wearing by 10%% for any spells you cast this round.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Arcane Armor Training",
+      },
     },
   },
   SourcePage="p.118",
@@ -53933,15 +48223,6 @@ DefineAbility({
   Description={
     Format="You have learned how to cast spells while wearing armor.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Arcane Armor Training",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -53956,6 +48237,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="As a swift action, you can imbue your weapons with a fraction of your power. For 1 round, your weapons deal +1 damage and are treated as magic for the purpose of overcoming damage reduction. For every five caster levels you possess, this bonus increases by +1, to a maximum of +5 at 20th level.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Arcane Strike",
+      },
     },
   },
   SourcePage="p.118",
@@ -54003,16 +48293,7 @@ DefineAbility({
   Description={
     Format="As a swift action, you can imbue your weapons with a fraction of your power. For 1 round, you gain a +%1 damage bonus and your weapons are treated as magic for the purpose of overcoming damage reduction.",
     Arguments={
-      "ArcaneStrikeDamageBonus",
-    },
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Arcane Strike",
-      },
+      Formula("ArcaneStrikeDamageBonus"),
     },
   },
   Types={
@@ -54031,15 +48312,6 @@ DefineAbility({
       FormatString="When you wear a type of armor with which you are proficient, the armor check penalty for that armor applies only to Dexterity- and Strength-based skill checks.",
     },
   },
-  SourcePage="p.118",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_LightArmorProficiency"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are skilled at wearing light armor.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -54048,6 +48320,15 @@ DefineAbility({
         "Armor Proficiency (Light)",
       },
     },
+  },
+  SourcePage="p.118",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_LightArmorProficiency"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are skilled at wearing light armor.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54065,6 +48346,15 @@ DefineAbility({
       FormatString="Each creature you conjure with any summon spell gains a +4 enhancement bonus to Strength and Constitution for the duration of the spell that summoned it.",
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Augment Summoning",
+      },
+    },
+  },
   SourcePage="p.118",
   Conditions={
     function (character)
@@ -54078,15 +48368,6 @@ DefineAbility({
   },
   Description={
     Format="Your summoned creatures are more powerful and robust than most.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Augment Summoning",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54104,15 +48385,6 @@ DefineAbility({
       FormatString="In melee, every time you miss because of concealment (see Chapter 8), you can reroll your miss chance percentile roll one time to see if you actually hit. An invisible attacker gets no advantages related to hitting you in melee. That is, you don't lose your Dexterity bonus to Armor Class, and the attacker doesn't get the usual +2 bonus for being invisible. The invisible attacker's bonuses do still apply for ranged attacks, however. You do not need to make Acrobatics skill checks to move at full speed while blinded.",
     },
   },
-  SourcePage="p.118",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_BlindFight"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are skillled at attacking opponents that you cannot clearly perceive.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -54121,6 +48393,15 @@ DefineAbility({
         "Blind-Fight",
       },
     },
+  },
+  SourcePage="p.118",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_BlindFight"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are skillled at attacking opponents that you cannot clearly perceive.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54136,6 +48417,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="As a standard action, you can make a single attack at your full base attack bonus against a foe within reach. If you hit, you deal damage normally and can make an additional attack (using your full base attack bonus) against a foe that is adjacent to the first and also within reach. You can only make one additional attack per round with this feat. When you use this feat, you take a -2 penalty to your Armor Class until your next turn.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Cleave",
+      },
     },
   },
   SourcePage="p.119",
@@ -54158,15 +48448,6 @@ DefineAbility({
   Description={
     Format="You can strike two adjacent foes with a single swing.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Cleave",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -54183,15 +48464,6 @@ DefineAbility({
       FormatString="You get a +4 bonus on concentration checks made to cast a spell or use a spell-like ability when casting on the defensive or while grappled.",
     },
   },
-  SourcePage="p.119",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_CombatCasting"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are adept at spellcasting when threatened or distracted.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -54200,6 +48472,15 @@ DefineAbility({
         "Combat Casting",
       },
     },
+  },
+  SourcePage="p.119",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_CombatCasting"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are adept at spellcasting when threatened or distracted.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54218,6 +48499,15 @@ DefineAbility({
       Arguments={
         "CombatExpertiseModifierAttack",
         "CombatExpertiseModifierAC",
+      },
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Combat Expertise",
       },
     },
   },
@@ -54247,15 +48537,6 @@ DefineAbility({
   Description={
     Format="You can increase your defense at the expense of your accuracy.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Combat Expertise",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -54275,15 +48556,6 @@ DefineAbility({
       },
     },
   },
-  SourcePage="p.119",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_CombatReflexes"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can make additional attacks of opportunity.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -54292,6 +48564,15 @@ DefineAbility({
         "Combat Reflexes",
       },
     },
+  },
+  SourcePage="p.119",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_CombatReflexes"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can make additional attacks of opportunity.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54307,6 +48588,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You can create magic rods. Crafting a rod takes 1 day for each 1,000 gp in its base price. To craft a rod, you must use up raw materials costing half of its base price. See the magic item creation rules for more information.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Craft Rod",
+      },
     },
   },
   SourcePage="p.120",
@@ -54338,15 +48628,6 @@ DefineAbility({
   Description={
     Format="You can create magic rods.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Craft Rod",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -54361,6 +48642,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You can create any staff whose prerequisites you meet. Crafting a staff takes 1 day for each 1,000 gp in its base price. To craft a staff, you must use up raw materials costing half of its base price. A newly created staff has 10 charges. See the magic item creation rules for more information.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Craft Staff",
+      },
     },
   },
   SourcePage="p.120",
@@ -54392,15 +48682,6 @@ DefineAbility({
   Description={
     Format="You can create magic staves.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Craft Staff",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -54415,6 +48696,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You can create a wide variety of magic wondrous items. Crafting a wondrous item takes 1 day for each 1,000 gp in its price. To create a wondrous item, you must use up raw materials costing half of its base price. See the magic item creation rules in Chapter 15 for more information. You can also mend a broken wondrous item if it is one that you could make. Doing so costs half the raw materials and half the time it would take to craft that item.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Craft Wondrous Item",
+      },
     },
   },
   SourcePage="p.120",
@@ -54460,15 +48750,6 @@ DefineAbility({
   Description={
     Format="You can create wondrous items, a type of magic item.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Craft Wondrous Item",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -54486,6 +48767,15 @@ DefineAbility({
       Arguments={
         "DeadlyAimModifier",
         "2*DeadlyAimModifier",
+      },
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Deadly Aim",
       },
     },
   },
@@ -54518,15 +48808,6 @@ DefineAbility({
   Description={
     Format="You can make exceptionally deadly ranged attacks by pinpointing a foe's weak spot, at the expense of making the attack less likely to succeed.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Deadly Aim",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -54543,15 +48824,6 @@ DefineAbility({
       FormatString="You get a +2 bonus on all Bluff and Disguise skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.",
     },
   },
-  SourcePage="p.121",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_Deceitful"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are skilled at deceiving others, both with the spoken word ans with physical disguises.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -54560,6 +48832,15 @@ DefineAbility({
         "Deceitful",
       },
     },
+  },
+  SourcePage="p.121",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_Deceitful"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are skilled at deceiving others, both with the spoken word ans with physical disguises.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54577,15 +48858,6 @@ DefineAbility({
       FormatString="You treat your total Hit Dice as your base attack bonus when calculating your Combat Maneuver Defense.",
     },
   },
-  SourcePage="p.121",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_DefensiveCombatTraining"] >= 1)
-    end,
-  },
-  Description={
-    Format="You excel at defending yourself from all manner of combat maneuvers.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -54594,6 +48866,15 @@ DefineAbility({
         "Defensive Combat Training",
       },
     },
+  },
+  SourcePage="p.121",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_DefensiveCombatTraining"] >= 1)
+    end,
+  },
+  Description={
+    Format="You excel at defending yourself from all manner of combat maneuvers.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54611,15 +48892,6 @@ DefineAbility({
       FormatString="You get a +2 bonus on Disable Device and Sleight of Hand skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.",
     },
   },
-  SourcePage="p.121",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_DeftHands"] >= 1)
-    end,
-  },
-  Description={
-    Format="You have exceptional manual dexterity.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -54628,6 +48900,15 @@ DefineAbility({
         "Deft Hands",
       },
     },
+  },
+  SourcePage="p.121",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_DeftHands"] >= 1)
+    end,
+  },
+  Description={
+    Format="You have exceptional manual dexterity.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54645,6 +48926,15 @@ DefineAbility({
       FormatString="When your hit point total is below 0, but you are not dead, you automatically stabilize. You do not need to make a Constitution check each round to avoid losing additional hit points. You may choose to act as if you were disabled, rather than dying. You must make this decision as soon as you are reduced to negative hit points (even if it isn't your turn). If you do not choose to act as if you were disabled, you immediately fall unconscious. When using this feat, you are staggered. You can take a move action without further injuring yourself, but if you perform any standard action (or any other action deemed as strenuous, including some free actions, such as casting a quickened spell) you take 1 point of damage after completing the act. If your negative hit points are equal to or greater than your Constitution score, you immediately die.",
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Diehard",
+      },
+    },
+  },
   SourcePage="p.122",
   Conditions={
     function (character)
@@ -54658,15 +48948,6 @@ DefineAbility({
   },
   Description={
     Format="You are especially hard to kill. Not only do your wounds automatically stabilize when grievously injured, but you can remain conscious and continue to act even at death's door.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Diehard",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54682,6 +48963,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You gain a +1 dodge bonus to your AC. A condition that makes you lose your Dex bonus to AC also makes you lose the benefits of this feat.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Dodge",
+      },
     },
   },
   SourcePage="p.122",
@@ -54710,15 +49000,6 @@ DefineAbility({
   Description={
     Format="Your training and reflexes allow you to react swiftly to avoid an opponent's attack.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Dodge",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -54735,15 +49016,6 @@ DefineAbility({
       FormatString="All variable, numeric effects of an empowered spell are increased by half including bonuses to those dice rolls. Saving throws and opposed rolls are not affected, nor are spells without random variables. An empowered spell uses up a spell slot two levels higher than the spell's actual level.",
     },
   },
-  SourcePage="p.122",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_EmpowerSpell"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can increase the power of your spells, causing them to deal more damage.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -54752,6 +49024,15 @@ DefineAbility({
         "Empower Spell",
       },
     },
+  },
+  SourcePage="p.122",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_EmpowerSpell"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can increase the power of your spells, causing them to deal more damage.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54772,15 +49053,6 @@ DefineAbility({
       },
     },
   },
-  SourcePage="p.112",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_Endurance"] >= 1)
-    end,
-  },
-  Description={
-    Format="Harsh conditions or long exertions do not easily tire you.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -54789,6 +49061,15 @@ DefineAbility({
         "Endurance",
       },
     },
+  },
+  SourcePage="p.112",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_Endurance"] >= 1)
+    end,
+  },
+  Description={
+    Format="Harsh conditions or long exertions do not easily tire you.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54806,15 +49087,6 @@ DefineAbility({
       FormatString="You can alter a spell with a range of close, medium, or long to increase its range by 100%%. An enlarged spell uses up a spell slot one level higher than the spell's actual level. Spells whose ranges are not defined by distance, as well as spells whose ranges are not close, medium, or long, do not benefit from this feat.",
     },
   },
-  SourcePage="p.122",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_EnlargeSpell"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can increase the range of your spells.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -54823,6 +49095,15 @@ DefineAbility({
         "Enlarge Spell",
       },
     },
+  },
+  SourcePage="p.122",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_EnlargeSpell"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can increase the range of your spells.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54840,15 +49121,6 @@ DefineAbility({
       FormatString="An extended spell lasts twice as long as normal. A spell with a duration of concentration, instantaneous, or permanent is not affected by this feat. An extended spell uses up a spell slot one level higher than the spell's actual level.",
     },
   },
-  SourcePage="p.123",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_ExtendSpell"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can make your spells last twice as long.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -54857,6 +49129,15 @@ DefineAbility({
         "Extend Spell",
       },
     },
+  },
+  SourcePage="p.123",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_ExtendSpell"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can make your spells last twice as long.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54874,6 +49155,15 @@ DefineAbility({
       FormatString="You only suffer a -1 penalty per full range increment between you and your target when using a ranged weapon.",
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Far Shot",
+      },
+    },
+  },
   SourcePage="p.124",
   Conditions={
     function (character)
@@ -54887,15 +49177,6 @@ DefineAbility({
   },
   Description={
     Format="You are more accurate at longer ranges.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Far Shot",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54916,16 +49197,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
-  SourcePage="p.124",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_Fleet"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are faster than most.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -54934,6 +49205,15 @@ DefineAbility({
         "Fleet",
       },
     },
+  },
+  SourcePage="p.124",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_Fleet"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are faster than most.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -54949,6 +49229,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You can create magic rings. Crafting a ring takes 1 day for each 1,000 gp in its base price. To craft a ring, you must use up raw materials costing half of the base price. See the magic item creation rules in Chapter 15 for more information. You can also mend a broken ring if it is one that you could make. Doing so costs half the raw materials and half the time it would take to forge that ring in the first place.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Forge Ring",
+      },
     },
   },
   SourcePage="p.124",
@@ -54980,15 +49269,6 @@ DefineAbility({
   Description={
     Format="You can create magic rings.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Forge Ring",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -55005,15 +49285,6 @@ DefineAbility({
       FormatString="You get a +2 bonus on all Fortitude saving throws.",
     },
   },
-  SourcePage="p.124",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_GreatFortitude"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are resistant to poisons, diseases, and other deadly maladies.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -55022,6 +49293,15 @@ DefineAbility({
         "Great Fortitude",
       },
     },
+  },
+  SourcePage="p.124",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_GreatFortitude"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are resistant to poisons, diseases, and other deadly maladies.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55039,6 +49319,15 @@ DefineAbility({
       FormatString="Add +1 to the Difficulty Class for all saving throws against spells from the school of magic you select. This bonus stacks with the bonus from Spell Focus.",
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Greater Spell Focus (Enchantment)",
+      },
+    },
+  },
   SourcePage="p.125",
   Conditions={
     function (character)
@@ -55052,15 +49341,6 @@ DefineAbility({
   },
   Description={
     Format="Any spells you cast from your chosen school of magic are very hard to resist.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Greater Spell Focus (Enchantment)",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55078,14 +49358,6 @@ DefineAbility({
       FormatString="A heightened spell has a higher spell level than normal (up to a maximum of 9th level). Unlike other metamagic feats, Heighten Spell actually increases the effective level of the spell that it modifies. All effects dependent on spell level (such as saving throw DCs and ability to penetrate a lesser globe of invulnerability) are calculated according to the heightened level. The heightened spell is as difficult to prepare and cast as a spell of its effective level.",
     },
   },
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_HeightenSpell"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can cast spells as if they were a higher level.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -55094,6 +49366,14 @@ DefineAbility({
         "Heighten Spell",
       },
     },
+  },
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_HeightenSpell"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can cast spells as if they were a higher level.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55109,6 +49389,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You do not provoke an attack of opportunity when performing a bull rush combat maneuver. In addition, you receive a +2 bonus on checks made to bull rush a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to bull rush you.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Improved Bull Rush",
+      },
     },
   },
   SourcePage="p.126",
@@ -55131,15 +49420,6 @@ DefineAbility({
   Description={
     Format="You are skilled at pushing your foes around.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Improved Bull Rush",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -55156,15 +49436,6 @@ DefineAbility({
       FormatString="When counterspelling, you may use a spell of the same school that is one or more spell levels higher than the target spell.",
     },
   },
-  SourcePage="p.126",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_ImprovedCounterspell"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are skilled at countering the spells of others using similar spells.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -55173,6 +49444,15 @@ DefineAbility({
         "Improved Counterspell",
       },
     },
+  },
+  SourcePage="p.126",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_ImprovedCounterspell"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are skilled at countering the spells of others using similar spells.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55188,6 +49468,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You do not provoke an attack of opportunity when performing a disarm combat maneuver. In addition, you receive a +2 bonus on checks made to disarm a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to disarm you.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Improved Disarm",
+      },
     },
   },
   SourcePage="p.127",
@@ -55221,15 +49510,6 @@ DefineAbility({
   Description={
     Format="You are skilled at knocking weapons from a foe's grasp.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Improved Disarm",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -55244,6 +49524,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You can make a Bluff check to feint in combat as a move action.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Improved Feint",
+      },
     },
   },
   SourcePage="p.127",
@@ -55272,15 +49561,6 @@ DefineAbility({
   Description={
     Format="You are skilled at fooling your opponents in combat.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Improved Feint",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -55295,6 +49575,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You do not provoke an attack of opportunity when performing a grapple combat maneuver. In addition, you receive a +2 bonus on checks made to grapple a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to grapple you.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Improved Grapple",
+      },
     },
   },
   SourcePage="p.127",
@@ -55328,15 +49617,6 @@ DefineAbility({
   Description={
     Format="You are skilled at grappling opponents.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Improved Grapple",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -55353,6 +49633,15 @@ DefineAbility({
       FormatString="Once per day, you may reroll a Fortitude save. You must decide to use this ability before the results are revealed. You must take the second roll, even if it is worse.",
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Improved Great Fortitude",
+      },
+    },
+  },
   SourcePage="p.127",
   Conditions={
     function (character)
@@ -55366,15 +49655,6 @@ DefineAbility({
   },
   Description={
     Format="You can draw upon an inner reserve to resist diseases, poisons, and other grievous harm.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Improved Great Fortitude",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55392,15 +49672,6 @@ DefineAbility({
       FormatString="You get a +4 bonus on initiative checks.",
     },
   },
-  SourcePage="p.127",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_ImprovedInitiative"] >= 1)
-    end,
-  },
-  Description={
-    Format="Your quick reflexes allow you to react quickly to danger.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -55409,6 +49680,15 @@ DefineAbility({
         "Improved Initiative",
       },
     },
+  },
+  SourcePage="p.127",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_ImprovedInitiative"] >= 1)
+    end,
+  },
+  Description={
+    Format="Your quick reflexes allow you to react quickly to danger.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55426,6 +49706,15 @@ DefineAbility({
       FormatString="Once per day, you may reroll a Will save. You must decide to use this ability before the results are revealed. You must take the second roll, even if it is worse.",
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Improved Iron Will",
+      },
+    },
+  },
   SourcePage="p.127",
   Conditions={
     function (character)
@@ -55439,15 +49728,6 @@ DefineAbility({
   },
   Description={
     Format="Your clarity of thought allows you to resist mental attacks.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Improved Iron Will",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55463,6 +49743,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You do not provoke an attack of opportunity when performing an overrun combat maneuver. In addition, you receive a +2 bonus on checks made to overrrun a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to overrun you. Targets of your overrun attempt may not chose to avoid you.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Improved Overrun",
+      },
     },
   },
   SourcePage="p.127",
@@ -55485,15 +49774,6 @@ DefineAbility({
   Description={
     Format="You are skilled at running down your foes.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Improved Overrun",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -55508,6 +49788,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You do not provoke an attack of opportunity when performing a sunder combat maneuver. In addition, you receive a +2 bonus on checks made to sunder an item. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to sunder your gear.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Improved Sunder",
+      },
     },
   },
   SourcePage="p.128",
@@ -55530,15 +49819,6 @@ DefineAbility({
   Description={
     Format="You are skilled at damaging your foes' weapons and armor.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Improved Sunder",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -55555,15 +49835,6 @@ DefineAbility({
       FormatString="You are considered to be armed even when unarmed-you do not provoke attacks of opportunity when you attack foes while unarmed. Your unarmed strikes can deal lethal or nonlethal damage, at your choice.",
     },
   },
-  SourcePage="p.128",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_ImprovedUnarmedStrike"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are skilled while fighting unarmed.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -55572,6 +49843,15 @@ DefineAbility({
         "Improved Unarmed Strike",
       },
     },
+  },
+  SourcePage="p.128",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_ImprovedUnarmedStrike"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are skilled while fighting unarmed.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55589,15 +49869,6 @@ DefineAbility({
       FormatString="Add your Strength modifier to Intimidate skill checks in addition to your Charisma modifier.",
     },
   },
-  SourcePage="p.128",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_IntimidatingProwess"] >= 1)
-    end,
-  },
-  Description={
-    Format="Your physical might is intimidating to others.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -55606,6 +49877,15 @@ DefineAbility({
         "Intimidating Prowess",
       },
     },
+  },
+  SourcePage="p.128",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_IntimidatingProwess"] >= 1)
+    end,
+  },
+  Description={
+    Format="Your physical might is intimidating to others.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55623,15 +49903,6 @@ DefineAbility({
       FormatString="You get a +2 bonus on all Will saving throws.",
     },
   },
-  SourcePage="p.129",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_IronWill"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are more resistant to mental effects.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -55640,6 +49911,15 @@ DefineAbility({
         "Iron Will",
       },
     },
+  },
+  SourcePage="p.129",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_IronWill"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are more resistant to mental effects.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55657,6 +49937,15 @@ DefineAbility({
       FormatString="This feat enables you to attract a loyal cohort and a number of devoted subordinates who assist you. A cohort is generally an NPC with class levels, while followers are typically lower level NPCs. See Table 5-2 for what level of cohort and how many followers you can recruit.",
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Leadership",
+      },
+    },
+  },
   SourcePage="p.129",
   Conditions={
     function (character)
@@ -55668,15 +49957,6 @@ DefineAbility({
   },
   Description={
     Format="You attract followers to your cause and a companion to join you on your adventure.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Leadership",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55694,15 +49974,6 @@ DefineAbility({
       FormatString="You get a +2 bonus on all Reflex saving throws.",
     },
   },
-  SourcePage="p.130",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_LightningReflexes"] >= 1)
-    end,
-  },
-  Description={
-    Format="You have faster reflexes than normal.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -55711,6 +49982,15 @@ DefineAbility({
         "Lightning Reflexes",
       },
     },
+  },
+  SourcePage="p.130",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_LightningReflexes"] >= 1)
+    end,
+  },
+  Description={
+    Format="You have faster reflexes than normal.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55728,15 +50008,6 @@ DefineAbility({
       FormatString="You get a +2 bonus on all Spellcraft checks and Use Magic Device checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.",
     },
   },
-  SourcePage="p.130",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_MagicalAptitude"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are skilled at spellcasting and using magic items.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -55745,6 +50016,15 @@ DefineAbility({
         "Magical Aptitude",
       },
     },
+  },
+  SourcePage="p.130",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_MagicalAptitude"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are skilled at spellcasting and using magic items.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55767,7 +50047,15 @@ DefineAbility({
       return ((not (character.IsProficientWith(weapon)) and (((weapon.IsType("Martial"))))))
     end),
   },
-  Selections=nil,
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Martial Weapon Proficiency (%LIST)",
+      },
+    },
+  },
   SourcePage="p.130",
   Conditions={
     function (character)
@@ -55781,15 +50069,6 @@ DefineAbility({
   },
   Description={
     Format="You understand how to use your chosen martial weapon in combat.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Martial Weapon Proficiency (%LIST)",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55807,15 +50086,6 @@ DefineAbility({
       FormatString="All variable, numeric effects of a spell modified by this feat are maximized. Saving throws and opposed rolls are not affected, nor are spells without random variables. A maximized spell uses up a spell slot three levels higher than the spell's actual level. An empowered, maximized spell gains the separate benefits of each feat: the maximum result plus half the normally rolled result.",
     },
   },
-  SourcePage="p.130",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_MaximizeSpell"] >= 1)
-    end,
-  },
-  Description={
-    Format="Your spells have the maximum possible effect.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -55824,6 +50094,15 @@ DefineAbility({
         "Maximize Spell",
       },
     },
+  },
+  SourcePage="p.130",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_MaximizeSpell"] >= 1)
+    end,
+  },
+  Description={
+    Format="Your spells have the maximum possible effect.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55839,6 +50118,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You get a +4 dodge bonus to Armor Class against attacks of opportunity caused when you move out of or within a threatened area. A condition that makes you lose your Dexterity bonus to Armor Class (if any) also makes you lose dodge bonuses. Dodge bonuses stack with each other, unlike most types of bonuses.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Mobility",
+      },
     },
   },
   SourcePage="p.130",
@@ -55872,15 +50160,6 @@ DefineAbility({
   Description={
     Format="You can easily move through a dangerous melee.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Mobility",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -55897,6 +50176,15 @@ DefineAbility({
       FormatString="Once per round when your mount is hit in combat, you may attempt a Ride check (as an immediate action) to negate the hit. The hit is negated if your Ride check result is greater than the opponent's attack roll.",
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Mounted Combat",
+      },
+    },
+  },
   SourcePage="p.131",
   Conditions={
     function (character)
@@ -55908,15 +50196,6 @@ DefineAbility({
   },
   Description={
     Format="You are adept at guiding your mount through combat.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Mounted Combat",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -55932,6 +50211,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="Whenever you move, you may move through 5 feet of difficult terrain each round as if it were normal terrain. This feat allows you to take a 5-foot step into difficult terrain.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Nimble Moves",
+      },
     },
   },
   SourcePage="p.131",
@@ -55960,15 +50248,6 @@ DefineAbility({
   Description={
     Format="You can move across a single obstacle with ease.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Nimble Moves",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -55985,15 +50264,6 @@ DefineAbility({
       FormatString="You get a +2 bonus on Diplomacy and Intimidate skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.",
     },
   },
-  SourcePage="p.131",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_Persuasive"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are skilled at swaying attitudes and intimidating others into your way of thinking.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56002,6 +50272,15 @@ DefineAbility({
         "Persuasive",
       },
     },
+  },
+  SourcePage="p.131",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_Persuasive"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are skilled at swaying attitudes and intimidating others into your way of thinking.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56019,15 +50298,6 @@ DefineAbility({
       FormatString="You get a +1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet.",
     },
   },
-  SourcePage="p.131",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_PointBlankShot"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are especially accurate when making ranged attacks against close target.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56036,6 +50306,15 @@ DefineAbility({
         "Point-Blank Shot",
       },
     },
+  },
+  SourcePage="p.131",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_PointBlankShot"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are especially accurate when making ranged attacks against close target.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56057,6 +50336,15 @@ DefineAbility({
       },
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Power Attack",
+      },
+    },
+  },
   SourcePage="p.131",
   Conditions={
     function (character)
@@ -56071,15 +50359,6 @@ DefineAbility({
   },
   Description={
     Format="You can make exceptionally deadly melee attacks by sacrificing accuracy for strength.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Power Attack",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56097,6 +50376,15 @@ DefineAbility({
       FormatString="You can shoot or throw ranged weapons at an opponent engaged in melee without taking the standard -4 penalty on your attack roll.",
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Precise Shot",
+      },
+    },
+  },
   SourcePage="p.131",
   Conditions={
     function (character)
@@ -56110,15 +50398,6 @@ DefineAbility({
   },
   Description={
     Format="You are adept at firing ranged attacks into melee.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Precise Shot",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56136,6 +50415,15 @@ DefineAbility({
       FormatString="You can draw a weapon as a free action instead of as a move action. You can draw a hidden weapon (see the Sleight of Hand skill) as a move action. A character who has selected this feat may throw weapons at his full normal rate of attacks (much like a character with a bow). Alchemical items, potions, scrolls, and wands cannot be drawn quickly using this feat.",
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Quick Draw",
+      },
+    },
+  },
   SourcePage="p.131",
   Conditions={
     function (character)
@@ -56147,15 +50435,6 @@ DefineAbility({
   },
   Description={
     Format="You can draw weapons faster than most.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Quick Draw",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56173,15 +50452,6 @@ DefineAbility({
       FormatString="Casting a quickened spell is a swift action. You can perform another action, even casting another spell, in the same round as you cast a quickened spell. A spell whose casting time is more than 1 round or 1 full-round action cannot be quickened. A quickened spell uses up a spell slot four levels higher than the spell's actual level. Casting a quickened spell doesn't provoke an attack of opportunity.",
     },
   },
-  SourcePage="p.132",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_QuickenSpell"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can cast spells in the fraction of the normal time.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56190,6 +50460,15 @@ DefineAbility({
         "Quicken Spell",
       },
     },
+  },
+  SourcePage="p.132",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_QuickenSpell"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can cast spells in the fraction of the normal time.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56205,6 +50484,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="When you are mounted and use the charge action, you may move and attack as if with a standard charge and then move again (continuing the straight line of the charge). Your total movement for the round can't exceed double your mounted speed. You and your mount do not provoke an attack of opportunity from the opponent that you attack.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Ride-By Attack",
+      },
     },
   },
   SourcePage="p.132",
@@ -56224,15 +50512,6 @@ DefineAbility({
   Description={
     Format="While mounted, you can move, strike at a foe, and then continue moving.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Ride-By Attack",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -56247,6 +50526,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="You can create a scroll of any spell that you know. Scribing a scroll takes 2 hours if its base price is 250 gp or less, otherwise scribing a scroll takes 1 day for each 1,000 gp in its base price. To scribe a scroll, you must use up raw materials costing half of this base price. See the magic item creation rules in Chapter 15 for more information.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Scribe Scroll",
+      },
     },
   },
   SourcePage="p.132",
@@ -56278,15 +50566,6 @@ DefineAbility({
   Description={
     Format="You can create magic scrolls.",
   },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Scribe Scroll",
-      },
-    },
-  },
   Types={
     "Sorcerer Bloodline Feat",
   },
@@ -56303,15 +50582,6 @@ DefineAbility({
       FormatString="A silent spell can be cast with no verbal components. Spells without verbal components are not affected. A silent spell uses up a spell slot one level higher than the spell's actual level.",
     },
   },
-  SourcePage="p.133",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SilentSpell"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can cast your spells without making any sound.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56320,6 +50590,15 @@ DefineAbility({
         "Silent Spell",
       },
     },
+  },
+  SourcePage="p.133",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SilentSpell"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can cast your spells without making any sound.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56337,15 +50616,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusAcrobatics"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Acrobatics skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56354,6 +50624,15 @@ DefineAbility({
         "Skill Focus (Acrobatics)",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusAcrobatics"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Acrobatics skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56371,15 +50650,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusBluff"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Bluff skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56388,6 +50658,15 @@ DefineAbility({
         "Skill Focus (Bluff)",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusBluff"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Bluff skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56410,16 +50689,6 @@ DefineAbility({
       return ((skill.IsType("Craft")))
     end),
   },
-  Selections=nil,
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusCraft"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at your chosen Craft skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56428,6 +50697,15 @@ DefineAbility({
         "Skill Focus (%LIST)",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusCraft"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at your chosen Craft skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56445,15 +50723,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusFly"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Fly skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56462,6 +50731,15 @@ DefineAbility({
         "Skill Focus (Fly)",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusFly"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Fly skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56479,15 +50757,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusIntimidate"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Intimidate skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56496,6 +50765,15 @@ DefineAbility({
         "Skill Focus (Intimidate)",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusIntimidate"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Intimidate skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56513,15 +50791,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgeArcana"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Knowledge (Arcana) skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56530,6 +50799,15 @@ DefineAbility({
         "Skill Focus (Knowledge (Arcana))",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgeArcana"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Knowledge (Arcana) skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56547,15 +50825,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgeDungeoneering"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Knowledge (dungeoneering) skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56564,6 +50833,15 @@ DefineAbility({
         "Skill Focus (Knowledge (Dungeoneering))",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgeDungeoneering"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Knowledge (dungeoneering) skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56581,15 +50859,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgeEngineering"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Knowledge (engineering) skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56598,6 +50867,15 @@ DefineAbility({
         "Skill Focus (Knowledge (Engineering))",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgeEngineering"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Knowledge (engineering) skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56615,15 +50893,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgeHistory"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Knowledge (History) skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56632,6 +50901,15 @@ DefineAbility({
         "Skill Focus (Knowledge (History))",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgeHistory"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Knowledge (History) skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56649,15 +50927,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgeNature"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Knowledge (Nature) skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56666,6 +50935,15 @@ DefineAbility({
         "Skill Focus (Knowledge (Nature))",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgeNature"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Knowledge (Nature) skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56683,15 +50961,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgePlanes"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Knowledge (Planes) skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56700,6 +50969,15 @@ DefineAbility({
         "Skill Focus (Knowledge (Planes))",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgePlanes"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Knowledge (Planes) skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56717,15 +50995,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgeReligion"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Knowledge (Religion) skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56734,6 +51003,15 @@ DefineAbility({
         "Skill Focus (Knowledge (Religion))",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusKnowledgeReligion"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Knowledge (Religion) skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56751,15 +51029,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusPerception"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Skill Focus (Perception) skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56768,6 +51037,15 @@ DefineAbility({
         "Skill Focus (Perception)",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusPerception"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Skill Focus (Perception) skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56790,16 +51068,6 @@ DefineAbility({
       return ((skill.IsType("Perform")))
     end),
   },
-  Selections=nil,
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusPerform"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Perform skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56808,6 +51076,15 @@ DefineAbility({
         "Skill Focus (%LIST)",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusPerform"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Perform skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56825,15 +51102,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusSenseMotive"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Sense Motive skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56842,6 +51110,15 @@ DefineAbility({
         "Skill Focus (Sense Motive)",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusSenseMotive"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Sense Motive skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56859,15 +51136,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusStealth"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Stealth skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56876,6 +51144,15 @@ DefineAbility({
         "Skill Focus (Stealth)",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusStealth"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Stealth skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56893,15 +51170,6 @@ DefineAbility({
       FormatString="You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusSwim"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are particularly adept at the Swim skill.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56910,6 +51178,15 @@ DefineAbility({
         "Skill Focus (Swim)",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SkillFocusSwim"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are particularly adept at the Swim skill.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56961,15 +51238,6 @@ DefineAbility({
       FormatString="Add +1 to the Difficulty Class for all saving throws against spells from the school of magic you select.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SpellFocusEnchantment"] >= 1)
-    end,
-  },
-  Description={
-    Format="Any spells you cast of your chosen school of magic are more difficult to resist.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -56978,6 +51246,15 @@ DefineAbility({
         "Spell Focus (Enchantment)",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SpellFocusEnchantment"] >= 1)
+    end,
+  },
+  Description={
+    Format="Any spells you cast of your chosen school of magic are more difficult to resist.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -56995,15 +51272,6 @@ DefineAbility({
       FormatString="Add +1 to the Difficulty Class for all saving throws against spells from the school of magic you select.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SpellFocusNecromancy"] >= 1)
-    end,
-  },
-  Description={
-    Format="Any spells you cast of your chosen school of magic are more difficult to resist.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -57012,6 +51280,15 @@ DefineAbility({
         "Spell Focus (Necromancy)",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SpellFocusNecromancy"] >= 1)
+    end,
+  },
+  Description={
+    Format="Any spells you cast of your chosen school of magic are more difficult to resist.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -57029,15 +51306,6 @@ DefineAbility({
       FormatString="You get a +2 bonus on caster level checks (1d20 + caster level) made to overcome a creature's spell resistance.",
     },
   },
-  SourcePage="p.134",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_SpellPenetration"] >= 1)
-    end,
-  },
-  Description={
-    Format="Your spells break through spell resistance more easily than most.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -57046,6 +51314,15 @@ DefineAbility({
         "Spell Penetration",
       },
     },
+  },
+  SourcePage="p.134",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_SpellPenetration"] >= 1)
+    end,
+  },
+  Description={
+    Format="Your spells break through spell resistance more easily than most.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -57063,15 +51340,6 @@ DefineAbility({
       FormatString="You get a +2 bonus on all Escape Artist and Stealth skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.",
     },
   },
-  SourcePage="p.135",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_Stealthy"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are good at avoiding attention and slipping out of bonds.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -57080,6 +51348,15 @@ DefineAbility({
         "Stealthy",
       },
     },
+  },
+  SourcePage="p.135",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_Stealthy"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are good at avoiding attention and slipping out of bonds.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -57097,15 +51374,6 @@ DefineAbility({
       FormatString="A stilled spell can be cast with no somatic components. Spells without somatic components are not affected. A stilled spell uses up a spell slot one level higher than the spell's actual level.",
     },
   },
-  SourcePage="p.135",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_StillSpell"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can cast spells without moving.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -57114,6 +51382,15 @@ DefineAbility({
         "Still Spell",
       },
     },
+  },
+  SourcePage="p.135",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_StillSpell"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can cast spells without moving.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -57142,15 +51419,6 @@ DefineAbility({
       },
     },
   },
-  SourcePage="p.135",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_Toughness"] >= 1)
-    end,
-  },
-  Description={
-    Format="You have enhanced physical stamina.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -57159,6 +51427,15 @@ DefineAbility({
         "Toughness",
       },
     },
+  },
+  SourcePage="p.135",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_Toughness"] >= 1)
+    end,
+  },
+  Description={
+    Format="You have enhanced physical stamina.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -57176,15 +51453,6 @@ DefineAbility({
       FormatString="With a light weapon, rapier, whip, or spiked chain made for a creature of your size category, you may use your Dexterity modifier instead of your Strength modifier on attack rolls. If you carry a shield, its armor check penalty applies to your attack rolls.",
     },
   },
-  SourcePage="p.136",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_WeaponFinesse"] >= 1)
-    end,
-  },
-  Description={
-    Format="You are trained in using your agility in melee combat, as opposed to brute strength.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -57193,6 +51461,15 @@ DefineAbility({
         "Weapon Finesse",
       },
     },
+  },
+  SourcePage="p.136",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_WeaponFinesse"] >= 1)
+    end,
+  },
+  Description={
+    Format="You are trained in using your agility in melee combat, as opposed to brute strength.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -57247,15 +51524,6 @@ DefineAbility({
       FormatString="You can alter a burst, emanation, or spread-shaped spell to increase its area. Any numeric measurements of the spell's area increase by 100%%. A widened spell uses up a spell slot three levels higher than the spell's actual level. Spells that do not have an area of one of these four sorts are not affected by this feat.",
     },
   },
-  SourcePage="p.137",
-  Conditions={
-    function (character)
-      return (character.Variables["Sorcerer_BloodlineFeat_WidenSpell"] >= 1)
-    end,
-  },
-  Description={
-    Format="You can cast your spells so that they occupy a larger space.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -57264,6 +51532,15 @@ DefineAbility({
         "Widen Spell",
       },
     },
+  },
+  SourcePage="p.137",
+  Conditions={
+    function (character)
+      return (character.Variables["Sorcerer_BloodlineFeat_WidenSpell"] >= 1)
+    end,
+  },
+  Description={
+    Format="You can cast your spells so that they occupy a larger space.",
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -57279,6 +51556,15 @@ DefineAbility({
   Benefits={
     {
       FormatString="If you move more than 5 feet this turn, you gain 20%% concealment for 1 round against ranged attacks.",
+    },
+  },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Wind Stance",
+      },
     },
   },
   SourcePage="p.137",
@@ -57314,15 +51600,6 @@ DefineAbility({
   },
   Description={
     Format="Your erratic movements make it difficult for enemies to pinpoint your location.",
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Wind Stance",
-      },
-    },
   },
   Types={
     "Sorcerer Bloodline Feat",
@@ -63943,14 +58220,6 @@ DefineAbility({
       return ((not (character.HasAbility(ability))) and (character.IsQualifiedFor(ability) and (((ability.IsType("SorcererBloodlineChoice"))))))
     end),
   },
-  Selections=nil,
-  Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Name == "Sorcerer ~ Standard Bloodline")
-      end)
-    end,
-  },
   Abilities={
     {
       Category="Sorcerer Bloodline",
@@ -63959,6 +58228,13 @@ DefineAbility({
         "%LIST",
       },
     },
+  },
+  Conditions={
+    function (character)
+      return 1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "Special Ability" and (ability.Name == "Sorcerer ~ Standard Bloodline")
+      end)
+    end,
   },
   Types={
     "Bloodline Selection",
@@ -63975,124 +58251,6 @@ DefineAbility({
     {
       Name="Bloodline",
       FormatString="Aberrant",
-    },
-  },
-  SourcePage="p.72",
-  Description={
-    Format="There is a taint in your blood, one that is alien and bizarre. You tend to think in odd ways, approaching problems from an angle that most would not expect. Over time, this taint manifests itself in your physical form.",
-    Arguments={
-      "PREVAREQ:Sorcerer_Aberrant_Description,0",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Aberrant_BloodlineLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlineProgressionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlineArcana1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlineSpells1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePowers",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower3",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower9",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower15",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower20",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlineClassSkill1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_Description",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Aberrant_BloodlinePower1LVL",
-      },
-      Formula=Formula("Sorcerer_Aberrant_BloodlineLVL+BloodlinePower1LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Aberrant_BloodlinePower3LVL",
-      },
-      Formula=Formula("Sorcerer_Aberrant_BloodlineLVL+BloodlinePower3LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Aberrant_BloodlinePower9LVL",
-      },
-      Formula=Formula("Sorcerer_Aberrant_BloodlineLVL+BloodlinePower9LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Aberrant_BloodlinePower15LVL",
-      },
-      Formula=Formula("Sorcerer_Aberrant_BloodlineLVL+BloodlinePower15LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Aberrant_BloodlinePower20LVL",
-      },
-      Formula=Formula("Sorcerer_Aberrant_BloodlineLVL+BloodlinePower20LVLBonus"),
     },
   },
   Abilities={
@@ -64205,6 +58363,50 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.72",
+  Description={
+    Format="There is a taint in your blood, one that is alien and bizarre. You tend to think in odd ways, approaching problems from an angle that most would not expect. Over time, this taint manifests itself in your physical form.",
+    Arguments={
+      Formula("PREVAREQ:Sorcerer_Aberrant_Description,0"),
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Aberrant_BloodlinePower1LVL",
+      },
+      Formula=Formula("Sorcerer_Aberrant_BloodlineLVL+BloodlinePower1LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Aberrant_BloodlinePower3LVL",
+      },
+      Formula=Formula("Sorcerer_Aberrant_BloodlineLVL+BloodlinePower3LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Aberrant_BloodlinePower9LVL",
+      },
+      Formula=Formula("Sorcerer_Aberrant_BloodlineLVL+BloodlinePower9LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Aberrant_BloodlinePower15LVL",
+      },
+      Formula=Formula("Sorcerer_Aberrant_BloodlineLVL+BloodlinePower15LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Aberrant_BloodlinePower20LVL",
+      },
+      Formula=Formula("Sorcerer_Aberrant_BloodlineLVL+BloodlinePower20LVLBonus"),
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -64219,6 +58421,22 @@ DefineAbility({
   Category="Sorcerer Bloodline",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Aberrant Bloodline ~ Feat Tracker",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sorcerer Bloodline ~ Aberrant",
+      },
+    },
+  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -64314,22 +58532,6 @@ DefineAbility({
         Name="Base",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Aberrant Bloodline ~ Feat Tracker",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sorcerer Bloodline ~ Aberrant",
       },
     },
   },
@@ -64705,21 +58907,7 @@ DefineAbility({
   Description={
     Format="points of acid damage. You can use this ability %1 times per day.",
     Arguments={
-      "Sorcerer_Aberrant_BloodlinePower1Times",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_AcidicRay_DamageBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_Aberrant_BloodlinePower1Times"),
     },
   },
   Bonuses={
@@ -64781,17 +58969,7 @@ DefineAbility({
   Description={
     Format="Your reach increases by %1 feet whenever you are making a melee touch attack. This ability does not otherwise increase your threatened area.",
     Arguments={
-      "Sorcerer_LongLimbs_Reach",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_LongLimbs_Reach",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_LongLimbs_Reach"),
     },
   },
   Bonuses={
@@ -64892,17 +59070,7 @@ DefineAbility({
   Description={
     Format="Your anatomy changes, giving you a %1%% chance to ignore any critical hit or sneak attack scored against you, treating it as a normal hit instead.",
     Arguments={
-      "Sorcerer_UnusualAnatomy_PercentChance",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_UnusualAnatomy_PercentChance",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_UnusualAnatomy_PercentChance"),
     },
   },
   Bonuses={
@@ -64950,6 +59118,7 @@ DefineAbility({
     },
   },
   SourcePage="p.72",
+  SpellResistance="Sorcerer_AlienResistance_SR",
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -64963,17 +59132,7 @@ DefineAbility({
   Description={
     Format="You gain spell resistance %1.",
     Arguments={
-      "Sorcerer_AlienResistance_SR",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_AlienResistance_SR",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_AlienResistance_SR"),
     },
   },
   Bonuses={
@@ -64993,7 +59152,6 @@ DefineAbility({
     "SpecialQuality",
     "Supernatural",
   },
-  SpellResistance="Sorcerer_AlienResistance_SR",
 })
 
 DefineAbility({
@@ -65012,7 +59170,20 @@ DefineAbility({
       FormatString="AberrantBloodlinePowers",
     },
   },
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Critical Hits",
+        "Immunity to Sneak Attacks",
+      },
+    },
+  },
   SourcePage="p.72",
+  DamageReduction={
+    Value="5/-",
+  },
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -65025,12 +59196,6 @@ DefineAbility({
   },
   Description={
     Format="Your body becomes truly unnatural. You are immune to critical hits and sneak attacks. In addition, you gain blindsight with a range of 60 feet and damage reduction 5/--.",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Aberrant_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -65046,16 +59211,6 @@ DefineAbility({
       },
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Critical Hits",
-        "Immunity to Sneak Attacks",
-      },
-    },
-  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -65064,9 +59219,6 @@ DefineAbility({
     "SpecialQuality",
     "Extraordinary",
     "Defensive",
-  },
-  DamageReduction={
-    Value="5/-",
   },
 })
 
@@ -65080,124 +59232,6 @@ DefineAbility({
     {
       Name="Bloodline",
       FormatString="Abyssal",
-    },
-  },
-  SourcePage="p.72",
-  Description={
-    Format="Generations ago, a demon spread its filth into your heritage. While it does not manifest in all of your kin, for you it is particularly strong. You might sometimes have urges to chaos or evil, but your destiny (and alignment) is up to you.",
-    Arguments={
-      "PREVAREQ:Sorcerer_Abyssal_Description,0",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Abyssal_BloodlineLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlineProgressionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlineArcana1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlineSpells1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePowers",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower3",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower9",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower15",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower20",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlineClassSkill1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_Description",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Abyssal_BloodlinePower1LVL",
-      },
-      Formula=Formula("Sorcerer_Abyssal_BloodlineLVL+BloodlinePower1LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Abyssal_BloodlinePower3LVL",
-      },
-      Formula=Formula("Sorcerer_Abyssal_BloodlineLVL+BloodlinePower3LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Abyssal_BloodlinePower9LVL",
-      },
-      Formula=Formula("Sorcerer_Abyssal_BloodlineLVL+BloodlinePower9LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Abyssal_BloodlinePower15LVL",
-      },
-      Formula=Formula("Sorcerer_Abyssal_BloodlineLVL+BloodlinePower15LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Abyssal_BloodlinePower20LVL",
-      },
-      Formula=Formula("Sorcerer_Abyssal_BloodlineLVL+BloodlinePower20LVLBonus"),
     },
   },
   Abilities={
@@ -65310,6 +59344,50 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.72",
+  Description={
+    Format="Generations ago, a demon spread its filth into your heritage. While it does not manifest in all of your kin, for you it is particularly strong. You might sometimes have urges to chaos or evil, but your destiny (and alignment) is up to you.",
+    Arguments={
+      Formula("PREVAREQ:Sorcerer_Abyssal_Description,0"),
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Abyssal_BloodlinePower1LVL",
+      },
+      Formula=Formula("Sorcerer_Abyssal_BloodlineLVL+BloodlinePower1LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Abyssal_BloodlinePower3LVL",
+      },
+      Formula=Formula("Sorcerer_Abyssal_BloodlineLVL+BloodlinePower3LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Abyssal_BloodlinePower9LVL",
+      },
+      Formula=Formula("Sorcerer_Abyssal_BloodlineLVL+BloodlinePower9LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Abyssal_BloodlinePower15LVL",
+      },
+      Formula=Formula("Sorcerer_Abyssal_BloodlineLVL+BloodlinePower15LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Abyssal_BloodlinePower20LVL",
+      },
+      Formula=Formula("Sorcerer_Abyssal_BloodlineLVL+BloodlinePower20LVLBonus"),
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -65324,6 +59402,22 @@ DefineAbility({
   Category="Sorcerer Bloodline",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Bloodline Feat Tracker ~ Abyssal",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sorcerer Bloodline ~ Abyssal",
+      },
+    },
+  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -65419,22 +59513,6 @@ DefineAbility({
         Name="Base",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Bloodline Feat Tracker ~ Abyssal",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sorcerer Bloodline ~ Abyssal",
       },
     },
   },
@@ -65719,13 +59797,7 @@ DefineAbility({
   Description={
     Format="Whenever you cast a spell of the summoning subschool, the creatures summoned gain DR %1/good. This does not stack with any DR the creature might have.",
     Arguments={
-      "Sorcerer_AbyssalBloodlineArcana_SummonDR",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_AbyssalBloodlineArcana_SummonDR",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_AbyssalBloodlineArcana_SummonDR"),
     },
   },
   Bonuses={
@@ -65848,6 +59920,15 @@ DefineAbility({
       FormatString="AbyssalBloodlinePowers",
     },
   },
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Claw",
+      },
+    },
+  },
   SourcePage="p.73",
   Conditions={
     function (character)
@@ -65862,21 +59943,7 @@ DefineAbility({
   Description={
     Format="You can use your claws for %1 rounds per day. These rounds do not need to be consecutive.",
     Arguments={
-      "Sorcerer_Abyssal_BloodlinePower1Times",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_GenericClaws_SizeBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_Abyssal_BloodlinePower1Times"),
     },
   },
   Bonuses={
@@ -65902,15 +59969,6 @@ DefineAbility({
         function (character)
           return (character.Variables["Sorcerer_Abyssal_BloodlinePower1LVL"] >= 7)
         end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Claw",
       },
     },
   },
@@ -65965,22 +60023,8 @@ DefineAbility({
   Description={
     Format="You gain resist electricity %1 and a +%2 bonus on saving throws made against poison.",
     Arguments={
-      "Sorcerer_AbyssalDemonResistances_ResistanceBonus",
-      "Sorcerer_AbyssalDemonResistances_SaveBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_AbyssalDemonResistances_ResistanceBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_AbyssalDemonResistances_SaveBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_AbyssalDemonResistances_ResistanceBonus"),
+      Formula("Sorcerer_AbyssalDemonResistances_SaveBonus"),
     },
   },
   Bonuses={
@@ -66047,17 +60091,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 inherent bonus to your Strength.",
     Arguments={
-      "Sorcerer_AbyssalStrengthOfTheAbyss_StrBonus*2",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_AbyssalStrengthOfTheAbyss_StrBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_AbyssalStrengthOfTheAbyss_StrBonus*2"),
     },
   },
   Bonuses={
@@ -66118,12 +60152,6 @@ DefineAbility({
   Description={
     Format="Whenever you summon a creature with the demon subtype or the fiendish template using a summon monster spell, you summon one additional creature of the same kind.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -66147,6 +60175,23 @@ DefineAbility({
       FormatString="AbyssalBloodlinePowers",
     },
   },
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Electricity",
+        "Immunity to Poison",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Telepathy",
+      },
+    },
+  },
   SourcePage="p.73",
   Conditions={
     function (character)
@@ -66161,17 +60206,7 @@ DefineAbility({
   Description={
     Format="The power of the Abyss flows through you. You gain immunity to electricity and poison. You also gain resistance to acid %1, cold %1, and fire %1, and gain telepathy with a range of 60 feet (allowing you to communicate with any creature that can speak a language).",
     Arguments={
-      "Sorcerer_AbyssalDemonicMight_ResistanceBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Abyssal_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_AbyssalDemonicMight_ResistanceBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_AbyssalDemonicMight_ResistanceBonus"),
     },
   },
   Bonuses={
@@ -66204,23 +60239,6 @@ DefineAbility({
       Formula=Formula("-40"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Electricity",
-        "Immunity to Poison",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Telepathy",
-      },
-    },
-  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -66242,136 +60260,6 @@ DefineAbility({
     {
       Name="Bloodline",
       FormatString="Arcane",
-    },
-  },
-  SourcePage="p.73",
-  Description={
-    Format="Your family has always been skilled in the eldritch art of magic. While many of your relatives were accomplished wizards, your powers developed without the need for study and practice.",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Arcane_BloodlineLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlineProgressionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlineArcana1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlineSpells1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePowers",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePower1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePower3",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePower9",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePower15",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePower20",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlineClassSkill1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_Description",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="ABILITYPOOL",
-      Variables={
-        "Knowledge Class Skill",
-      },
-      Formula=Formula("1"),
-      Conditions={
-        function (character)
-          return (character.Variables["Sorcerer_Arcane_BloodlineClassSkill1"] >= 1)
-        end,
-        function (character)
-          return (character.Variables["Sorcerer_Arcane_Description"] == 0)
-        end,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Arcane_BloodlinePower1LVL",
-      },
-      Formula=Formula("Sorcerer_Arcane_BloodlineLVL+BloodlinePower1LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Arcane_BloodlinePower3LVL",
-      },
-      Formula=Formula("Sorcerer_Arcane_BloodlineLVL+BloodlinePower3LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Arcane_BloodlinePower9LVL",
-      },
-      Formula=Formula("Sorcerer_Arcane_BloodlineLVL+BloodlinePower9LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Arcane_BloodlinePower15LVL",
-      },
-      Formula=Formula("Sorcerer_Arcane_BloodlineLVL+BloodlinePower15LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Arcane_BloodlinePower20LVL",
-      },
-      Formula=Formula("Sorcerer_Arcane_BloodlineLVL+BloodlinePower20LVLBonus"),
     },
   },
   Abilities={
@@ -66472,6 +60360,62 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.73",
+  Description={
+    Format="Your family has always been skilled in the eldritch art of magic. While many of your relatives were accomplished wizards, your powers developed without the need for study and practice.",
+  },
+  Bonuses={
+    {
+      Category="ABILITYPOOL",
+      Variables={
+        "Knowledge Class Skill",
+      },
+      Formula=Formula("1"),
+      Conditions={
+        function (character)
+          return (character.Variables["Sorcerer_Arcane_BloodlineClassSkill1"] >= 1)
+        end,
+        function (character)
+          return (character.Variables["Sorcerer_Arcane_Description"] == 0)
+        end,
+      },
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Arcane_BloodlinePower1LVL",
+      },
+      Formula=Formula("Sorcerer_Arcane_BloodlineLVL+BloodlinePower1LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Arcane_BloodlinePower3LVL",
+      },
+      Formula=Formula("Sorcerer_Arcane_BloodlineLVL+BloodlinePower3LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Arcane_BloodlinePower9LVL",
+      },
+      Formula=Formula("Sorcerer_Arcane_BloodlineLVL+BloodlinePower9LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Arcane_BloodlinePower15LVL",
+      },
+      Formula=Formula("Sorcerer_Arcane_BloodlineLVL+BloodlinePower15LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Arcane_BloodlinePower20LVL",
+      },
+      Formula=Formula("Sorcerer_Arcane_BloodlineLVL+BloodlinePower20LVLBonus"),
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -66486,6 +60430,22 @@ DefineAbility({
   Category="Sorcerer Bloodline",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Arcane Bloodline ~ Feat Tracker",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sorcerer Bloodline ~ Arcane",
+      },
+    },
+  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -66581,22 +60541,6 @@ DefineAbility({
         Name="Base",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Arcane Bloodline ~ Feat Tracker",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sorcerer Bloodline ~ Arcane",
       },
     },
   },
@@ -66934,20 +60878,6 @@ DefineAbility({
   Description={
     Format="You gain an arcane bond, as a wizard equal to your sorcerer level. Your sorcerer levels stack with any wizard levels you possess when determining the powers of your familiar or bonded object. This ability does not allow you to have both a familiar and a bonded item. Once per day, your bonded item allows you to cast any one of your spells known (unlike a wizard's bonded item, which allows him to cast any one spell in his spellbook).",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Arcane_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Arcane_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ArcaneBondLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -67040,17 +60970,7 @@ DefineAbility({
   Description={
     Format="You can apply any one metamagic feat you know to a spell you are about to cast without increasing the casting time. You must still expend a higher-level spell slot to cast this spell. You can use this ability %1 times per day.",
     Arguments={
-      "Sorcerer_ArcaneMetamagicAdept_Times",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Arcane_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_ArcaneMetamagicAdept_Times",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_ArcaneMetamagicAdept_Times"),
     },
   },
   Bonuses={
@@ -67099,17 +61019,7 @@ DefineAbility({
   Description={
     Format="You can add any %1 spells from the sorcerer/wizard spell list to your list of spells known. This spell must be of a level that you are capable of casting.",
     Arguments={
-      "Sorcerer_NewArcana_Number",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Arcane_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_NewArcana_Number",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_NewArcana_Number"),
     },
   },
   Bonuses={
@@ -67159,12 +61069,6 @@ DefineAbility({
   },
   Description={
     Format="Pick one school of magic. The DC for any spells you cast from that school increases by +2. This bonus stacks with the bonus granted by Spell Focus.",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Arcane_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -67222,13 +61126,7 @@ DefineAbility({
   Description={
     Format="The DC for any spells you cast from the %1 school increases by +2. This bonus stacks with the bonus granted by Spell Focus.",
     Arguments={
-      "%LIST",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Arcane_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
+      Formula("%LIST"),
     },
   },
   Bonuses={
@@ -67281,12 +61179,6 @@ DefineAbility({
   Description={
     Format="Your body surges with arcane power. You can add any metamagic feats that you know to your spells without increasing their casting time, although you must still expend higher-level spell slots. Whenever you use magic items that require charges, you can instead expend spell slots to power the item. For every three levels of spell slots that you expend, you consume one less charge when using a magic item that expends charges.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Arcane_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -67316,7 +61208,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Bonuses={
     {
       Category="SPELLKNOWN",
@@ -67340,7 +61231,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return (character.Variables["BloodlineCasterLVL"] >= 4)
@@ -67369,7 +61259,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return (character.Variables["BloodlineCasterLVL"] >= 6)
@@ -67398,7 +61287,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return (character.Variables["BloodlineCasterLVL"] >= 8)
@@ -67427,7 +61315,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return (character.Variables["BloodlineCasterLVL"] >= 10)
@@ -67456,7 +61343,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return (character.Variables["BloodlineCasterLVL"] >= 12)
@@ -67485,7 +61371,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return (character.Variables["BloodlineCasterLVL"] >= 14)
@@ -67514,7 +61399,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return (character.Variables["BloodlineCasterLVL"] >= 16)
@@ -67543,7 +61427,6 @@ DefineAbility({
   Choice={
     Choose=ChooseNothing(),
   },
-  Selections=nil,
   Conditions={
     function (character)
       return (character.Variables["BloodlineCasterLVL"] >= 18)
@@ -67573,124 +61456,6 @@ DefineAbility({
     {
       Name="Bloodline",
       FormatString="Celestial",
-    },
-  },
-  SourcePage="p.74",
-  Description={
-    Format="Your bloodline is blessed by a celestial power, either from a celestial ancestor or through divine intervention. Although this power drives you along the path of good, your fate (and alignment) is your own to determine.",
-    Arguments={
-      "PREVAREQ:Sorcerer_Celestial_Description,0",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Celestial_BloodlineLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlineProgressionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlineArcana1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlineSpells1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePowers",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePower1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePower3",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePower9",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePower15",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePower20",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlineClassSkill1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_Description",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Celestial_BloodlinePower1LVL",
-      },
-      Formula=Formula("Sorcerer_Celestial_BloodlineLVL+BloodlinePower1LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Celestial_BloodlinePower3LVL",
-      },
-      Formula=Formula("Sorcerer_Celestial_BloodlineLVL+BloodlinePower3LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Celestial_BloodlinePower9LVL",
-      },
-      Formula=Formula("Sorcerer_Celestial_BloodlineLVL+BloodlinePower9LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Celestial_BloodlinePower15LVL",
-      },
-      Formula=Formula("Sorcerer_Celestial_BloodlineLVL+BloodlinePower15LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Celestial_BloodlinePower20LVL",
-      },
-      Formula=Formula("Sorcerer_Celestial_BloodlineLVL+BloodlinePower20LVLBonus"),
     },
   },
   Abilities={
@@ -67803,6 +61568,50 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.74",
+  Description={
+    Format="Your bloodline is blessed by a celestial power, either from a celestial ancestor or through divine intervention. Although this power drives you along the path of good, your fate (and alignment) is your own to determine.",
+    Arguments={
+      Formula("PREVAREQ:Sorcerer_Celestial_Description,0"),
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Celestial_BloodlinePower1LVL",
+      },
+      Formula=Formula("Sorcerer_Celestial_BloodlineLVL+BloodlinePower1LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Celestial_BloodlinePower3LVL",
+      },
+      Formula=Formula("Sorcerer_Celestial_BloodlineLVL+BloodlinePower3LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Celestial_BloodlinePower9LVL",
+      },
+      Formula=Formula("Sorcerer_Celestial_BloodlineLVL+BloodlinePower9LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Celestial_BloodlinePower15LVL",
+      },
+      Formula=Formula("Sorcerer_Celestial_BloodlineLVL+BloodlinePower15LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Celestial_BloodlinePower20LVL",
+      },
+      Formula=Formula("Sorcerer_Celestial_BloodlineLVL+BloodlinePower20LVLBonus"),
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -67817,6 +61626,22 @@ DefineAbility({
   Category="Sorcerer Bloodline",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Celestial Bloodline ~ Feat Tracker",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sorcerer Bloodline ~ Celestial",
+      },
+    },
+  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -67912,22 +61737,6 @@ DefineAbility({
         Name="Base",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Celestial Bloodline ~ Feat Tracker",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sorcerer Bloodline ~ Celestial",
       },
     },
   },
@@ -68212,13 +62021,7 @@ DefineAbility({
   Description={
     Format="Whenever you cast a spell of the summoning subschool, the creatures summoned gain DR %1/evil. This does not stack with any DR the creature might have.",
     Arguments={
-      "Sorcerer_CelestialBloodlineArcana_SummonDR",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_CelestialBloodlineArcana_SummonDR",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_CelestialBloodlineArcana_SummonDR"),
     },
   },
   Bonuses={
@@ -68323,21 +62126,7 @@ DefineAbility({
   Description={
     Format="points of damage. A good creature cannot benefit from your heavenly fire more than once per day. Neutral creatures are neither harmed nor healed by this effect. You can use this ability %1 times per day.",
     Arguments={
-      "Sorcerer_Celestial_BloodlinePower1Times",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Celestial_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Celestial_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_CelestialHeaventlyFire_DamageBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_Celestial_BloodlinePower1Times"),
     },
   },
   Bonuses={
@@ -68385,17 +62174,7 @@ DefineAbility({
   Description={
     Format="You gain resist acid %1 and resist cold %1.",
     Arguments={
-      "Sorcerer_CelestialCelestialResistances_ResistanceBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Celestial_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_CelestialCelestialResistances_ResistanceBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_CelestialCelestialResistances_ResistanceBonus"),
     },
   },
   Bonuses={
@@ -68517,17 +62296,7 @@ DefineAbility({
   Description={
     Format="You can sprout feathery wings and fly with a speed of 60 feet and good maneuverability.",
     Arguments={
-      "PREABILITY:1,CATEGORY=Special Ability,Celestial Bloodline ~ Ascension",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Celestial_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_CelestialWingsOfHeaven_TimeMinutes",
-      InitialValue=Formula("0"),
+      Formula("PREABILITY:1,CATEGORY=Special Ability,Celestial Bloodline ~ Ascension"),
     },
   },
   Bonuses={
@@ -68594,16 +62363,6 @@ DefineAbility({
   Description={
     Format="You can reroll any one ability check, attack roll, skill check, or saving throw you just made. You must decide to use this ability after the die is rolled, but before the results are revealed by the GM. You must take the second result, even if it is worse. You can use this ability once per day.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Celestial_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_CelestialConviction_Times",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -68646,6 +62405,18 @@ DefineAbility({
   Templates={
     "Celestial Bloodline ~ Wings of Heaven",
   },
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Acid",
+        "Immunity to Cold",
+        "Immunity to Petrification",
+        "Tongues",
+      },
+    },
+  },
   SourcePage="p.74",
   Conditions={
     function (character)
@@ -68659,20 +62430,6 @@ DefineAbility({
   },
   Description={
     Format="You become infused with the power of the heavens. You gain immunity to acid, cold, and petrification. You also gain resist electricity 10, resist fire 10, and a +4 racial bonus on saves against poison. You also gain unlimited use of the wings of heaven ability. Finally, you gain the ability to speak with any creature that has a language (as per the tongues spell).",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Celestial_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_CelestialAscension_ResistanceBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_CelestialAscension_SaveBonus",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -68708,18 +62465,6 @@ DefineAbility({
       },
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Acid",
-        "Immunity to Cold",
-        "Immunity to Petrification",
-        "Tongues",
-      },
-    },
-  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -68741,124 +62486,6 @@ DefineAbility({
     {
       Name="Bloodline",
       FormatString="Destined",
-    },
-  },
-  SourcePage="p.74",
-  Description={
-    Format="Your family is destined for greatness in some way. Your birth could have been foretold in prophecy, or perhaps it occurred during an especially auspicious event, such as a solar eclipse. Regardless of your bloodline's origin, you have a great future ahead.",
-    Arguments={
-      "PREVAREQ:Sorcerer_Destined_Description,0",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Destined_BloodlineLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlineProgressionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlineArcana1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlineSpells1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePowers",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePower1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePower3",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePower9",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePower15",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePower20",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlineClassSkill1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_Description",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Destined_BloodlinePower1LVL",
-      },
-      Formula=Formula("Sorcerer_Destined_BloodlineLVL+BloodlinePower1LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Destined_BloodlinePower3LVL",
-      },
-      Formula=Formula("Sorcerer_Destined_BloodlineLVL+BloodlinePower3LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Destined_BloodlinePower9LVL",
-      },
-      Formula=Formula("Sorcerer_Destined_BloodlineLVL+BloodlinePower9LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Destined_BloodlinePower15LVL",
-      },
-      Formula=Formula("Sorcerer_Destined_BloodlineLVL+BloodlinePower15LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Destined_BloodlinePower20LVL",
-      },
-      Formula=Formula("Sorcerer_Destined_BloodlineLVL+BloodlinePower20LVLBonus"),
     },
   },
   Abilities={
@@ -68971,6 +62598,50 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.74",
+  Description={
+    Format="Your family is destined for greatness in some way. Your birth could have been foretold in prophecy, or perhaps it occurred during an especially auspicious event, such as a solar eclipse. Regardless of your bloodline's origin, you have a great future ahead.",
+    Arguments={
+      Formula("PREVAREQ:Sorcerer_Destined_Description,0"),
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Destined_BloodlinePower1LVL",
+      },
+      Formula=Formula("Sorcerer_Destined_BloodlineLVL+BloodlinePower1LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Destined_BloodlinePower3LVL",
+      },
+      Formula=Formula("Sorcerer_Destined_BloodlineLVL+BloodlinePower3LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Destined_BloodlinePower9LVL",
+      },
+      Formula=Formula("Sorcerer_Destined_BloodlineLVL+BloodlinePower9LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Destined_BloodlinePower15LVL",
+      },
+      Formula=Formula("Sorcerer_Destined_BloodlineLVL+BloodlinePower15LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Destined_BloodlinePower20LVL",
+      },
+      Formula=Formula("Sorcerer_Destined_BloodlineLVL+BloodlinePower20LVLBonus"),
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -68985,6 +62656,22 @@ DefineAbility({
   Category="Sorcerer Bloodline",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Destined Bloodline ~ Feat Tracker",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sorcerer Bloodline ~ Destined",
+      },
+    },
+  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -69080,22 +62767,6 @@ DefineAbility({
         Name="Base",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Destined Bloodline ~ Feat Tracker",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sorcerer Bloodline ~ Destined",
       },
     },
   },
@@ -69451,22 +63122,8 @@ DefineAbility({
   Description={
     Format="You can touch a creature as a standard action, giving it a +%1 insight bonus on attack rolls, skill checks, ability checks, and saving throws for 1 round. You can use this ability %2 times per day.",
     Arguments={
-      "Sorcerer_DestinedTouchOfDestiny_Bonus",
-      "Sorcerer_Destined_BloodlinePower1Times",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Destined_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DestinedTouchOfDestiny_Bonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_DestinedTouchOfDestiny_Bonus"),
+      Formula("Sorcerer_Destined_BloodlinePower1Times"),
     },
   },
   Bonuses={
@@ -69521,17 +63178,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 luck bonus on all of your saving throws and to your AC during surprise rounds and when you are otherwise unaware of an attack.",
     Arguments={
-      "Sorcerer_DestinedFated_LuckBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Destined_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DestinedFated_LuckBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_DestinedFated_LuckBonus"),
     },
   },
   Bonuses={
@@ -69598,17 +63245,7 @@ DefineAbility({
   Description={
     Format="You can use this ability twice per day.",
     Arguments={
-      "PREVARGT:Sorcerer_DestinedItWasMeantToBe_Times,1",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Destined_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DestinedItWasMeantToBe_Times",
-      InitialValue=Formula("0"),
+      Formula("PREVARGT:Sorcerer_DestinedItWasMeantToBe_Times,1"),
     },
   },
   Bonuses={
@@ -69664,16 +63301,6 @@ DefineAbility({
   Description={
     Format="Your ultimate destiny is drawing near. Once per day, when an attack or spell that causes damage would result in your death, you may attempt a DC 20 Will save. If successful, you are instead reduced to -1 hit points and are automatically stabilized. The bonus from your fated ability applies to this save.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Destined_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Destined_WithinReach_Times",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -69727,16 +63354,6 @@ DefineAbility({
   Description={
     Format="Your moment of destiny is at hand. Any critical threats made against you only confirm if the second roll results in a natural 20 on the die. Any critical threats you score with a spell are automatically confirmed. Once per day, you can automatically succeed at one caster level check made to overcome spell resistance. You must use this ability before making the roll.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Destined_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DestinedDestinyRealized_Times",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -69767,131 +63384,6 @@ DefineAbility({
     {
       Name="Bloodline",
       FormatString="Draconic",
-    },
-  },
-  SourcePage="p.75",
-  Description={
-    Format="At some point in your family's history, a dragon interbred with your bloodline, and now its ancient power flows through your veins.",
-    Arguments={
-      "PREVAREQ:Sorcerer_Draconic_Description,0",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Draconic_BloodlineLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlineProgressionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlineArcana1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlineSpells1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePowers",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePower1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePower3",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePower9",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePower15",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePower20",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlineClassSkill1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_Description",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="ABILITYPOOL",
-      Variables={
-        "Draconic Bloodline Type",
-      },
-      Formula=Formula("1"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Draconic_BloodlinePower1LVL",
-      },
-      Formula=Formula("Sorcerer_Draconic_BloodlineLVL+BloodlinePower1LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Draconic_BloodlinePower3LVL",
-      },
-      Formula=Formula("Sorcerer_Draconic_BloodlineLVL+BloodlinePower3LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Draconic_BloodlinePower9LVL",
-      },
-      Formula=Formula("Sorcerer_Draconic_BloodlineLVL+BloodlinePower9LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Draconic_BloodlinePower15LVL",
-      },
-      Formula=Formula("Sorcerer_Draconic_BloodlineLVL+BloodlinePower15LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Draconic_BloodlinePower20LVL",
-      },
-      Formula=Formula("Sorcerer_Draconic_BloodlineLVL+BloodlinePower20LVLBonus"),
     },
   },
   Abilities={
@@ -70004,6 +63496,57 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.75",
+  Description={
+    Format="At some point in your family's history, a dragon interbred with your bloodline, and now its ancient power flows through your veins.",
+    Arguments={
+      Formula("PREVAREQ:Sorcerer_Draconic_Description,0"),
+    },
+  },
+  Bonuses={
+    {
+      Category="ABILITYPOOL",
+      Variables={
+        "Draconic Bloodline Type",
+      },
+      Formula=Formula("1"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Draconic_BloodlinePower1LVL",
+      },
+      Formula=Formula("Sorcerer_Draconic_BloodlineLVL+BloodlinePower1LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Draconic_BloodlinePower3LVL",
+      },
+      Formula=Formula("Sorcerer_Draconic_BloodlineLVL+BloodlinePower3LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Draconic_BloodlinePower9LVL",
+      },
+      Formula=Formula("Sorcerer_Draconic_BloodlineLVL+BloodlinePower9LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Draconic_BloodlinePower15LVL",
+      },
+      Formula=Formula("Sorcerer_Draconic_BloodlineLVL+BloodlinePower15LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Draconic_BloodlinePower20LVL",
+      },
+      Formula=Formula("Sorcerer_Draconic_BloodlineLVL+BloodlinePower20LVLBonus"),
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -70018,6 +63561,22 @@ DefineAbility({
   Category="Sorcerer Bloodline",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Draconic Bloodline ~ Feat Tracker",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sorcerer Bloodline ~ Draconic",
+      },
+    },
+  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -70113,22 +63672,6 @@ DefineAbility({
         Name="Base",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Draconic Bloodline ~ Feat Tracker",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sorcerer Bloodline ~ Draconic",
       },
     },
   },
@@ -70478,24 +64021,6 @@ DefineAbility({
   Description={
     Format="descriptor, that spell deals +1 point of damage per die rolled.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_DraconicDamageType_Acid",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Cold",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Electricity",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Fire",
-      InitialValue=Formula("0"),
-    },
-  },
   Types={
     "Sorcerer Class Feature",
     "Sorcerer Bloodline Arcana",
@@ -70658,6 +64183,15 @@ DefineAbility({
       FormatString="DraconicBloodlinePowers",
     },
   },
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Claw",
+      },
+    },
+  },
   SourcePage="p.75",
   Conditions={
     function (character)
@@ -70672,21 +64206,7 @@ DefineAbility({
   Description={
     Format="You can use your claws for %1 rounds per day. These rounds do not need to be consecutive.",
     Arguments={
-      "Sorcerer_Draconic_BloodlinePower1Times",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Draconic_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Draconic_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_GenericClaws_SizeBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_Draconic_BloodlinePower1Times"),
     },
   },
   Bonuses={
@@ -70712,15 +64232,6 @@ DefineAbility({
         function (character)
           return (character.Variables["Sorcerer_Draconic_BloodlinePower1LVL"] >= 7)
         end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Claw",
       },
     },
   },
@@ -70761,37 +64272,7 @@ DefineAbility({
   Description={
     Format="and a +%1 natural armor bonus.",
     Arguments={
-      "Sorcerer_DraconicDragonResistances_NaturalArmorBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Draconic_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Cold",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Fire",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Electricity",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Acid",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDragonResistances_ResistanceBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDragonResistances_NaturalArmorBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_DraconicDragonResistances_NaturalArmorBonus"),
     },
   },
   Bonuses={
@@ -71065,50 +64546,8 @@ DefineAbility({
   Description={
     Format="You can use this ability %1 times per day.",
     Arguments={
-      "Sorcerer_DraconicBreathWeapon_Times",
-      "PREVARGTEQ:Sorcerer_DraconicBreathWeapon_Times,4",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Draconic_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Cold",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Fire",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Electricity",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Acid",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicBreathWeapon_Line",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicBreathWeapon_Cone",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicBreathWeapon_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicBreathWeapon_Dice",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicBreathWeapon_DC",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_DraconicBreathWeapon_Times"),
+      Formula("PREVARGTEQ:Sorcerer_DraconicBreathWeapon_Times,4"),
     },
   },
   Bonuses={
@@ -71176,16 +64615,6 @@ DefineAbility({
   Description={
     Format="Leathery dragon wings grow from your back as a standard action, giving you a fly speed of 60 feet with average maneuverability. You can dismiss the wings as a free action.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Draconic_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Maneuverability",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -71224,56 +64653,6 @@ DefineAbility({
     {
       Name="ChildAbility",
       FormatString="DraconicBloodlinePowers",
-    },
-  },
-  SourcePage="p.75",
-  Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Name == "Sorcerer Bloodline ~ Draconic")
-      end)
-    end,
-    function (character)
-      return (character.Variables["Sorcerer_Draconic_BloodlineProgressionLVL"] >= 20)
-    end,
-  },
-  Description={
-    Format="damage. You also gain blindsense 60 feet.",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Draconic_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Cold",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Fire",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Electricity",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_DraconicDamageType_Acid",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "BlindsenseRange",
-      },
-      Formula=Formula("60"),
-      Type={
-        Name="Base",
-        Replace=false,
-        Stack=false,
-      },
     },
   },
   Abilities={
@@ -71334,6 +64713,34 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.75",
+  Conditions={
+    function (character)
+      return 1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "Special Ability" and (ability.Name == "Sorcerer Bloodline ~ Draconic")
+      end)
+    end,
+    function (character)
+      return (character.Variables["Sorcerer_Draconic_BloodlineProgressionLVL"] >= 20)
+    end,
+  },
+  Description={
+    Format="damage. You also gain blindsense 60 feet.",
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "BlindsenseRange",
+      },
+      Formula=Formula("60"),
+      Type={
+        Name="Base",
+        Replace=false,
+        Stack=false,
+      },
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -71366,12 +64773,6 @@ DefineAbility({
   Stackable=false,
   Description={
     Format="The power of dragons flows through you and manifests in a number of ways. At 1st level, you must select one of the chromatic or metallic dragon types (see the Pathfinder RPG Bestiary). This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your dragon type. Black dragons are associated with the acid energy type and have a 60-foot line breath shape.",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_DraconicBloodlineChoice_Black",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -71437,12 +64838,6 @@ DefineAbility({
   Description={
     Format="The power of dragons flows through you and manifests in a number of ways. At 1st level, you must select one of the chromatic or metallic dragon types (see the Pathfinder RPG Bestiary). This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your dragon type. Blue dragons are associated with the electricity energy type and have a 60-foot line breath shape.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_DraconicBloodlineChoice_Blue",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -71506,12 +64901,6 @@ DefineAbility({
   Stackable=false,
   Description={
     Format="The power of dragons flows through you and manifests in a number of ways. At 1st level, you must select one of the chromatic or metallic dragon types (see the Pathfinder RPG Bestiary). This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your dragon type. Green dragons are associated with the acid energy type and have a 30-foot cone breath shape.",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_DraconicBloodlineChoice_Green",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -71577,12 +64966,6 @@ DefineAbility({
   Description={
     Format="The power of dragons flows through you and manifests in a number of ways. At 1st level, you must select one of the chromatic or metallic dragon types (see the Pathfinder RPG Bestiary). This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your dragon type. Red dragons are associated with the fire energy type and have a 30-foot cone breath shape.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_DraconicBloodlineChoice_Red",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -71646,12 +65029,6 @@ DefineAbility({
   Stackable=false,
   Description={
     Format="The power of dragons flows through you and manifests in a number of ways. At 1st level, you must select one of the chromatic or metallic dragon types (see the Pathfinder RPG Bestiary). This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your dragon type. White dragons are associated with the cold energy type and have a 30-foot cone breath shape.",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_DraconicBloodlineChoice_White",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -71717,12 +65094,6 @@ DefineAbility({
   Description={
     Format="The power of dragons flows through you and manifests in a number of ways. At 1st level, you must select one of the chromatic or metallic dragon types (see the Pathfinder RPG Bestiary). This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your dragon type. Brass dragons are associated with the fire energy type and have a 60-foot line breath shape.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_DraconicBloodlineChoice_Brass",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -71786,12 +65157,6 @@ DefineAbility({
   Stackable=false,
   Description={
     Format="The power of dragons flows through you and manifests in a number of ways. At 1st level, you must select one of the chromatic or metallic dragon types (see the Pathfinder RPG Bestiary). This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your dragon type. Bronze dragons are associated with the electricity energy type and have a 60-foot line breath shape.",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_DraconicBloodlineChoice_Bronze",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -71857,12 +65222,6 @@ DefineAbility({
   Description={
     Format="The power of dragons flows through you and manifests in a number of ways. At 1st level, you must select one of the chromatic or metallic dragon types (see the Pathfinder RPG Bestiary). This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your dragon type. Copper dragons are associated with the acid energy type and have a 60-foot line breath shape.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_DraconicBloodlineChoice_Copper",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -71927,12 +65286,6 @@ DefineAbility({
   Description={
     Format="The power of dragons flows through you and manifests in a number of ways. At 1st level, you must select one of the chromatic or metallic dragon types (see the Pathfinder RPG Bestiary). This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your dragon type. Gold dragons are associated with the fire energy type and have a 30-foot cone breath shape.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_DraconicBloodlineChoice_Gold",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -71996,12 +65349,6 @@ DefineAbility({
   Stackable=false,
   Description={
     Format="The power of dragons flows through you and manifests in a number of ways. At 1st level, you must select one of the chromatic or metallic dragon types (see the Pathfinder RPG Bestiary). This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your dragon type. Silver dragons are associated with the cold energy type and have a 30-foot cone breath shape.",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_DraconicBloodlineChoice_Silver",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -72068,131 +65415,6 @@ DefineAbility({
     {
       Name="Bloodline",
       FormatString="Elemental",
-    },
-  },
-  SourcePage="p.75",
-  Description={
-    Format="The power of the elements resides in you, and at times you can hardly control its fury. This influence comes from an elemental outsider in your family history or a time when you or your relatives were exposed to a powerful elemental force.",
-    Arguments={
-      "PREVAREQ:Sorcerer_Elemental_Description,0",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Elemental_BloodlineLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlineProgressionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlineArcana1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlineSpells1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePowers",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePower1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePower3",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePower9",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePower15",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePower20",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlineClassSkill1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_Description",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="ABILITYPOOL",
-      Variables={
-        "Elemental Bloodline Type",
-      },
-      Formula=Formula("1"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Elemental_BloodlinePower1LVL",
-      },
-      Formula=Formula("Sorcerer_Elemental_BloodlineLVL+BloodlinePower1LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Elemental_BloodlinePower3LVL",
-      },
-      Formula=Formula("Sorcerer_Elemental_BloodlineLVL+BloodlinePower3LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Elemental_BloodlinePower9LVL",
-      },
-      Formula=Formula("Sorcerer_Elemental_BloodlineLVL+BloodlinePower9LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Elemental_BloodlinePower15LVL",
-      },
-      Formula=Formula("Sorcerer_Elemental_BloodlineLVL+BloodlinePower15LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Elemental_BloodlinePower20LVL",
-      },
-      Formula=Formula("Sorcerer_Elemental_BloodlineLVL+BloodlinePower20LVLBonus"),
     },
   },
   Abilities={
@@ -72305,6 +65527,57 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.75",
+  Description={
+    Format="The power of the elements resides in you, and at times you can hardly control its fury. This influence comes from an elemental outsider in your family history or a time when you or your relatives were exposed to a powerful elemental force.",
+    Arguments={
+      Formula("PREVAREQ:Sorcerer_Elemental_Description,0"),
+    },
+  },
+  Bonuses={
+    {
+      Category="ABILITYPOOL",
+      Variables={
+        "Elemental Bloodline Type",
+      },
+      Formula=Formula("1"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Elemental_BloodlinePower1LVL",
+      },
+      Formula=Formula("Sorcerer_Elemental_BloodlineLVL+BloodlinePower1LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Elemental_BloodlinePower3LVL",
+      },
+      Formula=Formula("Sorcerer_Elemental_BloodlineLVL+BloodlinePower3LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Elemental_BloodlinePower9LVL",
+      },
+      Formula=Formula("Sorcerer_Elemental_BloodlineLVL+BloodlinePower9LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Elemental_BloodlinePower15LVL",
+      },
+      Formula=Formula("Sorcerer_Elemental_BloodlineLVL+BloodlinePower15LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Elemental_BloodlinePower20LVL",
+      },
+      Formula=Formula("Sorcerer_Elemental_BloodlineLVL+BloodlinePower20LVLBonus"),
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -72319,6 +65592,22 @@ DefineAbility({
   Category="Sorcerer Bloodline",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Elemental Bloodline ~ Feat Tracker",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sorcerer Bloodline ~ Elemental",
+      },
+    },
+  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -72414,22 +65703,6 @@ DefineAbility({
         Name="Base",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Elemental Bloodline ~ Feat Tracker",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sorcerer Bloodline ~ Elemental",
       },
     },
   },
@@ -72887,7 +66160,7 @@ DefineAbility({
   Description={
     Format="fire.",
     Arguments={
-      "PREVARGTEQ:Sorcerer_ElementalBloodlineChoice_Fire,1",
+      Formula("PREVARGTEQ:Sorcerer_ElementalBloodlineChoice_Fire,1"),
     },
   },
   Types={
@@ -73085,21 +66358,7 @@ DefineAbility({
   Description={
     Format="points of damage. You can use this ability %1 times per day.",
     Arguments={
-      "Sorcerer_Elemental_BloodlinePower1Times",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Elemental_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Elemental_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_ElementalElementalRay_DamageBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_Elemental_BloodlinePower1Times"),
     },
   },
   Bonuses={
@@ -73147,17 +66406,7 @@ DefineAbility({
   Description={
     Format="fire.",
     Arguments={
-      "PREVARGTEQ:Sorcerer_ElementalBloodlineChoice_Fire,1",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Elemental_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_ElementalElementalResistance_ResistanceBonus",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:Sorcerer_ElementalBloodlineChoice_Fire,1"),
     },
   },
   Bonuses={
@@ -73320,24 +66569,6 @@ DefineAbility({
   Description={
     Format="This power has a range of 60 feet.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Elemental_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_ElementalElementalBlast_Dice",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_ElementalElementalBlast_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_ElementalElementalBlast_Times",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -73381,29 +66612,6 @@ DefineAbility({
     {
       Name="ChildAbility",
       FormatString="ElementalBloodlinePowers",
-    },
-  },
-  SourcePage="p.76",
-  Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Name == "Sorcerer Bloodline ~ Elemental")
-      end)
-    end,
-    function (character)
-      return (character.Variables["Sorcerer_Elemental_BloodlineProgressionLVL"] >= 15)
-    end,
-  },
-  Description={
-    Format="You gain a swim speed of 60 feet.",
-    Arguments={
-      "PREVARGTEQ:Sorcerer_ElementalBloodlineChoice_Water,1",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Elemental_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
     },
   },
   Abilities={
@@ -73456,6 +66664,23 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.76",
+  Conditions={
+    function (character)
+      return 1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "Special Ability" and (ability.Name == "Sorcerer Bloodline ~ Elemental")
+      end)
+    end,
+    function (character)
+      return (character.Variables["Sorcerer_Elemental_BloodlineProgressionLVL"] >= 15)
+    end,
+  },
+  Description={
+    Format="You gain a swim speed of 60 feet.",
+    Arguments={
+      Formula("PREVARGTEQ:Sorcerer_ElementalBloodlineChoice_Water,1"),
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -73477,29 +66702,6 @@ DefineAbility({
     {
       Name="ChildAbility",
       FormatString="ElementalBloodlinePowers",
-    },
-  },
-  SourcePage="p.76",
-  Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Name == "Sorcerer Bloodline ~ Elemental")
-      end)
-    end,
-    function (character)
-      return (character.Variables["Sorcerer_Elemental_BloodlineProgressionLVL"] >= 20)
-    end,
-  },
-  Description={
-    Format="fire.",
-    Arguments={
-      "PREVARGTEQ:Sorcerer_ElementalBloodlineChoice_Fire,1",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Elemental_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
     },
   },
   Abilities={
@@ -73560,6 +66762,23 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.76",
+  Conditions={
+    function (character)
+      return 1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "Special Ability" and (ability.Name == "Sorcerer Bloodline ~ Elemental")
+      end)
+    end,
+    function (character)
+      return (character.Variables["Sorcerer_Elemental_BloodlineProgressionLVL"] >= 20)
+    end,
+  },
+  Description={
+    Format="fire.",
+    Arguments={
+      Formula("PREVARGTEQ:Sorcerer_ElementalBloodlineChoice_Fire,1"),
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -73579,12 +66798,6 @@ DefineAbility({
   Stackable=false,
   Description={
     Format="One of the four elements infuses your being, and you can draw upon its power in times of need. At first level, you must select one of the four elements: air, earth, fire, or water. This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your element. Air is associate with the Electricity energy type and the flight movement type (Fly 60 feet (average)).",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_ElementalBloodlineChoice_Air",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -73640,12 +66853,6 @@ DefineAbility({
   Description={
     Format="One of the four elements infuses your being, and you can draw upon its power in times of need. At first level, you must select one of the four elements: air, earth, fire, or water. This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your element. Earth is associate with the Acid energy type and the burrow movement type (Burrow 30 feet).",
   },
-  Definitions={
-    {
-      Name="Sorcerer_ElementalBloodlineChoice_Earth",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -73700,12 +66907,6 @@ DefineAbility({
   Description={
     Format="One of the four elements infuses your being, and you can draw upon its power in times of need. At first level, you must select one of the four elements: air, earth, fire, or water. This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your element. Fire is associate with the Fire energy type and the base movement type (+30 feet base speed).",
   },
-  Definitions={
-    {
-      Name="Sorcerer_ElementalBloodlineChoice_Fire",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -73759,12 +66960,6 @@ DefineAbility({
   Stackable=false,
   Description={
     Format="One of the four elements infuses your being, and you can draw upon its power in times of need. At first level, you must select one of the four elements: air, earth, fire, or water. This choice cannot be changed. A number of your abilities grant resistances and deal damage based on your element. Water is associate with the Cold energy type and the swim movement type (Swim 60 feet).",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_ElementalBloodlineChoice_Water",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -73839,12 +67034,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   SourcePage="p.76",
-  Definitions={
-    {
-      Name="Maneuverability",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -73891,124 +67080,6 @@ DefineAbility({
     {
       Name="Bloodline",
       FormatString="Fey",
-    },
-  },
-  SourcePage="p.76",
-  Description={
-    Format="The capricious nature of the fey runs in your family due to some intermingling of fey blood or magic. You are more emotional than most, prone to bouts of joy and rage.",
-    Arguments={
-      "PREVAREQ:Sorcerer_Fey_Description,0",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Fey_BloodlineLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlineProgressionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlineArcana1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlineSpells1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePowers",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePower1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePower3",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePower9",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePower15",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePower20",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlineClassSkill1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_Description",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Fey_BloodlinePower1LVL",
-      },
-      Formula=Formula("Sorcerer_Fey_BloodlineLVL+BloodlinePower1LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Fey_BloodlinePower3LVL",
-      },
-      Formula=Formula("Sorcerer_Fey_BloodlineLVL+BloodlinePower3LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Fey_BloodlinePower9LVL",
-      },
-      Formula=Formula("Sorcerer_Fey_BloodlineLVL+BloodlinePower9LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Fey_BloodlinePower15LVL",
-      },
-      Formula=Formula("Sorcerer_Fey_BloodlineLVL+BloodlinePower15LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Fey_BloodlinePower20LVL",
-      },
-      Formula=Formula("Sorcerer_Fey_BloodlineLVL+BloodlinePower20LVLBonus"),
     },
   },
   Abilities={
@@ -74121,6 +67192,50 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.76",
+  Description={
+    Format="The capricious nature of the fey runs in your family due to some intermingling of fey blood or magic. You are more emotional than most, prone to bouts of joy and rage.",
+    Arguments={
+      Formula("PREVAREQ:Sorcerer_Fey_Description,0"),
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Fey_BloodlinePower1LVL",
+      },
+      Formula=Formula("Sorcerer_Fey_BloodlineLVL+BloodlinePower1LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Fey_BloodlinePower3LVL",
+      },
+      Formula=Formula("Sorcerer_Fey_BloodlineLVL+BloodlinePower3LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Fey_BloodlinePower9LVL",
+      },
+      Formula=Formula("Sorcerer_Fey_BloodlineLVL+BloodlinePower9LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Fey_BloodlinePower15LVL",
+      },
+      Formula=Formula("Sorcerer_Fey_BloodlineLVL+BloodlinePower15LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Fey_BloodlinePower20LVL",
+      },
+      Formula=Formula("Sorcerer_Fey_BloodlineLVL+BloodlinePower20LVLBonus"),
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -74135,6 +67250,22 @@ DefineAbility({
   Category="Sorcerer Bloodline",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Fey Bloodline ~ Feat Tracker",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sorcerer Bloodline ~ Fey",
+      },
+    },
+  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -74230,22 +67361,6 @@ DefineAbility({
         Name="Base",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Fey Bloodline ~ Feat Tracker",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sorcerer Bloodline ~ Fey",
       },
     },
   },
@@ -74603,17 +67718,7 @@ DefineAbility({
   Description={
     Format="You can cause a creature to burst out laughing for 1 round as a melee touch attack. A laughing creature can only take a move action but can defend itself normally. Once a creature has been affected by laughing touch, it is immune to its effects for 24 hours. You can use this ability %1 times per day. This is a mind-affecting effect.",
     Arguments={
-      "Sorcerer_Fey_BloodlinePower1Times",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Fey_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Fey_BloodlinePower1Times",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_Fey_BloodlinePower1Times"),
     },
   },
   Types={
@@ -74651,12 +67756,6 @@ DefineAbility({
   },
   Description={
     Format="You can move through any sort of undergrowth (such as natural thorns, briars, overgrown areas, and similar terrain) at your normal speed and without taking damage or suffering any other impairment. Thorns, briars, and overgrown areas that have been magically manipulated to impede motion, however, still affect you.",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Fey_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Types={
     "Class Feature",
@@ -74706,16 +67805,6 @@ DefineAbility({
   Description={
     Format="You can turn invisible for %1 rounds per day. This ability functions as greater invisibility. These rounds need not be consecutive.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Fey_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_FeyFleetingGlance_Time",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -74761,12 +67850,6 @@ DefineAbility({
   Description={
     Format="You may reroll any caster level check made to overcome spell resistance. You must decide to use this ability before the results are revealed by the GM. You must take the second result, even if it is worse. You can use this ability at will.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Fey_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -74790,6 +67873,16 @@ DefineAbility({
       FormatString="FeyBloodlinePowers",
     },
   },
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Poison",
+      },
+    },
+  },
+  SourcePage="p.76",
   SpellLikeAbilities={
     {
       Name="Shadow Walk",
@@ -74800,7 +67893,9 @@ DefineAbility({
       CasterLevel="Sorcerer_FeySoulOfTheFey_CasterLevel",
     },
   },
-  SourcePage="p.76",
+  DamageReduction={
+    Value="10/Cold Iron",
+  },
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -74814,17 +67909,7 @@ DefineAbility({
   Description={
     Format="Your soul becomes one with the world of the fey. You gain immunity to poison and DR 10/cold iron. Creatures of the animal type do not attack you unless compelled to do so through magic. Once per day, you can cast shadow walk as a spell-like ability with a caster level of %1.",
     Arguments={
-      "Sorcerer_FeySoulOfTheFey_CasterLevel",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Fey_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_FeySoulOfTheFey_CasterLevel",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_FeySoulOfTheFey_CasterLevel"),
     },
   },
   Bonuses={
@@ -74836,15 +67921,6 @@ DefineAbility({
       Formula=Formula("Sorcerer_Fey_BloodlinePower20LVL"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Poison",
-      },
-    },
-  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -74853,9 +67929,6 @@ DefineAbility({
     "SpecialQuality",
     "Special Quality",
     "Supernatural",
-  },
-  DamageReduction={
-    Value="10/Cold Iron",
   },
 })
 
@@ -74869,124 +67942,6 @@ DefineAbility({
     {
       Name="Bloodline",
       FormatString="Infernal",
-    },
-  },
-  SourcePage="p.76",
-  Description={
-    Format="Somewhere in your family's history, a relative made a deal with a devil, and that pact has influenced your family line ever since. In you, it manifests in direct and obvious ways, granting you powers and abilities. While your fate is still your own, you can't help but wonder if your ultimate reward is bound to the Pit.",
-    Arguments={
-      "PREVAREQ:Sorcerer_Infernal_Description,0",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Infernal_BloodlineLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlineProgressionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlineArcana1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlineSpells1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePowers",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePower1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePower3",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePower9",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePower15",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePower20",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlineClassSkill1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_Description",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Infernal_BloodlinePower1LVL",
-      },
-      Formula=Formula("Sorcerer_Infernal_BloodlineLVL+BloodlinePower1LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Infernal_BloodlinePower3LVL",
-      },
-      Formula=Formula("Sorcerer_Infernal_BloodlineLVL+BloodlinePower3LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Infernal_BloodlinePower9LVL",
-      },
-      Formula=Formula("Sorcerer_Infernal_BloodlineLVL+BloodlinePower9LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Infernal_BloodlinePower15LVL",
-      },
-      Formula=Formula("Sorcerer_Infernal_BloodlineLVL+BloodlinePower15LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Infernal_BloodlinePower20LVL",
-      },
-      Formula=Formula("Sorcerer_Infernal_BloodlineLVL+BloodlinePower20LVLBonus"),
     },
   },
   Abilities={
@@ -75099,6 +68054,50 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.76",
+  Description={
+    Format="Somewhere in your family's history, a relative made a deal with a devil, and that pact has influenced your family line ever since. In you, it manifests in direct and obvious ways, granting you powers and abilities. While your fate is still your own, you can't help but wonder if your ultimate reward is bound to the Pit.",
+    Arguments={
+      Formula("PREVAREQ:Sorcerer_Infernal_Description,0"),
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Infernal_BloodlinePower1LVL",
+      },
+      Formula=Formula("Sorcerer_Infernal_BloodlineLVL+BloodlinePower1LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Infernal_BloodlinePower3LVL",
+      },
+      Formula=Formula("Sorcerer_Infernal_BloodlineLVL+BloodlinePower3LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Infernal_BloodlinePower9LVL",
+      },
+      Formula=Formula("Sorcerer_Infernal_BloodlineLVL+BloodlinePower9LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Infernal_BloodlinePower15LVL",
+      },
+      Formula=Formula("Sorcerer_Infernal_BloodlineLVL+BloodlinePower15LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Infernal_BloodlinePower20LVL",
+      },
+      Formula=Formula("Sorcerer_Infernal_BloodlineLVL+BloodlinePower20LVLBonus"),
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -75113,6 +68112,22 @@ DefineAbility({
   Category="Sorcerer Bloodline",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Infernal Bloodline ~ Feat Tracker",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sorcerer Bloodline ~ Infernal",
+      },
+    },
+  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -75208,22 +68223,6 @@ DefineAbility({
         Name="Base",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Infernal Bloodline ~ Feat Tracker",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sorcerer Bloodline ~ Infernal",
       },
     },
   },
@@ -75596,22 +68595,8 @@ DefineAbility({
   Description={
     Format="You can cause a creature to become shaken as a melee touch attack. This effect persists for %1 rounds. Creatures shaken by this ability radiate an aura of evil, as if they were an evil outsider. Multiple touches do not stack, but they do add to the duration. You can use this ability %2 times per day.",
     Arguments={
-      "Sorcerer_InfernalCorruptingTouch_Duration",
-      "Sorcerer_Infernal_BloodlinePower1Times",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Infernal_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Infernal_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_InfernalCorruptingTouch_Duration",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_InfernalCorruptingTouch_Duration"),
+      Formula("Sorcerer_Infernal_BloodlinePower1Times"),
     },
   },
   Bonuses={
@@ -75673,22 +68658,8 @@ DefineAbility({
   Description={
     Format="You gain resist fire %1 and a +%2 bonus on saving throws made against poison.",
     Arguments={
-      "Sorcerer_InfernalInfernalResistances_ResistanceBonus",
-      "Sorcerer_InfernalInfernalResistances_SaveBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Infernal_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_InfernalInfernalResistances_ResistanceBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_InfernalInfernalResistances_SaveBonus",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_InfernalInfernalResistances_ResistanceBonus"),
+      Formula("Sorcerer_InfernalInfernalResistances_SaveBonus"),
     },
   },
   Bonuses={
@@ -75775,28 +68746,6 @@ DefineAbility({
   Description={
     Format="This power has a range of 60 feet.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Infernal_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_InfernalHellfire_Dice",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_InfernalHellfire_Duration",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_InfernalHellfire_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_InfernalHellfire_Times",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -75863,16 +68812,6 @@ DefineAbility({
   Description={
     Format="You can grow fearsome bat wings as a standard action, giving you a fly speed of 60 feet with average maneuverability. The wings can be dismissed as a free action.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Infernal_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Maneuverability",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -75915,7 +68854,23 @@ DefineAbility({
       FormatString="InfernalBloodlinePowers",
     },
   },
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Fire",
+        "Immunity to Poison",
+        "See in Darkness",
+      },
+    },
+  },
   SourcePage="p.77",
+  Vision={
+    {
+      Vision="See in Darkness (Sorcerer_InfernalPowerOfThePit_VisionDistance)",
+    },
+  },
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -75928,16 +68883,6 @@ DefineAbility({
   },
   Description={
     Format="Your form becomes infused with vile power. You gain immunity to fire and poison. You also gain resistance to acid 10 and cold 10, and the ability to see perfectly in darkness of any kind to a range of 60 feet.",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Infernal_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_InfernalPowerOfThePit_VisionDistance",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -75972,17 +68917,6 @@ DefineAbility({
       },
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Fire",
-        "Immunity to Poison",
-        "See in Darkness",
-      },
-    },
-  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -75991,11 +68925,6 @@ DefineAbility({
     "SpecialQuality",
     "Special Quality",
     "Supernatural",
-  },
-  Vision={
-    {
-      Vision="See in Darkness (Sorcerer_InfernalPowerOfThePit_VisionDistance)",
-    },
   },
 })
 
@@ -76009,124 +68938,6 @@ DefineAbility({
     {
       Name="Bloodline",
       FormatString="Undead",
-    },
-  },
-  SourcePage="p.77",
-  Description={
-    Format="The taint of the grave runs through your family. Perhaps one of your ancestors became a powerful lich or vampire, or maybe you were born dead before suddenly returning to life. Either way, the forces of death move through you and touch your every action.",
-    Arguments={
-      "PREVAREQ:Sorcerer_Undead_Description,0",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Undead_BloodlineLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlineProgressionLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlineArcana1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlineSpells1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePowers",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePower1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePower3",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePower9",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePower15",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePower20",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlineClassSkill1",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_Description",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Undead_BloodlinePower1LVL",
-      },
-      Formula=Formula("Sorcerer_Undead_BloodlineLVL+BloodlinePower1LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Undead_BloodlinePower3LVL",
-      },
-      Formula=Formula("Sorcerer_Undead_BloodlineLVL+BloodlinePower3LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Undead_BloodlinePower9LVL",
-      },
-      Formula=Formula("Sorcerer_Undead_BloodlineLVL+BloodlinePower9LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Undead_BloodlinePower15LVL",
-      },
-      Formula=Formula("Sorcerer_Undead_BloodlineLVL+BloodlinePower15LVLBonus"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "Sorcerer_Undead_BloodlinePower20LVL",
-      },
-      Formula=Formula("Sorcerer_Undead_BloodlineLVL+BloodlinePower20LVLBonus"),
     },
   },
   Abilities={
@@ -76239,6 +69050,50 @@ DefineAbility({
       },
     },
   },
+  SourcePage="p.77",
+  Description={
+    Format="The taint of the grave runs through your family. Perhaps one of your ancestors became a powerful lich or vampire, or maybe you were born dead before suddenly returning to life. Either way, the forces of death move through you and touch your every action.",
+    Arguments={
+      Formula("PREVAREQ:Sorcerer_Undead_Description,0"),
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Undead_BloodlinePower1LVL",
+      },
+      Formula=Formula("Sorcerer_Undead_BloodlineLVL+BloodlinePower1LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Undead_BloodlinePower3LVL",
+      },
+      Formula=Formula("Sorcerer_Undead_BloodlineLVL+BloodlinePower3LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Undead_BloodlinePower9LVL",
+      },
+      Formula=Formula("Sorcerer_Undead_BloodlineLVL+BloodlinePower9LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Undead_BloodlinePower15LVL",
+      },
+      Formula=Formula("Sorcerer_Undead_BloodlineLVL+BloodlinePower15LVLBonus"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "Sorcerer_Undead_BloodlinePower20LVL",
+      },
+      Formula=Formula("Sorcerer_Undead_BloodlineLVL+BloodlinePower20LVLBonus"),
+    },
+  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -76253,6 +69108,22 @@ DefineAbility({
   Category="Sorcerer Bloodline",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Undead Bloodline ~ Feat Tracker",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sorcerer Bloodline ~ Undead",
+      },
+    },
+  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -76348,22 +69219,6 @@ DefineAbility({
         Name="Base",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Undead Bloodline ~ Feat Tracker",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sorcerer Bloodline ~ Undead",
       },
     },
   },
@@ -76736,27 +69591,9 @@ DefineAbility({
   Description={
     Format="You can make a melee touch attack as a standard action that causes a living creature to become shaken for %1 rounds. If you touch a shaken creature with this ability, it becomes frightened for 1 round if it has fewer than %2 Hit Dice. You can use this ability %3 times per day.",
     Arguments={
-      "Sorcerer_UndeadGraveTouch_Duration",
-      "Sorcerer_UndeadGraveTouch_AffectedHD",
-      "Sorcerer_Undead_BloodlinePower1Times",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Undead_BloodlinePower1LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_Undead_BloodlinePower1Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_UndeadGraveTouch_Duration",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_UndeadGraveTouch_AffectedHD",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_UndeadGraveTouch_Duration"),
+      Formula("Sorcerer_UndeadGraveTouch_AffectedHD"),
+      Formula("Sorcerer_Undead_BloodlinePower1Times"),
     },
   },
   Bonuses={
@@ -76798,6 +69635,16 @@ DefineAbility({
     },
   },
   SourcePage="p.77",
+  DamageReduction={
+    Value="Sorcerer_UndeadDeathsGift_DR/Lethal",
+    Conditions={
+      function (character)
+        return not (1 <= #filter(character.Abilities, function (ability)
+          return ability.Category == "Special Ability" and (ability.Name == "Undead Bloodline ~ One of Us")
+        end))
+      end,
+    },
+  },
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -76811,22 +69658,8 @@ DefineAbility({
   Description={
     Format="You gain resist cold %1 and DR %2/-- against nonlethal damage.",
     Arguments={
-      "Sorcerer_UndeadDeathsGift_ResistanceBonus",
-      "Sorcerer_UndeadDeathsGift_DR",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Undead_BloodlinePower3LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_UndeadDeathsGift_ResistanceBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_UndeadDeathsGift_DR",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_UndeadDeathsGift_ResistanceBonus"),
+      Formula("Sorcerer_UndeadDeathsGift_DR"),
     },
   },
   Bonuses={
@@ -76858,16 +69691,6 @@ DefineAbility({
     "Sorcerer Bloodline Power",
     "SpecialQuality",
     "Supernatural",
-  },
-  DamageReduction={
-    Value="Sorcerer_UndeadDeathsGift_DR/Lethal",
-    Conditions={
-      function (character)
-        return not (1 <= #filter(character.Abilities, function (ability)
-          return ability.Category == "Special Ability" and (ability.Name == "Undead Bloodline ~ One of Us")
-        end))
-      end,
-    },
   },
 })
 
@@ -76916,24 +69739,6 @@ DefineAbility({
   },
   Description={
     Format="This power has a range of 60 feet.",
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Undead_BloodlinePower9LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_UndeadGraspOfTheDead_Dice",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_UndeadGraspOfTheDead_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_UndeadGraspOfTheDead_Times",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -77012,21 +69817,7 @@ DefineAbility({
   Description={
     Format="You can become incorporeal for %1 rounds. While in this form, you gain the incorporeal subtype. You only take half damage from corporeal sources as long as they are magic (you take no damage from non-magic weapons and objects). Likewise, your spells deal only half damage to corporeal creatures. Spells and other effects that do not deal damage function normally. You can use this ability once per day.",
     Arguments={
-      "Sorcerer_UndeadIncorporealForm_Duration",
-    },
-  },
-  Definitions={
-    {
-      Name="Sorcerer_Undead_BloodlinePower15LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_UndeadIncorporealForm_Duration",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Sorcerer_UndeadIncorporealForm_Times",
-      InitialValue=Formula("0"),
+      Formula("Sorcerer_UndeadIncorporealForm_Duration"),
     },
   },
   Bonuses={
@@ -77071,7 +69862,22 @@ DefineAbility({
       FormatString="UndeadBloodlinePowers",
     },
   },
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Cold",
+        "Immunity to Nonlethal Damage",
+        "Immunity to Paralysis",
+        "Immunity to Sleep",
+      },
+    },
+  },
   SourcePage="p.77",
+  DamageReduction={
+    Value="5/-",
+  },
   Conditions={
     function (character)
       return 1 <= #filter(character.Abilities, function (ability)
@@ -77085,24 +69891,6 @@ DefineAbility({
   Description={
     Format="Your form begins to rot (the appearance of this decay is up to you) and undead see you as one of them. You gain immunity to cold, nonlethal damage, paralysis, and sleep. You also gain DR 5/--. Unintelligent undead do not notice you unless you attack them. You receive a +4 morale bonus on saving throws made against spells and spell-like abilities cast by undead.",
   },
-  Definitions={
-    {
-      Name="Sorcerer_Undead_BloodlinePower20LVL",
-      InitialValue=Formula("0"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Cold",
-        "Immunity to Nonlethal Damage",
-        "Immunity to Paralysis",
-        "Immunity to Sleep",
-      },
-    },
-  },
   Types={
     "Class Feature",
     "Sorcerer Class Feature",
@@ -77112,9 +69900,6 @@ DefineAbility({
     "Special Quality",
     "Extraordinary",
   },
-  DamageReduction={
-    Value="5/-",
-  },
 })
 
 DefineAbility({
@@ -77123,10 +69908,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.78",
-  Description={
-    Format="The wizard's class skills are Appraise (Int), Craft (Int), Fly (Dex), Knowledge (all) (Int), Linguistics (Int), Profession (Wis), and Spellcraft (Int).&nl;Skill Ranks per Level: 2 + Int modifier.",
-  },
   Abilities={
     {
       Category="Class Skill",
@@ -77141,6 +69922,10 @@ DefineAbility({
         "Spellcraft",
       },
     },
+  },
+  SourcePage="p.78",
+  Description={
+    Format="The wizard's class skills are Appraise (Int), Craft (Int), Fly (Dex), Knowledge (all) (Int), Linguistics (Int), Profession (Wis), and Spellcraft (Int).&nl;Skill Ranks per Level: 2 + Int modifier.",
   },
   Types={
     "Class Feature",
@@ -77166,10 +69951,6 @@ DefineAbility({
       },
     },
   },
-  SourcePage="p.78",
-  Description={
-    Format="Wizards are proficient with the club, dagger, heavy crossbow, light crossbow, and quarterstaff, but not with any type of armor or shield. Armor interferes with a wizard's movements, which can cause his spells with somatic components to fail.",
-  },
   Abilities={
     {
       Category="Internal",
@@ -77178,6 +69959,10 @@ DefineAbility({
         "Weapon Prof ~ Auto",
       },
     },
+  },
+  SourcePage="p.78",
+  Description={
+    Format="Wizards are proficient with the club, dagger, heavy crossbow, light crossbow, and quarterstaff, but not with any type of armor or shield. Armor interferes with a wizard's movements, which can cause his spells with somatic components to fail.",
   },
   Types={
     "Class Feature",
@@ -77231,13 +70016,7 @@ DefineAbility({
   Description={
     Format="(You have selected to establish a powerful arcane bond with a creature.)",
     Arguments={
-      "PREABILITY:1,CATEGORY=Special Ability,Arcane Bond ~ Familiar",
-    },
-  },
-  Definitions={
-    {
-      Name="ArcaneBondLVL",
-      InitialValue=Formula("0"),
+      Formula("PREABILITY:1,CATEGORY=Special Ability,Arcane Bond ~ Familiar"),
     },
   },
   Bonuses={
@@ -77270,10 +70049,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.78",
-  Description={
-    Format="A wizard can choose to specialize in one school of magic, gaining additional spells and powers based on that school. This choice must be made at 1st level, and once made, it cannot be changed. A wizard that does not select a school receives the universalist school instead.&nl;A wizard that chooses to specialize in one school of magic must select two other schools as his opposition schools, representing knowledge sacrificed in one area of arcane lore to gain mastery in another. A wizard who prepares spells from his opposition schools must use two spell slots of that level to prepare the spell. In addition, a specialist takes a -4 penalty on any skill checks made when crafting a magic item that has a spell from one of his opposition schools as a prerequisite. A universalist wizard can prepare spells from any school without restriction.&nl;Each arcane school gives the wizard a number of school powers. In addition, specialist wizards receive an additional spell slot of each spell level he can cast, from 1st on up. Each day, a wizard can prepare a spell from his specialty school in that slot. This spell must be in the wizard's spellbook. A wizard can select a spell modified by a metamagic feat to prepare in his school slot, but it uses up a higher-level spell slot. Wizards with the universalist school do not receive a school slot.",
-  },
   Abilities={
     {
       Category="Internal",
@@ -77282,6 +70057,10 @@ DefineAbility({
         "Arcane School Tracker",
       },
     },
+  },
+  SourcePage="p.78",
+  Description={
+    Format="A wizard can choose to specialize in one school of magic, gaining additional spells and powers based on that school. This choice must be made at 1st level, and once made, it cannot be changed. A wizard that does not select a school receives the universalist school instead.&nl;A wizard that chooses to specialize in one school of magic must select two other schools as his opposition schools, representing knowledge sacrificed in one area of arcane lore to gain mastery in another. A wizard who prepares spells from his opposition schools must use two spell slots of that level to prepare the spell. In addition, a specialist takes a -4 penalty on any skill checks made when crafting a magic item that has a spell from one of his opposition schools as a prerequisite. A universalist wizard can prepare spells from any school without restriction.&nl;Each arcane school gives the wizard a number of school powers. In addition, specialist wizards receive an additional spell slot of each spell level he can cast, from 1st on up. Each day, a wizard can prepare a spell from his specialty school in that slot. This spell must be in the wizard's spellbook. A wizard can select a spell modified by a metamagic feat to prepare in his school slot, but it uses up a higher-level spell slot. Wizards with the universalist school do not receive a school slot.",
   },
   Types={
     "Class Feature",
@@ -77297,25 +70076,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.79",
-  Description={
-    Format="Wizards can prepare a number of cantrips, or 0-level spells, each day. These spells are cast like any other spell, but they are not expended when cast and may be used again. A wizard can prepare a cantrip from an opposed school, but it uses up two of his available slots.",
-  },
-  Definitions={
-    {
-      Name="OppositionalSchool",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "OppositionalSchool",
-      },
-      Formula=Formula("2"),
-    },
-  },
   Abilities={
     {
       Category="Internal",
@@ -77328,6 +70088,19 @@ DefineAbility({
           return (character.Variables["OppositionalSchool"] == 0)
         end,
       },
+    },
+  },
+  SourcePage="p.79",
+  Description={
+    Format="Wizards can prepare a number of cantrips, or 0-level spells, each day. These spells are cast like any other spell, but they are not expended when cast and may be used again. A wizard can prepare a cantrip from an opposed school, but it uses up two of his available slots.",
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "OppositionalSchool",
+      },
+      Formula=Formula("2"),
     },
   },
   Types={
@@ -77343,10 +70116,6 @@ DefineAbility({
   Category="Special ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.79",
-  Description={
-    Format="At 1st level, a wizard gains Scribe Scroll as a bonus feat.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -77355,6 +70124,10 @@ DefineAbility({
         "Scribe Scroll",
       },
     },
+  },
+  SourcePage="p.79",
+  Description={
+    Format="At 1st level, a wizard gains Scribe Scroll as a bonus feat.",
   },
   Types={
     "Class Feature",
@@ -77409,9 +70182,18 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  DisplayName="Arcane Bond (Familiar)",
   Followers={
     Familiar=1,
+  },
+  DisplayName="Arcane Bond (Familiar)",
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Standard Familiar List",
+      },
+    },
   },
   SourcePage="p.82",
   Conditions={
@@ -77421,12 +70203,6 @@ DefineAbility({
   },
   Description={
     Format="A familiar is an animal chosen by a spellcaster to aid him in his study of magic. It retains the appearance, Hit Dice, base attack bonus, base save bonuses, skills, and feats of the normal animal it once was, but is now a magical beast for the purpose of effects that depend on its type. Only a normal, unmodified animal may become a familiar. An animal companion cannot also function as a familiar.&nl;A familiar grants special abilities to its master, as given on the table below. These special abilities apply only when the master and familiar are within 1 mile of each other.&nl;Levels of different classes that are entitled to familiars stack for the purpose of determining any familiar abilities that depend on the master's level.&nl;If a familiar is dismissed, lost, or dies, it can be replaced 1 week later through a specialized ritual that costs 200 gp per wizard level. The ritual takes 8 hours to complete.",
-  },
-  Definitions={
-    {
-      Name="FamiliarMasterLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -77439,15 +70215,6 @@ DefineAbility({
         Name="Base",
         Replace=false,
         Stack=false,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Standard Familiar List",
       },
     },
   },
@@ -77594,12 +70361,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ArcaneSchoolLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -77616,12 +70377,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ArcaneSchoolProgressionLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -77638,12 +70393,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="ArcaneSchoolPowerTimes",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -77660,19 +70409,59 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Abjuration School ~ Resistance",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_Resistance"] == 0)
+        end,
+        function (character)
+          return (character.Variables["AbjurationProgressionSchoolLVL"] >= 1)
+        end,
+        function (character)
+          return (character.Variables["AbjurationProgressionSchoolLVL"] < 20)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Abjuration School ~ Protective Ward",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_ProtectiveWard"] == 0)
+        end,
+        function (character)
+          return (character.Variables["AbjurationProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Abjuration School ~ Energy Absorption",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_EnergyAbsorption"] == 0)
+        end,
+        function (character)
+          return (character.Variables["AbjurationProgressionSchoolLVL"] >= 6)
+        end,
+      },
+    },
+  },
   SourcePage="p.79",
   Description={
     Format="You have chosen to specialize in abjuration spells.",
-  },
-  Definitions={
-    {
-      Name="AbjurationSchoolLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AbjurationProgressionSchoolLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -77767,56 +70556,6 @@ DefineAbility({
       Formula=Formula("1"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Abjuration School ~ Resistance",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_Resistance"] == 0)
-        end,
-        function (character)
-          return (character.Variables["AbjurationProgressionSchoolLVL"] >= 1)
-        end,
-        function (character)
-          return (character.Variables["AbjurationProgressionSchoolLVL"] < 20)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Abjuration School ~ Protective Ward",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_ProtectiveWard"] == 0)
-        end,
-        function (character)
-          return (character.Variables["AbjurationProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Abjuration School ~ Energy Absorption",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_EnergyAbsorption"] == 0)
-        end,
-        function (character)
-          return (character.Variables["AbjurationProgressionSchoolLVL"] >= 6)
-        end,
-      },
-    },
-  },
   Types={
     "WizardClassFeatures",
     "SpecialQuality",
@@ -77830,19 +70569,56 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Conjuration School ~ Summoner's Charm",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_SummonersCharm"] == 0)
+        end,
+        function (character)
+          return (character.Variables["ConjurationProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Conjuration School ~ Acid Dart",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_AcidDart"] == 0)
+        end,
+        function (character)
+          return (character.Variables["ConjurationProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Conjuration School ~ Dimensional Steps",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_DimensionalSteps"] == 0)
+        end,
+        function (character)
+          return (character.Variables["ConjurationProgressionSchoolLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.80",
   Description={
     Format="You have chosen to specialize in conjuration spells.",
-  },
-  Definitions={
-    {
-      Name="ConjurationSchoolLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ConjurationProgressionSchoolLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -77937,53 +70713,6 @@ DefineAbility({
       Formula=Formula("1"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Conjuration School ~ Summoner's Charm",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_SummonersCharm"] == 0)
-        end,
-        function (character)
-          return (character.Variables["ConjurationProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Conjuration School ~ Acid Dart",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_AcidDart"] == 0)
-        end,
-        function (character)
-          return (character.Variables["ConjurationProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Conjuration School ~ Dimensional Steps",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_DimensionalSteps"] == 0)
-        end,
-        function (character)
-          return (character.Variables["ConjurationProgressionSchoolLVL"] >= 8)
-        end,
-      },
-    },
-  },
   Types={
     "WizardClassFeatures",
     "SpecialQuality",
@@ -77997,19 +70726,56 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Divination School ~ Forwarned",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_Forwarned"] == 0)
+        end,
+        function (character)
+          return (character.Variables["DivinationProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Divination School ~ Diviner's Fortune",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_DivinersFortune"] == 0)
+        end,
+        function (character)
+          return (character.Variables["DivinationProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Divination School ~ Scrying Adept",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_ScryingAdept"] == 0)
+        end,
+        function (character)
+          return (character.Variables["DivinationProgressionSchoolLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.80",
   Description={
     Format="You have chosen to specialize in divination spells.",
-  },
-  Definitions={
-    {
-      Name="DivinationSchoolLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DivinationProgressionSchoolLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -78104,53 +70870,6 @@ DefineAbility({
       Formula=Formula("1"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Divination School ~ Forwarned",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_Forwarned"] == 0)
-        end,
-        function (character)
-          return (character.Variables["DivinationProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Divination School ~ Diviner's Fortune",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_DivinersFortune"] == 0)
-        end,
-        function (character)
-          return (character.Variables["DivinationProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Divination School ~ Scrying Adept",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_ScryingAdept"] == 0)
-        end,
-        function (character)
-          return (character.Variables["DivinationProgressionSchoolLVL"] >= 8)
-        end,
-      },
-    },
-  },
   Types={
     "WizardClassFeatures",
     "SpecialQuality",
@@ -78164,19 +70883,56 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Enchantment School ~ Enchanting Smile",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_EnchantingSmile"] == 0)
+        end,
+        function (character)
+          return (character.Variables["EnchantmentProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Enchantment School ~ Dazing Touch",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_DazingTouch"] == 0)
+        end,
+        function (character)
+          return (character.Variables["EnchantmentProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Enchantment School ~ Aura of Despair",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_AuraOfDespair"] == 0)
+        end,
+        function (character)
+          return (character.Variables["EnchantmentProgressionSchoolLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.81",
   Description={
     Format="You have chosen to specialize in enchantment spells.",
-  },
-  Definitions={
-    {
-      Name="EnchantmentSchoolLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="EnchantmentProgressionSchoolLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -78271,53 +71027,6 @@ DefineAbility({
       Formula=Formula("1"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Enchantment School ~ Enchanting Smile",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_EnchantingSmile"] == 0)
-        end,
-        function (character)
-          return (character.Variables["EnchantmentProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Enchantment School ~ Dazing Touch",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_DazingTouch"] == 0)
-        end,
-        function (character)
-          return (character.Variables["EnchantmentProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Enchantment School ~ Aura of Despair",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_AuraOfDespair"] == 0)
-        end,
-        function (character)
-          return (character.Variables["EnchantmentProgressionSchoolLVL"] >= 8)
-        end,
-      },
-    },
-  },
   Types={
     "WizardClassFeatures",
     "SpecialQuality",
@@ -78331,19 +71040,56 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Evocation School ~ Intense Spells",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_IntenseSpells"] == 0)
+        end,
+        function (character)
+          return (character.Variables["EvocationProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Evocation School ~ Force Missile",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_ForceMissile"] == 0)
+        end,
+        function (character)
+          return (character.Variables["EvocationProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Evocation School ~ Elemental Wall",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_ElementalWall"] == 0)
+        end,
+        function (character)
+          return (character.Variables["EvocationProgressionSchoolLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.81",
   Description={
     Format="You have chosen to specialize in evocation spells.",
-  },
-  Definitions={
-    {
-      Name="EvocationSchoolLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="EvocationProgressionSchoolLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -78438,53 +71184,6 @@ DefineAbility({
       Formula=Formula("1"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Evocation School ~ Intense Spells",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_IntenseSpells"] == 0)
-        end,
-        function (character)
-          return (character.Variables["EvocationProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Evocation School ~ Force Missile",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_ForceMissile"] == 0)
-        end,
-        function (character)
-          return (character.Variables["EvocationProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Evocation School ~ Elemental Wall",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_ElementalWall"] == 0)
-        end,
-        function (character)
-          return (character.Variables["EvocationProgressionSchoolLVL"] >= 8)
-        end,
-      },
-    },
-  },
   Types={
     "WizardClassFeatures",
     "SpecialQuality",
@@ -78498,19 +71197,56 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Illusion School ~ Extended Illusion",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_ExtendedIllusion"] == 0)
+        end,
+        function (character)
+          return (character.Variables["IllusionProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Illusion School ~ Blinding Ray",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_BlindingRay"] == 0)
+        end,
+        function (character)
+          return (character.Variables["IllusionProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Illusion School ~ Invisibility Field",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_InvisibilityField"] == 0)
+        end,
+        function (character)
+          return (character.Variables["IllusionProgressionSchoolLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.81",
   Description={
     Format="You have chosen to specialize in illusion spells.",
-  },
-  Definitions={
-    {
-      Name="IllusionSchoolLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="IllusionProgressionSchoolLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -78605,53 +71341,6 @@ DefineAbility({
       Formula=Formula("1"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Illusion School ~ Extended Illusion",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_ExtendedIllusion"] == 0)
-        end,
-        function (character)
-          return (character.Variables["IllusionProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Illusion School ~ Blinding Ray",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_BlindingRay"] == 0)
-        end,
-        function (character)
-          return (character.Variables["IllusionProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Illusion School ~ Invisibility Field",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_InvisibilityField"] == 0)
-        end,
-        function (character)
-          return (character.Variables["IllusionProgressionSchoolLVL"] >= 8)
-        end,
-      },
-    },
-  },
   Types={
     "WizardClassFeatures",
     "SpecialQuality",
@@ -78665,19 +71354,56 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Necromancy School ~ Power Over Undead",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_PowerOverUndead"] == 0)
+        end,
+        function (character)
+          return (character.Variables["NecromancyProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Necromancy School ~ Grave Touch",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_GraveTouch"] == 0)
+        end,
+        function (character)
+          return (character.Variables["NecromancyProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Necromancy School ~ Life Sight",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_LifeSight"] == 0)
+        end,
+        function (character)
+          return (character.Variables["NecromancyProgressionSchoolLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.81",
   Description={
     Format="You have chosen to specialize in necromancy spells.",
-  },
-  Definitions={
-    {
-      Name="NecromancySchoolLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="NecromancyProgressionSchoolLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -78772,53 +71498,6 @@ DefineAbility({
       Formula=Formula("1"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Necromancy School ~ Power Over Undead",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_PowerOverUndead"] == 0)
-        end,
-        function (character)
-          return (character.Variables["NecromancyProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Necromancy School ~ Grave Touch",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_GraveTouch"] == 0)
-        end,
-        function (character)
-          return (character.Variables["NecromancyProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Necromancy School ~ Life Sight",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_LifeSight"] == 0)
-        end,
-        function (character)
-          return (character.Variables["NecromancyProgressionSchoolLVL"] >= 8)
-        end,
-      },
-    },
-  },
   Types={
     "WizardClassFeatures",
     "SpecialQuality",
@@ -78832,19 +71511,56 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Transmutation School ~ Physical Enhancement",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_PhysicalEnhancement"] == 0)
+        end,
+        function (character)
+          return (character.Variables["TransmutationProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Transmutation School ~ Telekinetic Fist",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_TelekineticFist"] == 0)
+        end,
+        function (character)
+          return (character.Variables["TransmutationProgressionSchoolLVL"] >= 1)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Transmutation School ~ Change Shape",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["Wizard_CF_ChangeShape"] == 0)
+        end,
+        function (character)
+          return (character.Variables["TransmutationProgressionSchoolLVL"] >= 8)
+        end,
+      },
+    },
+  },
   SourcePage="p.82",
   Description={
     Format="You have chosen to specialize in transmutation spells.",
-  },
-  Definitions={
-    {
-      Name="TransmutationSchoolLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="TransmutationProgressionSchoolLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -78939,53 +71655,6 @@ DefineAbility({
       Formula=Formula("1"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Transmutation School ~ Physical Enhancement",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_PhysicalEnhancement"] == 0)
-        end,
-        function (character)
-          return (character.Variables["TransmutationProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Transmutation School ~ Telekinetic Fist",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_TelekineticFist"] == 0)
-        end,
-        function (character)
-          return (character.Variables["TransmutationProgressionSchoolLVL"] >= 1)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Transmutation School ~ Change Shape",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["Wizard_CF_ChangeShape"] == 0)
-        end,
-        function (character)
-          return (character.Variables["TransmutationProgressionSchoolLVL"] >= 8)
-        end,
-      },
-    },
-  },
   Types={
     "WizardClassFeatures",
     "SpecialQuality",
@@ -78999,43 +71668,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.82",
-  Description={
-    Format="You have chosen not to specialize in a single school of spells.",
-  },
-  Definitions={
-    {
-      Name="UniversalSchoolLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="UniversalProgressionSchoolLVL",
-      InitialValue=Formula("0"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "UniversalSchoolLVL",
-      },
-      Formula=Formula("ArcaneSchoolLVL"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "UniversalProgressionSchoolLVL",
-      },
-      Formula=Formula("ArcaneSchoolProgressionLVL"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "OppositionalSchool",
-      },
-      Formula=Formula("-2"),
-    },
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -79066,6 +71698,33 @@ DefineAbility({
           return (character.Variables["UniversalProgressionSchoolLVL"] >= 8)
         end,
       },
+    },
+  },
+  SourcePage="p.82",
+  Description={
+    Format="You have chosen not to specialize in a single school of spells.",
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "UniversalSchoolLVL",
+      },
+      Formula=Formula("ArcaneSchoolLVL"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "UniversalProgressionSchoolLVL",
+      },
+      Formula=Formula("ArcaneSchoolProgressionLVL"),
+    },
+    {
+      Category="VAR",
+      Variables={
+        "OppositionalSchool",
+      },
+      Formula=Formula("-2"),
     },
   },
   Types={
@@ -79724,13 +72383,7 @@ DefineAbility({
   Description={
     Format="You gain immunity to an energy type of your choice, chosen when you prepare spells. This immunity can be changed each day.",
     Arguments={
-      "PREVARGTEQ:AbjurationProgressionSchoolLVL,20",
-    },
-  },
-  Definitions={
-    {
-      Name="AbjurationResistanceBonus",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:AbjurationProgressionSchoolLVL,20"),
     },
   },
   Bonuses={
@@ -79793,23 +72446,9 @@ DefineAbility({
   Description={
     Format="As a standard action, you can create a 10-foot-radius field of protective magic centered on you that lasts %1 rounds. All allies in this area (including you) receive a +%2 deflection bonus to their AC. You can use this ability %3 times a day.",
     Arguments={
-      "AbjurationProtectiveWardDuration",
-      "AbjurationProtectiveWardBonus",
-      "AbjurationProtectiveWardTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="AbjurationProtectiveWardTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AbjurationProtectiveWardDuration",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AbjurationProtectiveWardBonus",
-      InitialValue=Formula("0"),
+      Formula("AbjurationProtectiveWardDuration"),
+      Formula("AbjurationProtectiveWardBonus"),
+      Formula("AbjurationProtectiveWardTimes"),
     },
   },
   Bonuses={
@@ -79864,13 +72503,7 @@ DefineAbility({
   Description={
     Format="You gain energy absorption %1 per day. Whenever you take energy damage, apply resistance and immunity first and apply the rest to this absorption, reducing your daily total by that amount. Any damage in excess of your absorption is applied to you normally.",
     Arguments={
-      "AbjurationEnergyAbsorption",
-    },
-  },
-  Definitions={
-    {
-      Name="AbjurationEnergyAbsorption",
-      InitialValue=Formula("0"),
+      Formula("AbjurationEnergyAbsorption"),
     },
   },
   Bonuses={
@@ -79900,13 +72533,7 @@ DefineAbility({
   Description={
     Format="You can change the duration of all Summon Monster spells to permanent. You can have no more than one Summon Monster spell made permanent in this way at one time. If you designate another Summon Monster spell as permanent, the previous spell immediately ends.",
     Arguments={
-      "PREVARGTEQ:ConjurationProgressionSchoolLVL,20",
-    },
-  },
-  Definitions={
-    {
-      Name="ConjurationSummonersCharmBonus",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:ConjurationProgressionSchoolLVL,20"),
     },
   },
   Bonuses={
@@ -79950,17 +72577,7 @@ DefineAbility({
   Description={
     Format="You can use this ability %1 times per day.",
     Arguments={
-      "ConjurationAcidDartTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="ConjurationAcidDartDamageBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ConjurationAcidDartTimes",
-      InitialValue=Formula("0"),
+      Formula("ConjurationAcidDartTimes"),
     },
   },
   Bonuses={
@@ -80011,13 +72628,7 @@ DefineAbility({
   Description={
     Format="You can use this ability to teleport up to %1 feet per day as a standard action. This teleportation must be used in 5-foot increments and such movement does not provoke an attack of opportunity. You can bring other willing creatures with you, but you must expend an equal amount of distance for each creature brought with you.",
     Arguments={
-      "ConjurationDimensionalSteps",
-    },
-  },
-  Definitions={
-    {
-      Name="ConjurationDimensionalSteps",
-      InitialValue=Formula("0"),
+      Formula("ConjurationDimensionalSteps"),
     },
   },
   Bonuses={
@@ -80048,13 +72659,7 @@ DefineAbility({
   Description={
     Format="Anytime you roll initiative, assume the roll resulted in a natural 20.",
     Arguments={
-      "PREVARGTEQ:DivinationProgressionSchoolLVL,20",
-    },
-  },
-  Definitions={
-    {
-      Name="DivinationForwarnedBonus",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:DivinationProgressionSchoolLVL,20"),
     },
   },
   Bonuses={
@@ -80105,18 +72710,8 @@ DefineAbility({
   Description={
     Format="When you activate this school power, you can touch any creature as a standard action to give it an insight bonus on all of its attack rolls, skill checks, ability checks, and saving throws equal to %1 for one round. You can use this ability %2 times per day.",
     Arguments={
-      "DivinationDivinersFortuneBonus",
-      "DivinationDivinersFortuneTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="DivinationDivinersFortuneBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DivinationDivinersFortuneTimes",
-      InitialValue=Formula("0"),
+      Formula("DivinationDivinersFortuneBonus"),
+      Formula("DivinationDivinersFortuneTimes"),
     },
   },
   Bonuses={
@@ -80173,13 +72768,7 @@ DefineAbility({
   Description={
     Format="Whenever you succeed at a saving throw against a spell of the enchantment school, that spell is reflected back at its caster, as per Spell Turning.",
     Arguments={
-      "PREVARGTEQ:EnchantmentProgressionSchoolLVL,20",
-    },
-  },
-  Definitions={
-    {
-      Name="EnchantmentEnchantingSmileBonus",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:EnchantmentProgressionSchoolLVL,20"),
     },
   },
   Bonuses={
@@ -80237,18 +72826,8 @@ DefineAbility({
   Description={
     Format="You can cause a living creature to become dazed for 1 round as a melee touch attack. Creatures with more than %1 hit dice are unaffected. You may use this ability %2 times per day.",
     Arguments={
-      "EnchantmentDazingTouchLimit",
-      "EnchantmentDazingTouchTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="EnchantmentDazingTouchLimit",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="EnchantmentDazingTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("EnchantmentDazingTouchLimit"),
+      Formula("EnchantmentDazingTouchTimes"),
     },
   },
   Bonuses={
@@ -80299,13 +72878,7 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura of despair for %1 rounds per day. Enemies within this aura take a -2 penalty on ability checks, attack rolls, damage rolls, saving throws, and skill checks. These rounds do not need to be consecutive. This is a mind-affecting effect.",
     Arguments={
-      "EnchantmentSchoolLVL",
-    },
-  },
-  Definitions={
-    {
-      Name="EnchantmentAuraOfDespairRounds",
-      InitialValue=Formula("0"),
+      Formula("EnchantmentSchoolLVL"),
     },
   },
   Bonuses={
@@ -80336,13 +72909,7 @@ DefineAbility({
   Description={
     Format="Whenever you cast an evocation spell you can roll twice to penetrate a creature's spell resistance and take the better result.",
     Arguments={
-      "PREVARGTEQ:EvocationProgressionSchoolLVL,20",
-    },
-  },
-  Definitions={
-    {
-      Name="EvocationIntenseSpellsBonus",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:EvocationProgressionSchoolLVL,20"),
     },
   },
   Bonuses={
@@ -80395,14 +72962,8 @@ DefineAbility({
   Description={
     Format="As a standard action you can unleash a force missile that automatically strikes a foe, as Magic Missile. The force missile deals 1d4+%1 points of damage. This is a force effect. You can use this ability %2 times per day.",
     Arguments={
-      "EvocationIntenseSpellsBonus",
-      "EvocationForceMissileTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="EvocationForceMissileTimes",
-      InitialValue=Formula("0"),
+      Formula("EvocationIntenseSpellsBonus"),
+      Formula("EvocationForceMissileTimes"),
     },
   },
   Bonuses={
@@ -80446,13 +73007,7 @@ DefineAbility({
   Description={
     Format="You can create a wall of energy that lasts for %1 rounds per day. These rounds do not need to be consecutive. This wall deals acid, cold, electricity, or fire damage, determined when you create it. The elemental wall otherwise functions like Wall of Fire.",
     Arguments={
-      "EvocationElementalWallRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="EvocationElementalWallRounds",
-      InitialValue=Formula("0"),
+      Formula("EvocationElementalWallRounds"),
     },
   },
   Bonuses={
@@ -80482,13 +73037,7 @@ DefineAbility({
   Description={
     Format="You can make one illusion spell with a duration of \"Concentration\" become permanent. You can have no more than one illusion made permanent in this way at one time. If you designate another illusion as permanent, the previous permanent illusion ends.",
     Arguments={
-      "PREVARGTEQ:IllusionProgressionSchoolLVL,20",
-    },
-  },
-  Definitions={
-    {
-      Name="IllusionExtendedIllusionBonus",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:IllusionProgressionSchoolLVL,20"),
     },
   },
   Bonuses={
@@ -80532,18 +73081,8 @@ DefineAbility({
   Description={
     Format="As a standard action you can fire a shimmering ray at any foe within 30 feet as a ranged touch attack. The ray causes creatures to be blinded for 1 round. Creatures with more than %1 Hit Dice are dazzled for 1 round instead. This ability can be used %2 times per day.",
     Arguments={
-      "IllusionBlindingRayLimit",
-      "IllusionBlindingRayTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="IllusionBlindingRayLimit",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="IllusionBlindingRayTimes",
-      InitialValue=Formula("0"),
+      Formula("IllusionBlindingRayLimit"),
+      Formula("IllusionBlindingRayTimes"),
     },
   },
   Bonuses={
@@ -80594,13 +73133,7 @@ DefineAbility({
   Description={
     Format="You can make yourself invisible as a swift action for %1 rounds per day. These rounds do not need to be consecutive. This otherwise functions as Greater Invisibility.",
     Arguments={
-      "IllusionInvisibilityFieldRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="IllusionInvisibilityFieldRounds",
-      InitialValue=Formula("0"),
+      Formula("IllusionInvisibilityFieldRounds"),
     },
   },
   Bonuses={
@@ -80641,16 +73174,6 @@ DefineAbility({
     },
   },
   SourcePage="p.81",
-  Definitions={
-    {
-      Name="PowerOverUndeadTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="PowerOverUndeadLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -80704,23 +73227,9 @@ DefineAbility({
   Description={
     Format="As a standard action, you can make a melee touch attack that causes a living creature to become shaken for %1 rounds. If you touch a shaken creature with this ability, it becomes frightened for 1 round if it has fewer that %2 Hit Dice. You can use this ability %3 times per day.",
     Arguments={
-      "NecromancyGraveTouchDuration",
-      "NecromancyGraveTouchLimit",
-      "NecromancyGraveTouchTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="NecromancyGraveTouchDuration",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="NecromancyGraveTouchLimit",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="NecromancyGraveTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("NecromancyGraveTouchDuration"),
+      Formula("NecromancyGraveTouchLimit"),
+      Formula("NecromancyGraveTouchTimes"),
     },
   },
   Bonuses={
@@ -80778,18 +73287,8 @@ DefineAbility({
   Description={
     Format="You gain blindsight to a range of %1 feet for %2 rounds per day. This ability only allows you to detect living creatures and undead creatures. This sight also tells you whether a creature is living or undead. These rounds do not need to be consecutive.",
     Arguments={
-      "NecromancyLifeSightRange",
-      "NecromancyLifeSightRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="NecromancyLifeSightRange",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="NecromancyLifeSightRounds",
-      InitialValue=Formula("0"),
+      Formula("NecromancyLifeSightRange"),
+      Formula("NecromancyLifeSightRounds"),
     },
   },
   Bonuses={
@@ -80830,21 +73329,20 @@ DefineAbility({
       },
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Command Undead",
+      },
+    },
+  },
   SourcePage="p.81",
   Description={
     Format="Undead cannot add their channel resistance to the save against your Command Undead ability.",
     Arguments={
-      "PREVARGTEQ:PowerOverUndeadLVL,20",
-    },
-  },
-  Definitions={
-    {
-      Name="PowerOverUndeadCommandDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="PowerOverUndeadCommandHD",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:PowerOverUndeadLVL,20"),
     },
   },
   Bonuses={
@@ -80861,15 +73359,6 @@ DefineAbility({
         "PowerOverUndeadCommandHD",
       },
       Formula=Formula("PowerOverUndeadLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Command Undead",
-      },
     },
   },
   Types={
@@ -80893,17 +73382,20 @@ DefineAbility({
       },
     },
   },
+  Abilities={
+    {
+      Category="FEAT",
+      Nature="AUTOMATIC",
+      Names={
+        "Turn Undead",
+      },
+    },
+  },
   SourcePage="p.81",
   Description={
     Format="Undead cannot add their channel resistance to the save against your Turn ability.",
     Arguments={
-      "PREVARGTEQ:PowerOverUndeadLVL,20",
-    },
-  },
-  Definitions={
-    {
-      Name="PowerOverUndeadTurnDC",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:PowerOverUndeadLVL,20"),
     },
   },
   Bonuses={
@@ -80913,15 +73405,6 @@ DefineAbility({
         "PowerOverUndeadTurnDC",
       },
       Formula=Formula("10+PowerOverUndeadLVL/2+CHA"),
-    },
-  },
-  Abilities={
-    {
-      Category="FEAT",
-      Nature="AUTOMATIC",
-      Names={
-        "Turn Undead",
-      },
     },
   },
   Types={
@@ -80938,22 +73421,23 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Physical Enhancement ~ Constitution",
+        "Physical Enhancement ~ Dexterity",
+        "Physical Enhancement ~ Strength",
+      },
+    },
+  },
   SourcePage="p.82",
   Description={
     Format="You gain a +%1 enhancement bonus to two physical ability scores (Strength, Dexterity, or Constitution). You can change this bonus to new ability scores when you prepare spells.",
     Arguments={
-      "TransmutationPhysicalEnhancementBonus",
-      "PREVAREQ:TransmutationProgressionSchoolLVL,20",
-    },
-  },
-  Definitions={
-    {
-      Name="TransmutationPhysicalEnhancementBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="TransmutationPhysicalEnhancementProgression",
-      InitialValue=Formula("0"),
+      Formula("TransmutationPhysicalEnhancementBonus"),
+      Formula("PREVAREQ:TransmutationProgressionSchoolLVL,20"),
     },
   },
   Bonuses={
@@ -80984,17 +73468,6 @@ DefineAbility({
       Formula=Formula("min(5,(TransmutationSchoolLVL/5)+1)"),
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Physical Enhancement ~ Constitution",
-        "Physical Enhancement ~ Dexterity",
-        "Physical Enhancement ~ Strength",
-      },
-    },
-  },
   Types={
     "WizardClassFeatures",
     "SpecialQuality",
@@ -81011,7 +73484,9 @@ DefineAbility({
   Stackable=false,
   Visible=false,
   TemporaryBonuses={
-    Description="You gain an enhancement bonus to Strength. You can change this bonus to a new ability score when you prepare spells.",
+    Description={
+      Format="You gain an enhancement bonus to Strength. You can change this bonus to a new ability score when you prepare spells.",
+    },
     Bonuses={
       {
         Target="PC",
@@ -81039,7 +73514,9 @@ DefineAbility({
   Stackable=false,
   Visible=false,
   TemporaryBonuses={
-    Description="You gain an enhancement bonus to Dexterity. You can change this bonus to a new ability score when you prepare spells.",
+    Description={
+      Format="You gain an enhancement bonus to Dexterity. You can change this bonus to a new ability score when you prepare spells.",
+    },
     Bonuses={
       {
         Target="PC",
@@ -81067,7 +73544,9 @@ DefineAbility({
   Stackable=false,
   Visible=false,
   TemporaryBonuses={
-    Description="You gain an enhancement bonus to Constitution. You can change this bonus to a new ability score when you prepare spells.",
+    Description={
+      Format="You gain an enhancement bonus to Constitution. You can change this bonus to a new ability score when you prepare spells.",
+    },
     Bonuses={
       {
         Target="PC",
@@ -81118,17 +73597,7 @@ DefineAbility({
   Description={
     Format="You can use this ability %1 times per day.",
     Arguments={
-      "TransmutationTelekineticFistTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TransmutationTelekineticFistBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="TransmutationTelekineticFistTimes",
-      InitialValue=Formula("0"),
+      Formula("TransmutationTelekineticFistTimes"),
     },
   },
   Bonuses={
@@ -81179,13 +73648,7 @@ DefineAbility({
   Description={
     Format="This ability otherwise functions like Beast Shape III or elemental body II.",
     Arguments={
-      "PREVARGTEQ:TransmutationProgressionSchoolLVL,12",
-    },
-  },
-  Definitions={
-    {
-      Name="TransmutationChangeShapeRounds",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:TransmutationProgressionSchoolLVL,12"),
     },
   },
   Bonuses={
@@ -81228,13 +73691,7 @@ DefineAbility({
   Description={
     Format="You can cause your melee weapon to fly from your grasp and strike a foe before instantly returning to you. As a standard action, you can make a single attack using a melee weapon at a range of 30 feet. This attack is treated as a ranged attack with a thrown weapon, except that you add your Intelligence modifier on the attack roll instead of your Dexterity modifier (damage still relies on Strength). This ability cannot be used to perform a combat maneuver. You can use this ability %1 times per day.",
     Arguments={
-      "UniversalHandOfTheApprenticeTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="UniversalHandOfTheApprenticeTimes",
-      InitialValue=Formula("0"),
+      Formula("UniversalHandOfTheApprenticeTimes"),
     },
   },
   Bonuses={
@@ -81277,13 +73734,7 @@ DefineAbility({
   Description={
     Format="You can apply any one metamagic feat that you know to a spell you are about to cast. This does not alter the level of the spell or the casting time. You can use this ability %1 per day. Any time you use this ability to apply a metamagic feat that increases the spell level by more than 1, you must use an additional daily usage for each level above 1 that the feat adds to the spell. Even though this ability does not modify the spell's actual level, you cannot use this ability to cast a spell whose modified spell level would be above the level of the highest-level spell that you are capable of casting.",
     Arguments={
-      "UniversalMetamagicMasteryTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="UniversalMetamagicMasteryTimes",
-      InitialValue=Formula("0"),
+      Formula("UniversalMetamagicMasteryTimes"),
     },
   },
   Bonuses={
@@ -81645,7 +74096,6 @@ DefineAbility({
       return ((true))
     end),
   },
-  Selections=nil,
   SourcePage="p.450",
   ClassSkills={
     "LIST",
@@ -81665,7 +74115,6 @@ DefineAbility({
       return ((not (character.IsProficientWith(weapon)) and (((weapon.IsType("Simple"))))))
     end),
   },
-  Selections=nil,
   AutomaticProficiencies={
     {
       Kind="Weapon",
@@ -81677,7 +74126,7 @@ DefineAbility({
   Description={
     Format="You understand how to use %1",
     Arguments={
-      "%LIST",
+      Formula("%LIST"),
     },
   },
   Types={
@@ -81733,32 +74182,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="RacialStatStr",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RacialStatDex",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RacialStatCon",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RacialStatInt",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RacialStatWis",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RacialStatCha",
-      InitialValue=Formula("0"),
-    },
-  },
 })
 
 ModifyAbility({
@@ -81766,16 +74189,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="GauntletOS",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="UnarmedLethal",
-      InitialValue=Formula("0"),
-    },
-  },
   Abilities={
     {
       Category="Internal",
@@ -81956,12 +74369,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="UncannyDodgeLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Abilities={
     {
       Category="Natural Attack",
@@ -82076,40 +74483,6 @@ DefineAbility({
       Names={
         "Spells (Ray)",
       },
-    },
-  },
-  Definitions={
-    {
-      Name="RayAttackRange",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RayAttackBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RayDamageDice",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RayDamageSize",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RayDamageBonus",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RayThreatRange",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RayCritMult",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AttackBonusSize",
-      InitialValue=Formula("0"),
     },
   },
   Bonuses={
@@ -82767,9 +75140,6 @@ DefineAbility({
       },
     },
   },
-  Description={
-    Format="A bard is proficient with all simple weapons, plus the longsword, rapier, sap, short sword, shortbow, and whip. Bards are proficient with light armor and shields (except tower shields). A bard can cast bard spells while wearing light armor without incurring the normal arcane spell failure chance. However, like any other arcane spellcaster, a bard wearing medium or heavy armor or using a shield incurs a chance of arcane spell failure if the spell in question has a somatic component (most do). A multiclass bard still incurs the normal arcane spell failure chance for arcane spells received from other classes.",
-  },
   Abilities={
     {
       Category="Internal",
@@ -82794,6 +75164,9 @@ DefineAbility({
         end,
       },
     },
+  },
+  Description={
+    Format="A bard is proficient with all simple weapons, plus the longsword, rapier, sap, short sword, shortbow, and whip. Bards are proficient with light armor and shields (except tower shields). A bard can cast bard spells while wearing light armor without incurring the normal arcane spell failure chance. However, like any other arcane spellcaster, a bard wearing medium or heavy armor or using a shield incurs a chance of arcane spell failure if the spell in question has a somatic component (most do). A multiclass bard still incurs the normal arcane spell failure chance for arcane spells received from other classes.",
   },
   Types={
     "BardClassFeatures",
@@ -82824,9 +75197,6 @@ DefineAbility({
       },
     },
   },
-  Description={
-    Format="Druids are proficient with the following weapons: club, dagger, dart, quarterstaff, scimitar, sickle, shortspear, sling, and spear. They are also proficient with all natural attacks (claw, bite, and so forth) of any form they assume with wild shape (see below). Druids are proficient with light and medium armor but are prohibited from wearing metal armor; thus, they may wear only padded, leather, or hide armor. (A druid may also wear wooden armor that has been altered by the ironwood spell so that it functions as though it were steel. See the ironwood spell description) Druids are proficient with shields (except tower shields) but must use only wooden ones. A druid who wears prohibited armor or carries a prohibited shield is unable to cast druid spells or use any of her supernatural or spell-like class abilities while doing so and for 24 hours thereafter.",
-  },
   Abilities={
     {
       Category="Internal",
@@ -82853,6 +75223,9 @@ DefineAbility({
       },
     },
   },
+  Description={
+    Format="Druids are proficient with the following weapons: club, dagger, dart, quarterstaff, scimitar, sickle, shortspear, sling, and spear. They are also proficient with all natural attacks (claw, bite, and so forth) of any form they assume with wild shape (see below). Druids are proficient with light and medium armor but are prohibited from wearing metal armor; thus, they may wear only padded, leather, or hide armor. (A druid may also wear wooden armor that has been altered by the ironwood spell so that it functions as though it were steel. See the ironwood spell description) Druids are proficient with shields (except tower shields) but must use only wooden ones. A druid who wears prohibited armor or carries a prohibited shield is unable to cast druid spells or use any of her supernatural or spell-like class abilities while doing so and for 24 hours thereafter.",
+  },
   Types={
     "DruidClassFeatures",
     "SpecialQuality",
@@ -82865,9 +75238,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Description={
-    Format="A fighter is proficient with all simple and martial weapons and with all armor (heavy, medium, and light) and shields (including tower shields).",
-  },
   Abilities={
     {
       Category="Internal",
@@ -82950,6 +75320,9 @@ DefineAbility({
       },
     },
   },
+  Description={
+    Format="A fighter is proficient with all simple and martial weapons and with all armor (heavy, medium, and light) and shields (including tower shields).",
+  },
   Types={
     "FighterClassFeatures",
     "SpecialQuality",
@@ -82989,9 +75362,6 @@ DefineAbility({
       },
     },
   },
-  Description={
-    Format="Monks are proficient with club, crossbow (light or heavy), dagger, handaxe, javelin, kama, nunchaku, quarterstaff, sai, shuriken, siangham, and sling. Monks are not proficient with any armor or shields When wearing armor, using a shield, or carrying a medium or heavy load, a monk loses her AC bonus, as well as her fast movement and flurry of blows abilities.",
-  },
   Abilities={
     {
       Category="Internal",
@@ -83000,6 +75370,9 @@ DefineAbility({
         "Weapon Prof ~ Auto",
       },
     },
+  },
+  Description={
+    Format="Monks are proficient with club, crossbow (light or heavy), dagger, handaxe, javelin, kama, nunchaku, quarterstaff, sai, shuriken, siangham, and sling. Monks are not proficient with any armor or shields When wearing armor, using a shield, or carrying a medium or heavy load, a monk loses her AC bonus, as well as her fast movement and flurry of blows abilities.",
   },
   Types={
     "MonkClassFeatures",
@@ -83013,9 +75386,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Description={
-    Format="Paladins are proficient with all simple and martial weapons, with all types of armor (heavy, medium, and light), and with shields (except tower shields).",
-  },
   Abilities={
     {
       Category="Internal",
@@ -83097,6 +75467,9 @@ DefineAbility({
       },
     },
   },
+  Description={
+    Format="Paladins are proficient with all simple and martial weapons, with all types of armor (heavy, medium, and light), and with shields (except tower shields).",
+  },
   Types={
     "PaladinClassFeatures",
     "SpecialQuality",
@@ -83109,9 +75482,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Description={
-    Format="A ranger is proficient with all simple and martial weapons and with light armor, medium armor, and shields (except tower shields).",
-  },
   Abilities={
     {
       Category="Internal",
@@ -83178,6 +75548,9 @@ DefineAbility({
       },
     },
   },
+  Description={
+    Format="A ranger is proficient with all simple and martial weapons and with light armor, medium armor, and shields (except tower shields).",
+  },
   Types={
     "RangerClassFeatures",
     "SpecialQuality",
@@ -83201,9 +75574,6 @@ DefineAbility({
         "Sword (Short)",
       },
     },
-  },
-  Description={
-    Format="Rogues are proficient with all simple weapons, plus the hand crossbow, rapier, sap, shortbow, and short sword. Rogues are proficient with light armor, but not with shields.",
   },
   Abilities={
     {
@@ -83270,6 +75640,9 @@ DefineAbility({
         end,
       },
     },
+  },
+  Description={
+    Format="Rogues are proficient with all simple weapons, plus the hand crossbow, rapier, sap, shortbow, and short sword. Rogues are proficient with light armor, but not with shields.",
   },
   Types={
     "RogueClassFeatures",
@@ -83558,16 +75931,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="UncannyDodgeFlankingLevel",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="UncannyDodgeLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -83650,7 +76013,7 @@ DefineAbility({
   Description={
     Format="You can no longer be flanked. This defense denies a rogue the ability to sneak attack you by flanking you, unless the attacker is a rogue of at least level %1.",
     Arguments={
-      "UncannyDodgeFlankingLevel",
+      Formula("UncannyDodgeFlankingLevel"),
     },
   },
   Bonuses={
@@ -83764,13 +76127,7 @@ DefineAbility({
   Description={
     Format="You gain a +%1 bonus on Reflex saves made to avoid traps, and a +%1 dodge bonus to AC against attacks made by traps.",
     Arguments={
-      "TrapSenseBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="TrapSenseBonus",
-      InitialValue=Formula("0"),
+      Formula("TrapSenseBonus"),
     },
   },
   Types={
@@ -83816,17 +76173,7 @@ DefineAbility({
   Description={
     Format="You can improve the attitude of an animal. This ability functions just like Diplomacy check made to improve the attitude of a person. You roll 1d20+%1 to determine the Wild Empathy check result. The typical domestic animal has a starting attitude of indifferent, while wild animals are usually unfriendly. To use Wild Empathy, you and the animal must be within 30 feet of one another under normal circumstances. Generally, influencing an animal in this way takes 1 minute, but as with influencing people, it might take more or less time. You can use this ability to influence a magical beast with an Intelligence score of 1 or 2, but you take a -4 penalty on the check.",
     Arguments={
-      "WildEmpathy",
-    },
-  },
-  Definitions={
-    {
-      Name="WildEmpathy",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="WildEmpathyLVL",
-      InitialValue=Formula("0"),
+      Formula("WildEmpathy"),
     },
   },
   Bonuses={
@@ -83869,12 +76216,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
-    {
-      Name="FavoredTerrainPool",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -83917,26 +76258,8 @@ DefineAbility({
   Description={
     Format="If you can catch an opponent when he is unable to defend himself effectively from your attack, you can strike a vital spot for extra damage. Your attack deals %1d%2 points of extra damage anytime your target would be denied a Dexterity bonus to AC, or when you flank your target. Should you score a critical hit with a sneak attack, this extra damage is not multiplied. Ranged attacks can count as sneak attacks only if the target is within 30 feet. With a weapon that deals nonlethal damage, you can make a sneak attack that deals nonlethal damage instead of lethal damage. You cannot use a weapon that deals lethal damage to deal nonlethal damage in a sneak attack, not even with the usual -4 penalty. You must be able to see the target well enough to pick out a vital spot and must be able to reach such a spot. You cannot sneak attack while striking a creature with concealment.",
     Arguments={
-      "SneakAttackDice",
-      "SneakAttackDieSize",
-    },
-  },
-  Definitions={
-    {
-      Name="SneakAttackDieSize",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SneakAttackDice",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SneakAttackLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="RogueSneakAttackLVL",
-      InitialValue=Formula("0"),
+      Formula("SneakAttackDice"),
+      Formula("SneakAttackDieSize"),
     },
   },
   Bonuses={
@@ -83988,18 +76311,8 @@ DefineAbility({
   Description={
     Format="If you study your victim for 3 rounds and then makes a sneak attack with a melee weapon that successfully deals damage, the sneak attack has the additional effect of possibly either paralyzing or killing the target (your choice). Studying the victim is a standard action. The death attack fails if the target detects the assassin or recognizes the assassin as an enemy (although the attack might still be a sneak attack if the target is denied his Dexterity bonus to his Armor Class or is flanked). If the victim of such a death attack fails a Fortitude save DC %1 against the kill effect, she dies. If the saving throw fails against the paralysis effect, the victim is rendered helpless and unable to act for 1d6+%2 rounds.",
     Arguments={
-      "DeathAttackDC",
-      "DeathAttackDuration",
-    },
-  },
-  Definitions={
-    {
-      Name="DeathAttackDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DeathAttackDuration",
-      InitialValue=Formula("0"),
+      Formula("DeathAttackDC"),
+      Formula("DeathAttackDuration"),
     },
   },
   Bonuses={
@@ -84026,14 +76339,8 @@ DefineAbility({
   Description={
     Format=" You get %1 extra chances to succeed on your saving throw.",
     Arguments={
-      "SlipperymindTimes",
-      "PREVARGTEQ:SlipperymindTimes,1",
-    },
-  },
-  Definitions={
-    {
-      Name="SlipperymindTimes",
-      InitialValue=Formula("0"),
+      Formula("SlipperymindTimes"),
+      Formula("PREVARGTEQ:SlipperymindTimes,1"),
     },
   },
   Types={
@@ -84050,17 +76357,7 @@ DefineAbility({
   Description={
     Format="You project an overwhelming chaotic aura.",
     Arguments={
-      "PREVARGTEQ:AuraChaosLVL,11",
-    },
-  },
-  Definitions={
-    {
-      Name="AuraChaosLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AlignmentAuraLVL",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:AuraChaosLVL,11"),
     },
   },
   Bonuses={
@@ -84089,17 +76386,7 @@ DefineAbility({
   Description={
     Format="You project an overwhelming evil aura.",
     Arguments={
-      "PREVARGTEQ:AuraEvilLVL,11",
-    },
-  },
-  Definitions={
-    {
-      Name="AuraEvilLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AlignmentAuraLVL",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:AuraEvilLVL,11"),
     },
   },
   Bonuses={
@@ -84128,17 +76415,7 @@ DefineAbility({
   Description={
     Format="You project an overwhelming good aura.",
     Arguments={
-      "PREVARGTEQ:AuraGoodLVL,11",
-    },
-  },
-  Definitions={
-    {
-      Name="AuraGoodLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AlignmentAuraLVL",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:AuraGoodLVL,11"),
     },
   },
   Bonuses={
@@ -84167,17 +76444,7 @@ DefineAbility({
   Description={
     Format="You project an overwhelming lawful aura.",
     Arguments={
-      "PREVARGTEQ:AuraLawLVL,11",
-    },
-  },
-  Definitions={
-    {
-      Name="AuraLawLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="AlignmentAuraLVL",
-      InitialValue=Formula("0"),
+      Formula("PREVARGTEQ:AuraLawLVL,11"),
     },
   },
   Bonuses={
@@ -84225,12 +76492,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="PrestigeClassChannelEnergyLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -84347,10 +76608,13 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  Definitions={
+  Abilities={
     {
-      Name="USECMB",
-      InitialValue=Formula("0"),
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "CMB",
+      },
     },
   },
   Bonuses={
@@ -84360,15 +76624,6 @@ DefineAbility({
         "USECMB",
       },
       Formula=Formula("1"),
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "CMB",
-      },
     },
   },
   Types={
@@ -84388,28 +76643,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="CMB",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CMD",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CMB_STAT",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CMD_ACMod",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CM_SizeMod",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -84461,16 +76694,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="CMB_BAB",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CMD_BAB",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -84622,16 +76845,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="CMB_BullRush",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CMD_BullRush",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -84655,16 +76868,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="CMB_Disarm",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CMD_Disarm",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -84688,16 +76891,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="CMB_Grapple",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CMD_Grapple",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -84749,16 +76942,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="CMB_Overrun",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CMD_Overrun",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -84782,16 +76965,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="CMB_Sunder",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CMD_Sunder",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -84815,16 +76988,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="CMB_Trip",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CMD_Trip",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -84933,16 +77096,6 @@ DefineAbility({
   Description={
     Format="At 1st level, every nonmagical arrow an arcane archer nocks and lets fly becomes magical, gaining a +1 enhancement bonus. Unlike magic weapons created by normal means, the archer need not spend gold pieces to accomplish this task. However, an archer's magic arrows only function for him. In addition, the arcane archer's arrows gain a number of additional qualities as he gains additional levels. The elemental, elemental burst, and aligned qualities can be changed once per day, when the arcane archer prepares spells or, in the case of spontaneous spellcasters, after 8 hours of rest. At 3rd level, every nonmagical arrow fired by an arcane archer gains one of the following elemental themed weapon qualities: flaming, frost, or shock. At 5th level, every nonmagical arrow fired by an arcane archer gains the distance weapon quality. At 7th level, every nonmagical arrow fired by an arcane archer gains one of the following elemental burst weapon qualities: flaming burst, icy burst, or shocking burst. This ability replaces the ability gained at 3rd level. At 9th level, every nonmagical arrow fired by an arcane archer gains one of the following aligned weapon qualities: anarchic, axiomatic, holy, or unholy. The arcane archer cannot choose an ability that is the opposite of his alignment (for example, a lawful good arcane archer could not choose anarchic or unholy as his weapon quality). The bonuses granted by a magic bow apply as normal to arrows that have been enhanced with this ability. Only the larger enhancement bonus applies. Duplicate abilities do not stack.",
   },
-  Definitions={
-    {
-      Name="ArrowEnhancement",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ArrowEnhancementLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -85000,13 +77153,7 @@ DefineAbility({
   Description={
     Format="At 4th level, an arcane archer can launch an arrow at a target known to him within range, and the arrow travels to the target, even around corners. Only an unavoidable obstacle or the limit of the arrow's range prevents the arrow's flight. This ability negates cover and concealment modifiers, but otherwise the attack is rolled normally. Using this ability is a standard action (and shooting the arrow is part of the action). An arcane archer can use this ability %1 per day.",
     Arguments={
-      "SeekerArrowTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="SeekerArrowTimes",
-      InitialValue=Formula("0"),
+      Formula("SeekerArrowTimes"),
     },
   },
   Bonuses={
@@ -85043,13 +77190,7 @@ DefineAbility({
   Description={
     Format="At 6th level, an arcane archer can launch an arrow %1 per day at a target known to him within range, and the arrow travels to the target in a straight path, passing through any nonmagical barrier or wall in its way. (Any magical barrier stops the arrow.) This ability negates cover, concealment, armor, and shield modifiers, but otherwise the attack is rolled normally. Using this ability is a standard action (and shooting the arrow is part of the action).",
     Arguments={
-      "PhaseArrowTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="PhaseArrowTimes",
-      InitialValue=Formula("0"),
+      Formula("PhaseArrowTimes"),
     },
   },
   Bonuses={
@@ -85087,18 +77228,8 @@ DefineAbility({
   Description={
     Format="In lieu of his regular attacks, %2 per day an arcane archer of 8th level or higher can fire an arrow at each and every target within range, to a maximum of %1 targets. Each attack uses the archer's primary attack bonus, and each enemy may only be targeted by a single arrow.",
     Arguments={
-      "HailArrowsTargets",
-      "HailArrowsTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="HailArrowsTargets",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="HailArrowsTimes",
-      InitialValue=Formula("0"),
+      Formula("HailArrowsTargets"),
+      Formula("HailArrowsTimes"),
     },
   },
   Bonuses={
@@ -85142,13 +77273,7 @@ DefineAbility({
   Description={
     Format="At 10th level, an arcane archer can create a special type of slaying arrow that forces the target, if damaged by the arrow's attack, to make a Fortitude save (DC %1) or be slain immediately. It takes 1 day to make a slaying arrow, and the arrow only functions for the arcane archer who created it. The slaying arrow lasts no longer than 1 year, and the archer can only have one such arrow in existence at a time.",
     Arguments={
-      "ArrowOfDeathDC",
-    },
-  },
-  Definitions={
-    {
-      Name="ArrowOfDeathDC",
-      InitialValue=Formula("0"),
+      Formula("ArrowOfDeathDC"),
     },
   },
   Bonuses={
@@ -85223,13 +77348,7 @@ DefineAbility({
   Description={
     Format="Beginning at 3rd level, %1 per day an arcane trickster can declare one melee or ranged attack she makes to be a sneak attack (the target can be no more than 30 feet distant if the impromptu sneak attack is a ranged attack). The target of an impromptu sneak attack loses any Dexterity bonus to AC, but only against that attack. The power can be used against any target, but creatures that are not subject to critical hits take no extra damage (though they still lose any Dexterity bonus to AC against the attack). At 7th level, an arcane trickster can use this ability twice per day.",
     Arguments={
-      "ImpromptuSneakTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="ImpromptuSneakTimes",
-      InitialValue=Formula("0"),
+      Formula("ImpromptuSneakTimes"),
     },
   },
   Bonuses={
@@ -85273,12 +77392,6 @@ DefineAbility({
   SourcePage="p.378",
   Description={
     Format="Starting at 5th level, an arcane trickster can cast her spells without their somatic or verbal components, as if using the Still Spell and Silent Spell feats. Spells cast using this ability do not increase in spell level or casting time. She can use this ability 3 times per day at 5th level and one additional time per every two levels thereafter, to a maximum of 5 times per day at 9th level. The arcane trickster decides to use this ability at the time of casting.",
-  },
-  Definitions={
-    {
-      Name="TrickySpellsTimes",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -85361,22 +77474,21 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sneak Attack",
+      },
+    },
+  },
   SourcePage="p.176",
   Description={
     Format="[Sneak Attack Damage %1d%2]",
     Arguments={
-      "SneakAttackDice",
-      "SneakAttackDieSize",
-    },
-  },
-  Definitions={
-    {
-      Name="SneakAttackDice",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SneakAttackDieSize",
-      InitialValue=Formula("0"),
+      Formula("SneakAttackDice"),
+      Formula("SneakAttackDieSize"),
     },
   },
   Bonuses={
@@ -85398,15 +77510,6 @@ DefineAbility({
         "SneakAttackDice",
       },
       Formula=Formula("ArcaneTricksterLVL/2"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sneak Attack",
-      },
     },
   },
   Types={
@@ -85438,9 +77541,6 @@ DefineAbility({
       },
     },
   },
-  Description={
-    Format="Assassins are proficient with the crossbow (hand, light, or heavy), dagger (any type), dart, rapier, sap, shortbow (normal and composite), and short sword. Assassins are proficient with light armor but not with shields.",
-  },
   Abilities={
     {
       Category="Internal",
@@ -85449,6 +77549,9 @@ DefineAbility({
         "ArmorProfLight",
       },
     },
+  },
+  Description={
+    Format="Assassins are proficient with the crossbow (hand, light, or heavy), dagger (any type), dart, rapier, sap, shortbow (normal and composite), and short sword. Assassins are proficient with light armor but not with shields.",
   },
   Types={
     "ClassFeatures",
@@ -85483,13 +77586,7 @@ DefineAbility({
   Description={
     Format="The assassin gains a +%1 saving throw bonus against poisons.",
     Arguments={
-      "AssassinPoisonSaveBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="AssassinPoisonSaveBonus",
-      InitialValue=Formula("0"),
+      Formula("AssassinPoisonSaveBonus"),
     },
   },
   Bonuses={
@@ -85531,6 +77628,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Death Attack",
+      },
+    },
+  },
   SourcePage="p.378",
   Description={
     Format="If an assassin studies his victim for 3 rounds and then makes a sneak attack with a melee weapon that successfully deals damage, the sneak attack has the additional effect of possibly either paralyzing or killing the target (assassin's choice). Studying the victim is a standard action. The death attack fails if the target detects the assassin or recognizes the assassin as an enemy (although the attack might still be a sneak attack if the target is denied his Dexterity bonus to his Armor Class or is flanked). If the victim of such a death attack fails a Fortitude save (DC 10 + the assassin's class level + the assassin's Int modifier) against the kill effect, she dies. If the saving throw fails against the paralysis effect, the victim is rendered helpless and unable to act for 1d6 rounds plus 1 round per level of the assassin.",
@@ -85543,15 +77649,6 @@ DefineAbility({
         "DeathAttackDuration",
       },
       Formula=Formula("AssassinLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Death Attack",
-      },
     },
   },
   Types={
@@ -85694,6 +77791,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Uncanny Dodge ~ Base",
+      },
+    },
+  },
   Bonuses={
     {
       Category="VAR",
@@ -85732,15 +77838,6 @@ DefineAbility({
       },
     },
   },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Uncanny Dodge ~ Base",
-      },
-    },
-  },
   Types={
     "ClassFeatures",
     "AssassinClassFeatures",
@@ -85753,15 +77850,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "SneakAttackDice",
-      },
-      Formula=Formula("(AssassinLVL+1)/2"),
-    },
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -85769,6 +77857,15 @@ DefineAbility({
       Names={
         "Sneak Attack",
       },
+    },
+  },
+  Bonuses={
+    {
+      Category="VAR",
+      Variables={
+        "SneakAttackDice",
+      },
+      Formula=Formula("(AssassinLVL+1)/2"),
     },
   },
   Types={
@@ -85872,12 +77969,6 @@ DefineAbility({
   SourcePage="p.381",
   Description={
     Format="As his skin thickens, a dragon disciple takes on more and more of his progenitor's physical aspect. At 1st, 4th, and 7th level, a dragon disciple gains an increase to the character's existing natural armor (if any), as indicated on Table 11-4. These armor bonuses stack.",
-  },
-  Definitions={
-    {
-      Name="DragonDiscipleArmorBonus",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -86044,6 +78135,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Bite",
+      },
+    },
+  },
   SourcePage="p.382",
   Description={
     Format="At 2nd level, whenever the dragon disciple uses his bloodline to grow claws, he also gains a bite attack. This is a primary natural attack that deals 1d6 points of damage (1d4 if the dragon disciple is small) plus 1-1/2 times the dragon disciple's Strength modifier. Upon reaching 6th level, this bite also deals 1d6 points of energy damage. The type of damage dealt is determined by the dragon disciple's bloodline.",
@@ -86055,15 +78155,6 @@ DefineAbility({
         "DAMAGE",
       },
       Formula=Formula("STR/2"),
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Bite",
-      },
     },
   },
   Types={
@@ -86081,6 +78172,22 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Draconic Bloodline ~ Breath Weapon",
+      },
+      Conditions={
+        function (character)
+          return 1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Blood of Dragons Bloodline" and (ability.Type == "SorcererBloodlineChoice")
+          end)
+        end,
+      },
+    },
+  },
   SourcePage="p.382",
   Description={
     Format="At 3rd level, a dragon disciple gains the breath weapon bloodline power, even if his level does not yet grant that power. Once his level is high enough to grant this ability through the bloodline, the dragon disciple gains an additional use of his breath weapon each day. The type and shape of the breath weapon depends on the type of dragon selected by the dragon disciple, as detailed under the Draconic sorcerer bloodline description (see page 75).",
@@ -86095,22 +78202,6 @@ DefineAbility({
       Conditions={
         function (character)
           return (character.Variables["DragonDiscipleLVL"] >= 3)
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Draconic Bloodline ~ Breath Weapon",
-      },
-      Conditions={
-        function (character)
-          return 1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Blood of Dragons Bloodline" and (ability.Type == "SorcererBloodlineChoice")
-          end)
         end,
       },
     },
@@ -86130,15 +78221,6 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   SourcePage="p.382",
-  Description={
-    Format="At 5th level, the dragon disciple gains blindsense with a range of 30 feet. Using nonvisual senses the dragon disciple notices things he cannot see. He usually does not need to make Perception checks to notice and pinpoint the location of creatures within range of his blindsense ability, provided that he has line of effect (see page 215) to that creature. Any opponent the dragon disciple cannot see still has total concealment against him, and the dragon disciple still has the normal miss chance when attacking foes that have concealment. Visibility still affects the movement of a creature with blindsense. A creature with blindsense is still denied its Dexterity bonus to Armor Class against attacks from creatures it cannot see. At 10th level, the range of this ability increases to 60 feet.",
-  },
-  Types={
-    "ClassFeatures",
-    "Dragon Disciple Class Feature",
-    "SpecialQuality",
-    "Extraordinary",
-  },
   Vision={
     {
       Vision="Blindsense (60')",
@@ -86163,6 +78245,15 @@ DefineAbility({
       },
     },
   },
+  Description={
+    Format="At 5th level, the dragon disciple gains blindsense with a range of 30 feet. Using nonvisual senses the dragon disciple notices things he cannot see. He usually does not need to make Perception checks to notice and pinpoint the location of creatures within range of his blindsense ability, provided that he has line of effect (see page 215) to that creature. Any opponent the dragon disciple cannot see still has total concealment against him, and the dragon disciple still has the normal miss chance when attacking foes that have concealment. Visibility still affects the movement of a creature with blindsense. A creature with blindsense is still denied its Dexterity bonus to Armor Class against attacks from creatures it cannot see. At 10th level, the range of this ability increases to 60 feet.",
+  },
+  Types={
+    "ClassFeatures",
+    "Dragon Disciple Class Feature",
+    "SpecialQuality",
+    "Extraordinary",
+  },
 })
 
 DefineAbility({
@@ -86171,6 +78262,7 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  SourcePage="p.382",
   SpellLikeAbilities={
     {
       Name="Form of the Dragon I",
@@ -86200,19 +78292,8 @@ DefineAbility({
       },
     },
   },
-  SourcePage="p.382",
   Description={
     Format="At 7th level, a dragon disciple can assume the form of a dragon. This ability works like form of the dragon I. At 10th level, this ability functions as form of the dragon II and the dragon disciple can use this ability twice per day. His caster level for this effect is equal to his effective sorcerer levels for his draconic bloodline. Whenever he casts form of the dragon, he must assume the form of a dragon of the same type as his bloodline.",
-  },
-  Definitions={
-    {
-      Name="DragonFormTimes",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="DragonFormCL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -86244,15 +78325,18 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Draconic Bloodline ~ Wings",
+      },
+    },
+  },
   SourcePage="p.382",
   Description={
     Format="At 9th level, a dragon disciple gains the wings bloodline power, even if his level does not yet grant that power. Once his level is high enough to grant this ability through the bloodline, the dragon disciple's speed increases to 90 feet.",
-  },
-  Definitions={
-    {
-      Name="DragonDisciple_Wings_SpeedBonus",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -86272,15 +78356,6 @@ DefineAbility({
         function (character)
           return (character.Variables["Sorcerer_Draconic_BloodlineProgressionLVL"] >= 15)
         end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Draconic Bloodline ~ Wings",
       },
     },
   },
@@ -86307,19 +78382,6 @@ DefineAbility({
       return ((not (character.HasAbility(ability))) and (character.IsQualifiedFor(ability) and (((ability.IsType("SorcererBloodlineChoice"))))))
     end),
   },
-  Selections=nil,
-  Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Name == "Dragon Disciple ~ Blood of Dragons")
-      end)
-    end,
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Archetype" and (ability.Name == "Sorcerer Archetype ~ Crossblooded")
-      end))
-    end,
-  },
   Abilities={
     {
       Category="Blood of Dragons Bloodline",
@@ -86336,6 +78398,18 @@ DefineAbility({
       },
     },
   },
+  Conditions={
+    function (character)
+      return 1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "Special Ability" and (ability.Name == "Dragon Disciple ~ Blood of Dragons")
+      end)
+    end,
+    function (character)
+      return not (1 <= #filter(character.Abilities, function (ability)
+        return ability.Category == "Archetype" and (ability.Name == "Sorcerer Archetype ~ Crossblooded")
+      end))
+    end,
+  },
   Types={
     "Dragon Disciple Bloodline Choice",
   },
@@ -86347,6 +78421,29 @@ DefineAbility({
   Category="Blood of Dragons Bloodline",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Draconic Bloodline ~ Feat Tracker",
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Sorcerer Bloodline ~ Draconic",
+      },
+    },
+    {
+      Category="Sorcerer Bloodline",
+      Nature="AUTOMATIC",
+      Names={
+        "Draconic Bloodline",
+      },
+    },
+  },
   Conditions={
     function (character)
       return not (1 <= #filter(character.Abilities, function (ability)
@@ -86412,29 +78509,6 @@ DefineAbility({
       Formula=Formula("if((Sorcerer_CF_BloodlinePower20==0&&Sorcerer_Draconic_BloodlineProgressionLVL>=20),1,0)"),
     },
   },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Draconic Bloodline ~ Feat Tracker",
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Sorcerer Bloodline ~ Draconic",
-      },
-    },
-    {
-      Category="Sorcerer Bloodline",
-      Nature="AUTOMATIC",
-      Names={
-        "Draconic Bloodline",
-      },
-    },
-  },
   Types={
     "SorcererBloodlineChoice",
   },
@@ -86495,12 +78569,6 @@ DefineAbility({
   SourcePage="p.382",
   Description={
     Format="When wearing light or no armor and not using a shield, a duelist adds 1 point of Intelligence bonus (if any) per duelist class level as a dodge bonus to her Armor Class while wielding a melee weapon. If a duelist is caught flat-footed or otherwise denied her Dexterity bonus, she also loses this bonus.",
-  },
-  Definitions={
-    {
-      Name="CannyDefenseLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -86565,13 +78633,7 @@ DefineAbility({
   Description={
     Format="At 2nd level, a duelist gains a +%1 bonus on initiative checks. This bonus stacks with the benefit provided by the Improved Initiative feat.",
     Arguments={
-      "ImprovedReaction",
-    },
-  },
-  Definitions={
-    {
-      Name="ImprovedReaction",
-      InitialValue=Formula("0"),
+      Formula("ImprovedReaction"),
     },
   },
   Bonuses={
@@ -86651,17 +78713,21 @@ DefineAbility({
       },
     },
   },
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Precise Strike ~ 1H",
+        "Precise Strike ~ Light",
+      },
+    },
+  },
   SourcePage="p.383",
   Description={
     Format="A duelist gains the ability to strike precisely with a light or one-handed piercing weapon, adding her duelist level [%1] to her damage roll. When making a precise strike, a duelist cannot attack with a weapon in her other hand or use a shield. A duelist's precise strike only works against living creatures with discernible anatomies. Any creature that is immune to critical hits is also immune to a precise strike, and any item or ability that protects a creature from critical hits also protects a creature from a precise strike.",
     Arguments={
-      "PreciseStrikeDamage",
-    },
-  },
-  Definitions={
-    {
-      Name="PreciseStrikeDamage",
-      InitialValue=Formula("0"),
+      Formula("PreciseStrikeDamage"),
     },
   },
   Bonuses={
@@ -86671,16 +78737,6 @@ DefineAbility({
         "PreciseStrikeDamage",
       },
       Formula=Formula("DuelistLVL"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Precise Strike ~ 1H",
-        "Precise Strike ~ Light",
-      },
     },
   },
   Types={
@@ -86697,17 +78753,10 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="PreciseStrikeDamage",
-      InitialValue=Formula("0"),
-    },
-  },
-  Types={
-    "Internal",
-  },
   TemporaryBonuses={
-    Description="+1 bonus to damage rolls for each duelist level when wielding a light piercing weapon in one hand and leaving your other hand free.",
+    Description={
+      Format="+1 bonus to damage rolls for each duelist level when wielding a light piercing weapon in one hand and leaving your other hand free.",
+    },
     Bonuses={
       {
         Target="EQ|Weapon,Melee,Light,Piercing",
@@ -86721,6 +78770,9 @@ DefineAbility({
       },
     },
   },
+  Types={
+    "Internal",
+  },
 })
 
 DefineAbility({
@@ -86729,17 +78781,10 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="PreciseStrikeDamage",
-      InitialValue=Formula("0"),
-    },
-  },
-  Types={
-    "Internal",
-  },
   TemporaryBonuses={
-    Description="+1 bonus to damage rolls for each duelist level when wielding a one-handed piercing weapon in one hand and leaving your other hand free.",
+    Description={
+      Format="+1 bonus to damage rolls for each duelist level when wielding a one-handed piercing weapon in one hand and leaving your other hand free.",
+    },
     Bonuses={
       {
         Target="EQ|Weapon,Melee,OneHanded,Piercing",
@@ -86752,6 +78797,9 @@ DefineAbility({
         },
       },
     },
+  },
+  Types={
+    "Internal",
   },
 })
 
@@ -86792,17 +78840,7 @@ DefineAbility({
   Description={
     Format="At 7th level and higher, if a duelist chooses to fight defensively or use total defense in melee combat, she gains an additional +%1 dodge bonus to AC for every 3 levels of duelist she has attained.",
     Arguments={
-      "ElaborateDefense",
-    },
-  },
-  Definitions={
-    {
-      Name="ElaborateParryLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ElaborateDefense",
-      InitialValue=Formula("0"),
+      Formula("ElaborateDefense"),
     },
   },
   Bonuses={
@@ -86934,10 +78972,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.384",
-  Description={
-    Format="At 9th level, a duelist gains the benefit of the Deflect Arrows feat when using a light or one-handed piercing weapon. The duelist does not need a free hand to use this feat.",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -86954,6 +78988,10 @@ DefineAbility({
         end,
       },
     },
+  },
+  SourcePage="p.384",
+  Description={
+    Format="At 9th level, a duelist gains the benefit of the Deflect Arrows feat when using a light or one-handed piercing weapon. The duelist does not need a free hand to use this feat.",
   },
   Types={
     "ClassFeatures",
@@ -86988,12 +79026,6 @@ DefineAbility({
   SourcePage="p.385",
   Description={
     Format="At 1st level, an eldritch knight may choose a bonus combat feat. This is in addition to the feats that a character of any class normally gets from advancing levels. The character must still meet any prerequisites for these bonus feats. An eldritch knight gains an additional combat feat at 5th and 9th level.",
-  },
-  Definitions={
-    {
-      Name="EldritchKnightBonusFeatCount",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -87053,6 +79085,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Fighter Level Advanced Feat Tracker",
+      },
+    },
+  },
   SourcePage="p.385",
   Description={
     Format="An eldritch knight adds his level to any levels of fighter he might have for the purpose of meeting the prerequisites for feats (if he has no fighter levels, treat his eldritch knight levels as levels of fighter). He also adds his level to any levels in an arcane spellcasting class for the purpose of meeting the prerequisites for feats.",
@@ -87064,15 +79105,6 @@ DefineAbility({
         "FighterWeaponQualifyLVL",
       },
       Formula=Formula("classlevel(\"Eldritch Knight\")"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Fighter Level Advanced Feat Tracker",
-      },
     },
   },
   Types={
@@ -87140,16 +79172,6 @@ DefineAbility({
   SourcePage="p.386",
   Description={
     Format="At 1st level and every two levels higher than 1st (3rd, 5th, 7th, and 9th), the loremaster chooses one secret from the Loremaster Secrets table. His level plus Intelligence modifier determines which secrets he can choose. He can't choose the same secret twice.",
-  },
-  Definitions={
-    {
-      Name="LoremasterSecretsLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="LoremasterSecretCount",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -87254,12 +79276,6 @@ DefineAbility({
   Description={
     Format="A loremaster can learn any new language at 4th and 8th level.",
   },
-  Definitions={
-    {
-      Name="BonusLanguageCount",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -87293,7 +79309,6 @@ DefineAbility({
       return ((not (character.HasLanguage(lang))) and (character.IsQualifiedFor(lang) and (((lang.IsType("Spoken"))))))
     end),
   },
-  Selections=nil,
   Types={
     "AddSpokenLanguage",
   },
@@ -87318,7 +79333,6 @@ DefineAbility({
     end),
     MaxTimes=1,
   },
-  Selections=nil,
   SourcePage="p.387",
   Conditions={
     function (character)
@@ -87569,7 +79583,6 @@ DefineAbility({
       return ((character.HasClass(class) and (((class.CanCastSpells)))))
     end),
   },
-  Selections=nil,
   SourcePage="p.387",
   Conditions={
     function (character)
@@ -87605,7 +79618,6 @@ DefineAbility({
       return ((character.HasClass(class) and (((class.CanCastSpells)))))
     end),
   },
-  Selections=nil,
   SourcePage="p.387",
   Conditions={
     function (character)
@@ -87640,17 +79652,7 @@ DefineAbility({
   Description={
     Format="You can prepare and cast spells from one of your spellcasting classes using the available slots from any of your other spellcasting classes. Spells prepared or cast in this way take up a slot one level higher than they originally occupied. This ability cannot be used to cast a spell at a lower level if that spell exists on both spell lists. You can prepare spells up to level %1 from one of your spellcasting classes using the slots one level higher of the other spellcasting class. The components of these spells do not change, but they otherwise follow the rules for the spellcasting class used to cast the spell. Spontaneous spellcasters can only select spells that they have prepared that day using non-spontaneous classes for this ability, even if the spells have already been cast.",
     Arguments={
-      "CombinedSpellsMaxLevel",
-    },
-  },
-  Definitions={
-    {
-      Name="CombinedSpellsLVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="CombinedSpellsMaxLevel",
-      InitialValue=Formula("0"),
+      Formula("CombinedSpellsMaxLevel"),
     },
   },
   Bonuses={
@@ -87714,6 +79716,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Bard ~ Bardic Performance",
+      },
+    },
+  },
   SourcePage="p.390",
   Description={
     Format="At 3rd level, a Pathfinder chronicler gains this ability, which functions like the bard class feature of the same name, except that the chronicler's effective bard level is 2 lower than her class level. Levels in this class stack with levels in any other class that grants a similar ability to determine her effective bard level.",
@@ -87726,15 +79737,6 @@ DefineAbility({
         "BardicPerformanceLVL",
       },
       Formula=Formula("CL-2"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Bard ~ Bardic Performance",
-      },
     },
   },
   Types={
@@ -87873,13 +79875,7 @@ DefineAbility({
   Description={
     Format="As a special use of bardic music, a 6th level Pathfinder chronicler can exhort any one ally within hearing to a sudden surge of action, allowing her ally to immediately take an extra move action. This does not count against the ally's number of actions on his own turn.",
     Arguments={
-      "PREVAREQ:InspireActionBonus,0",
-    },
-  },
-  Definitions={
-    {
-      Name="InspireActionBonus",
-      InitialValue=Formula("0"),
+      Formula("PREVAREQ:InspireActionBonus,0"),
     },
   },
   Bonuses={
@@ -87981,9 +79977,6 @@ DefineAbility({
       },
     },
   },
-  Description={
-    Format="Shadowdancers are proficient with the club, crossbow (hand, light, or heavy), dagger (any type), dart, mace, morningstar, quarterstaff, rapier, sap, shortbow (normal and composite), and short sword. Shadowdancers are proficient with light armor but not with shields.",
-  },
   Abilities={
     {
       Category="Internal",
@@ -87992,6 +79985,9 @@ DefineAbility({
         "ArmorProfLight",
       },
     },
+  },
+  Description={
+    Format="Shadowdancers are proficient with the club, crossbow (hand, light, or heavy), dagger (any type), dart, mace, morningstar, quarterstaff, rapier, sap, shortbow (normal and composite), and short sword. Shadowdancers are proficient with light armor but not with shields.",
   },
   Types={
     "ShadowdancerClassFeatures",
@@ -88046,12 +80042,6 @@ DefineAbility({
   Stackable=false,
   Visible=false,
   SourcePage="p.392",
-  Definitions={
-    {
-      Name="ShadowDancerTalentLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="ABILITYPOOL",
@@ -88080,6 +80070,7 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  SourcePage="p.392",
   SpellLikeAbilities={
     {
       Name="Silent Image",
@@ -88090,15 +80081,8 @@ DefineAbility({
       CasterLevel="ShadowIllusionLVL",
     },
   },
-  SourcePage="p.392",
   Description={
     Format="When a shadowdancer reaches 3rd level, she can create visual illusions. This ability functions as silent image, using the shadowdancer's level as the caster level. A shadowdancer can use this ability once per day for every two shadowdancer levels she has attained. The DC for this ability is Charisma-based.",
-  },
-  Definitions={
-    {
-      Name="ShadowIllusionLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -88129,12 +80113,6 @@ DefineAbility({
   Description={
     Format="At 3rd level, a shadowdancer can summon a shadow, an undead shade. Unlike a normal shadow, this shadow's alignment matches that of the shadowdancer, and the creature cannot create spawn. The summoned shadow receives a +4 bonus on Will saves made to halve the damage from positive channeled energy and the shadow cannot be turned or commanded. This shadow serves as a companion to the shadowdancer and can communicate intelligibly with the shadowdancer. This shadow has a number of hit points equal to half the shadowdancer's total. The shadow uses the shadowdancer's base attack bonus and base save bonuses. Otherwise, this shadow is identical to the shadow found in the Pathfinder RPG Bestiary. If a shadow companion is destroyed, or the shadowdancer chooses to dismiss it, the shadowdancer must attempt a DC 15 Fortitude save. If the saving throw fails, the shadowdancer gains one permanent negative level. A successful saving throw avoids this negative level. A destroyed or dismissed shadow companion cannot be replaced for 30 days.",
   },
-  Definitions={
-    {
-      Name="ShadowCompanionLVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -88157,6 +80135,7 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  SourcePage="p.393",
   SpellLikeAbilities={
     {
       Name="Shadow Conjuration",
@@ -88167,19 +80146,8 @@ DefineAbility({
       CasterLevel="ShadowCallLvl",
     },
   },
-  SourcePage="p.393",
   Description={
     Format="At 4th level, a shadowdancer can create creatures and effects out of raw shadow. This ability functions as shadow conjuration, using the shadowdancer's level as the caster level. A shadowdancer can use this ability once per day at 4th level, plus one additional time per day for every two levels attained beyond 4th (2/day at 6th level, 3/day at 8th level, and 4/day at 10th level). Upon reaching 10th level, this ability functions as greater shadow conjuration. The DC for this ability is Charisma-based.",
-  },
-  Definitions={
-    {
-      Name="ShadowCallLvl",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ShadowCallTimes",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -88222,16 +80190,6 @@ DefineAbility({
   SourcePage="p.393",
   Description={
     Format="At 4th level, a shadowdancer gains the ability to travel between shadows as if by means of a dimension door spell. The limitation is that the magical transport must begin and end in an area with at least some dim light. A shadowdancer can jump up to a total of 40 feet each day in this way; this may be a single jump of 40 feet or four jumps of 10 feet each. Every two levels higher than 4th, the distance a shadowdancer can jump each day doubles (80 feet at 6th, 160 feet at 8th, and 320 feet at 10th). This amount can be split among many jumps, but each one, no matter how small, counts as a 10-foot increment.",
-  },
-  Definitions={
-    {
-      Name="ShadowJump",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="ShadowJumpProgression",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -88297,10 +80255,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.393",
-  Description={
-    Format="Starting at 5th level, once per day, a shadowdancer can attempt to avoid a lethal blow. This functions as the rogue's advanced talent of the same name.",
-  },
   Abilities={
     {
       Category="Special Ability",
@@ -88309,6 +80263,10 @@ DefineAbility({
         "Rogue Talent ~ Defensive Roll",
       },
     },
+  },
+  SourcePage="p.393",
+  Description={
+    Format="Starting at 5th level, once per day, a shadowdancer can attempt to avoid a lethal blow. This functions as the rogue's advanced talent of the same name.",
   },
   Types={
     "ShadowdancerClassFeatures",
@@ -88359,6 +80317,15 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
+  Abilities={
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Uncanny Dodge ~ Base",
+      },
+    },
+  },
   Bonuses={
     {
       Category="VAR",
@@ -88378,15 +80345,6 @@ DefineAbility({
         "UncannyDodgeLVL",
       },
       Formula=Formula("(ShadowdancerLVL+1)/3"),
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Uncanny Dodge ~ Base",
-      },
     },
   },
   Types={
@@ -93159,24 +85117,6 @@ ModifyAbility({
   Category="Internal",
   AllowMultiple=false,
   Stackable=false,
-  Definitions={
-    {
-      Name="SLA_Base_LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Default_SLA_LVL",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SLA_Base_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="SLA_DC_STAT",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -93253,20 +85193,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Acid_Splash_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Acid_Splash_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Acid_Splash_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -93349,20 +85275,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Arcane_Mark_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Arcane_Mark_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Arcane_Mark_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -93443,20 +85355,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Bleed_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Bleed_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Bleed_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -93539,20 +85437,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Create_Water_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Create_Water_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Create_Water_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -93633,20 +85517,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Dancing_Lights_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Dancing_Lights_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Dancing_Lights_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -93729,20 +85599,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Daze_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Daze_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Daze_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -93823,20 +85679,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Detect_Magic_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Detect_Magic_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Detect_Magic_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -93919,20 +85761,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Detect_Poison_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Detect_Poison_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Detect_Poison_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -94013,20 +85841,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Disrupt_Undead_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Disrupt_Undead_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Disrupt_Undead_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -94109,20 +85923,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Flare_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Flare_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Flare_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -94203,20 +86003,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Ghost_Sound_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Ghost_Sound_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Ghost_Sound_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -94299,20 +86085,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Guidance_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Guidance_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Guidance_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -94393,20 +86165,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Know_Direction_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Know_Direction_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Know_Direction_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -94489,20 +86247,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Light_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Light_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Light_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -94583,20 +86327,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Lullaby_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Lullaby_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Lullaby_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -94679,20 +86409,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Mage_Hand_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Mage_Hand_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Mage_Hand_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -94773,20 +86489,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Mending_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Mending_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Mending_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -94869,20 +86571,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Message_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Message_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Message_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -94963,20 +86651,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Open_Close_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Open/Close_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Open_Close_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -95059,20 +86733,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Prestidigitation_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Prestidigitation_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Prestidigitation_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -95153,20 +86813,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Purify_Food_and_Drink_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Purify_Food_and_Drink_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Purify_Food_and_Drink_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -95249,20 +86895,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Ray_of_Frost_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Ray_of_Frost_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Ray_of_Frost_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -95343,20 +86975,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Read_Magic_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Read_Magic_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Read_Magic_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -95439,20 +87057,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Resistance_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Resistance_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Resistance_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -95533,20 +87137,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Stabilize_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Stabilize_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Stabilize_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -95629,20 +87219,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Summon_Instrument_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Summon_Instrument_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Summon_Instrument_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -95724,20 +87300,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Touch_of_Fatigue_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Touch_of_Fatigue_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Touch_of_Fatigue_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -95818,20 +87380,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Virtue_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Virtue_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Virtue_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -96535,20 +88083,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Calm_Animals_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Calm_Animals_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Calm_Animals_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -96629,20 +88163,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Charm_Animal_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Charm_Animal_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Charm_Animal_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -96725,20 +88245,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Cure_Light_Wounds_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Cure_Light_Wounds_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Cure_Light_Wounds_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -96819,20 +88325,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Detect_Animals_or_Plants_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Detect_Animals_or_Plants_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Detect_Animals_or_Plants_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -96915,20 +88407,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Detect_Snares_and_Pits_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Detect_Snares_and_Pits_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Detect_Snares_and_Pits_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -97009,20 +88487,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Endure_Elements_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Endure_Elements_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Endure_Elements_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -97105,20 +88569,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Entangle_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Entangle_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Entangle_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -97199,20 +88649,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Faerie_Fire_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Faerie_Fire_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Faerie_Fire_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -97295,20 +88731,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Goodberry_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Goodberry_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Goodberry_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -97389,20 +88811,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Hide_from_Animals_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Hide_from_Animals_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Hide_from_Animals_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -97485,20 +88893,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Jump_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Jump_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Jump_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -97579,20 +88973,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Longstrider_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Longstrider_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Longstrider_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -97675,20 +89055,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Magic_Fang_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Magic_Fang_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Magic_Fang_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -97769,20 +89135,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Magic_Stone_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Magic_Stone_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Magic_Stone_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -97865,20 +89217,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Obscuring_Mist_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Obscuring_Mist_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Obscuring_Mist_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -97959,20 +89297,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Pass_without_Trace_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Pass_without_Trace_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Pass_without_Trace_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -98055,20 +89379,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Produce_Flame_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Produce_Flame_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Produce_Flame_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -98149,20 +89459,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Shillelagh_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Shillelagh_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Shillelagh_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -98245,20 +89541,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Speak_with_Animals_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Speak_with_Animals_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Speak_with_Animals_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -98339,20 +89621,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Summon_Natures_Ally_I_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Summon_Natures_Ally_I_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Summon_Natures_Ally_I_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -98435,20 +89703,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Darkness_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Darkness_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Darkness_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -98529,20 +89783,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Deeper_Darkness_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Deeper_Darkness_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Deeper_Darkness_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -98625,20 +89865,6 @@ DefineAbility({
   Description={
     Format="Blank",
   },
-  Definitions={
-    {
-      Name="Levitate_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Levitate_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Levitate_LVL",
-      InitialValue=Formula("0"),
-    },
-  },
   Bonuses={
     {
       Category="VAR",
@@ -98719,20 +89945,6 @@ DefineAbility({
   },
   Description={
     Format="Blank",
-  },
-  Definitions={
-    {
-      Name="Detect_Magic_Times",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Detect_Magic_DC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="Detect_Magic_LVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -99220,15 +90432,9 @@ DefineAbility({
   Description={
     Format="As a standard action you can unleash an arc of electricity targeting any foe within 30 feet as a ranged touch attack. This arc of electricity deals 1d6+%1 points of electricity damage. You can use this ability %2 times per day.",
     Arguments={
-      "DomainAirLVL/2",
-      "LightningArcTimes",
-      "PREVARGTEQ:DomainAirLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="LightningArcTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainAirLVL/2"),
+      Formula("LightningArcTimes"),
+      Formula("PREVARGTEQ:DomainAirLVL,2"),
     },
   },
   Bonuses={
@@ -99255,13 +90461,33 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  SourcePage="p.41",
-  Definitions={
+  Abilities={
     {
-      Name="DomainAirResistanceBonus",
-      InitialValue=Formula("0"),
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Resistance to Electricity",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainAirLVL"] >= 6)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Electricity",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainAirLVL"] >= 20)
+        end,
+      },
     },
   },
+  SourcePage="p.41",
   Bonuses={
     {
       Category="VAR",
@@ -99296,32 +90522,6 @@ DefineAbility({
       Conditions={
         function (character)
           return (character.Variables["DomainAirLVL"] >= 12)
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Resistance to Electricity",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainAirLVL"] >= 6)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Electricity",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainAirLVL"] >= 20)
         end,
       },
     },
@@ -99364,13 +90564,7 @@ DefineAbility({
   Description={
     Format="You can Speak with Animals, as per the spell, for %1 rounds per day.",
     Arguments={
-      "SpeakWithAnimalsRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="SpeakWithAnimalsRounds",
-      InitialValue=Formula("0"),
+      Formula("SpeakWithAnimalsRounds"),
     },
   },
   Bonuses={
@@ -99403,12 +90597,6 @@ DefineAbility({
   SourcePage="p.41",
   Description={
     Format="You gain the service of an animal companion.",
-  },
-  Definitions={
-    {
-      Name="AnimalCompanionMasterLVL",
-      InitialValue=Formula("0"),
-    },
   },
   Bonuses={
     {
@@ -99458,15 +90646,9 @@ DefineAbility({
   Description={
     Format="You can cast Mending at will (CL %1) to repair damaged objects. In addition, you can cause damage to objects and construct creatures by striking them with a melee touch attack. Objects and constructs take 1d6 points of damage. This attack bypasses up to %1 points of damage reduction and hardness. You can use this ability %2 times per day.",
     Arguments={
-      "DomainArtificeLVL",
-      "ArtificersTouchTimes",
-      "PREVARLT:DomainArtificeLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="ArtificersTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainArtificeLVL"),
+      Formula("ArtificersTouchTimes"),
+      Formula("PREVARLT:DomainArtificeLVL,2"),
     },
   },
   Bonuses={
@@ -99516,13 +90698,7 @@ DefineAbility({
   Description={
     Format="You can give a weapon toched the Dancing special weapon quality for 4 rounds. You can use this ability %1 times per day.",
     Arguments={
-      "DancingWeaponTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="DancingWeaponTimes",
-      InitialValue=Formula("0"),
+      Formula("DancingWeaponTimes"),
     },
   },
   Bonuses={
@@ -99572,13 +90748,7 @@ DefineAbility({
   Description={
     Format="You can imbue a target with chaos as a melee touch attack. For the next round, any time the target rolls a d20, he must roll twice and take the less favorable result. You can use this ability %1 times per day.",
     Arguments={
-      "TouchofChaosTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TouchofChaosTimes",
-      InitialValue=Formula("0"),
+      Formula("TouchofChaosTimes"),
     },
   },
   Bonuses={
@@ -99629,14 +90799,8 @@ DefineAbility({
   Description={
     Format="You can give a weapon tocuhed the Anarchic special weapon quality for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "DomainChaosLVL/2",
-      "ChaosBladeTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="ChaosBladeTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainChaosLVL/2"),
+      Formula("ChaosBladeTimes"),
     },
   },
   Bonuses={
@@ -99686,14 +90850,8 @@ DefineAbility({
   Description={
     Format="You can cause a living creature to become dazed for 1 round as a melee touch attack. Creatures with more thatn %1 Hit Dice are unaffected. You can use this ability %2 times per day.",
     Arguments={
-      "DomainCharmLVL",
-      "DazingTouchTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="DazingTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainCharmLVL"),
+      Formula("DazingTouchTimes"),
     },
   },
   Bonuses={
@@ -99736,14 +90894,8 @@ DefineAbility({
   Description={
     Format="You can cast Charm Person as a swift action with a DC of %1. You can only have one creature charmed in this way at a time. The total duration of this effect is %2 round per day. These rounds do not need to be consecutive, and you can dismiss the charm anytime as a free action. Each attempt to use this ability consumes 1 round of its duration, whether or not the creature succeeds on its save to resist the effect.",
     Arguments={
-      "DomainCharmDC",
-      "CharmCharmingSmileRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="CharmCharmingSmileRounds",
-      InitialValue=Formula("0"),
+      Formula("DomainCharmDC"),
+      Formula("CharmCharmingSmileRounds"),
     },
   },
   Bonuses={
@@ -99793,14 +90945,8 @@ DefineAbility({
   Description={
     Format="You can touch a creature as a standard action to heal it of 1d6+%1 points of nonlethal damage. This touch also removes the fatigued, shaken, and sickened conditions (but has no effect on more severe conditions). You can use this ability %2 times per day.",
     Arguments={
-      "DomainCommunityLVL",
-      "CalmingTouchTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="CalmingTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainCommunityLVL"),
+      Formula("CalmingTouchTimes"),
     },
   },
   Bonuses={
@@ -99850,13 +90996,7 @@ DefineAbility({
   Description={
     Format="Whenever a spell targets you and one or more allies within 30 feet, you can use this ability to allow your allies to use your saving throw against the effect instead of their own. Each ally must decide individually before the rolls are made. Using this ability is an immediate action. You can use this ability %1 times per day.",
     Arguments={
-      "UnityTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="UnityTimes",
-      InitialValue=Formula("0"),
+      Formula("UnityTimes"),
     },
   },
   Bonuses={
@@ -99906,14 +91046,8 @@ DefineAbility({
   Description={
     Format="As a melee touch attack, you can cause a creature's vision to be fraught with shadows and darkness. The creature touched treats all other creatures as if they had concealment, suffering a 20%% miss chance on all attack rolls. This effect lasts for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainDarknessLVL/2,1)",
-      "TouchofDarknessTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TouchofDarknessTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainDarknessLVL/2,1)"),
+      Formula("TouchofDarknessTimes"),
     },
   },
   Bonuses={
@@ -99963,13 +91097,7 @@ DefineAbility({
   Description={
     Format="Your vision is not impaired by lighting conditions, even in absolute darkness and magic darkness. You can use this ability for %1 rounds per day. These rounds do not need to be consecutive.",
     Arguments={
-      "EyesOfDarknessRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="EyesOfDarknessRounds",
-      InitialValue=Formula("0"),
+      Formula("EyesOfDarknessRounds"),
     },
   },
   Bonuses={
@@ -100020,14 +91148,8 @@ DefineAbility({
   Description={
     Format="As a melee touch attack, you can cause a living creature to take 1d6 points of damage per round. This effect persists for %1 rounds or until stopped with a DC 15 Heal check or any spell or effect that heals damage. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainDeathLVL/2,1)",
-      "BleedingTouchTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="BleedingTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainDeathLVL/2,1)"),
+      Formula("BleedingTouchTimes"),
     },
   },
   Bonuses={
@@ -100095,14 +91217,8 @@ DefineAbility({
   Description={
     Format="You gain the destructive smite power; the supernatural ability to make a single melee attack with a +%1 morale bonus on damage rolls. You must declare the destructive smite before making the attack. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainDestructionLVL/2,1)",
-      "DestructiveSmiteTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="DestructiveSmiteTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainDestructionLVL/2,1)"),
+      Formula("DestructiveSmiteTimes"),
     },
   },
   Bonuses={
@@ -100152,14 +91268,8 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura of destruction for %1 rounds per day. All attacks made against targets in this aura (including you) gain a +%2 morale bonus on damage and all critical threats are automatically confirmed. These rounds do not need to be consecutive.",
     Arguments={
-      "DestructiveAuraRounds",
-      "DomainDestructionLVL/2",
-    },
-  },
-  Definitions={
-    {
-      Name="DestructiveAuraRounds",
-      InitialValue=Formula("0"),
+      Formula("DestructiveAuraRounds"),
+      Formula("DomainDestructionLVL/2"),
     },
   },
   Bonuses={
@@ -100210,15 +91320,9 @@ DefineAbility({
   Description={
     Format="As a standard action, you can unleash an acid dart targeting any foe within 30 feet as a ranged touch attack. This acid dart deals 1d6+%1 points of acid damage. You can use this ability %2 times per day.",
     Arguments={
-      "DomainEarthLVL/2",
-      "AcidDartTimes",
-      "PREVARGTEQ:DomainEarthLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="AcidDartTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainEarthLVL/2"),
+      Formula("AcidDartTimes"),
+      Formula("PREVARGTEQ:DomainEarthLVL,2"),
     },
   },
   Bonuses={
@@ -100245,13 +91349,33 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  SourcePage="p.43",
-  Definitions={
+  Abilities={
     {
-      Name="DomainEarthResistanceBonus",
-      InitialValue=Formula("0"),
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Resistance to Acid",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainEarthLVL"] >= 6)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Acid",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainEarthLVL"] >= 20)
+        end,
+      },
     },
   },
+  SourcePage="p.43",
   Bonuses={
     {
       Category="VAR",
@@ -100286,32 +91410,6 @@ DefineAbility({
       Conditions={
         function (character)
           return (character.Variables["DomainEarthLVL"] >= 12)
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Resistance to Acid",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainEarthLVL"] >= 6)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Acid",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainEarthLVL"] >= 20)
         end,
       },
     },
@@ -100354,14 +91452,8 @@ DefineAbility({
   Description={
     Format="You can cause a creature to become sickened as a melee touch attack. Creatures sickened by your touch count as good for the purposes of spells with the Evil descriptor. This ability lasts for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainEvilLVL/2,1)",
-      "TouchofEvilTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TouchofEvilTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainEvilLVL/2,1)"),
+      Formula("TouchofEvilTimes"),
     },
   },
   Bonuses={
@@ -100411,14 +91503,8 @@ DefineAbility({
   Description={
     Format="You can give a weapon you touch the Unholy special weapon quality for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "DomainEvilLVL/2",
-      "ScytheOfEvilTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="ScytheOfEvilTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainEvilLVL/2"),
+      Formula("ScytheOfEvilTimes"),
     },
   },
   Bonuses={
@@ -100468,15 +91554,9 @@ DefineAbility({
   Description={
     Format="As a standard action, you can unleash a scorching bolt of divine fire from your hand. You can target any single foe within 30 feet as a ranged touch attack with this bolt of fire. If you hit the foe, the fire bolt deals 1d6+%1 points of fire damage. You can use this ability %2 times per day.",
     Arguments={
-      "DomainFireLVL/2",
-      "FireBoltTimes",
-      "PREVARGTEQ:DomainFireLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="FireBoltTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainFireLVL/2"),
+      Formula("FireBoltTimes"),
+      Formula("PREVARGTEQ:DomainFireLVL,2"),
     },
   },
   Bonuses={
@@ -100503,13 +91583,33 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  SourcePage="p.44",
-  Definitions={
+  Abilities={
     {
-      Name="DomainFireResistanceBonus",
-      InitialValue=Formula("0"),
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Resistance to Fire",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainFireLVL"] >= 6)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Fire",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainFireLVL"] >= 20)
+        end,
+      },
     },
   },
+  SourcePage="p.44",
   Bonuses={
     {
       Category="VAR",
@@ -100544,32 +91644,6 @@ DefineAbility({
       Conditions={
         function (character)
           return (character.Variables["DomainFireLVL"] >= 12)
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Resistance to Fire",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainFireLVL"] >= 6)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Fire",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainFireLVL"] >= 20)
         end,
       },
     },
@@ -100612,14 +91686,8 @@ DefineAbility({
   Description={
     Format="You can cause your hand to shimmer with divine radiance, allowing you to touch a creature as a standard action and give it a +%1 bonus to a single Charisma-based skill check or Charisma ability check. This ability lasts for one hour or until the creature touched elects to apply the bonus to a roll. You can use this ability to grant the bonus %2 times per day.",
     Arguments={
-      "DomainGloryLVL",
-      "TouchofGloryTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TouchofGloryTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainGloryLVL"),
+      Formula("TouchofGloryTimes"),
     },
   },
   Bonuses={
@@ -100662,14 +91730,8 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura of divine presence for %1 rounds. All allies within this aura are treated as if under the effects of a Sanctuary spell with a DC of %2. These rounds do not need to be consecutive. Activating this ability is a standard action. If an ally leaves the area or makes an attack, the effect ends for that ally. If you make an attack, the effect ends for you and your allies.",
     Arguments={
-      "GloryDivinePresenceRounds",
-      "DomainGloryDC",
-    },
-  },
-  Definitions={
-    {
-      Name="GloryDivinePresenceRounds",
-      InitialValue=Formula("0"),
+      Formula("GloryDivinePresenceRounds"),
+      Formula("DomainGloryDC"),
     },
   },
   Bonuses={
@@ -100720,14 +91782,8 @@ DefineAbility({
   Description={
     Format="You can touch a creature as a standard action, granting giving it a +%1 sacred bonus on attack rolls, skill checks, ability checks, and saving throws for 1 round. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainGoodLVL/2,1)",
-      "TouchofGoodTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TouchofGoodTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainGoodLVL/2,1)"),
+      Formula("TouchofGoodTimes"),
     },
   },
   Bonuses={
@@ -100777,14 +91833,8 @@ DefineAbility({
   Description={
     Format="You can give a weapon you touch the Holy special weapon quality for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "DomainGoodLVL",
-      "HolyLanceTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="HolyLanceTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainGoodLVL"),
+      Formula("HolyLanceTimes"),
     },
   },
   Bonuses={
@@ -100834,15 +91884,9 @@ DefineAbility({
   Description={
     Format="You can touch a living creature as a standard action, healing it of 1d4+%1 points of damage. You can only use this ability on a creature that is below 0 hit points. You can use this ability %2 times per day.",
     Arguments={
-      "DomainHealingLVL/2",
-      "RebukeDeathTimes",
-      "PREVARGTEQ:DomainHealingLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="RebukeDeathTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainHealingLVL/2"),
+      Formula("RebukeDeathTimes"),
+      Formula("PREVARGTEQ:DomainHealingLVL,2"),
     },
   },
   Bonuses={
@@ -100890,13 +91934,7 @@ DefineAbility({
   Description={
     Format="You can touch a creature to learn about its abilities and weaknesses. With a successful touch attack, you gain information as if you made the appropriate Knowledge skill check with a result equal to %1.",
     Arguments={
-      "LoreKeeperDomainSkillBonus",
-    },
-  },
-  Definitions={
-    {
-      Name="LoreKeeperDomainSkillBonus",
-      InitialValue=Formula("0"),
+      Formula("LoreKeeperDomainSkillBonus"),
     },
   },
   Bonuses={
@@ -100946,13 +91984,7 @@ DefineAbility({
   Description={
     Format="You can use Clairaudience/Clairvoyance as a spell-like ability (CL %1). You can use this ability for %1 rounds per day. These rounds do not need to be consecutive.",
     Arguments={
-      "RemoteViewingRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="RemoteViewingRounds",
-      InitialValue=Formula("0"),
+      Formula("RemoteViewingRounds"),
     },
   },
   Bonuses={
@@ -101002,13 +92034,7 @@ DefineAbility({
   Description={
     Format="You can touch a willing creature as a standard action, infusing it with the power of divine order and allowing it to treat all attack rolls, skill checks, ability checks, and saving throws for 1 round as if the natural d20 roll resulted in an 11. You can use this ability %1 times per day.",
     Arguments={
-      "TouchofLawTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="TouchofLawTimes",
-      InitialValue=Formula("0"),
+      Formula("TouchofLawTimes"),
     },
   },
   Bonuses={
@@ -101058,14 +92084,8 @@ DefineAbility({
   Description={
     Format="You can give a weapon touched the Axiomatic special weapon quality for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "DomainLawLVL/2",
-      "StaffOfOrderTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="StaffOfOrderTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainLawLVL/2"),
+      Formula("StaffOfOrderTimes"),
     },
   },
   Bonuses={
@@ -101115,13 +92135,7 @@ DefineAbility({
   Description={
     Format="You have the ability to ignore impediments to your mobility. For %1 rounds per day, you can move normally regardless of magical effects that impede movement, as if you were affected by Freedom of Movement. This effect  occurs automatically as soon as it applies. These rounds do not need to be consecutive.",
     Arguments={
-      "LiberationRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="LiberationRounds",
-      InitialValue=Formula("0"),
+      Formula("LiberationRounds"),
     },
   },
   Bonuses={
@@ -101172,13 +92186,7 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura of freedom for %1 rounds per day. Allies within this aura are not affected by the confused, grappled, frightened, panicked, paralyzed, pinned, or shaken conditions. This aura only suppresses these effects, and they return once a creature leaves the aura or when the aura ends, if applicable. These rounds do not need to be consecutive.",
     Arguments={
-      "FreedomsCallRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="FreedomsCallRounds",
-      InitialValue=Formula("0"),
+      Formula("FreedomsCallRounds"),
     },
   },
   Bonuses={
@@ -101229,13 +92237,7 @@ DefineAbility({
   Description={
     Format="You can touch a willing creature as a standard action, giving it a bit of luck. For the next round, any time the target rolls a d20, he may roll twice and take the more favorable result. You can use this ability %1 times per day.",
     Arguments={
-      "BitofLuckTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="BitofLuckTimes",
-      InitialValue=Formula("0"),
+      Formula("BitofLuckTimes"),
     },
   },
   Bonuses={
@@ -101286,13 +92288,7 @@ DefineAbility({
   Description={
     Format="As an immediate action, you can reroll any one d20 roll that you have just made before the results of the roll are revealed. You must take the result of the reroll, even if it's worse than the original roll. You can use this ability %1 times per day.",
     Arguments={
-      "GoodFortuneTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="GoodFortuneTimes",
-      InitialValue=Formula("0"),
+      Formula("GoodFortuneTimes"),
     },
   },
   Bonuses={
@@ -101343,14 +92339,8 @@ DefineAbility({
   Description={
     Format="You can give a creature a vision of madness as a melee touch attack. Choose one of the following; attack rolls, saving throws, or skill checks. The target receives a +%1 bonus to the chosen rolls and a -%1 penalty to the other two types of rolls. This effect fades after 3 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainMadnessLVL/2,1)",
-      "VisionofMadnessTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="VisionofMadnessTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainMadnessLVL/2,1)"),
+      Formula("VisionofMadnessTimes"),
     },
   },
   Bonuses={
@@ -101400,14 +92390,8 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura of madness for %1 rounds per day. Enemies within this aura are affected by Confusion unless they make a Will save (DC %2). The Confusion effect ends immediately when the creature leaves the area or the aura expires. Creatures that succeed on their saving throw are immune to this aura for 24 hours. These rounds do not need to be consecutive.",
     Arguments={
-      "AuraOfMadnessRounds",
-      "DomainMadnessDC",
-    },
-  },
-  Definitions={
-    {
-      Name="AuraOfMadnessRounds",
-      InitialValue=Formula("0"),
+      Formula("AuraOfMadnessRounds"),
+      Formula("DomainMadnessDC"),
     },
   },
   Bonuses={
@@ -101458,13 +92442,7 @@ DefineAbility({
   Description={
     Format="You can cause your melee weapon to fly from your grasp and strike a foe before instantly returning. As a standard action, you can make a single attack with a melee weapon at a range of 30 feet. This attack is treated as a ranged attack with a thrown weapon, except that you add your Wisdom modifier instead of your Dexterity modifier (damage still relies on Strength). This ability cannot be used to perform a combat maneuver. You can use this ability %1 times per day.",
     Arguments={
-      "HandoftheAcolyteTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="HandoftheAcolyteTimes",
-      InitialValue=Formula("0"),
+      Formula("HandoftheAcolyteTimes"),
     },
   },
   Bonuses={
@@ -101514,13 +92492,7 @@ DefineAbility({
   Description={
     Format="You can use a targeted Dispel Magic effect as a melee touch attack. You can use this ability %1 times per day.",
     Arguments={
-      "DispellingTouchTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="DispellingTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("DispellingTouchTimes"),
     },
   },
   Bonuses={
@@ -101550,8 +92522,8 @@ DefineAbility({
   Description={
     Format="As a standard action, you can speak an inspiring word to a creature within 30 feet. That creature receives a +2 morale bonus on attack rolls, skill checks, ability checks, and saving throws for %1 rounds. You can use this power %2 times per day.",
     Arguments={
-      "max(DomainNobilityLVL/2,1)",
-      "DomainNobilityTimes",
+      Formula("max(DomainNobilityLVL/2,1)"),
+      Formula("DomainNobilityTimes"),
     },
   },
   Types={
@@ -101568,10 +92540,6 @@ DefineAbility({
   Category="Special Ability",
   AllowMultiple=false,
   Stackable=false,
-  SourcePage="p.46",
-  Description={
-    Format="You receive Leadership as a bonus feat. In addition, you gain a +2 bonus on your leadership score as long as you uphold the tenets of your deity (or divine concept if you do not venerate a deity).",
-  },
   Abilities={
     {
       Category="FEAT",
@@ -101580,6 +92548,10 @@ DefineAbility({
         "Leadership",
       },
     },
+  },
+  SourcePage="p.46",
+  Description={
+    Format="You receive Leadership as a bonus feat. In addition, you gain a +2 bonus on your leadership score as long as you uphold the tenets of your deity (or divine concept if you do not venerate a deity).",
   },
   Types={
     "ClericClassFeatures",
@@ -101619,14 +92591,8 @@ DefineAbility({
   Description={
     Format="As a free action, your hands can become as hard as wood, covered in tiny thorns. While you have wooden fists, your unarmed strikes do not provoke attacks of opportunity, deal lethal damage, and gain a +%1 bonus on damage rolls. You can use this ability for %2 rounds per day. These rounds do not need to be consecutive.",
     Arguments={
-      "max(DomainPlantLVL/2,1)",
-      "WoodenFistRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="WoodenFistRounds",
-      InitialValue=Formula("0"),
+      Formula("max(DomainPlantLVL/2,1)"),
+      Formula("WoodenFistRounds"),
     },
   },
   Bonuses={
@@ -101676,14 +92642,8 @@ DefineAbility({
   Description={
     Format="You can cause a host of wooden thorns to burst from your skin as a free action. While Bramble Armor is in effect, any foe striking you with an unarmed strike or a melee weapon without reach takes 1d6+%1 points of piercing damage. You can use this ability for %2 rounds per day. These rounds do not need to be consecutive.",
     Arguments={
-      "DomainPlantLVL/2",
-      "BrambleArmorRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="BrambleArmorRounds",
-      InitialValue=Formula("0"),
+      Formula("DomainPlantLVL/2"),
+      Formula("BrambleArmorRounds"),
     },
   },
   Bonuses={
@@ -101734,14 +92694,8 @@ DefineAbility({
   Description={
     Format="As a standard action, you can touch an ally and grant them your +%1 resistance bonus for 1 minute. When you use this ability, you lose your resistance bonus granted by the Protection domain for 1 minute. You can use this ability %2 times per day.",
     Arguments={
-      "DomainProtectionSaveBonus",
-      "ResistantTouchTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="ResistantTouchTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainProtectionSaveBonus"),
+      Formula("ResistantTouchTimes"),
     },
   },
   Bonuses={
@@ -101792,14 +92746,8 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura of protection for %1 rounds per day. You and your allies within this aura gain a +%2 deflection to AC resistance 5 against all elements (acid, cold, electricity, fire, and sonic). These rounds do not need to be consecutive.",
     Arguments={
-      "AuraOfProtectionRounds",
-      "(DomainProtectionLVL-4)/4",
-    },
-  },
-  Definitions={
-    {
-      Name="AuraOfProtectionRounds",
-      InitialValue=Formula("0"),
+      Formula("AuraOfProtectionRounds"),
+      Formula("(DomainProtectionLVL-4)/4"),
     },
   },
   Bonuses={
@@ -101850,14 +92798,8 @@ DefineAbility({
   Description={
     Format="Your touch can fill a creature with lethargy, causing a living creature to become staggered for 1 round as a melee touch attack. If you touch a staggered living creatures, that creature falls asleep for 1 round instead. Undead creatures touched by you are staggered for %1 rounds. You can use this ability %2 times per day.",
     Arguments={
-      "WIS",
-      "GentleRestTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="GentleRestTimes",
-      InitialValue=Formula("0"),
+      Formula("WIS"),
+      Formula("GentleRestTimes"),
     },
   },
   Bonuses={
@@ -101907,13 +92849,7 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot aura that wards against death for %1 rounds per day. Living creatures in this area are immune to death effects, energy drain, and effects that cause negative levels. This ward does not remove negative levels that a creature has already gained, but the negative levels have no effect while the creature is inside the warded area. These rounds do not need to be consecutive.",
     Arguments={
-      "WardAgainstDeathRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="WardAgainstDeathRounds",
-      InitialValue=Formula("0"),
+      Formula("WardAgainstDeathRounds"),
     },
   },
   Bonuses={
@@ -101964,16 +92900,10 @@ DefineAbility({
   Description={
     Format="As a standard action, you can create a Blast Rune in any adjacent square. Any creature entering this square takes 1d6+%1 points of damage. This rune deals either acid, cold, electricity, or fire damage, decided when you create the rune. The rune is invisible and lasts %2 rounds or until discharged. You cannot create a Blast Rune in a square occupied by another creature. This rune counts as a 1st-level spell for the purposes of dispelling. It can be discovered with at DC 26 Perception skill check and disarmed with a DC 26 Disable Device skill check. You can use this ability %3 times per day.",
     Arguments={
-      "DomainRuneLVL/2",
-      "DomainRuneLVL",
-      "BlastRuneTimes",
-      "PREVARGTEQ:DomainRuneLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="BlastRuneTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainRuneLVL/2"),
+      Formula("DomainRuneLVL"),
+      Formula("BlastRuneTimes"),
+      Formula("PREVARGTEQ:DomainRuneLVL,2"),
     },
   },
   Bonuses={
@@ -102041,14 +92971,8 @@ DefineAbility({
   Description={
     Format="As a standard action, you can touch a creature to give it great strength. For 1 round, the target gains a +%1 enhancement bonus to melee attacks. combat maneuver checks that rely on Strength, Stregth-based skills, and Strength checks. You can use this ability %2 times per day.",
     Arguments={
-      "max(DomainStrengthLVL/2,1)",
-      "StrengthSurgeTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="StrengthSurgeTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainStrengthLVL/2,1)"),
+      Formula("StrengthSurgeTimes"),
     },
   },
   Bonuses={
@@ -102098,13 +93022,7 @@ DefineAbility({
   Description={
     Format="You can add a +%1 enhancement bonus to your Strength score for %1 rounds per day. That bonus only applies on Strength checks and Strength-based skill checks. These rounds do not need to be consecutive.",
     Arguments={
-      "MightOfTheGodsRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="MightOfTheGodsRounds",
-      InitialValue=Formula("0"),
+      Formula("MightOfTheGodsRounds"),
     },
   },
   Bonuses={
@@ -102134,7 +93052,7 @@ DefineAbility({
   Description={
     Format="Whenever you channel positive energy to harm undead creatures, add a +%1 bonus to the damage dealt. Undead do not add their channel resistance to their saves when you channel positive energy.",
     Arguments={
-      "DomainSunLVL",
+      Formula("DomainSunLVL"),
     },
   },
   Types={
@@ -102175,13 +93093,7 @@ DefineAbility({
   Description={
     Format="You can emit a 30-foot nimbus of light for %1 rounds per day. This acts as a Daylight spell. In addition, undead within this radius take %1 points of damage each round that they remain inside the nimbus. Spells and spell-like abilities with the Darkness descriptor are automatically dispelled if brought inside this nimbus. These rounds do not need to be consecutive.",
     Arguments={
-      "SunNimbusOfLightRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="SunNimbusOfLightRounds",
-      InitialValue=Formula("0"),
+      Formula("SunNimbusOfLightRounds"),
     },
   },
   Bonuses={
@@ -102232,13 +93144,7 @@ DefineAbility({
   Description={
     Format="As a free action, you can gain increased mobility for 1 round. For the next round, you ignore all difficult terrain and do not take any penalties for moving through it. You can use this ability %1 times per day.",
     Arguments={
-      "AgileFeetTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="AgileFeetTimes",
-      InitialValue=Formula("0"),
+      Formula("AgileFeetTimes"),
     },
   },
   Bonuses={
@@ -102289,13 +93195,7 @@ DefineAbility({
   Description={
     Format="You can teleport up to %1 feet per day as a move action. This teleportation must be used in 5-foot increments and such movement does not provoke attacks of opportunity. You must have line of sight to your destination to use this ability. You can bring other willing creatures with you, but you must expend an equal amount of distance for each creature brought.",
     Arguments={
-      "TravelDimensionalHop",
-    },
-  },
-  Definitions={
-    {
-      Name="TravelDimensionalHop",
-      InitialValue=Formula("0"),
+      Formula("TravelDimensionalHop"),
     },
   },
   Bonuses={
@@ -102346,14 +93246,8 @@ DefineAbility({
   Description={
     Format="You can create an illusory double of yourself as a move action. This double functions as a single Mirror Image and lasts for %1 rounds, or until the illusory duplicate is dispelled or destroyed. You can have no more than one Copycat at a time. This ability does not stack with the Mirror Image spell. You can use this ability %2 times per day.",
     Arguments={
-      "DomainTrickeryLVL",
-      "CopycatTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="CopycatTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainTrickeryLVL"),
+      Formula("CopycatTimes"),
     },
   },
   Bonuses={
@@ -102396,18 +93290,8 @@ DefineAbility({
   Description={
     Format="You can create an illusion that hides the appearance of yourself and any number of allies within 30 feet for %1 rounds. This ability otherwise functions like the spell Veil. The save DC to disbelieve this effect is %2. The rounds do not need to be consecutive.",
     Arguments={
-      "TrickeryMastersIllusionRounds",
-      "TrickeryMastersIllusionDC",
-    },
-  },
-  Definitions={
-    {
-      Name="TrickeryMastersIllusionDC",
-      InitialValue=Formula("0"),
-    },
-    {
-      Name="TrickeryMastersIllusionRounds",
-      InitialValue=Formula("0"),
+      Formula("TrickeryMastersIllusionRounds"),
+      Formula("TrickeryMastersIllusionDC"),
     },
   },
   Bonuses={
@@ -102462,17 +93346,25 @@ DefineAbility({
     },
   },
   SourcePage="p.48",
+  TemporaryBonuses={
+    Bonuses={
+      {
+        Target="EQ|Melee",
+        Bonus={
+          Category="WEAPON",
+          Variables={
+            "DAMAGE",
+          },
+          Formula=Formula("max(DomainWarLVL/2,1)"),
+        },
+      },
+    },
+  },
   Description={
     Format="You can touch a creature as a standard action to give it a +%1 bonus on melee damage rolls for 1 round. You can do so %2 times per day.",
     Arguments={
-      "max(DomainWarLVL/2,1)",
-      "BattleRageTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="BattleRageTimes",
-      InitialValue=Formula("0"),
+      Formula("max(DomainWarLVL/2,1)"),
+      Formula("BattleRageTimes"),
     },
   },
   Bonuses={
@@ -102489,20 +93381,6 @@ DefineAbility({
     "SpecialQuality",
     "SpellLike",
     "DomainPower",
-  },
-  TemporaryBonuses={
-    Bonuses={
-      {
-        Target="EQ|Melee",
-        Bonus={
-          Category="WEAPON",
-          Variables={
-            "DAMAGE",
-          },
-          Formula=Formula("max(DomainWarLVL/2,1)"),
-        },
-      },
-    },
   },
 })
 
@@ -102536,13 +93414,7 @@ DefineAbility({
   Description={
     Format="As a swift action, you gain the use of one combat feat for %1 rounds per day. These rounds do not need to be consecutive and you can change the feat chosen each time you use this ability. You must meet the prerequisites to use these feats.",
     Arguments={
-      "WeaponMasterRounds",
-    },
-  },
-  Definitions={
-    {
-      Name="WeaponMasterRounds",
-      InitialValue=Formula("0"),
+      Formula("WeaponMasterRounds"),
     },
   },
   Bonuses={
@@ -102592,15 +93464,9 @@ DefineAbility({
   Description={
     Format="As a standard action, you can fire an icicle from your finger, targeting any foe within 30 feet as a ranged touch attack. The icicle deals 1d6+%1 points of cold damage. You can use this ability %2 times per day.",
     Arguments={
-      "DomainWaterLVL/2",
-      "IcicleTimes",
-      "PREVARGTEQ:DomainWaterLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="IcicleTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainWaterLVL/2"),
+      Formula("IcicleTimes"),
+      Formula("PREVARGTEQ:DomainWaterLVL,2"),
     },
   },
   Bonuses={
@@ -102627,13 +93493,33 @@ DefineAbility({
   AllowMultiple=false,
   Stackable=false,
   Visible=false,
-  SourcePage="p.48",
-  Definitions={
+  Abilities={
     {
-      Name="DomainWaterResistanceBonus",
-      InitialValue=Formula("0"),
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Resistance to Cold",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainWaterLVL"] >= 6)
+        end,
+      },
+    },
+    {
+      Category="Special Ability",
+      Nature="AUTOMATIC",
+      Names={
+        "Immunity to Cold",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DomainWaterLVL"] >= 20)
+        end,
+      },
     },
   },
+  SourcePage="p.48",
   Bonuses={
     {
       Category="VAR",
@@ -102668,32 +93554,6 @@ DefineAbility({
       Conditions={
         function (character)
           return (character.Variables["DomainWaterLVL"] >= 12)
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Resistance to Cold",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainWaterLVL"] >= 6)
-        end,
-      },
-    },
-    {
-      Category="Special Ability",
-      Nature="AUTOMATIC",
-      Names={
-        "Immunity to Cold",
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DomainWaterLVL"] >= 20)
         end,
       },
     },
@@ -102736,15 +93596,9 @@ DefineAbility({
   Description={
     Format="As a standard action, you can create a storm burst targeting any foe within 30 feet as a ranged touch attack. The storm burst deals 1d6+%1 points of nonlethal damage. In addition, the target is buffeted by winds and rain, causing it to take a -2 penalty on attack rolls for 1 round. You can use this ability %2 times per day",
     Arguments={
-      "DomainWeatherLVL/2",
-      "StormBurstTimes",
-      "PREVARGTEQ:DomainWeatherLVL,2",
-    },
-  },
-  Definitions={
-    {
-      Name="StormBurstTimes",
-      InitialValue=Formula("0"),
+      Formula("DomainWeatherLVL/2"),
+      Formula("StormBurstTimes"),
+      Formula("PREVARGTEQ:DomainWeatherLVL,2"),
     },
   },
   Bonuses={
@@ -102787,13 +93641,7 @@ DefineAbility({
   Description={
     Format="You can call down %1 bolts of lightning per day. You can call down as many bolts as you want with a single standard action, but no creature can be the target of more than one bolt and no two targets can be more than 30 feet apart. This ability otherwise functions as Call Lightning.",
     Arguments={
-      "WeatherLightningLordTimes",
-    },
-  },
-  Definitions={
-    {
-      Name="WeatherLightningLordTimes",
-      InitialValue=Formula("0"),
+      Formula("WeatherLightningLordTimes"),
     },
   },
   Bonuses={

@@ -43,19 +43,10 @@ namespace Primordially.PluginCore.Tests
         public void ParseDoubleFact()
         {
           DataSetLoader loader = new DataSetLoader(@"C:\Users\Chad Nedzlek\source\repos\primordially\Data", DataSetStrictness.Strict);
-          var dataSet = loader.LoadString(@"DefineFact({Category=""TESTCAT"",Key=""TestKey"",DataFormat=""String""})
+          string doubleFactString = @"DefineFact({Category=""TESTCAT"",Key=""TestKey"",DataFormat=""String""})
 DefineFact({Category=""TESTCAT"",Key=""TestKey"",DataFormat=""String""})
-");
-          dataSet.Facts.Should().HaveCount(1);
-          dataSet.Facts.Should().ContainKey("TESTCAT|TestKey");
-          var fact = dataSet.Facts["TESTCAT|TestKey"];
-          fact.Category.Should().Be("TESTCAT");
-          fact.DataFormat.Should().Be("String");
-          fact.DisplayName.Should().BeNullOrEmpty();
-          fact.Explanation.Should().BeNullOrEmpty();
-          fact.Required.Should().BeTrue();
-          fact.Selectable.Should().BeTrue();
-          fact.Visible.Should().BeTrue();
+";
+          loader.Invoking(l => l.LoadString(doubleFactString)).Should().Throw<LuaException>();
         }
 
         [Test]
