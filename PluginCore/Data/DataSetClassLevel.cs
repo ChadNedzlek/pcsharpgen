@@ -3,28 +3,26 @@ using System.Collections.Immutable;
 
 namespace Primordially.PluginCore.Data
 {
-    public class DataSetClassLevel
+    public class DataSetClassLevelBase
+    {
+        private protected DataSetClassLevelBase(ImmutableList<DataSetAddedCasterLevel> addedCasterLevels)
+        {
+            AddedCasterLevels = addedCasterLevels;
+        }
+        
+        public ImmutableList<DataSetAddedCasterLevel> AddedCasterLevels { get; }
+    }
+
+    public class DataSetClassLevel : DataSetClassLevelBase
     {
         public static DataSetClassLevel Empty { get; } = new DataSetClassLevel(ImmutableList<DataSetAddedCasterLevel>.Empty, ImmutableList<DataSetAddAbility>.Empty);
 
-
-        public DataSetClassLevel(
-            ImmutableList<DataSetAddedCasterLevel> addedCasterLevels,
-            ImmutableList<DataSetAddAbility> grantedAbilities)
-        {
-            AddedCasterLevels = addedCasterLevels;
-            GrantedAbilities = grantedAbilities;
-        }
-
-        public ImmutableList<DataSetAddedCasterLevel> AddedCasterLevels { get; }
         public ImmutableList<DataSetAddAbility> GrantedAbilities { get; }
 
-        public DataSetClassLevel MergedWith(DataSetClassLevel other)
+        public DataSetClassLevel(ImmutableList<DataSetAddedCasterLevel> addedCasterLevels, ImmutableList<DataSetAddAbility> grantedAbilities)
+            : base(addedCasterLevels)
         {
-            return new DataSetClassLevel(
-                AddedCasterLevels.AddRange(other.AddedCasterLevels),
-                GrantedAbilities.AddRange(other.GrantedAbilities)
-            );
+            GrantedAbilities = grantedAbilities;
         }
     }
 }

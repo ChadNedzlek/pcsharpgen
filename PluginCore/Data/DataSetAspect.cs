@@ -5,7 +5,7 @@ namespace Primordially.PluginCore.Data
     public class DataSetAspect
         : DataSetFormattable
     {
-        public DataSetAspect(string name, string formatString, ImmutableList<string> arguments) : base(formatString, arguments)
+        public DataSetAspect(string name, string formatString, ImmutableList<DataSetFormula> arguments) : base(formatString, arguments)
         {
             Name = name;
         }

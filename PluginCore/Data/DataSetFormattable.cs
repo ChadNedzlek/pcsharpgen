@@ -4,13 +4,13 @@ namespace Primordially.PluginCore.Data
 {
     public class DataSetFormattable
     {
-        public DataSetFormattable(string formatString, ImmutableList<string> arguments)
+        public DataSetFormattable(string formatString, ImmutableList<DataSetFormula> arguments)
         {
             FormatString = formatString;
             Arguments = arguments;
         }
 
         public string FormatString { get; }
-        public ImmutableList<string> Arguments { get; }
+        public ImmutableList<DataSetFormula> Arguments { get; }
     }
 }

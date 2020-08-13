@@ -1,16 +1,24 @@
 ﻿namespace Primordially.PluginCore.Data
 {
-    public class DataSetAddAbility
+    public class DataSetAddAbilityBase
     {
-        public DataSetAddAbility(string category, string nature, string name)
+        public DataSetAddAbilityBase(string category, string nature)
         {
             Category = category;
             Nature = nature;
-            Name = name;
         }
 
         public string Category { get; }
         public string Nature { get; }
-        public string Name { get; }
+    }
+
+    public class DataSetAddAbility : DataSetAddAbilityBase
+    {
+        public DataSetAddAbility(string category, string nature, DataSetAbility ability) : base(category, nature)
+        {
+            Ability = ability;
+        }
+
+        public DataSetAbility Ability { get; }
     }
 }

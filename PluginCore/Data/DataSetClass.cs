@@ -2,49 +2,24 @@
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using ReactiveUI;
 
 namespace Primordially.PluginCore.Data
 {
-    internal class RepeatingDataSetClassLevel
+    public class DataSetClassBase
     {
-        public RepeatingDataSetClassLevel(int start, int repeat, DataSetClassLevel info)
-        {
-            Start = start;
-            Repeat = repeat;
-            Info = info;
-        }
-
-        public int Start { get; }
-
-        public int Repeat { get; }
-        public DataSetClassLevel Info { get; }
-
-        public bool IsValidAtLevel(int level)
-        {
-            if (level == Start)
-                return true;
-            if (Repeat == 0)
-                return false;
-            return ((level - Start) % Repeat) == 0;
-        }
-    }
-
-    public class DataSetClass
-    {
-        internal DataSetClass(
+        internal DataSetClassBase(
             string name,
             DataSourceInformation? sourceInfo,
             ImmutableDictionary<string, string> facts,
             string? sourcePage,
-            Func<CharacterInterface, bool>? condition,
+            DataSetCondition<CharacterInterface> condition,
             ImmutableList<DataSetVariableDefinition> definitions,
             ImmutableList<DataSetBonus> bonuses,
             ImmutableList<string> types,
             ImmutableList<string> roles,
             int? hitDie,
-            int? maxLevel,
-            string? exClass,
-            ImmutableList<RepeatingDataSetClassLevel> levels)
+            int? maxLevel)
         {
             Name = name;
             SourceInfo = sourceInfo;
@@ -57,15 +32,13 @@ namespace Primordially.PluginCore.Data
             Roles = roles;
             HitDie = hitDie;
             MaxLevel = maxLevel;
-            ExClass = exClass;
-            _levels = levels;
         }
 
         public string Name { get; }
         public DataSourceInformation? SourceInfo { get; }
         public ImmutableDictionary<string, string> Facts { get; }
         public string? SourcePage { get; }
-        public Func<CharacterInterface, bool>? Condition { get; }
+        public DataSetCondition<CharacterInterface> Condition { get; }
         public ImmutableList<DataSetVariableDefinition> Definitions { get; }
 
         public ImmutableList<DataSetBonus> Bonuses { get; }
@@ -73,39 +46,48 @@ namespace Primordially.PluginCore.Data
         public ImmutableList<string> Roles { get; }
         public int? HitDie { get; }
         public int? MaxLevel { get; }
-        public string? ExClass { get; }
-        private readonly ImmutableList<RepeatingDataSetClassLevel> _levels;
-
-        public DataSetClass MergedWith(DataSetClass other)
-        {
-            Func<CharacterInterface, bool>? condition;
-            if (other.Condition != null && Condition != null)
-            {
-                condition = ci => other.Condition(ci) && Condition(ci);
-            }
-            else
-            {
-                condition = other.Condition ?? Condition;
-            }
-
-            return new DataSetClass(
-                other.Name ?? Name,
-                other.SourceInfo ?? SourceInfo,
-                Facts.AddRange(other.Facts),
-                other.SourcePage ?? SourcePage,
-                condition,
-                Definitions.AddRange(other.Definitions),
-                Bonuses.AddRange(other.Bonuses),
-                Types.AddRange(other.Types),
-                Roles.AddRange(other.Roles),
-                other.HitDie ?? HitDie,
-                other.MaxLevel ?? MaxLevel,
-                other.ExClass ?? ExClass,
-                _levels.AddRange(other._levels)
-            );
-        }
         
-        private Lazy<Dictionary<int, DataSetClassLevel>> _levelCache;
+    }
+
+    public class DataSetClass : DataSetClassBase
+    {
+        private readonly ImmutableList<RepeatingDataSetClassLevel> _levels;
+        public DataSetClass? ExClass { get; }
+
+        internal DataSetClass(
+            string name,
+            DataSourceInformation? sourceInfo,
+            ImmutableDictionary<string, string> facts,
+            string? sourcePage,
+            DataSetCondition<CharacterInterface> condition,
+            ImmutableList<DataSetVariableDefinition> definitions,
+            ImmutableList<DataSetBonus> bonuses,
+            ImmutableList<string> types,
+            ImmutableList<string> roles,
+            int? hitDie,
+            int? maxLevel,
+            ImmutableList<RepeatingDataSetClassLevel> levels,
+            DataSetClass? exClass)
+            : base(
+                name,
+                sourceInfo,
+                facts,
+                sourcePage,
+                condition,
+                definitions,
+                bonuses,
+                types,
+                roles,
+                hitDie,
+                maxLevel
+            )
+        {
+            _levels = levels;
+            ExClass = exClass;
+        }
+
+        
+        private readonly Lazy<Dictionary<int, DataSetClassLevel>> _levelCache = new Lazy<Dictionary<int, DataSetClassLevel>>();
         public DataSetClassLevel GetLevel(int level)
         {
             if (_levelCache.Value.TryGetValue(level, out var cached))

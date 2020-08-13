@@ -9,7 +9,7 @@ namespace Primordially.PluginCore.Data
             string category,
             ImmutableList<string> variables,
             DataSetFormula formula,
-            Func<CharacterInterface, bool>? condition)
+            DataSetCondition<CharacterInterface> condition)
         {
             Category = category;
             Variables = variables;
@@ -20,6 +20,6 @@ namespace Primordially.PluginCore.Data
         public string Category { get; }
         public ImmutableList<string> Variables { get; }
         public DataSetFormula Formula { get; }
-        public Func<CharacterInterface, bool>? Condition { get; }
+        public DataSetCondition<CharacterInterface> Condition { get; }
     }
 }
