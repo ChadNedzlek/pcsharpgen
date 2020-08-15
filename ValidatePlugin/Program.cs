@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
+using NLua;
 using Primordially.PluginCore.Data;
+using Splat;
 
 namespace Primordially.ValidatePlugin
 {
@@ -20,6 +22,8 @@ namespace Primordially.ValidatePlugin
                 Console.Error.WriteLine($"'{path}' does not exist");
                 return 2;
             }
+
+            Locator.CurrentMutable.RegisterConstant((ILogger) new ConsoleLogger());
 
             DataSetLoader loader = new DataSetLoader(Path.GetDirectoryName(path)!, DataSetStrictness.Lax);
             var dataSet = loader.LoadData(path);

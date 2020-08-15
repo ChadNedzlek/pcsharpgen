@@ -2,16 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Data;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using NLua;
-using ReactiveUI;
 using Splat;
 
 namespace Primordially.PluginCore.Data
@@ -44,7 +41,7 @@ namespace Primordially.PluginCore.Data
         private DataSetBuilder PrepareEnvironment(out Lua lua, out DataSetInteractions interactions)
         {
             lua = new Lua();
-            DataSetBuilder dataSet = new DataSetBuilder(lua);
+            DataSetBuilder dataSet = new DataSetBuilder(lua, this);
             interactions = new DataSetInteractions(dataSet, lua, this);
             lua.State.Encoding = Encoding.UTF8;
             lua.DoString("import = function() end");
@@ -54,21 +51,6 @@ namespace Primordially.PluginCore.Data
 
         private class DataSetInteractions : IEnableLogger
         {
-            private static readonly ImmutableHashSet<string> s_knownClassKeys = ImmutableHashSet.Create(
-                "Name",
-                "Fact",
-                "SourcePage",
-                "Condition",
-                "Definitions",
-                "Bonuses",
-                "Types",
-                "Roles",
-                "HitDice",
-                "MaxLevel",
-                "ExClass",
-                "Levels"
-            );
-
             private readonly DataSetBuilder _dataSet;
             private readonly DataSetLoader _dataSetLoader;
 
@@ -95,7 +77,15 @@ namespace Primordially.PluginCore.Data
                 }
 
                 _file.Push(newPath);
-                _lua.DoFile(newPath);
+                try
+                {
+                    _lua.DoFile(newPath);
+                }
+                catch (Exception e)
+                {
+                    ReportError(e.Message);
+                }
+
                 _sourceInfo = null;
                 _file.Pop();
             }
@@ -132,12 +122,7 @@ namespace Primordially.PluginCore.Data
                     _dataSet.Classes.Remove(name);
                 }
 
-                foreach (var unknownKey in table.Keys.Cast<string>().Where(k => !s_knownClassKeys.Contains(k)))
-                {
-                    ReportError($"Unknown key {unknownKey} in DefineClass");
-                }
-
-                UnboundClass dataSetClass = ParseClassLevel(table);
+                UnboundClass dataSetClass = ParseClass(table);
 
                 _dataSet.Classes.Add(name, dataSetClass);
             }
@@ -261,34 +246,55 @@ namespace Primordially.PluginCore.Data
             }
 
             [LuaGlobal]
+            public void DefineEquipmentModifier(LuaTable table)
+            {
+                string key = (string) table["Key"];
+                LuaTable? autoEquip = (LuaTable?) table["AutomaticEquipment"];
+                _dataSet.EquipmentModifiers.Add(
+                    key,
+                    new UnboundEquipmentModifier(
+                        ParseList(table["Bonuses"], ParseBonus),
+                        (string) table["Key"],
+                        ParseList(table["Types"], Stringify),
+                        ParseList(table["SpecialProperties"], ParseFormattable),
+                        ParseFormattable(table["Description"]),
+                        (string?) table["Name"],
+                        (DataSetFormula?) table["Cost"],
+                        ParseList(table["GrantedItemTypes"], Stringify),
+                        (bool?) table["Visible"],
+                        (bool?) table["AffectsBothHeadsSet"],
+                        (string) table["NameModifier"],
+                        (string) table["NameModifierLocation"],
+                        ParseChoice(table["Choice"], ParseInt(table["Selection"])),
+                        ParseList(table["Replaces"], Stringify),
+                        ParseArmorTypeChange(table["ChangeArmorType"]),
+                        ParseCharges(table["Charges"]),
+                        ParseInt(table["EquivalentEnhancementBonus"]),
+                        ParseList(autoEquip?["Name"], Stringify)
+                    )
+                );
+            }
+
+            private DataSetChargeRange? ParseCharges(object o)
+            {
+                if (o == null)
+                    return null;
+                LuaTable table = (LuaTable) o;
+                return new DataSetChargeRange(ParseInt(table["Min"]), ParseInt(table["Max"]));
+            }
+
+            private DataSetArmorTypeChange? ParseArmorTypeChange(object o)
+            {
+                if (o == null)
+                    return null;
+                LuaTable table = (LuaTable) o;
+                return new DataSetArmorTypeChange((string) table["From"], (string) table["To"]);
+            }
+
+            [LuaGlobal]
             public DataSetDiceFormula DiceFormula(string desc)
             {
                 return new DataSetDiceFormula(desc);
-            }
-
-            private int? ParseCost(object value) => (int?) (ParseDouble(value) * 100);
-
-            private double? ParseDouble(object value)
-            {
-                switch (value)
-                {
-                    case null:
-                        return null;
-                    case double d:
-                        return d;
-                    case long l:
-                        return l;
-                    default:
-                        ReportError($"{value} is not a valid number");
-                        return null;
-                }
-            }
-
-            private int? ParseInt(object value)
-            {
-                #nullable disable
-                return (int?) (long?) value;
-                #nullable restore
             }
 
             private UnboundEquipmentAddModifier ParseAddModifier(object arg)
@@ -458,6 +464,18 @@ namespace Primordially.PluginCore.Data
 
             [LuaGlobal]
             public object? ChooseNothing() => null;
+            
+            [LuaGlobal]
+            public IChooser<int> ChooseNumber(int? min, int? max, int? increment, string? title)
+            {
+                return new NumberChooser(min, max, increment, title);
+            }
+
+            [LuaGlobal]
+            public IChooser<StatBonusInterface> ChooseStatBonus(int? min, int? max, int? increment, string? title)
+            {
+                return new StatBonusChooser(min, max, increment, title);
+            }
 
             [LuaGlobal]
             public DataSetFormula Formula(string text)
@@ -476,7 +494,7 @@ namespace Primordially.PluginCore.Data
                     case DataSetStrictness.Lax:
                         _lua.State.Warning(message, true);
                         var trc = _lua.GetDebugTraceback();
-                        this.Log().Error(message, "LUA exception at: {0}", trc);
+                        this.Log().Error("LUA exception '{0}' at: {1}", message, trc);
                         return;
                 }
             }
@@ -501,9 +519,29 @@ namespace Primordially.PluginCore.Data
                     ParseList(table["Spells"], Stringify)
                 );
             }
-
-            private UnboundClass ParseClassLevel(LuaTable table)
+            
+            private static readonly ImmutableHashSet<string> s_knownClassKeys = ImmutableHashSet.Create(
+                "Bonuses",
+                "Condition",
+                "Definitions",
+                "ExClass",
+                "Facts",
+                "HitDie",
+                "Levels",
+                "MaxLevel",
+                "Name",
+                "Roles",
+                "SkillPointsPerLevel",
+                "SourcePage",
+                "Types"
+            );
+            private UnboundClass ParseClass(LuaTable table)
             {
+                foreach (var unknownKey in table.Keys.Cast<string>().Where(k => !s_knownClassKeys.Contains(k)))
+                {
+                    ReportError($"Unknown key {unknownKey} in DefineClass");
+                }
+
                 var levels = ParseList(
                     (LuaTable) table["Levels"],
                     obj =>
@@ -536,15 +574,16 @@ namespace Primordially.PluginCore.Data
                 var dataSetClass = new UnboundClass(
                     (string) table["Name"],
                     _sourceInfo,
-                    ParseDict(table["Fact"], Stringify),
+                    ParseDict(table["Facts"], Stringify),
                     (string?) table["SourcePage"],
-                    ParseSingleCondition<CharacterInterface>(table["Condition"], "DefineClass"),
+                    ParseSingleCondition<CharacterInterface>(table["Condition"]),
                     ParseList((LuaTable?) table["Definitions"], ParseVariableDefinition),
                     ParseList((LuaTable?) table["Bonuses"], ParseBonus),
                     ParseList((LuaTable?) table["Types"], Stringify),
                     ParseList((LuaTable?) table["Roles"], Stringify),
-                    ParseInt(table["HitDice"]),
+                    ParseInt(table["HitDie"]),
                     ParseInt(table["MaxLevel"]),
+                    ParseInt(table["SkillPointsPerLevel"]),
                     levels,
                     (string?) table["ExClass"]
                 );
@@ -731,16 +770,6 @@ namespace Primordially.PluginCore.Data
                 return builder.ToImmutable();
             }
 
-            private static ImmutableList<T> MergeList<T>(
-                ImmutableList<T> initial,
-                LuaTable table,
-                Func<object, T> selector)
-            {
-                ImmutableList<T>.Builder b = initial.ToBuilder();
-                b.AddRange(ParseList(table, selector));
-                return b.ToImmutable();
-            }
-
             private static T SingleCall<T>(LuaFunction func, params object?[] args)
             {
                 var result = func.Call(args);
@@ -752,7 +781,7 @@ namespace Primordially.PluginCore.Data
                 return (T) result[0];
             }
 
-            public class IntermediateGrantAbility
+            private class IntermediateGrantAbility
             {
                 public IntermediateGrantAbility(string category, string nature, ImmutableList<string> names)
                 {
@@ -813,70 +842,57 @@ namespace Primordially.PluginCore.Data
             [LuaGlobal]
             public void DefineAbility(LuaTable table)
             {
-                string? key = (string) table["Key"];
-                string name = (string) table["Name"];
-                if (key != null &&
-                    _dataSet.GetAbility(key) != null ||
-                    _dataSet.GetAbility(name) != null)
+                string? key = (string?) table["Key"];
+                if (key == null)
+                    key = (string) table["Name"];
+
+                if (_dataSet.Abilities.ContainsKey(key))
                 {
                     ReportError($"Ability with DefineAbility with key '{key}' is called more than once");
-                    _dataSet.ClearAbility(name, key);
+                    _dataSet.Abilities.Remove(key);
                 }
 
-                _dataSet.AddAbility(ParseAbility(table), name, key);
+                _dataSet.Abilities.Add(key, ParseAbility(table));
             }
 
             [LuaGlobal]
             public void ModifyAbility(LuaTable table)
             {
-                string name = (string) table["Name"];
-                string? key = (string) table["Key"];
-                UnboundAbility ability;
-                if (key != null)
-                {
-                    UnboundAbility? foundAbility = _dataSet.GetAbility(key);
-                    if (foundAbility == null)
-                    {
-                        ReportError($"No ability with Key '{key}' found");
-                        DefineAbility(table);
-                        foundAbility = UnboundAbility.Empty;
-                    }
-                    
-                    ability = foundAbility ?? UnboundAbility.Empty;
-                }
-                else
-                {
-                    UnboundAbility? foundAbility = _dataSet.GetAbility(name);
-                    if (foundAbility == null)
-                    {
-                        ReportError($"No ability with Name '{table["Name"]}' found");
-                        DefineAbility(table);
-                    }
+                string? key = (string?) table["Key"];
+                if (key == null)
+                    key = (string) table["Name"];
 
-                    ability = foundAbility ?? UnboundAbility.Empty;
+                if (!_dataSet.Abilities.TryGetValue(key, out UnboundAbility ability))
+                {
+                    ReportError($"No ability with Key '{key}' found");
+                    DefineAbility(table);
+                    return;
                 }
 
                 UnboundAbility newAbility = ParseAbility(table);
 
-                _dataSet.ClearAbility(name, key);
-                _dataSet.AddAbility(ability.MergedWith(newAbility), name, key);
+                _dataSet.Abilities.Remove(key);
+                _dataSet.Abilities.Add(key, ability.MergedWith(newAbility));
             }
 
             private static readonly ImmutableHashSet<string> s_knownAbilityKeys = ImmutableHashSet.Create(
-                "Name",
-                "Key",
-                "Category",
-                "Description",
-                "Stackable",
-                "AllowMultiple",
-                "Visible",
-                "Types",
-                "Definitions",
-                "Bonuses",
                 "Abilities",
+                "AllowMultiple",
                 "Aspects",
+                "Bonuses",
+                "Category",
+                "Choice",
+                "Conditions",
                 "Cost",
-                "SourcePage"
+                "Definitions",
+                "Description",
+                "DisplayName",
+                "Key",
+                "Name",
+                "SourcePage",
+                "Stackable",
+                "Types",
+                "Visible"
             );
 
             private UnboundAbility ParseAbility(LuaTable table)
@@ -889,20 +905,22 @@ namespace Primordially.PluginCore.Data
                 return new UnboundAbility(
                     (string) table["Name"],
                     (string?) table["Key"],
-                    _sourceInfo,
-                    ParseList((LuaTable?) table["Bonuses"], ParseBonus),
-                    (bool?) table["Stackable"],
+                    (string?) table["DisplayName"],
                     (string?) table["Category"],
+                    ParseFormattable(table["Description"]),
+                    _sourceInfo,
+                    (bool?) table["Stackable"],
                     (bool?) table["AllowMultiple"],
                     (bool?) table["Visible"],
-                    ParseList((LuaTable?) table["Definitions"], ParseVariableDefinition),
-                    ParseList((LuaTable?) table["Aspects"], ParseAspect),
-                    ParseList((LuaTable?) table["Types"], Stringify),
                     ParseInt(table["Cost"]),
-                    ParseFormattable(table["Description"]),
                     (string?) table["SourcePage"],
                     ParseChoice(table["Choice"], ParseInt(table["Selection"])),
-                    ParseAbilityGrants(table["Abilities"])
+                    ParseList((LuaTable?) table["Types"], Stringify),
+                    ParseList((LuaTable?) table["Aspects"], ParseAspect),
+                    ParseList((LuaTable?) table["Definitions"], ParseVariableDefinition),
+                    ParseList((LuaTable?) table["Bonuses"], ParseBonus),
+                    ParseAbilityGrants(table["Abilities"]),
+                    ParseSingleCondition<CharacterInterface>(table["Conditions"])
                 );
             }
 
@@ -939,6 +957,33 @@ namespace Primordially.PluginCore.Data
                     _ => throw new ArgumentException("Formattable object is not correctly defined")
                 };
             }
+            
+#nullable disable
+            private int? ParseCost(object value) => (int?) (ParseDouble(value) * 100);
+#nullable restore
+
+            private double? ParseDouble(object value)
+            {
+                switch (value)
+                {
+                    case null:
+                        return null;
+                    case double d:
+                        return d;
+                    case long l:
+                        return l;
+                    default:
+                        ReportError($"{value} is not a valid number");
+                        return null;
+                }
+            }
+
+            private int? ParseInt(object value)
+            {
+#nullable disable
+                return (int?) (long?) value;
+#nullable restore
+            }
 
             private static string Stringify(object o)
             {
@@ -950,20 +995,20 @@ namespace Primordially.PluginCore.Data
 
         private sealed class DataSetBuilder
         {
-            private readonly ImmutableDictionary<string, UnboundAbility>.Builder _keyedAbilities =
-                ImmutableDictionary.CreateBuilder<string, UnboundAbility>(StringComparer.OrdinalIgnoreCase);
 
             private readonly Lua _luaContext;
+            private readonly DataSetLoader _dataSetLoader;
 
-            private readonly ImmutableDictionary<string, UnboundAbility>.Builder _namedAbilities =
-                ImmutableDictionary.CreateBuilder<string, UnboundAbility>(StringComparer.OrdinalIgnoreCase);
-
-            internal DataSetBuilder(Lua luaContext)
+            internal DataSetBuilder(Lua luaContext, DataSetLoader dataSetLoader)
             {
                 _luaContext = luaContext;
+                _dataSetLoader = dataSetLoader;
             }
 
             public DataSetInformation? DataSetInformation { get; set; }
+
+            public Dictionary<string, UnboundAbility> Abilities { get; } =
+                new Dictionary<string, UnboundAbility>(StringComparer.OrdinalIgnoreCase);
 
             public Dictionary<string, UnboundClass> Classes { get; } =
                 new Dictionary<string, UnboundClass>(StringComparer.OrdinalIgnoreCase);
@@ -995,30 +1040,6 @@ namespace Primordially.PluginCore.Data
             public Dictionary<string, UnboundEquipmentModifier> EquipmentModifiers { get; } =
                 new Dictionary<string, UnboundEquipmentModifier>(StringComparer.OrdinalIgnoreCase);
 
-            public UnboundAbility GetAbility(string nameOrKey)
-            {
-                return _keyedAbilities.GetValueOrDefault(nameOrKey) ??
-                    _namedAbilities.GetValueOrDefault(nameOrKey);
-            }
-
-            public void AddAbility(UnboundAbility ability, string name, string? key = null)
-            {
-                _namedAbilities.Add(name, ability);
-                if (key != null)
-                {
-                    _keyedAbilities.Add(key, ability);
-                }
-            }
-
-            public void ClearAbility(string name, string? key)
-            {
-                _namedAbilities.Remove(name);
-                if (key != null)
-                {
-                    _keyedAbilities.Remove(key);
-                }
-            }
-
             public DataSet Build()
             {
                 Binder binder = new Binder(this);
@@ -1028,12 +1049,11 @@ namespace Primordially.PluginCore.Data
             private class Binder : IBinder
             {
                 private readonly DataSetBuilder _builder;
-                private readonly ImmutableDictionary<string, DataSetAbility>.Builder _namedAbilities = ImmutableDictionary.CreateBuilder<string, DataSetAbility>();
-                private readonly ImmutableDictionary<string, DataSetAbility>.Builder _keyedAbilities = ImmutableDictionary.CreateBuilder<string, DataSetAbility>();
 
                 public Binder(DataSetBuilder builder)
                 {
                     _builder = builder;
+                    _abilities = ImmutableDictionary.CreateBuilder<string, DataSetAbility>(_builder.Abilities.Comparer);
                     _classes = ImmutableDictionary.CreateBuilder<string, DataSetClass>(_builder.Classes.Comparer);
                     _abilityScores = ImmutableDictionary.CreateBuilder<string, DataSetAbilityScore>(_builder.Classes.Comparer);
                     _domains = ImmutableDictionary.CreateBuilder<string, DataSetDomain>(_builder.Classes.Comparer);
@@ -1042,16 +1062,17 @@ namespace Primordially.PluginCore.Data
 
                     _binders = new Dictionary<Type, Func<string, object>>
                     {
-                        {typeof(DataSetAbility), BindAbility},
-                        {typeof(DataSetClass), s => Bind<DataSetClass>(s)},
-                        {typeof(DataSetAbilityScore), s => Bind<DataSetAbilityScore>(s)},
-                        {typeof(DataSetAbilityScore), s => Bind<DataSetDomain>(s)},
-                        {typeof(DataSetEquipment), s => Bind<DataSetEquipment>(s)},
-                        {typeof(DataSetEquipmentModifier), s => Bind<DataSetEquipmentModifier>(s)},
+                        {typeof(DataSetAbility), s => Bind(s, _builder.Abilities, _abilities)},
+                        {typeof(DataSetClass), s => Bind(s, _builder.Classes, _classes)},
+                        {typeof(DataSetAbilityScore), s => Bind(s, _builder.AbilityScores, _abilityScores)},
+                        {typeof(DataSetDomain), s => Bind(s, _builder.Domains, _domains)},
+                        {typeof(DataSetEquipment), s => Bind(s, _builder.Equipment, _equipment)},
+                        {typeof(DataSetEquipmentModifier), s => Bind(s, _builder.EquipmentModifiers, _equipmentModifiers)},
                     };
                 }
 
                 private readonly Dictionary<Type, Func<string, object>> _binders;
+                private readonly ImmutableDictionary<string, DataSetAbility>.Builder _abilities;
                 private readonly ImmutableDictionary<string, DataSetClass>.Builder _classes;
                 private readonly ImmutableDictionary<string, DataSetAbilityScore>.Builder _abilityScores;
                 private readonly ImmutableDictionary<string, DataSetDomain>.Builder _domains;
@@ -1063,25 +1084,8 @@ namespace Primordially.PluginCore.Data
                 {
                     if (key == null)
                         return null;
+
                     return Unsafe.As<TBound>(_binders[typeof(TBound)](key));
-                }
-
-                private DataSetAbility BindAbility(string key)
-                {
-                    UnboundAbility u = _builder.GetAbility(key);
-                    if (u == null)
-                        throw new KeyNotFoundException();
-
-                    _builder._namedAbilities.Remove(key);
-                    _builder._keyedAbilities.Remove(key);
-                    var b = u.Bind(this);
-                    _namedAbilities.Add(b.Name, b);
-                    if (b.Key != null)
-                    {
-                        _namedAbilities.Add(b.Key, b);
-                    }
-
-                    return b;
                 }
 
                 private ImmutableDictionary<string, TBound> BindAll<TUnbound, TBound>(
@@ -1098,6 +1102,11 @@ namespace Primordially.PluginCore.Data
 
                 private TBound Bind<TUnbound, TBound>(string key, Dictionary<string, TUnbound> unbound, ImmutableDictionary<string, TBound>.Builder bound) where TUnbound : IRequiresBinding<TBound>
                 {
+                    if (bound.TryGetValue(key, out TBound preBound))
+                    {
+                        return preBound;
+                    }
+
                     TUnbound u = unbound[key];
                     unbound.Remove(key);
                     TBound b = u.Bind(this);
@@ -1107,19 +1116,10 @@ namespace Primordially.PluginCore.Data
 
                 public DataSet Build()
                 {
-                    while (_builder._keyedAbilities.Count != 0)
-                    {
-                        BindAbility(_builder._keyedAbilities.Keys.First());
-                    }
-                    while (_builder._namedAbilities.Count != 0)
-                    {
-                        BindAbility(_builder._namedAbilities.Keys.First());
-                    }
-
                     return new DataSet(
                         _builder._luaContext,
                         _builder.DataSetInformation,
-                        new AbilityDictionary(_keyedAbilities.ToImmutable(), _namedAbilities.ToImmutable()),
+                        BindAll(_builder.Abilities, _abilities),
                         BindAll(_builder.Classes, _classes),
                         _builder.Alignments.ToImmutable(),
                         _builder.Facts.ToImmutable(),
@@ -1303,19 +1303,21 @@ namespace Primordially.PluginCore.Data
                 "",
                 null,
                 null,
-                ImmutableList<DataSetBonus>.Empty,
                 null,
                 null,
                 null,
                 null,
-                ImmutableList<DataSetVariableDefinition>.Empty,
-                ImmutableList<DataSetAspect>.Empty,
+                null,
+                null,
+                null,
+                null,
+                null,
                 ImmutableList<string>.Empty,
-                null,
-                null,
-                null,
-                null,
-                ImmutableList<UnboundAddAbility>.Empty
+                ImmutableList<DataSetAspect>.Empty,
+                ImmutableList<DataSetVariableDefinition>.Empty,
+                ImmutableList<DataSetBonus>.Empty,
+                ImmutableList<UnboundAddAbility>.Empty,
+                DataSetConditions<CharacterInterface>.Empty
             );
 
             private readonly IImmutableList<UnboundAddAbility> _abilities;
@@ -1323,36 +1325,40 @@ namespace Primordially.PluginCore.Data
             public UnboundAbility(
                 string name,
                 string? key,
-                DataSourceInformation? sourceInfo,
-                ImmutableList<DataSetBonus> bonuses,
-                bool? stackable,
+                string? displayName,
                 string? category,
+                DataSetFormattable? description,
+                DataSourceInformation? sourceInfo,
+                bool? stackable,
                 bool? allowMultiple,
                 bool? visible,
-                ImmutableList<DataSetVariableDefinition> definitions,
-                ImmutableList<DataSetAspect> aspects,
-                ImmutableList<string> types,
                 int? cost,
-                DataSetFormattable? description,
                 string? sourcePage,
                 Choice? choice,
-                IImmutableList<UnboundAddAbility> abilities)
+                ImmutableList<string> types,
+                ImmutableList<DataSetAspect> aspects,
+                ImmutableList<DataSetVariableDefinition> definitions,
+                ImmutableList<DataSetBonus> bonuses,
+                IImmutableList<UnboundAddAbility> abilities,
+                DataSetCondition<CharacterInterface>? condition)
                 : base(
                     name,
                     key,
-                    sourceInfo,
-                    bonuses,
-                    stackable,
+                    displayName,
                     category,
+                    description,
+                    sourceInfo,
+                    stackable,
                     allowMultiple,
                     visible,
+                    cost,
+                    sourcePage,
+                    bonuses,
                     definitions,
                     aspects,
                     types,
-                    cost,
-                    description,
-                    sourcePage,
-                    choice
+                    choice,
+                    condition
                 )
             {
                 _abilities = abilities;
@@ -1363,20 +1369,22 @@ namespace Primordially.PluginCore.Data
                 return new DataSetAbility(
                     Name,
                     Key,
-                    SourceInfo,
-                    Bonuses,
-                    Stackable,
+                    DisplayName,
                     Category,
+                    Description,
+                    SourceInfo,
+                    Stackable,
                     AllowMultiple,
                     Visible,
+                    Cost,
+                    SourcePage,
+                    Bonuses,
                     Definitions,
                     Aspects,
                     Types,
-                    Cost,
-                    Description,
-                    SourcePage,
                     Choice,
-                    _abilities.Select(a => a.Bind(lookup)).ToImmutableList()
+                    _abilities.Select(a => a.Bind(lookup)).ToImmutableList(),
+                    Condition
                 );
             }
 
@@ -1385,20 +1393,22 @@ namespace Primordially.PluginCore.Data
                 return new UnboundAbility(
                     other.Name ?? Name,
                     other.Key ?? Key,
-                    SourceInfo ?? other.SourceInfo,
-                    Bonuses.AddRange(other.Bonuses),
-                    other.StackableSet ?? StackableSet,
+                    other.DisplayName ?? DisplayName,
                     other.Category ?? Category,
+                    other.Description ?? Description,
+                    SourceInfo ?? other.SourceInfo,
+                    other.StackableSet ?? StackableSet,
                     other.AllowMultipleSet ?? AllowMultipleSet,
                     other.VisibleSet ?? VisibleSet,
-                    Definitions.AddRange(other.Definitions),
-                    Aspects.AddRange(other.Aspects),
-                    Types.AddRange(other.Types),
                     other.CostSet ?? CostSet,
-                    other.Description ?? Description,
                     other.SourcePage ?? SourcePage,
                     Choice,
-                    _abilities.AddRange(other._abilities)
+                    Types.AddRange(other.Types),
+                    Aspects.AddRange(other.Aspects),
+                    Definitions.AddRange(other.Definitions),
+                    Bonuses.AddRange(other.Bonuses),
+                    _abilities.AddRange(other._abilities),
+                    Condition.CombineWith(other.Condition)
                 );
             }
         }
@@ -1537,9 +1547,9 @@ namespace Primordially.PluginCore.Data
             private readonly string _nameModifier;
             private readonly string _nameModifierLocation;
             private readonly ImmutableList<string> _replaces;
-            private readonly UnboundEquipment? _automaticEquipment;
+            private readonly ImmutableList<string> _automaticEquipment;
 
-            private protected UnboundEquipmentModifier(
+            public UnboundEquipmentModifier(
                 ImmutableList<DataSetBonus> bonuses,
                 string key,
                 ImmutableList<string> types,
@@ -1552,12 +1562,12 @@ namespace Primordially.PluginCore.Data
                 bool? affectsBothHeads,
                 string nameModifier,
                 string nameModifierLocation,
-                IChooser? choice,
+                Choice? choice,
                 ImmutableList<string> replaces,
                 DataSetArmorTypeChange? armorTypeChange,
                 DataSetChargeRange? charges,
                 int? equivalentEnhancementBonus,
-                UnboundEquipment? automaticEquipment)
+                ImmutableList<string> automaticEquipment)
                 : base(
                     name,
                     key,
@@ -1600,7 +1610,7 @@ namespace Primordially.PluginCore.Data
                     Charges,
                     EquivalentEnhancementBonus,
                     _replaces.Select(key => binder.Bind<DataSetEquipment>(key)).ToImmutableList(),
-                    _automaticEquipment == null ? null : binder.Bind<DataSetEquipment>(_automaticEquipment.Name)
+                    _automaticEquipment.Select(e => binder.Bind<DataSetEquipment>(e)!).ToImmutableList()
                 );
             }
 
@@ -1689,6 +1699,7 @@ namespace Primordially.PluginCore.Data
                 ImmutableList<string> roles,
                 int? hitDie,
                 int? maxLevel,
+                int? skillPointsPerLevel,
                 ImmutableList<UnboundRepeatingClassLevel> levels,
                 string? exClass)
                 : base(
@@ -1702,7 +1713,8 @@ namespace Primordially.PluginCore.Data
                     types,
                     roles,
                     hitDie,
-                    maxLevel
+                    maxLevel,
+                    skillPointsPerLevel
                 )
             {
                 _exClass = exClass;
@@ -1723,6 +1735,7 @@ namespace Primordially.PluginCore.Data
                     Roles,
                     HitDie,
                     MaxLevel,
+                    SkillPointsPerLevel,
                     _levels.Select(l => l.Bind(binder)).ToImmutableList(),
                     binder.Bind<DataSetClass>(_exClass)
                 );
@@ -1742,6 +1755,7 @@ namespace Primordially.PluginCore.Data
                     Roles.AddRange(other.Roles),
                     other.HitDie ?? HitDie,
                     other.MaxLevel ?? MaxLevel,
+                    other.SkillPointsPerLevel ?? SkillPointsPerLevel,
                     _levels.AddRange(other._levels),
                     other._exClass ?? _exClass
                 );
@@ -1831,11 +1845,6 @@ namespace Primordially.PluginCore.Data
             }
         }
 
-        internal interface IUnbound
-        {
-            string BindKey { get; }
-        }
-
         private interface IBinder
         {
             [return: NotNullIfNotNull("key")]
@@ -1848,7 +1857,24 @@ namespace Primordially.PluginCore.Data
         }
     }
 
-    internal class StringInterface
+    internal class StatBonusChooser : NumberChooser, IChooser<StatBonusInterface>
+    {
+        public StatBonusChooser(int? min, int? max, int? increment, string? title)
+            : base(min, max, increment, title)
+        {
+        }
+
+        public IImmutableList<StatBonusInterface> Filter(
+            CharacterInterface character,
+            IImmutableList<StatBonusInterface> options)
+        {
+            return options;
+        }
+
+        public override string ChooseType => nameof(StatBonusChooser);
+    }
+
+    internal class StatBonusInterface
     {
     }
 }

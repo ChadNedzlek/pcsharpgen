@@ -20,7 +20,7 @@ namespace Primordially.PluginCore.Data
             ImmutableList<string> grantedItemTypes,
             bool? visible,
             bool? affectsBothHeads,
-            IChooser? choice,
+            Choice? choice,
             DataSetArmorTypeChange? armorTypeChange,
             DataSetChargeRange? charges,
             int? equivalentEnhancementBonus)
@@ -51,7 +51,7 @@ namespace Primordially.PluginCore.Data
         public ImmutableList<string> GrantedItemTypes { get; }
         public bool Visible => VisibleSet ?? true;
         public bool AffectsBothHeads => AffectsBothHeadsSet ?? false;
-        public IChooser? Choice { get; }
+        public Choice? Choice { get; }
         public DataSetArmorTypeChange? ArmorTypeChange { get; }
         public DataSetChargeRange? Charges { get; }
         public int? EquivalentEnhancementBonus { get;  }
@@ -62,7 +62,7 @@ namespace Primordially.PluginCore.Data
         public string Name => NameSet!;
         public ModifyName NameModifier { get; }
         public ImmutableList<DataSetEquipment> Replaces { get; }
-        public DataSetEquipment? AutomaticEquipment { get; }
+        public ImmutableList<DataSetEquipment> AutomaticEquipment { get; }
 
         public DataSetEquipmentModifier(
             string name,
@@ -76,12 +76,12 @@ namespace Primordially.PluginCore.Data
             bool? visible,
             bool? affectsBothHeads,
             ModifyName nameModifier,
-            IChooser? choice,
+            Choice? choice,
             DataSetArmorTypeChange? armorTypeChange,
             DataSetChargeRange? charges,
             int? equivalentEnhancementBonus,
             ImmutableList<DataSetEquipment> replaces,
-            DataSetEquipment? automaticEquipment)
+            ImmutableList<DataSetEquipment> automaticEquipment)
             : base(
                 name,
                 key,

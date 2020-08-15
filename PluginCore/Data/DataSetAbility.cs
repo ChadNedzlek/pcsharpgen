@@ -7,19 +7,21 @@ namespace Primordially.PluginCore.Data
         public DataSetAbilityBase(
             string name,
             string? key,
-            DataSourceInformation? sourceInfo,
-            ImmutableList<DataSetBonus> bonuses,
-            bool? stackable,
+            string? displayName,
             string? category,
+            DataSetFormattable? description,
+            DataSourceInformation? sourceInfo,
+            bool? stackable,
             bool? allowMultiple,
             bool? visible,
+            int? cost,
+            string? sourcePage,
+            ImmutableList<DataSetBonus> bonuses,
             ImmutableList<DataSetVariableDefinition> definitions,
             ImmutableList<DataSetAspect> aspects,
             ImmutableList<string> types,
-            int? cost,
-            DataSetFormattable? description,
-            string? sourcePage,
-            Choice? choice)
+            Choice? choice,
+            DataSetCondition<CharacterInterface> condition)
         {
             Name = name;
             Key = key;
@@ -36,6 +38,8 @@ namespace Primordially.PluginCore.Data
             Description = description;
             SourcePage = sourcePage;
             Choice = choice;
+            Condition = condition;
+            DisplayName = displayName;
         }
 
 
@@ -45,6 +49,7 @@ namespace Primordially.PluginCore.Data
         protected readonly int? CostSet;
         public string Name { get; }
         public string? Key { get; }
+        public string? DisplayName { get; }
         public DataSourceInformation? SourceInfo { get; }
         public ImmutableList<DataSetBonus> Bonuses { get; }
         public string? Category { get; }
@@ -54,7 +59,8 @@ namespace Primordially.PluginCore.Data
         public DataSetFormattable? Description { get; }
         public string? SourcePage { get; }
         public Choice? Choice { get;}
-        
+        public DataSetCondition<CharacterInterface> Condition { get; }
+
         public bool Stackable => StackableSet ?? false;
         public bool AllowMultiple => AllowMultipleSet ?? false;
         public int Cost => CostSet ?? 0;
@@ -68,36 +74,40 @@ namespace Primordially.PluginCore.Data
         public DataSetAbility(
             string name,
             string? key,
-            DataSourceInformation? sourceInfo,
-            ImmutableList<DataSetBonus> bonuses,
-            bool? stackable,
+            string? displayName,
             string? category,
+            DataSetFormattable? description,
+            DataSourceInformation? sourceInfo,
+            bool? stackable,
             bool? allowMultiple,
             bool? visible,
+            int? cost,
+            string? sourcePage,
+            ImmutableList<DataSetBonus> bonuses,
             ImmutableList<DataSetVariableDefinition> definitions,
             ImmutableList<DataSetAspect> aspects,
             ImmutableList<string> types,
-            int? cost,
-            DataSetFormattable? description,
-            string? sourcePage,
             Choice? choice,
-            ImmutableList<DataSetAddAbility> abilities)
+            ImmutableList<DataSetAddAbility> abilities,
+            DataSetCondition<CharacterInterface> condition)
             : base(
                 name,
                 key,
-                sourceInfo,
-                bonuses,
-                stackable,
+                displayName,
                 category,
+                description,
+                sourceInfo,
+                stackable,
                 allowMultiple,
                 visible,
+                cost,
+                sourcePage,
+                bonuses,
                 definitions,
                 aspects,
                 types,
-                cost,
-                description,
-                sourcePage,
-                choice
+                choice,
+                condition
             )
         {
             Abilities = abilities;

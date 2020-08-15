@@ -19,7 +19,8 @@ namespace Primordially.PluginCore.Data
             ImmutableList<string> types,
             ImmutableList<string> roles,
             int? hitDie,
-            int? maxLevel)
+            int? maxLevel,
+            int? skillPointsPerLevel)
         {
             Name = name;
             SourceInfo = sourceInfo;
@@ -32,6 +33,7 @@ namespace Primordially.PluginCore.Data
             Roles = roles;
             HitDie = hitDie;
             MaxLevel = maxLevel;
+            SkillPointsPerLevel = skillPointsPerLevel;
         }
 
         public string Name { get; }
@@ -46,7 +48,7 @@ namespace Primordially.PluginCore.Data
         public ImmutableList<string> Roles { get; }
         public int? HitDie { get; }
         public int? MaxLevel { get; }
-        
+        public int? SkillPointsPerLevel { get; }
     }
 
     public class DataSetClass : DataSetClassBase
@@ -66,6 +68,7 @@ namespace Primordially.PluginCore.Data
             ImmutableList<string> roles,
             int? hitDie,
             int? maxLevel,
+            int? skillPointsPerLevel,
             ImmutableList<RepeatingDataSetClassLevel> levels,
             DataSetClass? exClass)
             : base(
@@ -79,7 +82,8 @@ namespace Primordially.PluginCore.Data
                 types,
                 roles,
                 hitDie,
-                maxLevel
+                maxLevel,
+                skillPointsPerLevel
             )
         {
             _levels = levels;
