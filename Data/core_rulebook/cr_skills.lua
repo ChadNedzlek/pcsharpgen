@@ -8,24 +8,15 @@ SetSource({
 })
 DefineSkill({
   Name="Acrobatics",
-  Types={
-    "Dexterity",
-    "ACHECK",
-    "Base",
-  },
-  KeyStat="DEX",
   ArmorCheckPenalty="Yes",
+  KeyStat="DEX",
+  SourcePage="p.87",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Acrobatics",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -35,28 +26,27 @@ DefineSkill({
           return ((character.Skill("Acrobatics").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Acrobatics",
+      },
     },
   },
-  SourcePage="p.87",
+  Types={
+    "Dexterity",
+    "ACHECK",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Appraise",
-  Types={
-    "Intelligence",
-    "Base",
-  },
   KeyStat="INT",
+  SourcePage="p.90",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Appraise",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -66,33 +56,31 @@ DefineSkill({
           return ((character.Skill("Appraise").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Appraise",
+      },
     },
   },
-  SourcePage="p.90",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Intelligence",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Bluff",
-  Types={
-    "Charisma",
-    "Base",
-  },
   KeyStat="CHA",
+  SourcePage="p.90",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Bluff",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -102,35 +90,32 @@ DefineSkill({
           return ((character.Skill("Bluff").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Bluff",
+      },
     },
   },
-  SourcePage="p.90",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Charisma",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Climb",
-  Types={
-    "Strength",
-    "ACHECK",
-    "Base",
-  },
-  KeyStat="STR",
   ArmorCheckPenalty="Yes",
+  KeyStat="STR",
+  SourcePage="p.90",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Climb",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -140,47 +125,43 @@ DefineSkill({
           return ((character.Skill("Climb").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Climb",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("8"),
       Type={
         Name="Racial",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
           return ((character.HasMovement("Climb", 1))) >= 1
         end,
       },
+      Variables={
+        "Climb",
+      },
     },
   },
-  SourcePage="p.90",
+  Types={
+    "Strength",
+    "ACHECK",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Craft (Alchemy)",
-  Types={
-    "Intelligence",
-    "Craft",
-    "Base",
-  },
   KeyStat="INT",
+  SourcePage="p.91",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Alchemy)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -190,35 +171,54 @@ DefineSkill({
           return ((character.Skill("Craft (Alchemy)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Alchemy)",
+      },
     },
   },
-  SourcePage="p.91",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Armor)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Armor)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsArmor") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Armor)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Armor)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -228,33 +228,8 @@ DefineSkill({
           return ((character.Skill("Craft (Armor)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Armor)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsArmor") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Armor)",
       },
     },
   },
@@ -263,27 +238,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Baskets)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Baskets)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsBaskets") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Baskets)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Baskets)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -293,33 +285,8 @@ DefineSkill({
           return ((character.Skill("Craft (Baskets)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Baskets)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsBaskets") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Baskets)",
       },
     },
   },
@@ -328,27 +295,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Blacksmithing)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Blacksmithing)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsBlacksmithing") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Blacksmithing)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Blacksmithing)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -358,33 +342,8 @@ DefineSkill({
           return ((character.Skill("Craft (Blacksmithing)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Blacksmithing)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsBlacksmithing") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Blacksmithing)",
       },
     },
   },
@@ -393,27 +352,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Books)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Books)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsBooks") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Books)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Books)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -423,33 +399,8 @@ DefineSkill({
           return ((character.Skill("Craft (Books)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Books)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsBooks") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Books)",
       },
     },
   },
@@ -458,27 +409,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Bows)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Bows)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsBows") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Bows)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Bows)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -488,33 +456,8 @@ DefineSkill({
           return ((character.Skill("Craft (Bows)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Bows)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsBows") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Bows)",
       },
     },
   },
@@ -523,27 +466,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Calligraphy)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Calligraphy)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsCalligraphy") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Calligraphy)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Calligraphy)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -553,33 +513,8 @@ DefineSkill({
           return ((character.Skill("Craft (Calligraphy)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Calligraphy)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsCalligraphy") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Calligraphy)",
       },
     },
   },
@@ -588,27 +523,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Carpentry)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Carpentry)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsCarpentry") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Carpentry)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Carpentry)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -618,33 +570,8 @@ DefineSkill({
           return ((character.Skill("Craft (Carpentry)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Carpentry)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsCarpentry") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Carpentry)",
       },
     },
   },
@@ -653,27 +580,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Cloth)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Cloth)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsCloth") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Cloth)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Cloth)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -683,33 +627,8 @@ DefineSkill({
           return ((character.Skill("Craft (Cloth)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Cloth)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsCloth") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Cloth)",
       },
     },
   },
@@ -718,27 +637,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Clothing)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Clothing)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsClothing") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Clothing)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Clothing)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -748,33 +684,8 @@ DefineSkill({
           return ((character.Skill("Craft (Clothing)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Clothing)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsClothing") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Clothing)",
       },
     },
   },
@@ -783,27 +694,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Gemcutting)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Gemcutting)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsGemcutting") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Gemcutting)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Gemcutting)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -813,33 +741,8 @@ DefineSkill({
           return ((character.Skill("Craft (Gemcutting)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Gemcutting)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsGemcutting") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Gemcutting)",
       },
     },
   },
@@ -848,27 +751,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Glass)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Glass)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsGlass") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Glass)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Glass)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -878,33 +798,8 @@ DefineSkill({
           return ((character.Skill("Craft (Glass)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Glass)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsGlass") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Glass)",
       },
     },
   },
@@ -913,27 +808,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Jewelry)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Jewelry)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsJewelry") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Jewelry)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Jewelry)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -943,33 +855,8 @@ DefineSkill({
           return ((character.Skill("Craft (Jewelry)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Jewelry)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsJewelry") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Jewelry)",
       },
     },
   },
@@ -978,27 +865,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Leather)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Leather)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsLeather") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Leather)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Leather)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1008,33 +912,8 @@ DefineSkill({
           return ((character.Skill("Craft (Leather)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Leather)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsLeather") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Leather)",
       },
     },
   },
@@ -1043,27 +922,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Locks)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Locks)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsLocks") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Locks)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Locks)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1073,33 +969,8 @@ DefineSkill({
           return ((character.Skill("Craft (Locks)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Locks)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsLocks") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Locks)",
       },
     },
   },
@@ -1108,27 +979,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Paintings)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Paintings)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsPaintings") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Paintings)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Paintings)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1138,33 +1026,8 @@ DefineSkill({
           return ((character.Skill("Craft (Paintings)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Paintings)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsPaintings") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Paintings)",
       },
     },
   },
@@ -1173,27 +1036,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Pottery)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Pottery)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsPottery") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Pottery)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Pottery)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1203,33 +1083,8 @@ DefineSkill({
           return ((character.Skill("Craft (Pottery)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Pottery)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsPottery") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Pottery)",
       },
     },
   },
@@ -1238,27 +1093,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Sculptures)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Sculptures)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsSculptures") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Sculptures)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Sculptures)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1268,33 +1140,8 @@ DefineSkill({
           return ((character.Skill("Craft (Sculptures)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Sculptures)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsSculptures") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Sculptures)",
       },
     },
   },
@@ -1303,27 +1150,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Ships)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Ships)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsShips") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Ships)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Ships)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1333,33 +1197,8 @@ DefineSkill({
           return ((character.Skill("Craft (Ships)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Ships)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsShips") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Ships)",
       },
     },
   },
@@ -1368,27 +1207,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Shoes)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Shoes)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsShoes") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Shoes)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Shoes)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1398,33 +1254,8 @@ DefineSkill({
           return ((character.Skill("Craft (Shoes)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Shoes)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsShoes") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Shoes)",
       },
     },
   },
@@ -1433,27 +1264,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Stonemasonry)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Stonemasonry)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsStonemasonry") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Stonemasonry)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Stonemasonry)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1463,33 +1311,8 @@ DefineSkill({
           return ((character.Skill("Craft (Stonemasonry)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Stonemasonry)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsStonemasonry") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Stonemasonry)",
       },
     },
   },
@@ -1498,27 +1321,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Traps)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Traps)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftTools") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Traps)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Traps)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1528,33 +1368,8 @@ DefineSkill({
           return ((character.Skill("Craft (Traps)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Traps)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftTools") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Traps)",
       },
     },
   },
@@ -1563,27 +1378,44 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Craft (Weapons)",
   Types={
     "Intelligence",
     "Craft",
     "Base",
   },
+})
+DefineSkill({
+  Name="Craft (Weapons)",
   KeyStat="INT",
+  SourcePage="p.91",
+  TemporaryBonus={
+    Bonus={
+      Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsWeapons") end))) >= 1)
+        end,
+      },
+      Variables={
+        "Craft (Weapons)",
+      },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Weapons)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1593,33 +1425,8 @@ DefineSkill({
           return ((character.Skill("Craft (Weapons)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.91",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Craft (Weapons)",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("CraftToolsWeapons") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Craft (Weapons)",
       },
     },
   },
@@ -1627,40 +1434,38 @@ DefineSkill({
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
+  },
+  Types={
+    "Intelligence",
+    "Craft",
+    "Base",
   },
 })
 DefineSkill({
   Name="Craft (Untrained)",
-  Types={
-    "Intelligence",
-    "Craft",
-  },
   KeyStat="INT",
   SourcePage="p.91",
+  Visible=true,
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Intelligence",
+    "Craft",
+  },
 })
 DefineSkill({
   Name="Diplomacy",
-  Types={
-    "Charisma",
-    "Base",
-  },
   KeyStat="CHA",
+  SourcePage="p.93",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Diplomacy",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1670,36 +1475,54 @@ DefineSkill({
           return ((character.Skill("Diplomacy").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Diplomacy",
+      },
     },
   },
-  SourcePage="p.93",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Charisma",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Disable Device",
-  Types={
-    "Dexterity",
-    "ACHECK",
-    "Base",
-  },
-  KeyStat="DEX",
-  UseUntrained=false,
   ArmorCheckPenalty="Yes",
-  Bonuses={
-    {
+  KeyStat="DEX",
+  SourcePage="p.94",
+  TemporaryBonus={
+    Bonus={
       Category="SKILL",
+      Formula=Formula("-2"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("ThiefTools") end))) >= 1)
+        end,
+      },
       Variables={
         "Disable Device",
       },
+    },
+    Target="PC",
+  },
+  TemporaryBonusDescription={
+    Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
+  },
+  UseUntrained=false,
+  Bonuses={
+    {
+      Category="SKILL",
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1709,33 +1532,8 @@ DefineSkill({
           return ((character.Skill("Disable Device").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.94",
-  TemporaryBonuses={
-    Description={
-      Format="Craft skill checks are made with a -2 circumstance penalty if improvised tools are used",
-    },
-    Bonuses={
-      {
-        Target="PC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Disable Device",
-          },
-          Formula=Formula("-2"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("ThiefTools") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Disable Device",
       },
     },
   },
@@ -1744,25 +1542,22 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Dexterity",
+    "ACHECK",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Disguise",
-  Types={
-    "Charisma",
-    "Base",
-  },
   KeyStat="CHA",
+  SourcePage="p.95",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Disguise",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1772,35 +1567,32 @@ DefineSkill({
           return ((character.Skill("Disguise").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Disguise",
+      },
     },
   },
-  SourcePage="p.95",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Charisma",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Escape Artist",
-  Types={
-    "Dexterity",
-    "ACHECK",
-    "Base",
-  },
-  KeyStat="DEX",
   ArmorCheckPenalty="Yes",
+  KeyStat="DEX",
+  SourcePage="p.95",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Escape Artist",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1810,30 +1602,28 @@ DefineSkill({
           return ((character.Skill("Escape Artist").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Escape Artist",
+      },
     },
   },
-  SourcePage="p.95",
-})
-DefineSkill({
-  Name="Fly",
   Types={
     "Dexterity",
     "ACHECK",
     "Base",
   },
-  KeyStat="DEX",
+})
+DefineSkill({
+  Name="Fly",
   ArmorCheckPenalty="Yes",
+  KeyStat="DEX",
+  SourcePage="p.96",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Fly",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1843,29 +1633,28 @@ DefineSkill({
           return ((character.Skill("Fly").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Fly",
+      },
     },
   },
-  SourcePage="p.96",
+  Types={
+    "Dexterity",
+    "ACHECK",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Handle Animal",
-  Types={
-    "Charisma",
-    "Base",
-  },
   KeyStat="CHA",
+  SourcePage="p.97",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Handle Animal",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1875,33 +1664,31 @@ DefineSkill({
           return ((character.Skill("Handle Animal").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Handle Animal",
+      },
     },
   },
-  SourcePage="p.97",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Charisma",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Heal",
-  Types={
-    "Wisdom",
-    "Base",
-  },
   KeyStat="WIS",
+  SourcePage="p.98",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Heal",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1911,33 +1698,31 @@ DefineSkill({
           return ((character.Skill("Heal").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Heal",
+      },
     },
   },
-  SourcePage="p.98",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Wisdom",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Intimidate",
-  Types={
-    "Charisma",
-    "Base",
-  },
   KeyStat="CHA",
+  SourcePage="p.99",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Intimidate",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1947,30 +1732,27 @@ DefineSkill({
           return ((character.Skill("Intimidate").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Intimidate",
+      },
     },
   },
-  SourcePage="p.99",
+  Types={
+    "Charisma",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Knowledge (Arcana)",
-  Types={
-    "Intelligence",
-    "Knowledge",
-    "Base",
-  },
   KeyStat="INT",
+  SourcePage="p.100",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Arcana)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -1980,35 +1762,33 @@ DefineSkill({
           return ((character.Skill("Knowledge (Arcana)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Arcana)",
+      },
     },
   },
-  SourcePage="p.100",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Knowledge (Dungeoneering)",
   Types={
     "Intelligence",
     "Knowledge",
     "Base",
   },
+})
+DefineSkill({
+  Name="Knowledge (Dungeoneering)",
   KeyStat="INT",
+  SourcePage="p.100",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Dungeoneering)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2018,35 +1798,33 @@ DefineSkill({
           return ((character.Skill("Knowledge (Dungeoneering)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Dungeoneering)",
+      },
     },
   },
-  SourcePage="p.100",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Knowledge (Engineering)",
   Types={
     "Intelligence",
     "Knowledge",
     "Base",
   },
+})
+DefineSkill({
+  Name="Knowledge (Engineering)",
   KeyStat="INT",
+  SourcePage="p.100",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Engineering)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2056,35 +1834,33 @@ DefineSkill({
           return ((character.Skill("Knowledge (Engineering)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Engineering)",
+      },
     },
   },
-  SourcePage="p.100",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Knowledge (Geography)",
   Types={
     "Intelligence",
     "Knowledge",
     "Base",
   },
+})
+DefineSkill({
+  Name="Knowledge (Geography)",
   KeyStat="INT",
+  SourcePage="p.100",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Geography)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2094,35 +1870,33 @@ DefineSkill({
           return ((character.Skill("Knowledge (Geography)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Geography)",
+      },
     },
   },
-  SourcePage="p.100",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Knowledge (History)",
   Types={
     "Intelligence",
     "Knowledge",
     "Base",
   },
+})
+DefineSkill({
+  Name="Knowledge (History)",
   KeyStat="INT",
+  SourcePage="p.100",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (History)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2132,35 +1906,33 @@ DefineSkill({
           return ((character.Skill("Knowledge (History)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (History)",
+      },
     },
   },
-  SourcePage="p.100",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Knowledge (Local)",
   Types={
     "Intelligence",
     "Knowledge",
     "Base",
   },
+})
+DefineSkill({
+  Name="Knowledge (Local)",
   KeyStat="INT",
+  SourcePage="p.100",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Local)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2170,35 +1942,33 @@ DefineSkill({
           return ((character.Skill("Knowledge (Local)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Local)",
+      },
     },
   },
-  SourcePage="p.100",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Knowledge (Nature)",
   Types={
     "Intelligence",
     "Knowledge",
     "Base",
   },
+})
+DefineSkill({
+  Name="Knowledge (Nature)",
   KeyStat="INT",
+  SourcePage="p.100",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Nature)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2208,35 +1978,33 @@ DefineSkill({
           return ((character.Skill("Knowledge (Nature)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Nature)",
+      },
     },
   },
-  SourcePage="p.100",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Knowledge (Nobility)",
   Types={
     "Intelligence",
     "Knowledge",
     "Base",
   },
+})
+DefineSkill({
+  Name="Knowledge (Nobility)",
   KeyStat="INT",
+  SourcePage="p.100",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Nobility)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2246,35 +2014,33 @@ DefineSkill({
           return ((character.Skill("Knowledge (Nobility)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Nobility)",
+      },
     },
   },
-  SourcePage="p.100",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Knowledge (Planes)",
   Types={
     "Intelligence",
     "Knowledge",
     "Base",
   },
+})
+DefineSkill({
+  Name="Knowledge (Planes)",
   KeyStat="INT",
+  SourcePage="p.100",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Planes)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2284,35 +2050,33 @@ DefineSkill({
           return ((character.Skill("Knowledge (Planes)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Planes)",
+      },
     },
   },
-  SourcePage="p.100",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Knowledge (Religion)",
   Types={
     "Intelligence",
     "Knowledge",
     "Base",
   },
+})
+DefineSkill({
+  Name="Knowledge (Religion)",
   KeyStat="INT",
+  SourcePage="p.100",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Religion)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2322,23 +2086,27 @@ DefineSkill({
           return ((character.Skill("Knowledge (Religion)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Religion)",
+      },
     },
   },
-  SourcePage="p.100",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Knowledge (Untrained)",
   Types={
     "Intelligence",
     "Knowledge",
+    "Base",
   },
+})
+DefineSkill({
+  Name="Knowledge (Untrained)",
   KeyStat="INT",
   SourcePage="p.100",
+  Visible=true,
   Conditions={
     function (character)
       local count = 0
@@ -2360,37 +2128,35 @@ DefineSkill({
       return count >= 1
     end,
   },
+  Types={
+    "Intelligence",
+    "Knowledge",
+  },
 })
 DefineSkill({
   Name="Linguistics",
-  Types={
-    "Intelligence",
-    "Base",
-  },
-  KeyStat="INT",
-  UseUntrained=false,
   Choice={
     Choose=ChooseLanguage(function (character, lang)
       return ((not (character.HasLanguage(lang)) and (((lang.IsType("Spoken"))))))
     end),
   },
+  KeyStat="INT",
   Selections=Formula("Linguisitcs_NumLanguages"),
-  AutomaticLanguage={
-    Selector=function (language)
-      return stringMatch(language.Name, "%LIST")
-    end,
+  SourcePage="p.101",
+  UseUntrained=false,
+  AutomaticLanguages={
+    {
+      Selector=function (language)
+        return stringMatch(language.Name, "%LIST")
+      end,
+    },
   },
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Linguistics",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2400,33 +2166,31 @@ DefineSkill({
           return ((character.Skill("Linguistics").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Linguistics",
+      },
     },
   },
-  SourcePage="p.101",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Intelligence",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Perception",
-  Types={
-    "Wisdom",
-    "Base",
-  },
   KeyStat="WIS",
+  SourcePage="p.102",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perception",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2436,30 +2200,27 @@ DefineSkill({
           return ((character.Skill("Perception").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perception",
+      },
     },
   },
-  SourcePage="p.102",
+  Types={
+    "Wisdom",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Perform (Act)",
-  Types={
-    "Charisma",
-    "Perform",
-    "Base",
-  },
   KeyStat="CHA",
+  SourcePage="p.102",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Act)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2469,35 +2230,33 @@ DefineSkill({
           return ((character.Skill("Perform (Act)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Act)",
+      },
     },
   },
-  SourcePage="p.102",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Perform (Comedy)",
   Types={
     "Charisma",
     "Perform",
     "Base",
   },
+})
+DefineSkill({
+  Name="Perform (Comedy)",
   KeyStat="CHA",
+  SourcePage="p.102",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Comedy)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2507,35 +2266,33 @@ DefineSkill({
           return ((character.Skill("Perform (Comedy)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Comedy)",
+      },
     },
   },
-  SourcePage="p.102",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Perform (Dance)",
   Types={
     "Charisma",
     "Perform",
     "Base",
   },
+})
+DefineSkill({
+  Name="Perform (Dance)",
   KeyStat="CHA",
+  SourcePage="p.102",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Dance)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2545,35 +2302,33 @@ DefineSkill({
           return ((character.Skill("Perform (Dance)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Dance)",
+      },
     },
   },
-  SourcePage="p.102",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Perform (Keyboard Instruments)",
   Types={
     "Charisma",
     "Perform",
     "Base",
   },
+})
+DefineSkill({
+  Name="Perform (Keyboard Instruments)",
   KeyStat="CHA",
+  SourcePage="p.102",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Keyboard Instruments)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2583,35 +2338,33 @@ DefineSkill({
           return ((character.Skill("Perform (Keyboard Instruments)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Keyboard Instruments)",
+      },
     },
   },
-  SourcePage="p.102",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Perform (Oratory)",
   Types={
     "Charisma",
     "Perform",
     "Base",
   },
+})
+DefineSkill({
+  Name="Perform (Oratory)",
   KeyStat="CHA",
+  SourcePage="p.102",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Oratory)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2621,35 +2374,33 @@ DefineSkill({
           return ((character.Skill("Perform (Oratory)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Oratory)",
+      },
     },
   },
-  SourcePage="p.102",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Perform (Percussion Instruments)",
   Types={
     "Charisma",
     "Perform",
     "Base",
   },
+})
+DefineSkill({
+  Name="Perform (Percussion Instruments)",
   KeyStat="CHA",
+  SourcePage="p.102",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Percussion Instruments)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2659,35 +2410,33 @@ DefineSkill({
           return ((character.Skill("Perform (Percussion Instruments)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Percussion Instruments)",
+      },
     },
   },
-  SourcePage="p.102",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Perform (Sing)",
   Types={
     "Charisma",
     "Perform",
     "Base",
   },
+})
+DefineSkill({
+  Name="Perform (Sing)",
   KeyStat="CHA",
+  SourcePage="p.102",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Sing)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2697,35 +2446,33 @@ DefineSkill({
           return ((character.Skill("Perform (Sing)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Sing)",
+      },
     },
   },
-  SourcePage="p.102",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Perform (String Instruments)",
   Types={
     "Charisma",
     "Perform",
     "Base",
   },
+})
+DefineSkill({
+  Name="Perform (String Instruments)",
   KeyStat="CHA",
+  SourcePage="p.102",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (String Instruments)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2735,35 +2482,33 @@ DefineSkill({
           return ((character.Skill("Perform (String Instruments)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (String Instruments)",
+      },
     },
   },
-  SourcePage="p.102",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Perform (Wind Instruments)",
   Types={
     "Charisma",
     "Perform",
     "Base",
   },
+})
+DefineSkill({
+  Name="Perform (Wind Instruments)",
   KeyStat="CHA",
+  SourcePage="p.102",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Wind Instruments)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2773,49 +2518,48 @@ DefineSkill({
           return ((character.Skill("Perform (Wind Instruments)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Wind Instruments)",
+      },
     },
   },
-  SourcePage="p.102",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
+  },
+  Types={
+    "Charisma",
+    "Perform",
+    "Base",
   },
 })
 DefineSkill({
   Name="Perform (Untrained)",
-  Types={
-    "Charisma",
-    "Perform",
-  },
   KeyStat="CHA",
   SourcePage="p.102",
+  Visible=true,
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Charisma",
+    "Perform",
+  },
 })
 DefineSkill({
   Name="Profession (Architect)",
-  Types={
-    "Wisdom",
-    "Profession",
-    "Base",
-  },
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Architect)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2825,35 +2569,33 @@ DefineSkill({
           return ((character.Skill("Profession (Architect)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Architect)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Baker)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Baker)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Baker)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2863,35 +2605,33 @@ DefineSkill({
           return ((character.Skill("Profession (Baker)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Baker)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Barrister)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Barrister)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Barrister)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2901,35 +2641,33 @@ DefineSkill({
           return ((character.Skill("Profession (Barrister)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Barrister)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Brewer)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Brewer)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Brewer)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2939,35 +2677,33 @@ DefineSkill({
           return ((character.Skill("Profession (Brewer)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Brewer)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Butcher)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Butcher)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Butcher)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -2977,35 +2713,33 @@ DefineSkill({
           return ((character.Skill("Profession (Butcher)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Butcher)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Clerk)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Clerk)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Clerk)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3015,35 +2749,33 @@ DefineSkill({
           return ((character.Skill("Profession (Clerk)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Clerk)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Cook)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Cook)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Cook)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3053,35 +2785,33 @@ DefineSkill({
           return ((character.Skill("Profession (Cook)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Cook)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Courtesan)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Courtesan)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Courtesan)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3091,35 +2821,33 @@ DefineSkill({
           return ((character.Skill("Profession (Courtesan)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Courtesan)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Driver)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Driver)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Driver)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3129,35 +2857,33 @@ DefineSkill({
           return ((character.Skill("Profession (Driver)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Driver)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Engineer)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Engineer)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Engineer)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3167,35 +2893,33 @@ DefineSkill({
           return ((character.Skill("Profession (Engineer)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Engineer)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Farmer)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Farmer)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Farmer)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3205,35 +2929,33 @@ DefineSkill({
           return ((character.Skill("Profession (Farmer)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Farmer)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Fisherman)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Fisherman)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Fisherman)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3243,35 +2965,33 @@ DefineSkill({
           return ((character.Skill("Profession (Fisherman)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Fisherman)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Gambler)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Gambler)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Gambler)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3281,35 +3001,33 @@ DefineSkill({
           return ((character.Skill("Profession (Gambler)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Gambler)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Gardener)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Gardener)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Gardener)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3319,35 +3037,33 @@ DefineSkill({
           return ((character.Skill("Profession (Gardener)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Gardener)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Herbalist)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Herbalist)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Herbalist)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3357,35 +3073,33 @@ DefineSkill({
           return ((character.Skill("Profession (Herbalist)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Herbalist)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Innkeeper)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Innkeeper)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Innkeeper)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3395,35 +3109,33 @@ DefineSkill({
           return ((character.Skill("Profession (Innkeeper)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Innkeeper)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Librarian)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Librarian)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Librarian)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3433,35 +3145,33 @@ DefineSkill({
           return ((character.Skill("Profession (Librarian)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Librarian)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Merchant)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Merchant)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Merchant)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3471,35 +3181,33 @@ DefineSkill({
           return ((character.Skill("Profession (Merchant)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Merchant)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Midwife)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Midwife)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Midwife)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3509,35 +3217,33 @@ DefineSkill({
           return ((character.Skill("Profession (Midwife)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Midwife)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Miller)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Miller)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Miller)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3547,35 +3253,33 @@ DefineSkill({
           return ((character.Skill("Profession (Miller)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Miller)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Miner)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Miner)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Miner)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3585,35 +3289,33 @@ DefineSkill({
           return ((character.Skill("Profession (Miner)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Miner)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Porter)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Porter)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Porter)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3623,35 +3325,33 @@ DefineSkill({
           return ((character.Skill("Profession (Porter)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Porter)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Sailor)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Sailor)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Sailor)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3661,35 +3361,33 @@ DefineSkill({
           return ((character.Skill("Profession (Sailor)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Sailor)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Scribe)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Scribe)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Scribe)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3699,35 +3397,33 @@ DefineSkill({
           return ((character.Skill("Profession (Scribe)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Scribe)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Shepherd)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Shepherd)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Shepherd)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3737,35 +3433,33 @@ DefineSkill({
           return ((character.Skill("Profession (Shepherd)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Shepherd)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Soldier)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Soldier)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Soldier)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3775,35 +3469,33 @@ DefineSkill({
           return ((character.Skill("Profession (Soldier)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Soldier)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Soothsayer)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Soothsayer)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Soothsayer)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3813,35 +3505,33 @@ DefineSkill({
           return ((character.Skill("Profession (Soothsayer)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Soothsayer)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Stable Master)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Stable Master)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Stable Master)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3851,35 +3541,33 @@ DefineSkill({
           return ((character.Skill("Profession (Stable Master)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Stable Master)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Tanner)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Tanner)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Tanner)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3889,35 +3577,33 @@ DefineSkill({
           return ((character.Skill("Profession (Tanner)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Tanner)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Trapper)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Trapper)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Trapper)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3927,35 +3613,33 @@ DefineSkill({
           return ((character.Skill("Profession (Trapper)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Trapper)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
-})
-DefineSkill({
-  Name="Profession (Woodcutter)",
   Types={
     "Wisdom",
     "Profession",
     "Base",
   },
+})
+DefineSkill({
+  Name="Profession (Woodcutter)",
   KeyStat="WIS",
+  SourcePage="p.103",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Woodcutter)",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -3965,35 +3649,54 @@ DefineSkill({
           return ((character.Skill("Profession (Woodcutter)").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Woodcutter)",
+      },
     },
   },
-  SourcePage="p.103",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Wisdom",
+    "Profession",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Ride",
-  Types={
-    "Dexterity",
-    "ACHECK",
-    "Base",
-  },
-  KeyStat="DEX",
   ArmorCheckPenalty="Yes",
-  Bonuses={
-    {
+  KeyStat="DEX",
+  SourcePage="p.103",
+  TemporaryBonus={
+    Bonus={
       Category="SKILL",
+      Formula=Formula("-5"),
+      Type={
+        Name="Circumstance",
+      },
+      Conditions={
+        function (character)
+          return not (((#filter(character.Items, function (item) return item.IsType("Saddle") end))) >= 1)
+        end,
+      },
       Variables={
         "Ride",
       },
+    },
+    Target="ANYPC",
+  },
+  TemporaryBonusDescription={
+    Format="If you are riding bareback, or attempt to ride a creature that is ill suited as a mount, you take a -5 penalty on Ride checks.",
+  },
+  Bonuses={
+    {
+      Category="SKILL",
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4003,33 +3706,8 @@ DefineSkill({
           return ((character.Skill("Ride").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-  },
-  SourcePage="p.103",
-  TemporaryBonuses={
-    Description={
-      Format="If you are riding bareback, or attempt to ride a creature that is ill suited as a mount, you take a -5 penalty on Ride checks.",
-    },
-    Bonuses={
-      {
-        Target="ANYPC",
-        Bonus={
-          Category="SKILL",
-          Variables={
-            "Ride",
-          },
-          Formula=Formula("-5"),
-          Type={
-            Name="Circumstance",
-            Replace=false,
-            Stack=false,
-          },
-          Conditions={
-            function (character)
-              return not (((#filter(character.Items, function (item) return item.IsType("Saddle") end))) >= 1)
-            end,
-          },
-        },
+      Variables={
+        "Ride",
       },
     },
   },
@@ -4038,25 +3716,22 @@ DefineSkill({
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Dexterity",
+    "ACHECK",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Sense Motive",
-  Types={
-    "Wisdom",
-    "Base",
-  },
   KeyStat="WIS",
+  SourcePage="p.104",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Sense Motive",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4066,36 +3741,33 @@ DefineSkill({
           return ((character.Skill("Sense Motive").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Sense Motive",
+      },
     },
   },
-  SourcePage="p.104",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Wisdom",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Sleight of Hand",
-  Types={
-    "Dexterity",
-    "ACHECK",
-    "Base",
-  },
-  KeyStat="DEX",
-  UseUntrained=false,
   ArmorCheckPenalty="Yes",
+  KeyStat="DEX",
+  SourcePage="p.105",
+  UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Sleight of Hand",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4105,34 +3777,33 @@ DefineSkill({
           return ((character.Skill("Sleight of Hand").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Sleight of Hand",
+      },
     },
   },
-  SourcePage="p.105",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Dexterity",
+    "ACHECK",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Spellcraft",
-  Types={
-    "Intelligence",
-    "Base",
-  },
   KeyStat="INT",
+  SourcePage="p.106",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Spellcraft",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4142,35 +3813,32 @@ DefineSkill({
           return ((character.Skill("Spellcraft").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Spellcraft",
+      },
     },
   },
-  SourcePage="p.106",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
   },
+  Types={
+    "Intelligence",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Stealth",
-  Types={
-    "Dexterity",
-    "ACHECK",
-    "Base",
-  },
-  KeyStat="DEX",
   ArmorCheckPenalty="Yes",
+  KeyStat="DEX",
+  SourcePage="p.106",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Stealth",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4180,28 +3848,27 @@ DefineSkill({
           return ((character.Skill("Stealth").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Stealth",
+      },
     },
   },
-  SourcePage="p.106",
+  Types={
+    "Dexterity",
+    "ACHECK",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Survival",
-  Types={
-    "Wisdom",
-    "Base",
-  },
   KeyStat="WIS",
+  SourcePage="p.107",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Survival",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4211,30 +3878,27 @@ DefineSkill({
           return ((character.Skill("Survival").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Survival",
+      },
     },
   },
-  SourcePage="p.107",
+  Types={
+    "Wisdom",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Swim",
-  Types={
-    "Strength",
-    "ACHECK",
-    "Base",
-  },
-  KeyStat="STR",
   ArmorCheckPenalty="Yes",
+  KeyStat="STR",
+  SourcePage="p.108",
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Swim",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4244,58 +3908,53 @@ DefineSkill({
           return ((character.Skill("Swim").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Swim",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("RacialBonus_Swim"),
       Type={
         Name="Racial",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
           return ((character.HasMovement("Swim", 1))) >= 1
         end,
       },
+      Variables={
+        "Swim",
+      },
     },
     {
       Category="VAR",
-      Variables={
-        "RacialBonus_Swim",
-      },
       Formula=Formula("8"),
       Type={
         Name="Base",
-        Replace=false,
-        Stack=false,
+      },
+      Variables={
+        "RacialBonus_Swim",
       },
     },
   },
-  SourcePage="p.108",
+  Types={
+    "Strength",
+    "ACHECK",
+    "Base",
+  },
 })
 DefineSkill({
   Name="Use Magic Device",
-  Types={
-    "Charisma",
-    "Base",
-  },
   KeyStat="CHA",
+  SourcePage="p.108",
   UseUntrained=false,
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Use Magic Device",
-      },
       Formula=Formula("3"),
       Type={
         Name="ClassSkill",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4305,13 +3964,19 @@ DefineSkill({
           return ((character.Skill("Use Magic Device").ranks >= 1 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Use Magic Device",
+      },
     },
   },
-  SourcePage="p.108",
   Conditions={
     function (character)
       return (character.Variables["AnimalCompanionSkill"] < 1)
     end,
+  },
+  Types={
+    "Charisma",
+    "Base",
   },
 })
 ModifySkill({
@@ -4319,14 +3984,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Acrobatics",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4335,17 +3995,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Acrobatics",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4357,6 +4015,9 @@ ModifySkill({
           return ((character.Skill("Acrobatics").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Acrobatics",
+      },
     },
   },
 })
@@ -4365,14 +4026,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Appraise",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4381,17 +4037,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Appraise",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4403,6 +4057,9 @@ ModifySkill({
           return ((character.Skill("Appraise").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Appraise",
+      },
     },
   },
 })
@@ -4411,14 +4068,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Bluff",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4427,17 +4079,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Bluff",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4449,6 +4099,9 @@ ModifySkill({
           return ((character.Skill("Bluff").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Bluff",
+      },
     },
   },
 })
@@ -4457,14 +4110,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Climb",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4473,17 +4121,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Climb",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4495,6 +4141,9 @@ ModifySkill({
           return ((character.Skill("Climb").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Climb",
+      },
     },
   },
 })
@@ -4503,14 +4152,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Alchemy)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4519,17 +4163,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Alchemy)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4541,6 +4183,9 @@ ModifySkill({
           return ((character.Skill("Craft (Alchemy)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Alchemy)",
+      },
     },
   },
 })
@@ -4549,14 +4194,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Armor)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4565,17 +4205,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Armor)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4587,6 +4225,9 @@ ModifySkill({
           return ((character.Skill("Craft (Armor)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Armor)",
+      },
     },
   },
 })
@@ -4595,14 +4236,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Baskets)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4611,17 +4247,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Baskets)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4633,6 +4267,9 @@ ModifySkill({
           return ((character.Skill("Craft (Baskets)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Baskets)",
+      },
     },
   },
 })
@@ -4641,14 +4278,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Books)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4657,17 +4289,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Books)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4679,6 +4309,9 @@ ModifySkill({
           return ((character.Skill("Craft (Books)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Books)",
+      },
     },
   },
 })
@@ -4687,14 +4320,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Bows)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4703,17 +4331,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Bows)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4725,6 +4351,9 @@ ModifySkill({
           return ((character.Skill("Craft (Bows)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Bows)",
+      },
     },
   },
 })
@@ -4733,14 +4362,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Calligraphy)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4749,17 +4373,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Calligraphy)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4771,6 +4393,9 @@ ModifySkill({
           return ((character.Skill("Craft (Calligraphy)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Calligraphy)",
+      },
     },
   },
 })
@@ -4779,14 +4404,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Carpentry)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4795,17 +4415,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Carpentry)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4817,6 +4435,9 @@ ModifySkill({
           return ((character.Skill("Craft (Carpentry)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Carpentry)",
+      },
     },
   },
 })
@@ -4825,14 +4446,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Cloth)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4841,17 +4457,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Cloth)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4863,6 +4477,9 @@ ModifySkill({
           return ((character.Skill("Craft (Cloth)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Cloth)",
+      },
     },
   },
 })
@@ -4871,14 +4488,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Clothing)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4887,17 +4499,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Clothing)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4909,6 +4519,9 @@ ModifySkill({
           return ((character.Skill("Craft (Clothing)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Clothing)",
+      },
     },
   },
 })
@@ -4917,14 +4530,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Glass)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4933,17 +4541,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Glass)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4955,6 +4561,9 @@ ModifySkill({
           return ((character.Skill("Craft (Glass)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Glass)",
+      },
     },
   },
 })
@@ -4963,14 +4572,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Jewelry)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -4979,17 +4583,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Jewelry)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5001,6 +4603,9 @@ ModifySkill({
           return ((character.Skill("Craft (Jewelry)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Jewelry)",
+      },
     },
   },
 })
@@ -5009,14 +4614,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Leather)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5025,17 +4625,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Leather)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5047,6 +4645,9 @@ ModifySkill({
           return ((character.Skill("Craft (Leather)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Leather)",
+      },
     },
   },
 })
@@ -5055,14 +4656,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Locks)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5071,17 +4667,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Locks)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5093,6 +4687,9 @@ ModifySkill({
           return ((character.Skill("Craft (Locks)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Locks)",
+      },
     },
   },
 })
@@ -5101,14 +4698,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Paintings)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5117,17 +4709,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Paintings)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5139,6 +4729,9 @@ ModifySkill({
           return ((character.Skill("Craft (Paintings)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Paintings)",
+      },
     },
   },
 })
@@ -5147,14 +4740,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Pottery)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5163,17 +4751,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Pottery)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5185,6 +4771,9 @@ ModifySkill({
           return ((character.Skill("Craft (Pottery)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Pottery)",
+      },
     },
   },
 })
@@ -5193,14 +4782,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Sculptures)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5209,17 +4793,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Sculptures)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5231,6 +4813,9 @@ ModifySkill({
           return ((character.Skill("Craft (Sculptures)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Sculptures)",
+      },
     },
   },
 })
@@ -5239,14 +4824,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Ships)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5255,17 +4835,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Ships)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5277,6 +4855,9 @@ ModifySkill({
           return ((character.Skill("Craft (Ships)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Ships)",
+      },
     },
   },
 })
@@ -5285,14 +4866,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Shoes)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5301,17 +4877,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Shoes)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5323,6 +4897,9 @@ ModifySkill({
           return ((character.Skill("Craft (Shoes)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Shoes)",
+      },
     },
   },
 })
@@ -5331,14 +4908,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Stonemasonry)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5347,17 +4919,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Stonemasonry)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5369,6 +4939,9 @@ ModifySkill({
           return ((character.Skill("Craft (Stonemasonry)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Stonemasonry)",
+      },
     },
   },
 })
@@ -5377,14 +4950,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Traps)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5393,17 +4961,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Traps)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5415,6 +4981,9 @@ ModifySkill({
           return ((character.Skill("Craft (Traps)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Traps)",
+      },
     },
   },
 })
@@ -5423,14 +4992,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Untrained)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5439,17 +5003,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Untrained)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5461,6 +5023,9 @@ ModifySkill({
           return ((character.Skill("Craft (Untrained)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Untrained)",
+      },
     },
   },
 })
@@ -5469,14 +5034,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Craft (Weapons)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5485,17 +5045,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Craft (Weapons)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5507,6 +5065,9 @@ ModifySkill({
           return ((character.Skill("Craft (Weapons)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Craft (Weapons)",
+      },
     },
   },
 })
@@ -5515,14 +5076,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Diplomacy",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5531,17 +5087,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Diplomacy",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5553,6 +5107,9 @@ ModifySkill({
           return ((character.Skill("Diplomacy").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Diplomacy",
+      },
     },
   },
 })
@@ -5561,14 +5118,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Disable Device",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5577,17 +5129,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Disable Device",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5599,6 +5149,9 @@ ModifySkill({
           return ((character.Skill("Disable Device").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Disable Device",
+      },
     },
   },
 })
@@ -5607,14 +5160,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Disguise",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5623,17 +5171,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Disguise",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5645,6 +5191,9 @@ ModifySkill({
           return ((character.Skill("Disguise").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Disguise",
+      },
     },
   },
 })
@@ -5653,14 +5202,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Escape Artist",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5669,17 +5213,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Escape Artist",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5691,6 +5233,9 @@ ModifySkill({
           return ((character.Skill("Escape Artist").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Escape Artist",
+      },
     },
   },
 })
@@ -5699,14 +5244,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Fly",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5715,17 +5255,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Fly",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5737,6 +5275,9 @@ ModifySkill({
           return ((character.Skill("Fly").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Fly",
+      },
     },
   },
 })
@@ -5745,14 +5286,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Handle Animal",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5761,17 +5297,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Handle Animal",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5783,6 +5317,9 @@ ModifySkill({
           return ((character.Skill("Handle Animal").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Handle Animal",
+      },
     },
   },
 })
@@ -5791,14 +5328,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Heal",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5807,17 +5339,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Heal",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5829,6 +5359,9 @@ ModifySkill({
           return ((character.Skill("Heal").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Heal",
+      },
     },
   },
 })
@@ -5837,14 +5370,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Intimidate",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5853,17 +5381,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Intimidate",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5875,6 +5401,9 @@ ModifySkill({
           return ((character.Skill("Intimidate").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Intimidate",
+      },
     },
   },
 })
@@ -5883,14 +5412,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Arcana)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5899,17 +5423,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Knowledge (Arcana)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5921,6 +5443,9 @@ ModifySkill({
           return ((character.Skill("Knowledge (Arcana)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Arcana)",
+      },
     },
   },
 })
@@ -5929,14 +5454,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Dungeoneering)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5945,17 +5465,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Knowledge (Dungeoneering)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5967,6 +5485,9 @@ ModifySkill({
           return ((character.Skill("Knowledge (Dungeoneering)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Dungeoneering)",
+      },
     },
   },
 })
@@ -5975,14 +5496,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Engineering)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -5991,17 +5507,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Knowledge (Engineering)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6013,6 +5527,9 @@ ModifySkill({
           return ((character.Skill("Knowledge (Engineering)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Engineering)",
+      },
     },
   },
 })
@@ -6021,14 +5538,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Geography)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6037,17 +5549,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Knowledge (Geography)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6059,6 +5569,9 @@ ModifySkill({
           return ((character.Skill("Knowledge (Geography)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Geography)",
+      },
     },
   },
 })
@@ -6067,14 +5580,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (History)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6083,17 +5591,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Knowledge (History)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6105,6 +5611,9 @@ ModifySkill({
           return ((character.Skill("Knowledge (History)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (History)",
+      },
     },
   },
 })
@@ -6113,14 +5622,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Local)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6129,17 +5633,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Knowledge (Local)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6151,6 +5653,9 @@ ModifySkill({
           return ((character.Skill("Knowledge (Local)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Local)",
+      },
     },
   },
 })
@@ -6159,14 +5664,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Nature)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6175,17 +5675,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Knowledge (Nature)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6197,6 +5695,9 @@ ModifySkill({
           return ((character.Skill("Knowledge (Nature)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Nature)",
+      },
     },
   },
 })
@@ -6205,14 +5706,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Nobility)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6221,17 +5717,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Knowledge (Nobility)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6243,6 +5737,9 @@ ModifySkill({
           return ((character.Skill("Knowledge (Nobility)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Nobility)",
+      },
     },
   },
 })
@@ -6251,14 +5748,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Planes)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6267,17 +5759,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Knowledge (Planes)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6289,6 +5779,9 @@ ModifySkill({
           return ((character.Skill("Knowledge (Planes)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Planes)",
+      },
     },
   },
 })
@@ -6297,14 +5790,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Knowledge (Religion)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6313,17 +5801,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Knowledge (Religion)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6335,6 +5821,9 @@ ModifySkill({
           return ((character.Skill("Knowledge (Religion)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Knowledge (Religion)",
+      },
     },
   },
 })
@@ -6343,14 +5832,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Linguistics",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6359,17 +5843,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Linguistics",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6381,6 +5863,9 @@ ModifySkill({
           return ((character.Skill("Linguistics").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Linguistics",
+      },
     },
   },
 })
@@ -6389,14 +5874,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perception",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6405,17 +5885,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Perception",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6427,6 +5905,9 @@ ModifySkill({
           return ((character.Skill("Perception").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perception",
+      },
     },
   },
 })
@@ -6435,14 +5916,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Act)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6451,17 +5927,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Perform (Act)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6473,6 +5947,9 @@ ModifySkill({
           return ((character.Skill("Perform (Act)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Act)",
+      },
     },
   },
 })
@@ -6481,14 +5958,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Comedy)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6497,17 +5969,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Perform (Comedy)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6519,6 +5989,9 @@ ModifySkill({
           return ((character.Skill("Perform (Comedy)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Comedy)",
+      },
     },
   },
 })
@@ -6527,14 +6000,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Dance)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6543,17 +6011,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Perform (Dance)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6565,6 +6031,9 @@ ModifySkill({
           return ((character.Skill("Perform (Dance)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Dance)",
+      },
     },
   },
 })
@@ -6573,14 +6042,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Keyboard Instruments)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6589,17 +6053,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Perform (Keyboard Instruments)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6611,6 +6073,9 @@ ModifySkill({
           return ((character.Skill("Perform (Keyboard Instruments)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Keyboard Instruments)",
+      },
     },
   },
 })
@@ -6619,14 +6084,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Oratory)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6635,17 +6095,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Perform (Oratory)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6657,6 +6115,9 @@ ModifySkill({
           return ((character.Skill("Perform (Oratory)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Oratory)",
+      },
     },
   },
 })
@@ -6665,14 +6126,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Percussion Instruments)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6681,17 +6137,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Perform (Percussion Instruments)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6703,6 +6157,9 @@ ModifySkill({
           return ((character.Skill("Perform (Percussion Instruments)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Percussion Instruments)",
+      },
     },
   },
 })
@@ -6711,14 +6168,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Sing)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6727,17 +6179,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Perform (Sing)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6749,6 +6199,9 @@ ModifySkill({
           return ((character.Skill("Perform (Sing)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Sing)",
+      },
     },
   },
 })
@@ -6757,14 +6210,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (String Instruments)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6773,17 +6221,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Perform (String Instruments)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6795,6 +6241,9 @@ ModifySkill({
           return ((character.Skill("Perform (String Instruments)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (String Instruments)",
+      },
     },
   },
 })
@@ -6803,14 +6252,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Untrained)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6819,17 +6263,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Perform (Untrained)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6841,6 +6283,9 @@ ModifySkill({
           return ((character.Skill("Perform (Untrained)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Untrained)",
+      },
     },
   },
 })
@@ -6849,14 +6294,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Perform (Wind Instruments)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6865,17 +6305,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Perform (Wind Instruments)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6887,6 +6325,9 @@ ModifySkill({
           return ((character.Skill("Perform (Wind Instruments)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Perform (Wind Instruments)",
+      },
     },
   },
 })
@@ -6895,14 +6336,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Architect)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6911,17 +6347,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Architect)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6933,6 +6367,9 @@ ModifySkill({
           return ((character.Skill("Profession (Architect)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Architect)",
+      },
     },
   },
 })
@@ -6941,14 +6378,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Baker)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6957,17 +6389,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Baker)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -6979,6 +6409,9 @@ ModifySkill({
           return ((character.Skill("Profession (Baker)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Baker)",
+      },
     },
   },
 })
@@ -6987,14 +6420,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Barrister)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7003,17 +6431,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Barrister)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7025,6 +6451,9 @@ ModifySkill({
           return ((character.Skill("Profession (Barrister)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Barrister)",
+      },
     },
   },
 })
@@ -7033,14 +6462,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Brewer)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7049,17 +6473,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Brewer)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7071,6 +6493,9 @@ ModifySkill({
           return ((character.Skill("Profession (Brewer)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Brewer)",
+      },
     },
   },
 })
@@ -7079,14 +6504,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Butcher)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7095,17 +6515,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Butcher)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7117,6 +6535,9 @@ ModifySkill({
           return ((character.Skill("Profession (Butcher)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Butcher)",
+      },
     },
   },
 })
@@ -7125,14 +6546,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Clerk)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7141,17 +6557,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Clerk)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7163,6 +6577,9 @@ ModifySkill({
           return ((character.Skill("Profession (Clerk)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Clerk)",
+      },
     },
   },
 })
@@ -7171,14 +6588,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Cook)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7187,17 +6599,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Cook)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7209,6 +6619,9 @@ ModifySkill({
           return ((character.Skill("Profession (Cook)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Cook)",
+      },
     },
   },
 })
@@ -7217,14 +6630,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Courtesan)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7233,17 +6641,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Courtesan)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7255,6 +6661,9 @@ ModifySkill({
           return ((character.Skill("Profession (Courtesan)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Courtesan)",
+      },
     },
   },
 })
@@ -7263,14 +6672,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Driver)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7279,17 +6683,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Driver)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7301,6 +6703,9 @@ ModifySkill({
           return ((character.Skill("Profession (Driver)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Driver)",
+      },
     },
   },
 })
@@ -7309,14 +6714,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Engineer)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7325,17 +6725,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Engineer)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7347,6 +6745,9 @@ ModifySkill({
           return ((character.Skill("Profession (Engineer)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Engineer)",
+      },
     },
   },
 })
@@ -7355,14 +6756,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Farmer)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7371,17 +6767,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Farmer)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7393,6 +6787,9 @@ ModifySkill({
           return ((character.Skill("Profession (Farmer)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Farmer)",
+      },
     },
   },
 })
@@ -7401,14 +6798,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Fisherman)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7417,17 +6809,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Fisherman)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7439,6 +6829,9 @@ ModifySkill({
           return ((character.Skill("Profession (Fisherman)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Fisherman)",
+      },
     },
   },
 })
@@ -7447,14 +6840,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Gambler)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7463,17 +6851,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Gambler)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7485,6 +6871,9 @@ ModifySkill({
           return ((character.Skill("Profession (Gambler)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Gambler)",
+      },
     },
   },
 })
@@ -7493,14 +6882,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Gardener)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7509,17 +6893,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Gardener)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7531,6 +6913,9 @@ ModifySkill({
           return ((character.Skill("Profession (Gardener)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Gardener)",
+      },
     },
   },
 })
@@ -7539,14 +6924,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Herbalist)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7555,17 +6935,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Herbalist)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7577,6 +6955,9 @@ ModifySkill({
           return ((character.Skill("Profession (Herbalist)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Herbalist)",
+      },
     },
   },
 })
@@ -7585,14 +6966,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Innkeeper)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7601,17 +6977,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Innkeeper)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7623,6 +6997,9 @@ ModifySkill({
           return ((character.Skill("Profession (Innkeeper)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Innkeeper)",
+      },
     },
   },
 })
@@ -7631,14 +7008,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Librarian)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7647,17 +7019,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Librarian)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7669,6 +7039,9 @@ ModifySkill({
           return ((character.Skill("Profession (Librarian)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Librarian)",
+      },
     },
   },
 })
@@ -7677,14 +7050,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Merchant)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7693,17 +7061,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Merchant)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7715,6 +7081,9 @@ ModifySkill({
           return ((character.Skill("Profession (Merchant)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Merchant)",
+      },
     },
   },
 })
@@ -7723,14 +7092,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Midwife)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7739,17 +7103,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Midwife)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7761,6 +7123,9 @@ ModifySkill({
           return ((character.Skill("Profession (Midwife)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Midwife)",
+      },
     },
   },
 })
@@ -7769,14 +7134,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Miller)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7785,17 +7145,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Miller)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7807,6 +7165,9 @@ ModifySkill({
           return ((character.Skill("Profession (Miller)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Miller)",
+      },
     },
   },
 })
@@ -7815,14 +7176,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Miner)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7831,17 +7187,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Miner)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7853,6 +7207,9 @@ ModifySkill({
           return ((character.Skill("Profession (Miner)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Miner)",
+      },
     },
   },
 })
@@ -7861,14 +7218,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Porter)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7877,17 +7229,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Porter)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7899,6 +7249,9 @@ ModifySkill({
           return ((character.Skill("Profession (Porter)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Porter)",
+      },
     },
   },
 })
@@ -7907,14 +7260,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Sailor)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7923,17 +7271,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Sailor)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7945,6 +7291,9 @@ ModifySkill({
           return ((character.Skill("Profession (Sailor)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Sailor)",
+      },
     },
   },
 })
@@ -7953,14 +7302,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Scribe)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7969,17 +7313,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Scribe)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -7991,6 +7333,9 @@ ModifySkill({
           return ((character.Skill("Profession (Scribe)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Scribe)",
+      },
     },
   },
 })
@@ -7999,14 +7344,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Shepherd)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8015,17 +7355,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Shepherd)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8037,6 +7375,9 @@ ModifySkill({
           return ((character.Skill("Profession (Shepherd)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Shepherd)",
+      },
     },
   },
 })
@@ -8045,14 +7386,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Soldier)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8061,17 +7397,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Soldier)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8083,6 +7417,9 @@ ModifySkill({
           return ((character.Skill("Profession (Soldier)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Soldier)",
+      },
     },
   },
 })
@@ -8091,14 +7428,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Stable Master)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8107,17 +7439,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Stable Master)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8129,6 +7459,9 @@ ModifySkill({
           return ((character.Skill("Profession (Stable Master)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Stable Master)",
+      },
     },
   },
 })
@@ -8137,14 +7470,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Tanner)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8153,17 +7481,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Tanner)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8175,6 +7501,9 @@ ModifySkill({
           return ((character.Skill("Profession (Tanner)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Tanner)",
+      },
     },
   },
 })
@@ -8183,14 +7512,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Trapper)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8199,17 +7523,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Trapper)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8221,6 +7543,9 @@ ModifySkill({
           return ((character.Skill("Profession (Trapper)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Trapper)",
+      },
     },
   },
 })
@@ -8229,14 +7554,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Profession (Woodcutter)",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8245,17 +7565,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Profession (Woodcutter)",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8267,6 +7585,9 @@ ModifySkill({
           return ((character.Skill("Profession (Woodcutter)").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Profession (Woodcutter)",
+      },
     },
   },
 })
@@ -8275,14 +7596,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Ride",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8291,17 +7607,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Ride",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8313,6 +7627,9 @@ ModifySkill({
           return ((character.Skill("Ride").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Ride",
+      },
     },
   },
 })
@@ -8321,14 +7638,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Sense Motive",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8337,17 +7649,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Sense Motive",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8359,6 +7669,9 @@ ModifySkill({
           return ((character.Skill("Sense Motive").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Sense Motive",
+      },
     },
   },
 })
@@ -8367,14 +7680,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Sleight of Hand",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8383,17 +7691,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Sleight of Hand",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8405,6 +7711,9 @@ ModifySkill({
           return ((character.Skill("Sleight of Hand").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Sleight of Hand",
+      },
     },
   },
 })
@@ -8413,14 +7722,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Spellcraft",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8429,17 +7733,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Spellcraft",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8451,6 +7753,9 @@ ModifySkill({
           return ((character.Skill("Spellcraft").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Spellcraft",
+      },
     },
   },
 })
@@ -8459,14 +7764,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Stealth",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8475,17 +7775,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Stealth",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8497,6 +7795,9 @@ ModifySkill({
           return ((character.Skill("Stealth").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Stealth",
+      },
     },
   },
 })
@@ -8505,14 +7806,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Survival",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8521,17 +7817,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Survival",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8543,6 +7837,9 @@ ModifySkill({
           return ((character.Skill("Survival").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Survival",
+      },
     },
   },
 })
@@ -8551,14 +7848,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Swim",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8567,17 +7859,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Swim",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8589,6 +7879,9 @@ ModifySkill({
           return ((character.Skill("Swim").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Swim",
+      },
     },
   },
 })
@@ -8597,14 +7890,9 @@ ModifySkill({
   Bonuses={
     {
       Category="SKILL",
-      Variables={
-        "Use Magic Device",
-      },
       Formula=Formula("3"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8613,17 +7901,15 @@ ModifySkill({
           end)
         end,
       },
-    },
-    {
-      Category="SKILL",
       Variables={
         "Use Magic Device",
       },
+    },
+    {
+      Category="SKILL",
       Formula=Formula("6"),
       Type={
         Name="SkillFocus",
-        Replace=false,
-        Stack=false,
       },
       Conditions={
         function (character)
@@ -8635,13 +7921,17 @@ ModifySkill({
           return ((character.Skill("Use Magic Device").ranks >= 10 and 1 or 0)) >= 1
         end,
       },
+      Variables={
+        "Use Magic Device",
+      },
     },
   },
 })
 DefineSkill({
   Name="Untrained Strength",
-  KeyStat="STR",
   SortKey="z",
+  KeyStat="STR",
+  Visible=true,
   Conditions={
     function (character)
       return (character.Variables["UseUntrainedSkills"] >= 1)
@@ -8650,8 +7940,9 @@ DefineSkill({
 })
 DefineSkill({
   Name="Untrained Dexterity",
-  KeyStat="DEX",
   SortKey="z",
+  KeyStat="DEX",
+  Visible=true,
   Conditions={
     function (character)
       return (character.Variables["UseUntrainedSkills"] >= 1)
@@ -8660,8 +7951,9 @@ DefineSkill({
 })
 DefineSkill({
   Name="Untrained Intelligence",
-  KeyStat="INT",
   SortKey="z",
+  KeyStat="INT",
+  Visible=true,
   Conditions={
     function (character)
       return (character.Variables["UseUntrainedSkills"] >= 1)
@@ -8670,8 +7962,9 @@ DefineSkill({
 })
 DefineSkill({
   Name="Untrained Wisdom",
-  KeyStat="WIS",
   SortKey="z",
+  KeyStat="WIS",
+  Visible=true,
   Conditions={
     function (character)
       return (character.Variables["UseUntrainedSkills"] >= 1)
@@ -8680,8 +7973,9 @@ DefineSkill({
 })
 DefineSkill({
   Name="Untrained Charisma",
-  KeyStat="CHA",
   SortKey="z",
+  KeyStat="CHA",
+  Visible=true,
   Conditions={
     function (character)
       return (character.Variables["UseUntrainedSkills"] >= 1)
@@ -8691,6 +7985,7 @@ DefineSkill({
 DefineSkill({
   Name="Profession (Untrained)",
   KeyStat="WIS",
+  Visible=true,
   Conditions={
     function (character)
       return (character.Variables["UseUntrainedSkills"] >= 1)
@@ -8699,7 +7994,9 @@ DefineSkill({
 })
 DefineSkill({
   Name="Disable Device",
+  Key="Untrained ~ Disable Device",
   KeyStat="DEX",
+  Visible=true,
   Conditions={
     function (character)
       return not (((character.Skill("Disable Device").ranks >= 1 and 1 or 0)) >= 1)
@@ -8711,7 +8008,9 @@ DefineSkill({
 })
 DefineSkill({
   Name="Handle Animal",
+  Key="Untrained ~ Handle Animal",
   KeyStat="CHA",
+  Visible=true,
   Conditions={
     function (character)
       return not (((character.Skill("Handle Animal").ranks >= 1 and 1 or 0)) >= 1)
@@ -8723,7 +8022,9 @@ DefineSkill({
 })
 DefineSkill({
   Name="Linguistics",
+  Key="Untrained ~ Linguistics",
   KeyStat="INT",
+  Visible=true,
   Conditions={
     function (character)
       return not (((character.Skill("Linguistics").ranks >= 1 and 1 or 0)) >= 1)
@@ -8735,7 +8036,9 @@ DefineSkill({
 })
 DefineSkill({
   Name="Sleight of Hand",
+  Key="Untrained ~ Sleight of Hand",
   KeyStat="DEX",
+  Visible=true,
   Conditions={
     function (character)
       return not (((character.Skill("Sleight of Hand").ranks >= 1 and 1 or 0)) >= 1)
@@ -8747,7 +8050,9 @@ DefineSkill({
 })
 DefineSkill({
   Name="Spellcraft",
+  Key="Untrained ~ Spellcraft",
   KeyStat="INT",
+  Visible=true,
   Conditions={
     function (character)
       return not (((character.Skill("Spellcraft").ranks >= 1 and 1 or 0)) >= 1)
@@ -8759,7 +8064,9 @@ DefineSkill({
 })
 DefineSkill({
   Name="Use Magic Device",
+  Key="Untrained ~ Use Magic Device",
   KeyStat="CHA",
+  Visible=true,
   Conditions={
     function (character)
       return not (((character.Skill("Use Magic Device").ranks >= 1 and 1 or 0)) >= 1)

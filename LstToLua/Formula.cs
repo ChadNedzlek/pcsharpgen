@@ -1,8 +1,15 @@
-﻿namespace Primordially.LstToLua
+﻿using System;
+
+namespace Primordially.LstToLua
 {
     internal class Formula : IDumpable
     {
         public string Value { get; }
+
+        public Formula(TextSpan value)
+            :this(value.Value)
+        {
+        }
 
         public Formula(string value)
         {
@@ -17,7 +24,7 @@
         public void Dump(LuaTextWriter output)
         {
             output.Write("Formula(");
-            output.WriteValue(Value);
+            output.WriteValue(Value.AsSpan());
             output.Write(")");
         }
     }

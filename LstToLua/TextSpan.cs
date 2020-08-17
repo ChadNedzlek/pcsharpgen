@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Text;
-using System.Threading;
 
 namespace Primordially.LstToLua
 {
-    internal struct TextSpan
+    internal readonly struct TextSpan
     {
         public TextSpan(string file, int lineNumber, int linePosition, string value)
         {
@@ -105,13 +103,16 @@ namespace Primordially.LstToLua
             var idx = IndexOf(value);
             if (idx == -1)
             {
-                left = default;
-                right = default;
+                left = this;
+                right = this;
                 return false;
             }
 
-            left = Substring(0, idx);
-            right = Substring(idx + value.Length);
+
+            var l = Substring(0, idx);
+            var r = Substring(idx + value.Length);
+            left = l;
+            right = r;
             return true;
         }
 

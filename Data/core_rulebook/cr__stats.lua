@@ -2,10 +2,126 @@
 -- From repository https://github.com/pcgen/pcgen at commit 11ceb52482855f2e5f0f6c108c3dc665b12af237
 DefineStat({
   Name="Strength",
+  Key="STR",
   SortKey="1",
   Abbreviation="STR",
-  Key="STR",
-  StatModFormula="floor(SCORE/2)-5",
+  StatMod=Formula("floor(SCORE/2)-5"),
+  Abilities={
+    {
+      Category="Internal",
+      Nature="AUTOMATIC",
+      Names={
+        "Default",
+      },
+    },
+  },
+  Bonuses={
+    {
+      Category="COMBAT",
+      Formula=Formula("STR"),
+      Type={
+        Name="Ability",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DisableToHitMeleeStr"] == 0)
+        end,
+      },
+      Variables={
+        "TOHIT.Melee",
+      },
+    },
+    {
+      Category="COMBAT",
+      Formula=Formula("STR"),
+      Type={
+        Name="Ability",
+      },
+      Variables={
+        "DAMAGE.Melee",
+        "DAMAGE.Thrown",
+      },
+    },
+    {
+      Category="COMBAT",
+      Formula=Formula("if(STR>0,0.5,1)"),
+      Variables={
+        "DAMAGEMULT:0",
+      },
+    },
+    {
+      Category="COMBAT",
+      Formula=Formula("1"),
+      Variables={
+        "DAMAGEMULT:1",
+      },
+    },
+    {
+      Category="COMBAT",
+      Formula=Formula("if(STR>0,1.5,1)"),
+      Variables={
+        "DAMAGEMULT:2",
+      },
+    },
+    {
+      Category="COMBAT",
+      Formula=Formula("-STR"),
+      Type={
+        Name="Ability",
+      },
+      Variables={
+        "DAMAGE.Splash",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("max(STRSCORE,AltSTRSCORE)"),
+      Type={
+        Name="Base",
+      },
+      Variables={
+        "PreStatScore_STR",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("STRSCORE"),
+      Variables={
+        "LOADSCORE",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("2"),
+      Variables={
+        "TWOHANDDAMAGEDIVISOR",
+        "OFFHANDLIGHTBONUS",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("1"),
+      Type={
+        Name="Racial",
+      },
+      Conditions={
+        function (character)
+          return not (1 <= #filter(character.Abilities, function (ability)
+            return ability.Category == "Special Ability" and (ability.Type == "Racial Vision")
+          end))
+        end,
+      },
+      Variables={
+        "RacialVision",
+      },
+    },
+  },
+  Definitions={
+    {
+      Name="MAXLEVELSTAT=STR",
+      InitialValue=Formula("STRSCORE-10"),
+    },
+  },
   Modifications={
     {
       Target="Score",
@@ -28,139 +144,131 @@ DefineStat({
       Value="Score",
     },
   },
-  Definitions={
-    {
-      Name="MAXLEVELSTAT=STR",
-      InitialValue=Formula("STRSCORE-10"),
-    },
-  },
-  Bonuses={
-    {
-      Category="COMBAT",
-      Variables={
-        "TOHIT.Melee",
-      },
-      Formula=Formula("STR"),
-      Type={
-        Name="Ability",
-        Replace=false,
-        Stack=false,
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DisableToHitMeleeStr"] == 0)
-        end,
-      },
-    },
-    {
-      Category="COMBAT",
-      Variables={
-        "DAMAGE.Melee",
-        "DAMAGE.Thrown",
-      },
-      Formula=Formula("STR"),
-      Type={
-        Name="Ability",
-        Replace=false,
-        Stack=false,
-      },
-    },
-    {
-      Category="COMBAT",
-      Variables={
-        "DAMAGEMULT:0",
-      },
-      Formula=Formula("if(STR>0,0.5,1)"),
-    },
-    {
-      Category="COMBAT",
-      Variables={
-        "DAMAGEMULT:1",
-      },
-      Formula=Formula("1"),
-    },
-    {
-      Category="COMBAT",
-      Variables={
-        "DAMAGEMULT:2",
-      },
-      Formula=Formula("if(STR>0,1.5,1)"),
-    },
-    {
-      Category="COMBAT",
-      Variables={
-        "DAMAGE.Splash",
-      },
-      Formula=Formula("-STR"),
-      Type={
-        Name="Ability",
-        Replace=false,
-        Stack=false,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "PreStatScore_STR",
-      },
-      Formula=Formula("max(STRSCORE,AltSTRSCORE)"),
-      Type={
-        Name="Base",
-        Replace=false,
-        Stack=false,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "LOADSCORE",
-      },
-      Formula=Formula("STRSCORE"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "TWOHANDDAMAGEDIVISOR",
-        "OFFHANDLIGHTBONUS",
-      },
-      Formula=Formula("2"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "RacialVision",
-      },
-      Formula=Formula("1"),
-      Type={
-        Name="Racial",
-        Replace=false,
-        Stack=false,
-      },
-      Conditions={
-        function (character)
-          return not (1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Special Ability" and (ability.Type == "Racial Vision")
-          end))
-        end,
-      },
-    },
-  },
-  Abilities={
-    {
-      Category="Internal",
-      Nature="AUTOMATIC",
-      Names={
-        "Default",
-      },
-    },
-  },
 })
 DefineStat({
   Name="Dexterity",
+  Key="DEX",
   SortKey="2",
   Abbreviation="DEX",
-  Key="DEX",
-  StatModFormula="floor(SCORE/2)-5",
+  StatMod=Formula("floor(SCORE/2)-5"),
+  Bonuses={
+    {
+      Category="COMBAT",
+      Formula=Formula("DEX"),
+      Type={
+        Name="Ability",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["DisableToHitRangedDex"] == 0)
+        end,
+      },
+      Variables={
+        "TOHIT.Ranged",
+      },
+    },
+    {
+      Category="COMBAT",
+      Formula=Formula("10"),
+      Type={
+        Name="Base",
+      },
+      Variables={
+        "AC",
+      },
+    },
+    {
+      Category="COMBAT",
+      Formula=Formula("min(ACAbilityStat, min(MXDXEN,MODEQUIPMAXDEX))"),
+      Type={
+        Name="Ability",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["ACStatNotDex"] == 0)
+        end,
+      },
+      Variables={
+        "AC",
+      },
+    },
+    {
+      Category="COMBAT",
+      Formula=Formula("max(FightingDefensivelyAC,TotalDefenseAC)"),
+      Type={
+        Name="Dodge",
+      },
+      Variables={
+        "AC",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("max(DEXSCORE,AltDEXSCORE)"),
+      Type={
+        Name="Base",
+      },
+      Variables={
+        "PreStatScore_DEX",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("DEX"),
+      Variables={
+        "INITCOMP",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("DEX"),
+      Variables={
+        "ACAbilityStat",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("1000"),
+      Conditions={
+        function (character)
+          return (character.Variables["ENCUMBERANCE"] == 0)
+        end,
+      },
+      Variables={
+        "MXDXEN",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("3"),
+      Conditions={
+        function (character)
+          return (character.Variables["ENCUMBERANCE"] == 1)
+        end,
+      },
+      Variables={
+        "MXDXEN",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("1"),
+      Conditions={
+        function (character)
+          return (character.Variables["ENCUMBERANCE"] == 2)
+        end,
+      },
+      Variables={
+        "MXDXEN",
+      },
+    },
+  },
+  Definitions={
+    {
+      Name="MAXLEVELSTAT=DEX",
+      InitialValue=Formula("DEXSCORE-10"),
+    },
+  },
   Modifications={
     {
       Target="Score",
@@ -183,141 +291,81 @@ DefineStat({
       Value="Score",
     },
   },
-  Definitions={
-    {
-      Name="MAXLEVELSTAT=DEX",
-      InitialValue=Formula("DEXSCORE-10"),
-    },
-  },
-  Bonuses={
-    {
-      Category="COMBAT",
-      Variables={
-        "TOHIT.Ranged",
-      },
-      Formula=Formula("DEX"),
-      Type={
-        Name="Ability",
-        Replace=false,
-        Stack=false,
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["DisableToHitRangedDex"] == 0)
-        end,
-      },
-    },
-    {
-      Category="COMBAT",
-      Variables={
-        "AC",
-      },
-      Formula=Formula("10"),
-      Type={
-        Name="Base",
-        Replace=false,
-        Stack=false,
-      },
-    },
-    {
-      Category="COMBAT",
-      Variables={
-        "AC",
-      },
-      Formula=Formula("min(ACAbilityStat, min(MXDXEN,MODEQUIPMAXDEX))"),
-      Type={
-        Name="Ability",
-        Replace=false,
-        Stack=false,
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["ACStatNotDex"] == 0)
-        end,
-      },
-    },
-    {
-      Category="COMBAT",
-      Variables={
-        "AC",
-      },
-      Formula=Formula("max(FightingDefensivelyAC,TotalDefenseAC)"),
-      Type={
-        Name="Dodge",
-        Replace=false,
-        Stack=false,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "PreStatScore_DEX",
-      },
-      Formula=Formula("max(DEXSCORE,AltDEXSCORE)"),
-      Type={
-        Name="Base",
-        Replace=false,
-        Stack=false,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "INITCOMP",
-      },
-      Formula=Formula("DEX"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "ACAbilityStat",
-      },
-      Formula=Formula("DEX"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "MXDXEN",
-      },
-      Formula=Formula("1000"),
-      Conditions={
-        function (character)
-          return (character.Variables["ENCUMBERANCE"] == 0)
-        end,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "MXDXEN",
-      },
-      Formula=Formula("3"),
-      Conditions={
-        function (character)
-          return (character.Variables["ENCUMBERANCE"] == 1)
-        end,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "MXDXEN",
-      },
-      Formula=Formula("1"),
-      Conditions={
-        function (character)
-          return (character.Variables["ENCUMBERANCE"] == 2)
-        end,
-      },
-    },
-  },
 })
 DefineStat({
   Name="Constitution",
+  Key="CON",
   SortKey="3",
   Abbreviation="CON",
-  Key="CON",
-  StatModFormula="floor(SCORE/2)-5",
+  StatMod=Formula("floor(SCORE/2)-5"),
+  Bonuses={
+    {
+      Category="HP",
+      Formula=Formula("CON"),
+      Variables={
+        "WOUNDPOINTS",
+      },
+    },
+    {
+      Category="HP",
+      Formula=Formula("CON"),
+      Conditions={
+        function (character)
+          return ((IsRuleEnabled("DAMAGE_HP"))) >= 1
+        end,
+      },
+      Variables={
+        "BONUS",
+      },
+    },
+    {
+      Category="HP",
+      Formula=Formula("CONSCORE*2"),
+      Variables={
+        "ALTHP",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("max(CONSCORE,AltCONSCORE)"),
+      Type={
+        Name="Base",
+      },
+      Variables={
+        "PreStatScore_CON",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("1"),
+      Conditions={
+        function (character)
+          return ((IsRuleEnabled("DAMAGE_VW"))) >= 1
+        end,
+      },
+      Variables={
+        "UseAlternateDamage",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("1"),
+      Conditions={
+        function (character)
+          return ((IsRuleEnabled("USE_CMB"))) >= 1
+        end,
+      },
+      Variables={
+        "UseCombatManueverBonus",
+      },
+    },
+  },
+  Definitions={
+    {
+      Name="MAXLEVELSTAT=CON",
+      InitialValue=Formula("CONSCORE-10"),
+    },
+  },
   Modifications={
     {
       Target="Score",
@@ -340,83 +388,52 @@ DefineStat({
       Value="Score",
     },
   },
-  Definitions={
-    {
-      Name="MAXLEVELSTAT=CON",
-      InitialValue=Formula("CONSCORE-10"),
-    },
-  },
-  Bonuses={
-    {
-      Category="HP",
-      Variables={
-        "WOUNDPOINTS",
-      },
-      Formula=Formula("CON"),
-    },
-    {
-      Category="HP",
-      Variables={
-        "BONUS",
-      },
-      Formula=Formula("CON"),
-      Conditions={
-        function (character)
-          return ((IsRuleEnabled("DAMAGE_HP"))) >= 1
-        end,
-      },
-    },
-    {
-      Category="HP",
-      Variables={
-        "ALTHP",
-      },
-      Formula=Formula("CONSCORE*2"),
-    },
-    {
-      Category="VAR",
-      Variables={
-        "PreStatScore_CON",
-      },
-      Formula=Formula("max(CONSCORE,AltCONSCORE)"),
-      Type={
-        Name="Base",
-        Replace=false,
-        Stack=false,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "UseAlternateDamage",
-      },
-      Formula=Formula("1"),
-      Conditions={
-        function (character)
-          return ((IsRuleEnabled("DAMAGE_VW"))) >= 1
-        end,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "UseCombatManueverBonus",
-      },
-      Formula=Formula("1"),
-      Conditions={
-        function (character)
-          return ((IsRuleEnabled("USE_CMB"))) >= 1
-        end,
-      },
-    },
-  },
 })
 DefineStat({
   Name="Intelligence",
+  Key="INT",
   SortKey="4",
   Abbreviation="INT",
-  Key="INT",
-  StatModFormula="floor(SCORE/2)-5",
+  StatMod=Formula("floor(SCORE/2)-5"),
+  Bonuses={
+    {
+      Category="VAR",
+      Formula=Formula("max(INTSCORE,AltINTSCORE)"),
+      Type={
+        Name="Base",
+      },
+      Variables={
+        "PreStatScore_INT",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("INTSCORE-10"),
+      Variables={
+        "MaxLevelStat_Int",
+      },
+    },
+    {
+      Category="LANG",
+      Formula=Formula("max(INT,0)+var(\"AdditionalLanguage\")"),
+      Variables={
+        "BONUS",
+      },
+    },
+    {
+      Category="MODSKILLPOINTS",
+      Formula=Formula("var(\"STAT.3.MOD.NOEQUIP.NOTEMP\")+BonusRetroSkillPoints"),
+      Variables={
+        "NUMBER",
+      },
+    },
+  },
+  Definitions={
+    {
+      Name="MAXLEVELSTAT=INT",
+      InitialValue=Formula("MaxLevelStat_Int"),
+    },
+  },
   Modifications={
     {
       Target="Score",
@@ -439,54 +456,31 @@ DefineStat({
       Value="Score",
     },
   },
-  Definitions={
-    {
-      Name="MAXLEVELSTAT=INT",
-      InitialValue=Formula("MaxLevelStat_Int"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "PreStatScore_INT",
-      },
-      Formula=Formula("max(INTSCORE,AltINTSCORE)"),
-      Type={
-        Name="Base",
-        Replace=false,
-        Stack=false,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "MaxLevelStat_Int",
-      },
-      Formula=Formula("INTSCORE-10"),
-    },
-    {
-      Category="LANG",
-      Variables={
-        "BONUS",
-      },
-      Formula=Formula("max(INT,0)+var(\"AdditionalLanguage\")"),
-    },
-    {
-      Category="MODSKILLPOINTS",
-      Variables={
-        "NUMBER",
-      },
-      Formula=Formula("var(\"STAT.3.MOD.NOEQUIP.NOTEMP\")+BonusRetroSkillPoints"),
-    },
-  },
 })
 DefineStat({
   Name="Wisdom",
+  Key="WIS",
   SortKey="5",
   Abbreviation="WIS",
-  Key="WIS",
-  StatModFormula="floor(SCORE/2)-5",
+  StatMod=Formula("floor(SCORE/2)-5"),
+  Bonuses={
+    {
+      Category="VAR",
+      Formula=Formula("max(WISSCORE,AltWISSCORE)"),
+      Type={
+        Name="Base",
+      },
+      Variables={
+        "PreStatScore_WIS",
+      },
+    },
+  },
+  Definitions={
+    {
+      Name="MAXLEVELSTAT=WIS",
+      InitialValue=Formula("WISSCORE-10"),
+    },
+  },
   Modifications={
     {
       Target="Score",
@@ -509,33 +503,54 @@ DefineStat({
       Value="Score",
     },
   },
-  Definitions={
-    {
-      Name="MAXLEVELSTAT=WIS",
-      InitialValue=Formula("WISSCORE-10"),
-    },
-  },
-  Bonuses={
-    {
-      Category="VAR",
-      Variables={
-        "PreStatScore_WIS",
-      },
-      Formula=Formula("max(WISSCORE,AltWISSCORE)"),
-      Type={
-        Name="Base",
-        Replace=false,
-        Stack=false,
-      },
-    },
-  },
 })
 DefineStat({
   Name="Charisma",
+  Key="CHA",
   SortKey="6",
   Abbreviation="CHA",
-  Key="CHA",
-  StatModFormula="floor(SCORE/2)-5",
+  StatMod=Formula("floor(SCORE/2)-5"),
+  Bonuses={
+    {
+      Category="COMBAT",
+      Formula=Formula("min(CHA, min(MXDXEN,MODEQUIPMAXDEX))"),
+      Type={
+        Name="Ability",
+      },
+      Conditions={
+        function (character)
+          return (character.Variables["ACStatIsCha"] == 1)
+        end,
+      },
+      Variables={
+        "AC",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("max(CHASCORE,AltCHASCORE)"),
+      Type={
+        Name="Base",
+      },
+      Variables={
+        "PreStatScore_CHA",
+      },
+    },
+    {
+      Category="VAR",
+      Formula=Formula("1"),
+      Variables={
+        "NormalMount",
+        "NormalFollower",
+      },
+    },
+  },
+  Definitions={
+    {
+      Name="MAXLEVELSTAT=CHA",
+      InitialValue=Formula("CHASCORE-10"),
+    },
+  },
   Modifications={
     {
       Target="Score",
@@ -556,51 +571,6 @@ DefineStat({
       Target="CHASCORE",
       Action="SET",
       Value="Score",
-    },
-  },
-  Definitions={
-    {
-      Name="MAXLEVELSTAT=CHA",
-      InitialValue=Formula("CHASCORE-10"),
-    },
-  },
-  Bonuses={
-    {
-      Category="COMBAT",
-      Variables={
-        "AC",
-      },
-      Formula=Formula("min(CHA, min(MXDXEN,MODEQUIPMAXDEX))"),
-      Type={
-        Name="Ability",
-        Replace=false,
-        Stack=false,
-      },
-      Conditions={
-        function (character)
-          return (character.Variables["ACStatIsCha"] == 1)
-        end,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "PreStatScore_CHA",
-      },
-      Formula=Formula("max(CHASCORE,AltCHASCORE)"),
-      Type={
-        Name="Base",
-        Replace=false,
-        Stack=false,
-      },
-    },
-    {
-      Category="VAR",
-      Variables={
-        "NormalMount",
-        "NormalFollower",
-      },
-      Formula=Formula("1"),
     },
   },
 })
