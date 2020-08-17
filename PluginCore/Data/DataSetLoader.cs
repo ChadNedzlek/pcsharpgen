@@ -204,6 +204,31 @@ namespace Primordially.PluginCore.Data
             }
 
             [LuaGlobal]
+            public void DefineSkill(LuaTable table)
+            {
+                string key = (string) table["Name"];
+                if (_dataSet.Skills.ContainsKey(key))
+                {
+                    ReportError($"Duplicate skill '{key}' defined");
+                    _dataSet.Skills.Remove(key);
+                }
+
+                _dataSet.Skills.Add(key, ParseSkill(table));
+            }
+
+            private UnboundSkill ParseSkill(LuaTable table)
+            {
+                return new UnboundSkill(
+                    (string) table["Name"],
+                    ParseList(table["Types"], Stringify),
+                    (bool?) table["UseUntrained"],
+                    ParseList(table["Bonuses"], ParseBonus),
+                    (string) table["SourcePage"],
+                    ParseSingleCondition<CharacterInterface>(table["Conditions"]),
+                    (string) table["KeyStat"]);
+            }
+
+            [LuaGlobal]
             public void DefineEquipment(LuaTable table)
             {
                 string name = (string) table["Name"];
@@ -585,7 +610,8 @@ namespace Primordially.PluginCore.Data
                     ParseInt(table["MaxLevel"]),
                     ParseInt(table["SkillPointsPerLevel"]),
                     levels,
-                    (string?) table["ExClass"]
+                    (string?) table["ExClass"],
+                    ParseList(table["ClassSkills"], Stringify)
                 );
                 return dataSetClass;
             }
@@ -889,6 +915,8 @@ namespace Primordially.PluginCore.Data
                 "DisplayName",
                 "Key",
                 "Name",
+                "Selection",
+                "SortKey",
                 "SourcePage",
                 "Stackable",
                 "Types",
@@ -920,7 +948,8 @@ namespace Primordially.PluginCore.Data
                     ParseList((LuaTable?) table["Definitions"], ParseVariableDefinition),
                     ParseList((LuaTable?) table["Bonuses"], ParseBonus),
                     ParseAbilityGrants(table["Abilities"]),
-                    ParseSingleCondition<CharacterInterface>(table["Conditions"])
+                    ParseSingleCondition<CharacterInterface>(table["Conditions"]),
+                    (string?) table["SortKey"]
                 );
             }
 
@@ -1009,6 +1038,12 @@ namespace Primordially.PluginCore.Data
 
             public Dictionary<string, UnboundAbility> Abilities { get; } =
                 new Dictionary<string, UnboundAbility>(StringComparer.OrdinalIgnoreCase);
+            
+            public Dictionary<string, UnboundAbilityScore> AbilityScores { get; } =
+                new Dictionary<string, UnboundAbilityScore>(StringComparer.OrdinalIgnoreCase);
+
+            public Dictionary<string, UnboundSkill> Skills { get; } =
+                new Dictionary<string, UnboundSkill>(StringComparer.OrdinalIgnoreCase);
 
             public Dictionary<string, UnboundClass> Classes { get; } =
                 new Dictionary<string, UnboundClass>(StringComparer.OrdinalIgnoreCase);
@@ -1022,12 +1057,9 @@ namespace Primordially.PluginCore.Data
             public ImmutableDictionary<string, DataSetSave>.Builder Saves { get; } =
                 ImmutableDictionary.CreateBuilder<string, DataSetSave>(StringComparer.OrdinalIgnoreCase);
 
-            public Dictionary<string, UnboundAbilityScore> AbilityScores { get; } =
-                new Dictionary<string, UnboundAbilityScore>(StringComparer.OrdinalIgnoreCase);
-
             public ImmutableDictionary<string, DataSetVariable>.Builder Variables { get; } =
                 ImmutableDictionary.CreateBuilder<string, DataSetVariable>(StringComparer.OrdinalIgnoreCase);
-
+            
             public ImmutableDictionary<string, DataSetAbilityCategory>.Builder AbilityCategories { get; } =
                 ImmutableDictionary.CreateBuilder<string, DataSetAbilityCategory>(StringComparer.OrdinalIgnoreCase);
 
@@ -1317,7 +1349,8 @@ namespace Primordially.PluginCore.Data
                 ImmutableList<DataSetVariableDefinition>.Empty,
                 ImmutableList<DataSetBonus>.Empty,
                 ImmutableList<UnboundAddAbility>.Empty,
-                DataSetConditions<CharacterInterface>.Empty
+                DataSetConditions<CharacterInterface>.Empty,
+                null
             );
 
             private readonly IImmutableList<UnboundAddAbility> _abilities;
@@ -1340,10 +1373,12 @@ namespace Primordially.PluginCore.Data
                 ImmutableList<DataSetVariableDefinition> definitions,
                 ImmutableList<DataSetBonus> bonuses,
                 IImmutableList<UnboundAddAbility> abilities,
-                DataSetCondition<CharacterInterface>? condition)
+                DataSetCondition<CharacterInterface>? condition,
+                string? sortKey)
                 : base(
                     name,
                     key,
+                    sortKey,
                     displayName,
                     category,
                     description,
@@ -1384,7 +1419,8 @@ namespace Primordially.PluginCore.Data
                     Types,
                     Choice,
                     _abilities.Select(a => a.Bind(lookup)).ToImmutableList(),
-                    Condition
+                    Condition,
+                    SortKeySet
                 );
             }
 
@@ -1408,7 +1444,8 @@ namespace Primordially.PluginCore.Data
                     Definitions.AddRange(other.Definitions),
                     Bonuses.AddRange(other.Bonuses),
                     _abilities.AddRange(other._abilities),
-                    Condition.CombineWith(other.Condition)
+                    Condition.CombineWith(other.Condition),
+                    other.SortKeySet ?? SortKeySet
                 );
             }
         }
@@ -1682,10 +1719,44 @@ namespace Primordially.PluginCore.Data
             }
         }
 
+        private class UnboundSkill : DataSetSkillBase, IRequiresBinding<DataSetSkill>
+        {
+            private readonly string _keyStat;
+            private readonly bool? _useUntrained;
+
+            public UnboundSkill(
+                string name,
+                ImmutableList<string> types,
+                bool? useUntrained,
+                ImmutableList<DataSetBonus> bonuses,
+                string sourcePage,
+                DataSetCondition<CharacterInterface> condition,
+                string keyStat)
+                : base(name, types, bonuses, sourcePage, condition)
+            {
+                _useUntrained = useUntrained;
+                _keyStat = keyStat;
+            }
+
+            public DataSetSkill Bind(IBinder binder)
+            {
+                return new DataSetSkill(
+                    Name,
+                    Types,
+                    binder.Bind<DataSetAbilityScore>(_keyStat),
+                    _useUntrained ?? false,
+                    Bonuses,
+                    SourcePage,
+                    Condition
+                );
+            }
+        }
+
         private class UnboundClass : DataSetClassBase, IRequiresBinding<DataSetClass>
         {
             private readonly ImmutableList<UnboundRepeatingClassLevel> _levels;
             private readonly string? _exClass;
+            private readonly ImmutableList<string> _classSkills;
 
             internal UnboundClass(
                 string name,
@@ -1701,7 +1772,8 @@ namespace Primordially.PluginCore.Data
                 int? maxLevel,
                 int? skillPointsPerLevel,
                 ImmutableList<UnboundRepeatingClassLevel> levels,
-                string? exClass)
+                string? exClass,
+                ImmutableList<string> classSkills)
                 : base(
                     name,
                     sourceInfo,
@@ -1718,6 +1790,7 @@ namespace Primordially.PluginCore.Data
                 )
             {
                 _exClass = exClass;
+                _classSkills = classSkills;
                 _levels = levels;
             }
 
@@ -1737,7 +1810,8 @@ namespace Primordially.PluginCore.Data
                     MaxLevel,
                     SkillPointsPerLevel,
                     _levels.Select(l => l.Bind(binder)).ToImmutableList(),
-                    binder.Bind<DataSetClass>(_exClass)
+                    binder.Bind<DataSetClass>(_exClass),
+                    _classSkills.Select(s => binder.Bind<DataSetSkill>(s)).ToImmutableList()
                 );
             }
 
@@ -1757,7 +1831,8 @@ namespace Primordially.PluginCore.Data
                     other.MaxLevel ?? MaxLevel,
                     other.SkillPointsPerLevel ?? SkillPointsPerLevel,
                     _levels.AddRange(other._levels),
-                    other._exClass ?? _exClass
+                    other._exClass ?? _exClass,
+                    _classSkills.AddRange(other._classSkills)
                 );
             }
         }

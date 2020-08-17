@@ -7,6 +7,7 @@ namespace Primordially.PluginCore.Data
         public DataSetAbilityBase(
             string name,
             string? key,
+            string? sortKey,
             string? displayName,
             string? category,
             DataSetFormattable? description,
@@ -49,22 +50,28 @@ namespace Primordially.PluginCore.Data
         protected readonly int? CostSet;
         public string Name { get; }
         public string? Key { get; }
+        public string? Category { get; }
         public string? DisplayName { get; }
+        public string? SourcePage { get; }
+        protected string? SortKeySet;
         public DataSourceInformation? SourceInfo { get; }
         public ImmutableList<DataSetBonus> Bonuses { get; }
-        public string? Category { get; }
         public ImmutableList<DataSetVariableDefinition> Definitions { get; }
         public ImmutableList<DataSetAspect> Aspects { get; }
         public ImmutableList<string> Types { get; }
         public DataSetFormattable? Description { get; }
-        public string? SourcePage { get; }
-        public Choice? Choice { get;}
         public DataSetCondition<CharacterInterface> Condition { get; }
+        public Choice? Choice { get;}
+        // TemporaryBonuses
+        // DamageReduction
+        // Movement
+        // AutomaticLanguages
 
         public bool Stackable => StackableSet ?? false;
         public bool AllowMultiple => AllowMultipleSet ?? false;
         public int Cost => CostSet ?? 0;
         public bool Visible => VisibleSet ?? true;
+        public string SortKey => SortKeySet ?? Key ?? Name;
     }
 
     public class DataSetAbility : DataSetAbilityBase
@@ -89,10 +96,12 @@ namespace Primordially.PluginCore.Data
             ImmutableList<string> types,
             Choice? choice,
             ImmutableList<DataSetAddAbility> abilities,
-            DataSetCondition<CharacterInterface> condition)
+            DataSetCondition<CharacterInterface> condition,
+            string? sortKey)
             : base(
                 name,
                 key,
+                sortKey,
                 displayName,
                 category,
                 description,

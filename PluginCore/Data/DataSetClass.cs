@@ -55,6 +55,7 @@ namespace Primordially.PluginCore.Data
     {
         private readonly ImmutableList<RepeatingDataSetClassLevel> _levels;
         public DataSetClass? ExClass { get; }
+        public ImmutableList<DataSetSkill> Skills { get; }
 
         internal DataSetClass(
             string name,
@@ -70,7 +71,8 @@ namespace Primordially.PluginCore.Data
             int? maxLevel,
             int? skillPointsPerLevel,
             ImmutableList<RepeatingDataSetClassLevel> levels,
-            DataSetClass? exClass)
+            DataSetClass? exClass,
+            ImmutableList<DataSetSkill> skills)
             : base(
                 name,
                 sourceInfo,
@@ -88,6 +90,7 @@ namespace Primordially.PluginCore.Data
         {
             _levels = levels;
             ExClass = exClass;
+            Skills = skills;
         }
 
         
@@ -133,5 +136,44 @@ namespace Primordially.PluginCore.Data
                 return built;
             }
         }
+    }
+
+    public class DataSetSkillBase
+    {
+        public DataSetSkillBase(string name, ImmutableList<string> types, ImmutableList<DataSetBonus> bonuses, string sourcePage, DataSetCondition<CharacterInterface> condition)
+        {
+            Name = name;
+            Types = types;
+            Bonuses = bonuses;
+            SourcePage = sourcePage;
+            Condition = condition;
+        }
+
+        public string Name { get; }
+        public ImmutableList<string> Types { get; }
+        public ImmutableList<DataSetBonus> Bonuses { get; }
+        public string SourcePage { get; }
+        public DataSetCondition<CharacterInterface> Condition { get; }
+    }
+
+    public class DataSetSkill
+        : DataSetSkillBase
+    {
+        public DataSetSkill(
+            string name,
+            ImmutableList<string> types,
+            DataSetAbilityScore keyStat,
+            bool useUntrained,
+            ImmutableList<DataSetBonus> bonuses,
+            string sourcePage,
+            DataSetCondition<CharacterInterface> condition)
+            : base(name, types, bonuses, sourcePage, condition)
+        {
+            KeyStat = keyStat;
+            UseUntrained = useUntrained;
+        }
+
+        public DataSetAbilityScore KeyStat { get; }
+        public bool UseUntrained { get; }
     }
 }
