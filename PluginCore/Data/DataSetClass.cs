@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using ReactiveUI;
 
 namespace Primordially.PluginCore.Data
 {
@@ -20,7 +19,7 @@ namespace Primordially.PluginCore.Data
             ImmutableList<string> roles,
             int? hitDie,
             int? maxLevel,
-            int? skillPointsPerLevel)
+            DataSetFormula? skillPointsPerLevel)
         {
             Name = name;
             SourceInfo = sourceInfo;
@@ -48,7 +47,7 @@ namespace Primordially.PluginCore.Data
         public ImmutableList<string> Roles { get; }
         public int? HitDie { get; }
         public int? MaxLevel { get; }
-        public int? SkillPointsPerLevel { get; }
+        public DataSetFormula? SkillPointsPerLevel { get; }
     }
 
     public class DataSetClass : DataSetClassBase
@@ -69,7 +68,7 @@ namespace Primordially.PluginCore.Data
             ImmutableList<string> roles,
             int? hitDie,
             int? maxLevel,
-            int? skillPointsPerLevel,
+            DataSetFormula? skillPointsPerLevel,
             ImmutableList<RepeatingDataSetClassLevel> levels,
             DataSetClass? exClass,
             ImmutableList<DataSetSkill> skills)
@@ -136,44 +135,5 @@ namespace Primordially.PluginCore.Data
                 return built;
             }
         }
-    }
-
-    public class DataSetSkillBase
-    {
-        public DataSetSkillBase(string name, ImmutableList<string> types, ImmutableList<DataSetBonus> bonuses, string sourcePage, DataSetCondition<CharacterInterface> condition)
-        {
-            Name = name;
-            Types = types;
-            Bonuses = bonuses;
-            SourcePage = sourcePage;
-            Condition = condition;
-        }
-
-        public string Name { get; }
-        public ImmutableList<string> Types { get; }
-        public ImmutableList<DataSetBonus> Bonuses { get; }
-        public string SourcePage { get; }
-        public DataSetCondition<CharacterInterface> Condition { get; }
-    }
-
-    public class DataSetSkill
-        : DataSetSkillBase
-    {
-        public DataSetSkill(
-            string name,
-            ImmutableList<string> types,
-            DataSetAbilityScore keyStat,
-            bool useUntrained,
-            ImmutableList<DataSetBonus> bonuses,
-            string sourcePage,
-            DataSetCondition<CharacterInterface> condition)
-            : base(name, types, bonuses, sourcePage, condition)
-        {
-            KeyStat = keyStat;
-            UseUntrained = useUntrained;
-        }
-
-        public DataSetAbilityScore KeyStat { get; }
-        public bool UseUntrained { get; }
     }
 }

@@ -95,6 +95,7 @@ ImportFile("cr_classes_companion.lua")
 ImportFile("cr_companionmods.lua")
 ImportFile("cr_kits_companion.lua")
 ImportFile("cr_races_companion.lua")
+ImportFile("overrides.lua")
 HideObjects("FEAT", {
   {
     "SpecialQuality",

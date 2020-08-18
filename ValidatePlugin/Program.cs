@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
-using NLua;
 using Primordially.PluginCore.Data;
 using Splat;
 
@@ -23,10 +23,14 @@ namespace Primordially.ValidatePlugin
                 return 2;
             }
 
-            Locator.CurrentMutable.RegisterConstant((ILogger) new ConsoleLogger());
+            //Locator.CurrentMutable.RegisterConstant((ILogger) new ConsoleLogger());
 
+            Stopwatch watch = Stopwatch.StartNew();
             DataSetLoader loader = new DataSetLoader(Path.GetDirectoryName(path)!, DataSetStrictness.Lax);
             var dataSet = loader.LoadData(path);
+            watch.Stop();
+
+            Console.WriteLine($"Load time : {watch.Elapsed}");
 
             Console.WriteLine("Data Set Summary");
             Console.WriteLine("Classes : " + dataSet.Classes.Count);

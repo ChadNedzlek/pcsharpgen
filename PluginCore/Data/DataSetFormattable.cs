@@ -10,6 +10,10 @@ namespace Primordially.PluginCore.Data
             Arguments = arguments;
         }
 
+        public DataSetFormattable(string formatString) : this(formatString, ImmutableList<DataSetFormula>.Empty)
+        {
+        }
+
         public string FormatString { get; }
         public ImmutableList<DataSetFormula> Arguments { get; }
     }

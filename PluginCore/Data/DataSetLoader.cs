@@ -147,12 +147,12 @@ namespace Primordially.PluginCore.Data
                     name,
                     new UnboundDomain(
                         name,
-                        (string) table["Description"],
+                        ParseFormattable(table["Description"]),
                         ParseList(table["Definitions"], ParseVariableDefinition),
                         ParseList(table["SpellLists"], ParseSpellList),
                         ParseSingleCondition<CharacterInterface>(table["Conditions"]),
-                        ParseList(table["ClassSkills"], Stringify),
                         (string) table["SourcePage"],
+                        ParseList(table["ClassSkills"], Stringify),
                         ParseAbilityGrants(table["Abilities"])
                     )
                 );
@@ -167,12 +167,12 @@ namespace Primordially.PluginCore.Data
                     existing.MergeWith(
                     new UnboundDomain(
                         name,
-                        (string) table["Description"],
+                        ParseFormattable(table["Description"]),
                         ParseList(table["Definitions"], ParseVariableDefinition),
                         ParseList(table["SpellLists"], ParseSpellList),
                         ParseSingleCondition<CharacterInterface>(table["Conditions"]),
-                        ParseList(table["ClassSkills"], Stringify),
                         (string) table["SourcePage"],
+                        ParseList(table["ClassSkills"], Stringify),
                         ParseAbilityGrants(table["Abilities"])
                     )
                 );
@@ -370,7 +370,7 @@ namespace Primordially.PluginCore.Data
                         (string) table["Name"],
                         (string) table["SortKey"],
                         (string) table["Abbreviation"],
-                        ParseFormula(table["StatModFormula"]),
+                        (DataSetFormula) table["StatMod"],
                         ParseList(
                             (LuaTable) table["Modifications"],
                             o =>
@@ -547,6 +547,7 @@ namespace Primordially.PluginCore.Data
             
             private static readonly ImmutableHashSet<string> s_knownClassKeys = ImmutableHashSet.Create(
                 "Bonuses",
+                "ClassSkills",
                 "Condition",
                 "Definitions",
                 "ExClass",
@@ -608,7 +609,7 @@ namespace Primordially.PluginCore.Data
                     ParseList((LuaTable?) table["Roles"], Stringify),
                     ParseInt(table["HitDie"]),
                     ParseInt(table["MaxLevel"]),
-                    ParseInt(table["SkillPointsPerLevel"]),
+                    (DataSetFormula) table["SkillPointsPerLevel"],
                     levels,
                     (string?) table["ExClass"],
                     ParseList(table["ClassSkills"], Stringify)
@@ -888,7 +889,7 @@ namespace Primordially.PluginCore.Data
                 if (key == null)
                     key = (string) table["Name"];
 
-                if (!_dataSet.Abilities.TryGetValue(key, out UnboundAbility ability))
+                if (!_dataSet.Abilities.TryGetValue(key, out UnboundAbility? ability))
                 {
                     ReportError($"No ability with Key '{key}' found");
                     DefineAbility(table);
@@ -932,7 +933,7 @@ namespace Primordially.PluginCore.Data
 
                 return new UnboundAbility(
                     (string) table["Name"],
-                    (string?) table["Key"],
+                    (string) table["Key"],
                     (string?) table["DisplayName"],
                     (string?) table["Category"],
                     ParseFormattable(table["Description"]),
@@ -1082,6 +1083,59 @@ namespace Primordially.PluginCore.Data
             {
                 private readonly DataSetBuilder _builder;
 
+                private abstract class TypeBinder
+                {
+                    public abstract Type BoundType { get; }
+
+                    public static TypeBinder<TUnbound, TBound> Create<TUnbound, TBound>(
+                        Binder binder,
+                        Dictionary<string, TUnbound> unbound,
+                        ImmutableDictionary<string, TBound>.Builder bound
+                    ) where TUnbound : IRequiresBinding<TBound>
+                    {
+                        return new TypeBinder<TUnbound, TBound>(binder, unbound, bound);
+                    }
+
+                    public abstract object Bind(string key);
+                }
+
+                private class TypeBinder<TUnbound, TBound> : TypeBinder where TUnbound : IRequiresBinding<TBound>
+                {
+                    public override Type BoundType => typeof(TBound);
+                    private readonly Binder _binder;
+                    private readonly Dictionary<string, TUnbound> _unbound;
+                    private readonly ImmutableDictionary<string, TBound>.Builder _bound;
+
+                    public TypeBinder(
+                        Binder binder,
+                        Dictionary<string, TUnbound> unbound,
+                        ImmutableDictionary<string, TBound>.Builder bound)
+                    {
+                        _binder = binder;
+                        _unbound = unbound;
+                        _bound = bound;
+                    }
+
+                    public override object Bind(string key)
+                    {
+                        return Bind(key, _unbound, _bound)!;
+                    }
+
+                    public TBound Bind(string key, Dictionary<string, TUnbound> unbound, ImmutableDictionary<string, TBound>.Builder bound) 
+                    {
+                        if (bound.TryGetValue(key, out TBound preBound))
+                        {
+                            return preBound;
+                        }
+
+                        TUnbound u = unbound[key];
+                        unbound.Remove(key);
+                        TBound b = u.Bind(_binder);
+                        bound.Add(key, b);
+                        return b;
+                    }
+                }
+
                 public Binder(DataSetBuilder builder)
                 {
                     _builder = builder;
@@ -1092,18 +1146,20 @@ namespace Primordially.PluginCore.Data
                     _equipmentModifiers = ImmutableDictionary.CreateBuilder<string, DataSetEquipmentModifier>(_builder.Classes.Comparer);
                     _equipment = ImmutableDictionary.CreateBuilder<string, DataSetEquipment>(_builder.Classes.Comparer);
 
-                    _binders = new Dictionary<Type, Func<string, object>>
+                    var allBinders = new TypeBinder[]
                     {
-                        {typeof(DataSetAbility), s => Bind(s, _builder.Abilities, _abilities)},
-                        {typeof(DataSetClass), s => Bind(s, _builder.Classes, _classes)},
-                        {typeof(DataSetAbilityScore), s => Bind(s, _builder.AbilityScores, _abilityScores)},
-                        {typeof(DataSetDomain), s => Bind(s, _builder.Domains, _domains)},
-                        {typeof(DataSetEquipment), s => Bind(s, _builder.Equipment, _equipment)},
-                        {typeof(DataSetEquipmentModifier), s => Bind(s, _builder.EquipmentModifiers, _equipmentModifiers)},
+                        TypeBinder.Create(this, _builder.Abilities, _abilities), 
+                        TypeBinder.Create(this, _builder.Classes, _classes), 
+                        TypeBinder.Create(this, _builder.AbilityScores, _abilityScores), 
+                        TypeBinder.Create(this, _builder.Domains, _domains), 
+                        TypeBinder.Create(this, _builder.Equipment, _equipment), 
+                        TypeBinder.Create(this, _builder.EquipmentModifiers, _equipmentModifiers), 
                     };
+
+                    _binders = allBinders.ToDictionary(b => b.BoundType);
                 }
 
-                private readonly Dictionary<Type, Func<string, object>> _binders;
+                private readonly Dictionary<Type, TypeBinder> _binders;
                 private readonly ImmutableDictionary<string, DataSetAbility>.Builder _abilities;
                 private readonly ImmutableDictionary<string, DataSetClass>.Builder _classes;
                 private readonly ImmutableDictionary<string, DataSetAbilityScore>.Builder _abilityScores;
@@ -1117,33 +1173,20 @@ namespace Primordially.PluginCore.Data
                     if (key == null)
                         return null;
 
-                    return Unsafe.As<TBound>(_binders[typeof(TBound)](key));
+                    return Unsafe.As<TBound>(_binders[typeof(TBound)].Bind(key));
                 }
 
                 private ImmutableDictionary<string, TBound> BindAll<TUnbound, TBound>(
                     Dictionary<string, TUnbound> unbound,
                     ImmutableDictionary<string, TBound>.Builder bound) where TUnbound : IRequiresBinding<TBound>
                 {
+                    var binder = _binders[typeof(TBound)];
                     while (unbound.Count != 0)
                     {
                         string key = unbound.Keys.First();
-                        Bind(key, unbound, bound);
+                        binder.Bind(key);
                     }
                     return bound.ToImmutable();
-                }
-
-                private TBound Bind<TUnbound, TBound>(string key, Dictionary<string, TUnbound> unbound, ImmutableDictionary<string, TBound>.Builder bound) where TUnbound : IRequiresBinding<TBound>
-                {
-                    if (bound.TryGetValue(key, out TBound preBound))
-                    {
-                        return preBound;
-                    }
-
-                    TUnbound u = unbound[key];
-                    unbound.Remove(key);
-                    TBound b = u.Bind(this);
-                    bound.Add(key, b);
-                    return b;
                 }
 
                 public DataSet Build()
@@ -1329,11 +1372,11 @@ namespace Primordially.PluginCore.Data
             }
         }
 
-        private class UnboundAbility : DataSetAbilityBase, IRequiresBinding<DataSetAbility>
+        private class UnboundAbility : IRequiresBinding<DataSetAbility>
         {
             public static UnboundAbility Empty { get; } = new UnboundAbility(
                 "",
-                null,
+                "",
                 null,
                 null,
                 null,
@@ -1352,6 +1395,29 @@ namespace Primordially.PluginCore.Data
                 DataSetConditions<CharacterInterface>.Empty,
                 null
             );
+
+            private readonly string _name;
+            private readonly string _key;
+
+            private readonly string? _category;
+            private readonly string? _displayName;
+            private readonly string? _sourcePage;
+            private readonly string? _sortKey;
+
+            private readonly bool? _stackable;
+            private readonly bool? _allowMultiple;
+            private readonly int? _cost;
+            private readonly bool? _visible;
+
+            private readonly ImmutableList<DataSetBonus> _bonuses;
+            private readonly ImmutableList<DataSetVariableDefinition> _definitions;
+            private readonly ImmutableList<DataSetAspect> _aspects;
+            private readonly ImmutableList<string> _types;
+            private readonly DataSetFormattable? _description;
+            private readonly DataSetCondition<CharacterInterface> _condition;
+
+            private readonly DataSourceInformation? _sourceInfo;
+            private readonly Choice? Choice;
 
             private readonly IImmutableList<UnboundAddAbility> _abilities;
 
@@ -1373,79 +1439,77 @@ namespace Primordially.PluginCore.Data
                 ImmutableList<DataSetVariableDefinition> definitions,
                 ImmutableList<DataSetBonus> bonuses,
                 IImmutableList<UnboundAddAbility> abilities,
-                DataSetCondition<CharacterInterface>? condition,
+                DataSetCondition<CharacterInterface> condition,
                 string? sortKey)
-                : base(
-                    name,
-                    key,
-                    sortKey,
-                    displayName,
-                    category,
-                    description,
-                    sourceInfo,
-                    stackable,
-                    allowMultiple,
-                    visible,
-                    cost,
-                    sourcePage,
-                    bonuses,
-                    definitions,
-                    aspects,
-                    types,
-                    choice,
-                    condition
-                )
             {
+                _name = name;
+                _key = key ?? name;
+                _displayName = displayName;
+                _category = category;
+                _description = description;
+                _sourceInfo = sourceInfo;
+                _stackable = stackable;
+                _allowMultiple = allowMultiple;
+                _visible = visible;
+                _cost = cost;
+                _sourcePage = sourcePage;
+                Choice = choice;
+                _types = types;
+                _aspects = aspects;
+                _definitions = definitions;
+                _bonuses = bonuses;
                 _abilities = abilities;
+                _condition = condition;
+                _sortKey = sortKey;
             }
 
             public DataSetAbility Bind(IBinder lookup)
             {
                 return new DataSetAbility(
-                    Name,
-                    Key,
-                    DisplayName,
-                    Category,
-                    Description,
-                    SourceInfo,
-                    Stackable,
-                    AllowMultiple,
-                    Visible,
-                    Cost,
-                    SourcePage,
-                    Bonuses,
-                    Definitions,
-                    Aspects,
-                    Types,
+                    _name,
+                    _key ?? _name,
+                    _displayName ?? _name,
+                    _category ?? "DEFAULT",
+                    _sortKey ?? _key ?? _name,
+                    _description ?? new DataSetFormattable(_displayName ?? _name),
+                    _sourceInfo,
+                    _stackable ?? false,
+                    _allowMultiple ?? false,
+                    _visible ?? true,
+                    _cost ?? 0,
+                    _sourcePage,
+                    _bonuses,
+                    _definitions,
+                    _aspects,
+                    _types,
                     Choice,
                     _abilities.Select(a => a.Bind(lookup)).ToImmutableList(),
-                    Condition,
-                    SortKeySet
+                    _condition
                 );
             }
 
             public UnboundAbility MergedWith(UnboundAbility other)
             {
                 return new UnboundAbility(
-                    other.Name ?? Name,
-                    other.Key ?? Key,
-                    other.DisplayName ?? DisplayName,
-                    other.Category ?? Category,
-                    other.Description ?? Description,
-                    SourceInfo ?? other.SourceInfo,
-                    other.StackableSet ?? StackableSet,
-                    other.AllowMultipleSet ?? AllowMultipleSet,
-                    other.VisibleSet ?? VisibleSet,
-                    other.CostSet ?? CostSet,
-                    other.SourcePage ?? SourcePage,
+                    other._name ?? _name,
+                    other._key ?? _key,
+                    other._displayName ?? _displayName,
+                    other._category ?? _category,
+                    other._description ?? _description,
+                    _sourceInfo ?? other._sourceInfo,
+                    other._stackable ?? _stackable,
+                    other._allowMultiple ?? _allowMultiple,
+                    other._visible ?? _visible,
+                    other._cost ?? _cost,
+                    other._sourcePage ?? _sourcePage,
                     Choice,
-                    Types.AddRange(other.Types),
-                    Aspects.AddRange(other.Aspects),
-                    Definitions.AddRange(other.Definitions),
-                    Bonuses.AddRange(other.Bonuses),
+                    _types.AddRange(other._types),
+                    _aspects.AddRange(other._aspects),
+                    _definitions.AddRange(other._definitions),
+                    _bonuses.AddRange(other._bonuses),
                     _abilities.AddRange(other._abilities),
-                    Condition.CombineWith(other.Condition),
-                    other.SortKeySet ?? SortKeySet
+                    _condition.CombineWith(other._condition),
+                    other._sortKey ?? _sortKey
                 );
             }
         }
@@ -1770,7 +1834,7 @@ namespace Primordially.PluginCore.Data
                 ImmutableList<string> roles,
                 int? hitDie,
                 int? maxLevel,
-                int? skillPointsPerLevel,
+                DataSetFormula? skillPointsPerLevel,
                 ImmutableList<UnboundRepeatingClassLevel> levels,
                 string? exClass,
                 ImmutableList<string> classSkills)
@@ -1873,34 +1937,47 @@ namespace Primordially.PluginCore.Data
             }
         }
 
-        private class UnboundDomain : DataSetDomainBase, DataSetLoader.IRequiresBinding<DataSetDomain>
+        private class UnboundDomain : IRequiresBinding<DataSetDomain>
         {
+            private readonly string _name;
+            private readonly DataSetFormattable? _description;
+            private readonly ImmutableList<DataSetVariableDefinition> _definitions;
+            private readonly ImmutableList<DataSetSpellList?> _spellLists;
+            private readonly DataSetCondition<CharacterInterface> _condition;
+            private readonly string? _sourcePage;
+            private readonly ImmutableList<string> _classSkills;
             private readonly ImmutableList<UnboundAddAbility> _grantAbilities;
 
             public UnboundDomain(
                 string name,
-                string description,
+                DataSetFormattable? description,
                 ImmutableList<DataSetVariableDefinition> definitions,
                 ImmutableList<DataSetSpellList?> spellLists,
                 DataSetCondition<CharacterInterface> condition,
+                string? sourcePage,
                 ImmutableList<string> classSkills,
-                string sourcePage,
                 ImmutableList<UnboundAddAbility> grantAbilities)
-                : base(name, description, definitions, spellLists, condition, classSkills, sourcePage)
             {
-                _grantAbilities = grantAbilities;
+                _name = name;
+                _description = description;
+                _definitions = definitions;
+                _spellLists = spellLists;
+                _condition = condition;
+                _sourcePage = sourcePage;
+                _classSkills = classSkills;
+                _grantAbilities= grantAbilities;
             }
 
             public UnboundDomain MergeWith(UnboundDomain other)
             {
                 return new UnboundDomain(
-                    other.Name ?? Name,
-                    other.Description ?? Description,
-                    Definitions.AddRange(other.Definitions),
-                    SpellLists.AddRange(other.SpellLists),
-                    Condition.CombineWith(other.Condition),
-                    ClassSkills.AddRange(other.ClassSkills),
-                    other.SourcePage ?? SourcePage,
+                    other._name ?? _name,
+                    other._description ?? _description,
+                    _definitions.AddRange(other._definitions),
+                    _spellLists.AddRange(other._spellLists),
+                    _condition.CombineWith(other._condition),
+                    other._sourcePage ?? _sourcePage,
+                    _classSkills.AddRange(other._classSkills),
                     _grantAbilities.AddRange(other._grantAbilities)
                 );
             }
@@ -1908,13 +1985,13 @@ namespace Primordially.PluginCore.Data
             public DataSetDomain Bind(IBinder binder)
             {
                 return new DataSetDomain(
-                    Name,
-                    Description,
-                    Definitions,
-                    SpellLists,
-                    Condition,
-                    ClassSkills,
-                    SourcePage,
+                    _name,
+                    _description ?? new DataSetFormattable(_name),
+                    _definitions,
+                    _spellLists,
+                    _condition,
+                    _sourcePage ?? "",
+                    _classSkills.Select(s => binder.Bind<DataSetSkill>(s)).ToImmutableList(),
                     _grantAbilities.Select(a => a.Bind(binder)).ToImmutableList()
                 );
             }
