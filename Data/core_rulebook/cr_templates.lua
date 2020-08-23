@@ -69,22 +69,8 @@ DefineTemplate({
       Category="STAT",
       Formula=Formula("1"),
       Conditions={
-        function (character)
-          local count = 0
-          local subCondition
-          subCondition = function (character)
-            return ((character.AgeSet >= "Middle-Aged")) >= 1
-          end
-          if subCondition(character) then
-            count = count + 1
-          end
-          subCondition = function (character)
-            return not (((character.AgeSet >= "Old")) >= 1)
-          end
-          if subCondition(character) then
-            count = count + 1
-          end
-          return count >= 2
+        function (character, item, sources)
+          return (character.IsAgeSetOrOlder("Middle-Aged")) and not ((character.IsAgeSetOrOlder("Old")))
         end,
       },
       Variables={
@@ -97,22 +83,8 @@ DefineTemplate({
       Category="STAT",
       Formula=Formula("3"),
       Conditions={
-        function (character)
-          local count = 0
-          local subCondition
-          subCondition = function (character)
-            return ((character.AgeSet >= "Old")) >= 1
-          end
-          if subCondition(character) then
-            count = count + 1
-          end
-          subCondition = function (character)
-            return not (((character.AgeSet >= "Venerable")) >= 1)
-          end
-          if subCondition(character) then
-            count = count + 1
-          end
-          return count >= 2
+        function (character, item, sources)
+          return (character.IsAgeSetOrOlder("Old")) and not ((character.IsAgeSetOrOlder("Venerable")))
         end,
       },
       Variables={
@@ -125,8 +97,8 @@ DefineTemplate({
       Category="STAT",
       Formula=Formula("6"),
       Conditions={
-        function (character)
-          return ((character.AgeSet >= "Venerable")) >= 1
+        function (character, item, sources)
+          return (character.IsAgeSetOrOlder("Venerable"))
         end,
       },
       Variables={
@@ -137,8 +109,8 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
-      return not (((character.AgeSet >= "Middle-Aged")) >= 1)
+    function (character, item, sources)
+      return not ((character.IsAgeSetOrOlder("Middle-Aged")))
     end,
   },
 })
@@ -150,22 +122,8 @@ DefineTemplate({
       Category="STAT",
       Formula=Formula("2"),
       Conditions={
-        function (character)
-          local count = 0
-          local subCondition
-          subCondition = function (character)
-            return ((character.AgeSet >= "Old")) >= 1
-          end
-          if subCondition(character) then
-            count = count + 1
-          end
-          subCondition = function (character)
-            return not (((character.AgeSet >= "Venerable")) >= 1)
-          end
-          if subCondition(character) then
-            count = count + 1
-          end
-          return count >= 2
+        function (character, item, sources)
+          return (character.IsAgeSetOrOlder("Old")) and not ((character.IsAgeSetOrOlder("Venerable")))
         end,
       },
       Variables={
@@ -178,8 +136,8 @@ DefineTemplate({
       Category="STAT",
       Formula=Formula("5"),
       Conditions={
-        function (character)
-          return ((character.AgeSet >= "Venerable")) >= 1
+        function (character, item, sources)
+          return (character.IsAgeSetOrOlder("Venerable"))
         end,
       },
       Variables={
@@ -190,22 +148,8 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return ((character.AgeSet >= "Middle-Aged")) >= 1
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return not (((character.AgeSet >= "Old")) >= 1)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 2
+    function (character, item, sources)
+      return (character.IsAgeSetOrOlder("Middle-Aged")) and not ((character.IsAgeSetOrOlder("Old")))
     end,
   },
 })
@@ -217,8 +161,8 @@ DefineTemplate({
       Category="STAT",
       Formula=Formula("3"),
       Conditions={
-        function (character)
-          return ((character.AgeSet >= "Venerable")) >= 1
+        function (character, item, sources)
+          return (character.IsAgeSetOrOlder("Venerable"))
         end,
       },
       Variables={
@@ -229,22 +173,8 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return ((character.AgeSet >= "Old")) >= 1
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return not (((character.AgeSet >= "Venerable")) >= 1)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 2
+    function (character, item, sources)
+      return (character.IsAgeSetOrOlder("Old")) and not ((character.IsAgeSetOrOlder("Venerable")))
     end,
   },
 })
@@ -252,8 +182,8 @@ DefineTemplate({
   Name="Timeless Body ~ Venerable",
   Visible=false,
   Conditions={
-    function (character)
-      return ((character.AgeSet >= "Venerable")) >= 1
+    function (character, item, sources)
+      return (character.IsAgeSetOrOlder("Venerable"))
     end,
   },
 })
@@ -309,8 +239,8 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
-      return (character.HasSpell("Alter Self") and 1 or 0) >= 1
+    function (character, item, sources)
+      return (countTrue(character.HasSpell("Alter Self"))) >= 1
     end,
   },
 })
@@ -328,8 +258,8 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
-      return (character.HasSpell("Alter Self") and 1 or 0) >= 1
+    function (character, item, sources)
+      return (countTrue(character.HasSpell("Alter Self"))) >= 1
     end,
   },
 })
@@ -343,13 +273,15 @@ DefineTemplate({
   },
   Visible=true,
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Name == "Channel Positive Energy")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.Name == "Channel Positive Energy" then return true end
+        return false
       end)
     end,
-    function (character)
-      return (character.HasSpell("Righteous Might") and 1 or 0) >= 1
+    function (character, item, sources)
+      return (countTrue(character.HasSpell("Righteous Might"))) >= 1
     end,
   },
 })
@@ -363,13 +295,15 @@ DefineTemplate({
   },
   Visible=true,
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Name == "Channel Negative Energy")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.Name == "Channel Negative Energy" then return true end
+        return false
       end)
     end,
-    function (character)
-      return (character.HasSpell("Righteous Might") and 1 or 0) >= 1
+    function (character, item, sources)
+      return (countTrue(character.HasSpell("Righteous Might"))) >= 1
     end,
   },
 })
@@ -388,8 +322,8 @@ DefineTemplate({
       Category="ABILITYPOOL",
       Formula=Formula("2"),
       Conditions={
-        function (character)
-          return ((character.Stats["INT"] >= 1)) >= 1
+        function (character, item, sources)
+          return (character.Stats["INT"] >= 1)
         end,
       },
       Variables={
@@ -400,8 +334,8 @@ DefineTemplate({
       Category="ABILITYPOOL",
       Formula=Formula("3"),
       Conditions={
-        function (character)
-          return ((character.Stats["INT"] >= 2)) >= 1
+        function (character, item, sources)
+          return (character.Stats["INT"] >= 2)
         end,
       },
       Variables={
@@ -410,13 +344,15 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Name == "Animal Tricks and Training")
+    function (character, item, sources)
+      return not (character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.Name == "Animal Tricks and Training" then return true end
+        return false
       end))
     end,
-    function (character)
-      return ((any(character.Race.RaceTypes, function (type) stringMatch(type, "Animal") end) and 1 or 0)) >= 1
+    function (character, item, sources)
+      return (any(character.Race.RaceTypes, function (type) stringMatch(type, "Animal") end))
     end,
   },
 })
@@ -1048,7 +984,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 2 and character.PcLevel <= 2
     end,
   },
@@ -1061,7 +997,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 3 and character.PcLevel <= 3
     end,
   },
@@ -1074,7 +1010,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 4 and character.PcLevel <= 4
     end,
   },
@@ -1087,7 +1023,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 5 and character.PcLevel <= 5
     end,
   },
@@ -1100,7 +1036,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 6 and character.PcLevel <= 6
     end,
   },
@@ -1113,7 +1049,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 7 and character.PcLevel <= 7
     end,
   },
@@ -1126,7 +1062,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 8 and character.PcLevel <= 8
     end,
   },
@@ -1139,7 +1075,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 9 and character.PcLevel <= 9
     end,
   },
@@ -1152,7 +1088,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 10 and character.PcLevel <= 10
     end,
   },
@@ -1165,7 +1101,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 11 and character.PcLevel <= 11
     end,
   },
@@ -1178,7 +1114,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 12 and character.PcLevel <= 12
     end,
   },
@@ -1191,7 +1127,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 13 and character.PcLevel <= 13
     end,
   },
@@ -1204,7 +1140,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 14 and character.PcLevel <= 14
     end,
   },
@@ -1217,7 +1153,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 15 and character.PcLevel <= 15
     end,
   },
@@ -1230,7 +1166,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 16 and character.PcLevel <= 16
     end,
   },
@@ -1243,7 +1179,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 17 and character.PcLevel <= 17
     end,
   },
@@ -1256,7 +1192,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 18 and character.PcLevel <= 18
     end,
   },
@@ -1269,7 +1205,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 19 and character.PcLevel <= 19
     end,
   },
@@ -1282,7 +1218,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 20 and character.PcLevel <= 20
     end,
   },
@@ -1329,7 +1265,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 1 and character.PcLevel <= 1
     end,
   },
@@ -1342,7 +1278,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 2 and character.PcLevel <= 2
     end,
   },
@@ -1355,7 +1291,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 3 and character.PcLevel <= 3
     end,
   },
@@ -1368,7 +1304,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 4 and character.PcLevel <= 4
     end,
   },
@@ -1381,7 +1317,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 5 and character.PcLevel <= 5
     end,
   },
@@ -1394,7 +1330,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 6 and character.PcLevel <= 6
     end,
   },
@@ -1407,7 +1343,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 7 and character.PcLevel <= 7
     end,
   },
@@ -1420,7 +1356,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 8 and character.PcLevel <= 8
     end,
   },
@@ -1433,7 +1369,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 9 and character.PcLevel <= 9
     end,
   },
@@ -1446,7 +1382,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 10 and character.PcLevel <= 10
     end,
   },
@@ -1459,7 +1395,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 11 and character.PcLevel <= 11
     end,
   },
@@ -1472,7 +1408,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 12 and character.PcLevel <= 12
     end,
   },
@@ -1485,7 +1421,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 13 and character.PcLevel <= 13
     end,
   },
@@ -1498,7 +1434,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 14 and character.PcLevel <= 14
     end,
   },
@@ -1511,7 +1447,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 15 and character.PcLevel <= 15
     end,
   },
@@ -1524,7 +1460,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 16 and character.PcLevel <= 16
     end,
   },
@@ -1537,7 +1473,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 17 and character.PcLevel <= 17
     end,
   },
@@ -1550,7 +1486,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 18 and character.PcLevel <= 18
     end,
   },
@@ -1563,7 +1499,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 19 and character.PcLevel <= 19
     end,
   },
@@ -1576,7 +1512,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 20 and character.PcLevel <= 20
     end,
   },
@@ -1615,7 +1551,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 1 and character.PcLevel <= 1
     end,
   },
@@ -1628,7 +1564,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 2 and character.PcLevel <= 2
     end,
   },
@@ -1641,7 +1577,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 3 and character.PcLevel <= 3
     end,
   },
@@ -1654,7 +1590,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 4 and character.PcLevel <= 4
     end,
   },
@@ -1667,7 +1603,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 5 and character.PcLevel <= 5
     end,
   },
@@ -1680,7 +1616,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 6 and character.PcLevel <= 6
     end,
   },
@@ -1693,7 +1629,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 7 and character.PcLevel <= 7
     end,
   },
@@ -1706,7 +1642,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 8 and character.PcLevel <= 8
     end,
   },
@@ -1719,7 +1655,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 9 and character.PcLevel <= 9
     end,
   },
@@ -1732,7 +1668,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 10 and character.PcLevel <= 10
     end,
   },
@@ -1745,7 +1681,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 11 and character.PcLevel <= 11
     end,
   },
@@ -1758,7 +1694,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 12 and character.PcLevel <= 12
     end,
   },
@@ -1771,7 +1707,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 13 and character.PcLevel <= 13
     end,
   },
@@ -1784,7 +1720,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 14 and character.PcLevel <= 14
     end,
   },
@@ -1797,7 +1733,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 15 and character.PcLevel <= 15
     end,
   },
@@ -1810,7 +1746,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 16 and character.PcLevel <= 16
     end,
   },
@@ -1823,7 +1759,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 17 and character.PcLevel <= 17
     end,
   },
@@ -1836,7 +1772,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 18 and character.PcLevel <= 18
     end,
   },
@@ -1849,7 +1785,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 19 and character.PcLevel <= 19
     end,
   },
@@ -1862,7 +1798,7 @@ DefineTemplate({
   StartingKitCount=1,
   Visible=false,
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.PcLevel >= 20 and character.PcLevel <= 20
     end,
   },
@@ -2477,7 +2413,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -2507,7 +2443,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -2544,7 +2480,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 2)
     end,
   },
@@ -2581,7 +2517,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 2)
     end,
   },
@@ -2618,7 +2554,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 3)
     end,
   },
@@ -2655,7 +2591,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 3)
     end,
   },
@@ -2685,7 +2621,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 3)
     end,
   },
@@ -2722,7 +2658,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 4)
     end,
   },
@@ -2766,7 +2702,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 4)
     end,
   },
@@ -2792,7 +2728,7 @@ DefineTemplate({
         "Ferocity",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -2826,7 +2762,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -2891,7 +2827,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -2957,7 +2893,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -2993,7 +2929,7 @@ DefineTemplate({
         "Wildshape 2 ~ Eagle",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] == 2)
         end,
       },
@@ -3005,7 +2941,7 @@ DefineTemplate({
         "Wildshape 3 ~ Eagle",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 3)
         end,
       },
@@ -3050,7 +2986,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -3112,7 +3048,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -3152,7 +3088,7 @@ DefineTemplate({
         "Octopus Wild Shape ~ Poison",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -3183,7 +3119,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -3267,7 +3203,7 @@ DefineTemplate({
         "Ferocity",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -3300,7 +3236,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -3344,7 +3280,7 @@ DefineTemplate({
         "Trip",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -3378,7 +3314,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -3421,7 +3357,7 @@ DefineTemplate({
         "Grab",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -3433,7 +3369,7 @@ DefineTemplate({
         "Constrict",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 3)
         end,
       },
@@ -3456,7 +3392,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -3500,7 +3436,7 @@ DefineTemplate({
         "Pounce",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -3524,7 +3460,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -3583,7 +3519,7 @@ DefineTemplate({
         "Ferocity",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -3617,7 +3553,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -3663,7 +3599,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -3699,7 +3635,7 @@ DefineTemplate({
         "Wildshape 2 ~ Gar",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -3711,7 +3647,7 @@ DefineTemplate({
         "Grab",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -3741,7 +3677,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -3788,7 +3724,7 @@ DefineTemplate({
         "Pull",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -3813,7 +3749,7 @@ DefineTemplate({
       Category="WEAPONPROF=Tongue",
       Formula=Formula("-STR"),
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -3823,7 +3759,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -3888,7 +3824,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -3931,7 +3867,7 @@ DefineTemplate({
         "Trip",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -3964,7 +3900,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -4007,7 +3943,7 @@ DefineTemplate({
         "Pounce",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -4019,7 +3955,7 @@ DefineTemplate({
         "Rake",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 3)
         end,
       },
@@ -4053,7 +3989,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -4098,7 +4034,7 @@ DefineTemplate({
         "Lizard Monitor Wild Shape ~ Poison",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 3)
         end,
       },
@@ -4131,7 +4067,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -4182,7 +4118,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -4239,7 +4175,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -4303,7 +4239,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -4339,7 +4275,7 @@ DefineTemplate({
         "Wildshape 3 ~ Squid",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 3)
         end,
       },
@@ -4351,7 +4287,7 @@ DefineTemplate({
         "Grab",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -4375,7 +4311,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -4411,7 +4347,7 @@ DefineTemplate({
         "Grab",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 2)
         end,
       },
@@ -4425,7 +4361,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -4474,7 +4410,7 @@ DefineTemplate({
         "Pounce",
       },
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["WildShapeProgression"] >= 1)
         end,
       },
@@ -4505,7 +4441,7 @@ DefineTemplate({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WildShapeProgression"] >= 1)
     end,
   },
@@ -4752,8 +4688,8 @@ DefineTemplate({
         Name="Temp2",
       },
       Conditions={
-        function (character)
-          return ((character.Skill("Acrobatics").ranks >= 3 and 1 or 0)) >= 1
+        function (character, item, sources)
+          return (character.Skill("Acrobatics").ranks >= 3)
         end,
       },
       Variables={
@@ -4778,8 +4714,8 @@ DefineTemplate({
         Name="Temp2",
       },
       Conditions={
-        function (character)
-          return ((character.Skill("Acrobatics").ranks >= 3 and 1 or 0)) >= 1
+        function (character, item, sources)
+          return (character.Skill("Acrobatics").ranks >= 3)
         end,
       },
       Variables={

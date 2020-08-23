@@ -39,6 +39,15 @@ namespace Primordially.LstToLua.Conditions
                     result = AbilityCondition.Parse(v, invert);
                     return true;
 
+                case "PREHANDSEQ":
+                case "PREHANDSLT":
+                case "PREHANDSLTEQ":
+                case "PREHANDSGT":
+                case "PREHANDSGTEQ":
+                case "PREHANDSNEQ":
+                    result = HandsCondition.Parse(v, invert, k.Value.Substring("PREHANDS".Length));
+                    return true;
+
                 case "PREVAREQ":
                 case "PREVARLT":
                 case "PREVARLTEQ":
@@ -192,6 +201,13 @@ namespace Primordially.LstToLua.Conditions
                 case "PRERULE":
                     result = RuleCondition.Parse(v, invert);
                     return true;
+                
+                case "PRECHARACTERTYPE":
+                    result = CharacterTypeCondition.Parse(v, invert);
+                    return true;
+                case "PRECAMPAIGN":
+                    result = CampaignCondition.Parse(invert, v);
+                    return true;
 
                 case "PRETYPE":
                     if (isEquipment)
@@ -233,14 +249,14 @@ namespace Primordially.LstToLua.Conditions
 
         public virtual void Dump(LuaTextWriter output)
         {
-            output.WriteStartFunction(Arguments);
+            output.WriteStartFunction("character, item, sources");
             output.Write("return ");
             DumpCondition(output);
             output.WriteLine();
             output.WriteEndFunction();
         }
 
-        protected virtual string Arguments => "character";
+        public virtual bool IsSimple => true;
 
         public abstract void DumpCondition(LuaTextWriter output);
     }

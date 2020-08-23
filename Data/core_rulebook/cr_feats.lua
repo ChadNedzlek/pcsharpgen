@@ -60,27 +60,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Nimble Moves")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Nimble Moves" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 15) or (character.Variables["FeatDexRequirement"] >= 15)
     end,
   },
   Types={
@@ -104,7 +92,7 @@ DefineAbility({
       Category="VAR",
       Formula=Formula("DEX-STR"),
       Conditions={
-        function (character)
+        function (character, item, sources)
           return character.Size > "T"
         end,
       },
@@ -167,9 +155,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Channel Energy")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Channel Energy") then return true end
+        return false
       end)
     end,
   },
@@ -236,49 +226,22 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Arcane Armor Training")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Arcane Armor Training" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return 1 <= #filter(ipairs(character.ClassLevels),
-        function (class, level)
-          return (GetSpellCastingType(class) == "" and level >= 7)
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CasterLevel_Highest"] >= 7)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return ((character.CountSpellCastingClasses(7))) >= 1 or (character.Variables["CasterLevel_Highest"] >= 7)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return ((character.IsProficientWithArmorType("Medium"))) >= 1
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return 1 <= #filter(character.Abilities, function (ability)
-          return ability.Category == "FEAT" and (ability.Name == "Armor Proficiency (Medium)")
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.IsProficientWithArmorType("Medium")) or character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Armor Proficiency (Medium)" then return true end
+        return false
+      end)
     end,
   },
   Types={
@@ -311,44 +274,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return 1 <= #filter(ipairs(character.ClassLevels),
-        function (class, level)
-          return (GetSpellCastingType(class) == "" and level >= 3)
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CasterLevel_Highest"] >= 3)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return ((character.CountSpellCastingClasses(3))) >= 1 or (character.Variables["CasterLevel_Highest"] >= 3)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return ((character.IsProficientWithArmorType("Light"))) >= 1
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return 1 <= #filter(character.Abilities, function (ability)
-          return ability.Category == "FEAT" and (ability.Name == "Armor Proficiency (Light)")
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.IsProficientWithArmorType("Light")) or character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Armor Proficiency (Light)" then return true end
+        return false
+      end)
     end,
   },
   Types={
@@ -390,41 +324,12 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        local count = 0
-        local subCondition
-        subCondition = function (character)
-          return 1 <= #filter(ipairs(character.ClassLevels),
-          function (class, level)
-            return (GetSpellCastingType(class) == "Arcane" and level >= 1)
-          end)
-        end
-        if subCondition(character) then
-          count = count + 1
-        end
-        subCondition = function (character)
-          return (character.Variables["Caster_Level_Highest__Arcane"] >= 1)
-        end
-        if subCondition(character) then
-          count = count + 1
-        end
-        return count >= 1
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return 1 <= #filter(character.Abilities, function (ability)
-          return ability.Category == "Special Ability" and (ability.Type == "SpellLike")
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return ((character.CountArcaneSpellCastingClasses(1))) >= 1 or (character.Variables["Caster_Level_Highest__Arcane"] >= 1) or character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("SpellLike") then return true end
+        return false
+      end)
     end,
   },
   Types={
@@ -453,24 +358,12 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return ((character.IsProficientWithArmorType("Medium"))) >= 1
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return 1 <= #filter(character.Abilities, function (ability)
-          return ability.Category == "FEAT" and (ability.Name == "Armor Proficiency (Medium)")
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.IsProficientWithArmorType("Medium")) or character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Armor Proficiency (Medium)" then return true end
+        return false
+      end)
     end,
   },
   Types={
@@ -524,24 +417,12 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return ((character.IsProficientWithArmorType("Light"))) >= 1
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return 1 <= #filter(character.Abilities, function (ability)
-          return ability.Category == "FEAT" and (ability.Name == "Armor Proficiency (Light)")
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.IsProficientWithArmorType("Light")) or character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Armor Proficiency (Light)" then return true end
+        return false
+      end)
     end,
   },
   Types={
@@ -593,9 +474,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Spell Focus (Conjuration)")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Spell Focus (Conjuration)" then return true end
+        return false
       end)
     end,
   },
@@ -616,27 +499,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Critical Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Critical Focus" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return character.TotalAttackBonus >= 11
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CriticalFocusQualify"] >= 11)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return character.TotalAttackBonus >= 11 or (character.Variables["CriticalFocusQualify"] >= 11)
     end,
   },
   Types={
@@ -677,27 +548,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Critical Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Critical Focus" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return character.TotalAttackBonus >= 15
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CriticalFocusQualify"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return character.TotalAttackBonus >= 15 or (character.Variables["CriticalFocusQualify"] >= 15)
     end,
   },
   Types={
@@ -718,25 +577,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return 1 <= #filter(ipairs(character.ClassLevels),
-        function (class, level)
-          return (GetSpellCastingType(class) == "" and level >= 3)
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CasterLevel_Highest"] >= 3)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return ((character.CountSpellCastingClasses(3))) >= 1 or (character.Variables["CasterLevel_Highest"] >= 3)
     end,
   },
   Types={
@@ -780,9 +622,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Channel Energy")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Channel Energy") then return true end
+        return false
       end)
     end,
   },
@@ -803,15 +647,17 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Power Attack")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Power Attack" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PreStatScore_STR"] >= 13)
     end,
   },
@@ -897,22 +743,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_INT"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CombatFeatIntRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_INT"] >= 13) or (character.Variables["CombatFeatIntRequirement"] >= 13)
     end,
   },
   Types={
@@ -971,28 +803,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_INT"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CombatFeatIntRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["DirtyTricksterIntQualify"] >= 1)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_INT"] >= 13) or (character.Variables["CombatFeatIntRequirement"] >= 13) or (character.Variables["DirtyTricksterIntQualify"] >= 1)
     end,
   },
   Types={
@@ -1045,9 +857,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Channel Negative Energy")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Channel Negative Energy") then return true end
+        return false
       end)
     end,
   },
@@ -1068,39 +882,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        local count = 0
-        local subCondition
-        subCondition = function (character)
-          return 1 <= #filter(ipairs(character.ClassLevels),
-          function (class, level)
-            return (GetSpellCastingType(class) == "" and level >= 5)
-          end)
-        end
-        if subCondition(character) then
-          count = count + 1
-        end
-        subCondition = function (character)
-          return (character.Variables["CasterLevel_Highest"] >= 5)
-        end
-        if subCondition(character) then
-          count = count + 1
-        end
-        return count >= 1
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["MasterCraftsmanRanks"] >= 5)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return ((character.CountSpellCastingClasses(5))) >= 1 or (character.Variables["CasterLevel_Highest"] >= 5) or (character.Variables["MasterCraftsmanRanks"] >= 5)
     end,
   },
   Types={
@@ -1120,25 +903,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return 1 <= #filter(ipairs(character.ClassLevels),
-        function (class, level)
-          return (GetSpellCastingType(class) == "" and level >= 9)
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CasterLevel_Highest"] >= 9)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return ((character.CountSpellCastingClasses(9))) >= 1 or (character.Variables["CasterLevel_Highest"] >= 9)
     end,
   },
   Types={
@@ -1158,25 +924,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return 1 <= #filter(ipairs(character.ClassLevels),
-        function (class, level)
-          return (GetSpellCastingType(class) == "" and level >= 11)
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CasterLevel_Highest"] >= 11)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return ((character.CountSpellCastingClasses(11))) >= 1 or (character.Variables["CasterLevel_Highest"] >= 11)
     end,
   },
   Types={
@@ -1196,25 +945,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return 1 <= #filter(ipairs(character.ClassLevels),
-        function (class, level)
-          return (GetSpellCastingType(class) == "" and level >= 5)
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CasterLevel_Highest"] >= 5)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return ((character.CountSpellCastingClasses(5))) >= 1 or (character.Variables["CasterLevel_Highest"] >= 5)
     end,
   },
   Types={
@@ -1234,39 +966,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        local count = 0
-        local subCondition
-        subCondition = function (character)
-          return 1 <= #filter(ipairs(character.ClassLevels),
-          function (class, level)
-            return (GetSpellCastingType(class) == "" and level >= 3)
-          end)
-        end
-        if subCondition(character) then
-          count = count + 1
-        end
-        subCondition = function (character)
-          return (character.Variables["CasterLevel_Highest"] >= 3)
-        end
-        if subCondition(character) then
-          count = count + 1
-        end
-        return count >= 1
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["MasterCraftsmanRanks"] >= 3)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return ((character.CountSpellCastingClasses(3))) >= 1 or (character.Variables["CasterLevel_Highest"] >= 3) or (character.Variables["MasterCraftsmanRanks"] >= 3)
     end,
   },
   Types={
@@ -1286,22 +987,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return character.TotalAttackBonus >= 9
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CriticalFocusQualify"] >= 9)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return character.TotalAttackBonus >= 9 or (character.Variables["CriticalFocusQualify"] >= 9)
     end,
   },
   Types={
@@ -1321,17 +1008,21 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Critical Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Critical Focus" then return true end
+        return false
       end)
     end,
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Type == "Critical")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.IsAnyType("Critical") then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["CriticalMasteryQualify"] >= 1)
     end,
   },
@@ -1352,9 +1043,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Weapon Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Weapon Focus" then return true end
+        return false
       end)
     end,
   },
@@ -1401,24 +1094,10 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 13) or (character.Variables["FeatDexRequirement"] >= 13)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
   },
@@ -1440,12 +1119,17 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 4 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Dazzling Display" or ability.Name == "Greater Weapon Focus" or ability.Name == "Shatter Defenses" or ability.Name == "Weapon Focus")
+    function (character, item, sources)
+      return 4 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Dazzling Display" then return true end
+        if ability.Name == "Greater Weapon Focus" then return true end
+        if ability.Name == "Shatter Defenses" then return true end
+        if ability.Name == "Weapon Focus" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 11
     end,
   },
@@ -1466,27 +1150,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Critical Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Critical Focus" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return character.TotalAttackBonus >= 13
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CriticalFocusQualify"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return character.TotalAttackBonus >= 13 or (character.Variables["CriticalFocusQualify"] >= 13)
     end,
   },
   Types={
@@ -1564,27 +1236,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Unarmed Strike")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Unarmed Strike" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 13) or (character.Variables["FeatDexRequirement"] >= 13)
     end,
   },
   Types={
@@ -1636,9 +1296,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Endurance")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Endurance" then return true end
+        return false
       end)
     end,
   },
@@ -1659,7 +1321,7 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["DisruptiveQualify"] >= 1)
     end,
   },
@@ -1692,22 +1354,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 13) or (character.Variables["FeatDexRequirement"] >= 13)
     end,
   },
   Types={
@@ -1736,27 +1384,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Two-Weapon Fighting")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Two-Weapon Fighting" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 15) or (character.Variables["FeatDexRequirement"] >= 15)
     end,
   },
   Types={
@@ -1781,9 +1417,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Channel Energy")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Channel Energy") then return true end
+        return false
       end)
     end,
   },
@@ -1901,27 +1539,16 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Critical Focus" or ability.Name == "Tiring Critical")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Critical Focus" then return true end
+        if ability.Name == "Tiring Critical" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return character.TotalAttackBonus >= 15
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CriticalFocusQualify"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return character.TotalAttackBonus >= 15 or (character.Variables["CriticalFocusQualify"] >= 15)
     end,
   },
   Types={
@@ -1956,7 +1583,7 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
   },
@@ -2006,9 +1633,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Channel Positive Energy" or ability.Type == "Channel Negative Energy")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Channel Positive Energy", "Channel Negative Energy") then return true end
+        return false
       end)
     end,
   },
@@ -2043,9 +1672,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Ki Pool")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Ki Pool") then return true end
+        return false
       end)
     end,
   },
@@ -2080,9 +1711,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Lay on Hands")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Lay on Hands") then return true end
+        return false
       end)
     end,
   },
@@ -2117,9 +1750,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Lay on Hands" or ability.Type == "Mercy")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Lay on Hands", "Mercy") then return true end
+        return false
       end)
     end,
   },
@@ -2154,9 +1789,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Bardic Performance")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Bardic Performance") then return true end
+        return false
       end)
     end,
   },
@@ -2191,9 +1828,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Rage")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Rage") then return true end
+        return false
       end)
     end,
   },
@@ -2235,9 +1874,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Point-Blank Shot")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Point-Blank Shot" then return true end
+        return false
       end)
     end,
   },
@@ -2267,7 +1908,7 @@ DefineAbility({
       Category="MOVEADD",
       Formula=Formula("5"),
       Conditions={
-        function (character)
+        function (character, item, sources)
           return (character.Variables["ENCUMBERANCE"] < 1) and (character.Variables["var(\"COUNT[EQTYPE.ARMOR.EQUIPPED.IS.MEDIUM]\")"] < 1) and (character.Variables["var(\"COUNT[EQTYPE.ARMOR.EQUIPPED.IS.HEAVY]\")"] < 1)
         end,
       },
@@ -2293,25 +1934,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return 1 <= #filter(ipairs(character.ClassLevels),
-        function (class, level)
-          return (GetSpellCastingType(class) == "" and level >= 7)
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CasterLevel_Highest"] >= 7)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return ((character.CountSpellCastingClasses(7))) >= 1 or (character.Variables["CasterLevel_Highest"] >= 7)
     end,
   },
   Types={
@@ -2331,12 +1955,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Unarmed Strike" or ability.Name == "Scorpion Style")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Unarmed Strike" then return true end
+        if ability.Name == "Scorpion Style" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
   },
@@ -2357,15 +1984,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Cleave" or ability.Name == "Power Attack")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Cleave" then return true end
+        if ability.Name == "Power Attack" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 4
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PreStatScore_STR"] >= 13)
     end,
   },
@@ -2420,15 +2050,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Bull Rush" or ability.Name == "Power Attack")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Bull Rush" then return true end
+        if ability.Name == "Power Attack" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PreStatScore_STR"] >= 13)
     end,
   },
@@ -2458,29 +2091,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Combat Expertise" or ability.Name == "Improved Disarm")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Combat Expertise" then return true end
+        if ability.Name == "Improved Disarm" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_INT"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CombatFeatIntRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_INT"] >= 13) or (character.Variables["CombatFeatIntRequirement"] >= 13)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
   },
@@ -2501,29 +2123,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Combat Expertise" or ability.Name == "Improved Feint")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Combat Expertise" then return true end
+        if ability.Name == "Improved Feint" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_INT"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CombatFeatIntRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_INT"] >= 13) or (character.Variables["CombatFeatIntRequirement"] >= 13)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
   },
@@ -2553,29 +2164,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Grapple" or ability.Name == "Improved Unarmed Strike")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Grapple" then return true end
+        if ability.Name == "Improved Unarmed Strike" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 13) or (character.Variables["FeatDexRequirement"] >= 13)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
   },
@@ -2605,15 +2205,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Overrun" or ability.Name == "Power Attack")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Overrun" then return true end
+        if ability.Name == "Power Attack" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PreStatScore_STR"] >= 13)
     end,
   },
@@ -2634,12 +2237,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Penetrating Strike" or ability.Name == "Weapon Focus")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Penetrating Strike" then return true end
+        if ability.Name == "Weapon Focus" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["GreatPenetratingStrikeQualify"] >= 1)
     end,
   },
@@ -2668,8 +2274,8 @@ DefineAbility({
         Stack=true,
       },
       Conditions={
-        function (character)
-          return ((character.HasEquipped(function (item) return item.IsType("Shield") end))) >= 1
+        function (character, item, sources)
+          return (character.HasEquipped(function (item) return item.IsType("Shield") end))
         end,
       },
       Variables={
@@ -2678,31 +2284,21 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Shield Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Shield Focus" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return ((character.IsProficientWithShieldType("Buckler")) + (character.IsProficientWithShieldType("Light")) + (character.IsProficientWithShieldType("Heavy"))) >= 3
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return 1 <= #filter(character.Abilities, function (ability)
-          return ability.Category == "FEAT" and (ability.Name == "Shield Proficiency")
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.IsProficientWithShieldType("Buckler")) and (character.IsProficientWithShieldType("Light")) and (character.IsProficientWithShieldType("Heavy")) or character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Shield Proficiency" then return true end
+        return false
+      end)
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["GreatShieldFocusQualify"] >= 1)
     end,
   },
@@ -2742,9 +2338,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Spell Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Spell Focus" then return true end
+        return false
       end)
     end,
   },
@@ -2765,9 +2363,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Spell Penetration")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Spell Penetration" then return true end
+        return false
       end)
     end,
   },
@@ -2797,15 +2397,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Sunder" or ability.Name == "Power Attack")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Sunder" then return true end
+        if ability.Name == "Power Attack" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PreStatScore_STR"] >= 13)
     end,
   },
@@ -2835,29 +2438,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Combat Expertise" or ability.Name == "Improved Trip")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Combat Expertise" then return true end
+        if ability.Name == "Improved Trip" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_INT"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CombatFeatIntRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_INT"] >= 13) or (character.Variables["CombatFeatIntRequirement"] >= 13)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
   },
@@ -2887,29 +2479,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Two-Weapon Fighting" or ability.Name == "Two-Weapon Fighting")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Two-Weapon Fighting" then return true end
+        if ability.Name == "Two-Weapon Fighting" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 19)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 19)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 19) or (character.Variables["FeatDexRequirement"] >= 19)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 11
     end,
   },
@@ -2930,12 +2511,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Vital Strike" or ability.Name == "Vital Strike")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Vital Strike" then return true end
+        if ability.Name == "Vital Strike" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 16
     end,
   },
@@ -2972,15 +2556,17 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Weapon Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Weapon Focus" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["GreatWeapFocusQualify"] >= 1)
     end,
   },
@@ -3017,12 +2603,16 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 3 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Greater Weapon Focus" or ability.Name == "Weapon Focus" or ability.Name == "Weapon Specialization")
+    function (character, item, sources)
+      return 3 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Greater Weapon Focus" then return true end
+        if ability.Name == "Weapon Focus" then return true end
+        if ability.Name == "Weapon Specialization" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["GreatWeapSpecQualify"] >= 1)
     end,
   },
@@ -3091,15 +2681,17 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Power Attack")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Power Attack" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PreStatScore_STR"] >= 13)
     end,
   },
@@ -3158,9 +2750,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Channel Positive Energy" or ability.Type == "Channel Negative Energy")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Channel Positive Energy", "Channel Negative Energy") then return true end
+        return false
       end)
     end,
   },
@@ -3215,7 +2809,7 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 8
     end,
   },
@@ -3246,27 +2840,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Combat Expertise")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Combat Expertise" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_INT"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CombatFeatIntRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_INT"] >= 13) or (character.Variables["CombatFeatIntRequirement"] >= 13)
     end,
   },
   Types={
@@ -3312,27 +2894,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Combat Expertise")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Combat Expertise" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_INT"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CombatFeatIntRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_INT"] >= 13) or (character.Variables["CombatFeatIntRequirement"] >= 13)
     end,
   },
   Types={
@@ -3363,27 +2933,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Unarmed Strike")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Unarmed Strike" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 13) or (character.Variables["FeatDexRequirement"] >= 13)
     end,
   },
   Types={
@@ -3404,9 +2962,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Great Fortitude")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Great Fortitude" then return true end
+        return false
       end)
     end,
   },
@@ -3452,9 +3012,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Iron Will")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Iron Will" then return true end
+        return false
       end)
     end,
   },
@@ -3475,9 +3037,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Lightning Reflexes")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Lightning Reflexes" then return true end
+        return false
       end)
     end,
   },
@@ -3508,15 +3072,17 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Power Attack")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Power Attack" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PreStatScore_STR"] >= 13)
     end,
   },
@@ -3538,29 +3104,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Point-Blank Shot" or ability.Name == "Precise Shot")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Point-Blank Shot" then return true end
+        if ability.Name == "Precise Shot" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 19)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 19)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 19) or (character.Variables["FeatDexRequirement"] >= 19)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 11
     end,
   },
@@ -3581,24 +3136,12 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return ((character.IsProficientWithShieldType("Buckler")) + (character.IsProficientWithShieldType("Light")) + (character.IsProficientWithShieldType("Heavy"))) >= 3
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return 1 <= #filter(character.Abilities, function (ability)
-          return ability.Category == "FEAT" and (ability.Name == "Shield Proficiency")
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.IsProficientWithShieldType("Buckler")) and (character.IsProficientWithShieldType("Light")) and (character.IsProficientWithShieldType("Heavy")) or character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Shield Proficiency" then return true end
+        return false
+      end)
     end,
   },
   Types={
@@ -3629,15 +3172,17 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Power Attack")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Power Attack" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PreStatScore_STR"] >= 13)
     end,
   },
@@ -3669,27 +3214,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Combat Expertise")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Combat Expertise" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_INT"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CombatFeatIntRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_INT"] >= 13) or (character.Variables["CombatFeatIntRequirement"] >= 13)
     end,
   },
   Types={
@@ -3719,29 +3252,17 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Two-Weapon Fighting")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Two-Weapon Fighting" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 17)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 17)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 17) or (character.Variables["FeatDexRequirement"] >= 17)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
   },
@@ -3778,12 +3299,14 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Vital Strike")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Vital Strike" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 11
     end,
   },
@@ -3804,12 +3327,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Catch Off-Guard" or ability.Name == "Throw Anything")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Catch Off-Guard" then return true end
+        if ability.Name == "Throw Anything" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 8
     end,
   },
@@ -3912,7 +3438,7 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.Level >= 7
     end,
   },
@@ -3958,29 +3484,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Dodge" or ability.Name == "Wind Stance")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Dodge" then return true end
+        if ability.Name == "Wind Stance" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 17)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 17)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 17) or (character.Variables["FeatDexRequirement"] >= 17)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 11
     end,
   },
@@ -4001,7 +3516,7 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
   },
@@ -4054,29 +3569,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Point-Blank Shot" or ability.Name == "Rapid Shot")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Point-Blank Shot" then return true end
+        if ability.Name == "Rapid Shot" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 17)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 17)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 17) or (character.Variables["FeatDexRequirement"] >= 17)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
   },
@@ -4111,9 +3615,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return not (1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Martial Weapon Proficiency Output")
+    function (character, item, sources)
+      return not (character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Martial Weapon Proficiency Output" then return true end
+        return false
       end))
     end,
   },
@@ -4159,8 +3665,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return ((character.BestSkillOfType("Craft").ranks >= 5 and 1 or 0) + (character.BestSkillOfType("Profession").ranks >= 5 and 1 or 0)) >= 1
+    function (character, item, sources)
+      return (character.BestSkillOfType("Craft").ranks >= 5) or (character.BestSkillOfType("Profession").ranks >= 5)
     end,
   },
   Types={
@@ -4200,12 +3706,16 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 3 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Unarmed Strike" or ability.Name == "Gorgon's Fist" or ability.Name == "Scorpion Style")
+    function (character, item, sources)
+      return 3 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Unarmed Strike" then return true end
+        if ability.Name == "Gorgon's Fist" then return true end
+        if ability.Name == "Scorpion Style" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 11
     end,
   },
@@ -4235,27 +3745,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Dodge")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Dodge" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 13) or (character.Variables["FeatDexRequirement"] >= 13)
     end,
   },
   Types={
@@ -4275,13 +3773,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Mounted Combat")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Mounted Combat" then return true end
+        return false
       end)
     end,
-    function (character)
-      return ((character.Skill("Ride").ranks >= 1 and 1 or 0)) >= 1
+    function (character, item, sources)
+      return (character.Skill("Ride").ranks >= 1)
     end,
   },
   Types={
@@ -4301,8 +3801,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return ((character.Skill("Ride").ranks >= 1 and 1 or 0)) >= 1
+    function (character, item, sources)
+      return (character.Skill("Ride").ranks >= 1)
     end,
   },
   Types={
@@ -4322,24 +3822,10 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["WildShapeProgression"] >= 1)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["ShamanWildShapeProgression"] >= 1)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["WildShapeProgression"] >= 1) or (character.Variables["ShamanWildShapeProgression"] >= 1)
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PreStatScore_WIS"] >= 13)
     end,
   },
@@ -4378,22 +3864,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 13) or (character.Variables["FeatDexRequirement"] >= 13)
     end,
   },
   Types={
@@ -4413,15 +3885,17 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Weapon Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Weapon Focus" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PenetratingStrikeQualify"] >= 1)
     end,
   },
@@ -4474,29 +3948,19 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 3 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Precise Shot" or ability.Name == "Point-Blank Shot" or ability.Name == "Precise Shot")
+    function (character, item, sources)
+      return 3 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Precise Shot" then return true end
+        if ability.Name == "Point-Blank Shot" then return true end
+        if ability.Name == "Precise Shot" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 19)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 19)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 19) or (character.Variables["FeatDexRequirement"] >= 19)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 16
     end,
   },
@@ -4555,11 +4019,8 @@ DefineAbility({
         "Power Attack (Flurry)",
       },
       Conditions={
-        function (character)
-          return 1 <= #filter(ipairs(character.ClassLevels),
-          function (class, level)
-            return (class == "Monk" and level >= 1)
-          end)
+        function (character, item, sources)
+          return ((character.GetLevelOfClass("Monk") >= 1)) >= 1
         end,
       },
     },
@@ -4570,9 +4031,11 @@ DefineAbility({
         "Power Attack (Natural Secondary)",
       },
       Conditions={
-        function (character)
-          return 1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Type == "NaturalAttackSecondary")
+        function (character, item, sources)
+          return character.HasAnyAbility(function (ability)
+            if ability.Category ~= "Internal" then return false end
+            if ability.IsAnyType("NaturalAttackSecondary") then return true end
+            return false
           end)
         end,
       },
@@ -4584,9 +4047,11 @@ DefineAbility({
         "Power Attack (Natural Primary)",
       },
       Conditions={
-        function (character)
-          return 1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Type == "NaturalAttackPrimary")
+        function (character, item, sources)
+          return character.HasAnyAbility(function (ability)
+            if ability.Category ~= "Internal" then return false end
+            if ability.IsAnyType("NaturalAttackPrimary") then return true end
+            return false
           end)
         end,
       },
@@ -4598,9 +4063,11 @@ DefineAbility({
         "Power Attack (Natural Primary - Single)",
       },
       Conditions={
-        function (character)
-          return 1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "Internal" and (ability.Type == "NaturalAttackPrimarySingle")
+        function (character, item, sources)
+          return character.HasAnyAbility(function (ability)
+            if ability.Category ~= "Internal" then return false end
+            if ability.IsAnyType("NaturalAttackPrimarySingle") then return true end
+            return false
           end)
         end,
       },
@@ -4646,10 +4113,10 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PreStatScore_STR"] >= 13)
     end,
   },
@@ -4671,9 +4138,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Point-Blank Shot")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Point-Blank Shot" then return true end
+        return false
       end)
     end,
   },
@@ -4694,7 +4163,7 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
   },
@@ -4743,8 +4212,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return ((character.IsProficientWithWeaponType("Crossbow"))) >= 1
+    function (character, item, sources)
+      return (character.IsProficientWithWeaponType("Crossbow"))
     end,
   },
   Types={
@@ -4779,27 +4248,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Point-Blank Shot")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Point-Blank Shot" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 13) or (character.Variables["FeatDexRequirement"] >= 13)
     end,
   },
   Types={
@@ -4820,13 +4277,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Mounted Combat")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Mounted Combat" then return true end
+        return false
       end)
     end,
-    function (character)
-      return ((character.Skill("Ride").ranks >= 1 and 1 or 0)) >= 1
+    function (character, item, sources)
+      return (character.Skill("Ride").ranks >= 1)
     end,
   },
   Types={
@@ -4866,9 +4325,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Unarmed Strike")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Unarmed Strike" then return true end
+        return false
       end)
     end,
   },
@@ -4889,25 +4350,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return 1 <= #filter(ipairs(character.ClassLevels),
-        function (class, level)
-          return (GetSpellCastingType(class) == "" and level >= 1)
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CasterLevel_Highest"] >= 1)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return ((character.CountSpellCastingClasses(1))) >= 1 or (character.Variables["CasterLevel_Highest"] >= 1)
     end,
   },
   Types={
@@ -4930,12 +4374,14 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Channel Positive Energy" or ability.Type == "Channel Negative Energy")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Channel Positive Energy", "Channel Negative Energy") then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PreStatScore_CHA"] >= 13)
     end,
   },
@@ -4988,12 +4434,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Weapon Focus" or ability.Name == "Dazzling Display")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Weapon Focus" then return true end
+        if ability.Name == "Dazzling Display" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
   },
@@ -5022,8 +4471,8 @@ DefineAbility({
         Stack=true,
       },
       Conditions={
-        function (character)
-          return ((character.HasEquipped(function (item) return item.IsType("Shield") end))) >= 1
+        function (character, item, sources)
+          return (character.HasEquipped(function (item) return item.IsType("Shield") end))
         end,
       },
       Variables={
@@ -5032,26 +4481,14 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return ((character.IsProficientWithShieldType("Buckler")) + (character.IsProficientWithShieldType("Light")) + (character.IsProficientWithShieldType("Heavy"))) >= 3
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return 1 <= #filter(character.Abilities, function (ability)
-          return ability.Category == "FEAT" and (ability.Name == "Shield Proficiency")
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.IsProficientWithShieldType("Buckler")) and (character.IsProficientWithShieldType("Light")) and (character.IsProficientWithShieldType("Heavy")) or character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Shield Proficiency" then return true end
+        return false
+      end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
   },
@@ -5105,31 +4542,23 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 3 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Shield Bash" or ability.Name == "Shield Slam" or ability.Name == "Two-Weapon Fighting")
+    function (character, item, sources)
+      return 3 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Shield Bash" then return true end
+        if ability.Name == "Shield Slam" then return true end
+        if ability.Name == "Two-Weapon Fighting" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return ((character.IsProficientWithShieldType("Buckler")) + (character.IsProficientWithShieldType("Light")) + (character.IsProficientWithShieldType("Heavy"))) >= 3
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return 1 <= #filter(character.Abilities, function (ability)
-          return ability.Category == "FEAT" and (ability.Name == "Shield Proficiency")
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.IsProficientWithShieldType("Buckler")) and (character.IsProficientWithShieldType("Light")) and (character.IsProficientWithShieldType("Heavy")) or character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Shield Proficiency" then return true end
+        return false
+      end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 11
     end,
   },
@@ -5176,31 +4605,22 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Shield Bash" or ability.Name == "Two-Weapon Fighting")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Shield Bash" then return true end
+        if ability.Name == "Two-Weapon Fighting" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return ((character.IsProficientWithShieldType("Buckler")) + (character.IsProficientWithShieldType("Light")) + (character.IsProficientWithShieldType("Heavy"))) >= 3
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return 1 <= #filter(character.Abilities, function (ability)
-          return ability.Category == "FEAT" and (ability.Name == "Shield Proficiency")
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.IsProficientWithShieldType("Buckler")) and (character.IsProficientWithShieldType("Light")) and (character.IsProficientWithShieldType("Heavy")) or character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Shield Proficiency" then return true end
+        return false
+      end)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
   },
@@ -5221,29 +4641,19 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 3 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Dodge" or ability.Name == "Mobility" or ability.Name == "Point-Blank Shot")
+    function (character, item, sources)
+      return 3 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Dodge" then return true end
+        if ability.Name == "Mobility" then return true end
+        if ability.Name == "Point-Blank Shot" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 13) or (character.Variables["FeatDexRequirement"] >= 13)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 4
     end,
   },
@@ -5264,27 +4674,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Critical Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Critical Focus" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return character.TotalAttackBonus >= 11
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CriticalFocusQualify"] >= 11)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return character.TotalAttackBonus >= 11 or (character.Variables["CriticalFocusQualify"] >= 11)
     end,
   },
   Types={
@@ -5386,27 +4784,16 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Deflect Arrows" or ability.Name == "Improved Unarmed Strike")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Deflect Arrows" then return true end
+        if ability.Name == "Improved Unarmed Strike" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 15) or (character.Variables["FeatDexRequirement"] >= 15)
     end,
   },
   Types={
@@ -5468,7 +4855,7 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return (character.Variables["SpellMasteryQualify"] >= 1)
     end,
   },
@@ -5506,12 +4893,14 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Disruptive")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Disruptive" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["SpellBreakerQualify"] >= 1)
     end,
   },
@@ -5532,13 +4921,16 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Mounted Combat" or ability.Name == "Ride-By Attack")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Mounted Combat" then return true end
+        if ability.Name == "Ride-By Attack" then return true end
+        return false
       end)
     end,
-    function (character)
-      return ((character.Skill("Ride").ranks >= 1 and 1 or 0)) >= 1
+    function (character, item, sources)
+      return (character.Skill("Ride").ranks >= 1)
     end,
   },
   Types={
@@ -5558,29 +4950,18 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Dodge" or ability.Name == "Mobility")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Dodge" then return true end
+        if ability.Name == "Mobility" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 13) or (character.Variables["FeatDexRequirement"] >= 13)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 4
     end,
   },
@@ -5604,27 +4985,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Critical Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Critical Focus" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return character.TotalAttackBonus >= 13
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CriticalFocusQualify"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return character.TotalAttackBonus >= 13 or (character.Variables["CriticalFocusQualify"] >= 13)
     end,
   },
   Types={
@@ -5645,9 +5014,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Combat Reflexes")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Combat Reflexes" then return true end
+        return false
       end)
     end,
   },
@@ -5700,7 +5071,7 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
   },
@@ -5741,7 +5112,7 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 11
     end,
   },
@@ -5765,27 +5136,16 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 2 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Critical Focus" or ability.Name == "Staggering Critical")
+    function (character, item, sources)
+      return 2 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Critical Focus" then return true end
+        if ability.Name == "Staggering Critical" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return character.TotalAttackBonus >= 17
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CriticalFocusQualify"] >= 17)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return character.TotalAttackBonus >= 17 or (character.Variables["CriticalFocusQualify"] >= 17)
     end,
   },
   Types={
@@ -5827,9 +5187,11 @@ DefineAbility({
       Category="VAR",
       Formula=Formula("2"),
       Conditions={
-        function (character)
-          return 1 <= #filter(character.Abilities, function (ability)
-            return ability.Category == "FEAT" and (ability.Name == "Ability Focus (Stunning Fist)")
+        function (character, item, sources)
+          return character.HasAnyAbility(function (ability)
+            if ability.Category ~= "FEAT" then return false end
+            if ability.Name == "Ability Focus (Stunning Fist)" then return true end
+            return false
           end)
         end,
       },
@@ -5856,43 +5218,17 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Improved Unarmed Strike")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Improved Unarmed Strike" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_WIS"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        local count = 0
-        local subCondition
-        subCondition = function (character)
-          return (character.Variables["PreStatScore_DEX"] >= 13)
-        end
-        if subCondition(character) then
-          count = count + 1
-        end
-        subCondition = function (character)
-          return (character.Variables["FeatDexRequirement"] >= 13)
-        end
-        if subCondition(character) then
-          count = count + 1
-        end
-        return count >= 1
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 2
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_WIS"] >= 13) and (character.Variables["PreStatScore_DEX"] >= 13) or (character.Variables["FeatDexRequirement"] >= 13)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 8
     end,
   },
@@ -5939,27 +5275,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Critical Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Critical Focus" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return character.TotalAttackBonus >= 13
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CriticalFocusQualify"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return character.TotalAttackBonus >= 13 or (character.Variables["CriticalFocusQualify"] >= 13)
     end,
   },
   Types={
@@ -5984,7 +5308,7 @@ DefineAbility({
     {
       FormatString="You gain +1 hit points whenever you gain a Hit Die (such as when you gain a level).",
       Conditions={
-        function (character)
+        function (character, item, sources)
           return character.HitDie >= 3
         end,
       },
@@ -5995,8 +5319,8 @@ DefineAbility({
       Category="HP",
       Formula=Formula("max(3,TL)"),
       Conditions={
-        function (character)
-          return ((IsRuleEnabled("DAMAGE_HP"))) >= 1
+        function (character, item, sources)
+          return (IsRuleEnabled("DAMAGE_HP"))
         end,
       },
       Variables={
@@ -6029,24 +5353,12 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return ((character.IsProficientWithShieldType("Buckler")) + (character.IsProficientWithShieldType("Light")) + (character.IsProficientWithShieldType("Heavy"))) >= 3
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return 1 <= #filter(character.Abilities, function (ability)
-          return ability.Category == "FEAT" and (ability.Name == "Shield Proficiency")
-        end)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.IsProficientWithShieldType("Buckler")) and (character.IsProficientWithShieldType("Light")) and (character.IsProficientWithShieldType("Heavy")) or character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Shield Proficiency" then return true end
+        return false
+      end)
     end,
   },
   Types={
@@ -6066,13 +5378,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Mounted Combat")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Mounted Combat" then return true end
+        return false
       end)
     end,
-    function (character)
-      return ((character.Skill("Ride").ranks >= 1 and 1 or 0)) >= 1
+    function (character, item, sources)
+      return (character.Skill("Ride").ranks >= 1)
     end,
   },
   Types={
@@ -6096,9 +5410,11 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "Special Ability" and (ability.Type == "Channel Positive Energy")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "Special Ability" then return false end
+        if ability.IsAnyType("Channel Positive Energy") then return true end
+        return false
       end)
     end,
   },
@@ -6126,36 +5442,8 @@ DefineAbility({
         Name="Shield",
       },
       Conditions={
-        function (character)
-          local count = 0
-          local subCondition
-          subCondition = function (character)
-            return ((character.HasEquipped(function (item) return item.IsType("Double") end))) >= 1
-          end
-          if subCondition(character) then
-            count = count + 1
-          end
-          subCondition = function (character)
-            local count = 0
-            local subCondition
-            subCondition = function (character)
-              return ((character.HasEquippedInPrimaryHand(function (item) return item.IsType("Melee") end))) >= 1
-            end
-            if subCondition(character) then
-              count = count + 1
-            end
-            subCondition = function (character)
-              return ((character.HasEquipped(function (item) return item.IsType("Melee") end))) >= 1
-            end
-            if subCondition(character) then
-              count = count + 1
-            end
-            return count >= 2
-          end
-          if subCondition(character) then
-            count = count + 1
-          end
-          return count >= 1
+        function (character, item, sources)
+          return (character.HasEquipped(function (item) return item.IsType("Double") end)) or (character.HasEquippedInPrimaryHand(function (item) return item.IsType("Melee") end)) and (character.HasEquipped(function (item) return item.IsType("Melee") end))
         end,
       },
       Variables={
@@ -6171,27 +5459,15 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Two-Weapon Fighting")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Two-Weapon Fighting" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 15) or (character.Variables["FeatDexRequirement"] >= 15)
     end,
   },
   Types={
@@ -6228,22 +5504,8 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 15) or (character.Variables["FeatDexRequirement"] >= 15)
     end,
   },
   Types={
@@ -6266,29 +5528,19 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 3 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Double Slice" or ability.Name == "Improved Two-Weapon Fighting" or ability.Name == "Two-Weapon Fighting")
+    function (character, item, sources)
+      return 3 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Double Slice" then return true end
+        if ability.Name == "Improved Two-Weapon Fighting" then return true end
+        if ability.Name == "Two-Weapon Fighting" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 17)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 17)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 17) or (character.Variables["FeatDexRequirement"] >= 17)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 11
     end,
   },
@@ -6309,18 +5561,22 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 3 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Mounted Combat" or ability.Name == "Power Attack" or ability.Name == "Improved Bull Rush")
+    function (character, item, sources)
+      return 3 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Mounted Combat" then return true end
+        if ability.Name == "Power Attack" then return true end
+        if ability.Name == "Improved Bull Rush" then return true end
+        return false
       end)
     end,
-    function (character)
-      return ((character.Skill("Ride").ranks >= 1 and 1 or 0)) >= 1
+    function (character, item, sources)
+      return (character.Skill("Ride").ranks >= 1)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["PreStatScore_STR"] >= 13)
     end,
   },
@@ -6341,7 +5597,7 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
   },
@@ -6405,7 +5661,7 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 1
     end,
   },
@@ -6442,12 +5698,14 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Weapon Focus")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Weapon Focus" then return true end
+        return false
       end)
     end,
-    function (character)
+    function (character, item, sources)
       return (character.Variables["WeapSpecQualify"] >= 1)
     end,
   },
@@ -6468,46 +5726,23 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 4 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Combat Expertise" or ability.Name == "Dodge" or ability.Name == "Mobility" or ability.Name == "Spring Attack")
+    function (character, item, sources)
+      return 4 <= character.CountAbilities(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Combat Expertise" then return true end
+        if ability.Name == "Dodge" then return true end
+        if ability.Name == "Mobility" then return true end
+        if ability.Name == "Spring Attack" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_INT"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["CombatFeatIntRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_INT"] >= 13) or (character.Variables["CombatFeatIntRequirement"] >= 13)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 13)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 13) or (character.Variables["FeatDexRequirement"] >= 13)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 4
     end,
   },
@@ -6549,29 +5784,17 @@ DefineAbility({
     },
   },
   Conditions={
-    function (character)
-      return 1 <= #filter(character.Abilities, function (ability)
-        return ability.Category == "FEAT" and (ability.Name == "Dodge")
+    function (character, item, sources)
+      return character.HasAnyAbility(function (ability)
+        if ability.Category ~= "FEAT" then return false end
+        if ability.Name == "Dodge" then return true end
+        return false
       end)
     end,
-    function (character)
-      local count = 0
-      local subCondition
-      subCondition = function (character)
-        return (character.Variables["PreStatScore_DEX"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      subCondition = function (character)
-        return (character.Variables["FeatDexRequirement"] >= 15)
-      end
-      if subCondition(character) then
-        count = count + 1
-      end
-      return count >= 1
+    function (character, item, sources)
+      return (character.Variables["PreStatScore_DEX"] >= 15) or (character.Variables["FeatDexRequirement"] >= 15)
     end,
-    function (character)
+    function (character, item, sources)
       return character.TotalAttackBonus >= 6
     end,
   },

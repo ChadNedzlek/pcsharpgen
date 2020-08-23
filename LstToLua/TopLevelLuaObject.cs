@@ -16,7 +16,9 @@ namespace Primordially.LstToLua
                 Property.String("SOURCEPAGE", "SourcePage"),
                 Property.String("SOURCESHORT", "SourceShort"),
                 Property.String("SOURCELONG", "SourceLong"),
+                Property.String("SOURCEDATE", "SourceDate"),
                 Property.String("SOURCEURL", "SourceUrl"),
+                Property.String("SOURCEWEB", "SourceWeb"),
                 Property.String("SOURCELINK", "SourceLink"),
             });
         }
@@ -30,6 +32,19 @@ namespace Primordially.LstToLua
         {
             get => Get<string>(nameof(Key));
             set => Set(nameof(Key), value);
+        }
+
+        public override void AddField(TextSpan field)
+        {
+            if (field.StartsWith("NAMEISPI:") || field.StartsWith("DESCISPI:"))
+            {
+                // These fields are unimportant for us because our product
+                // satisfies the requirements for the Community Use license
+                // specified here https://paizo.com/community/communityuse
+                // see the README for more details
+                return;
+            }
+            base.AddField(field);
         }
 
         public override void Dump(LuaTextWriter output)
