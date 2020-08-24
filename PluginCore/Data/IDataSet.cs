@@ -1,18 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
 
 namespace Primordially.PluginCore.Data
 {
-    public interface IDataSet : IDisposable
+    public interface IDataContainer : IDisposable
+    {
+        IReadOnlyDictionary<string, DataSetAbility> Abilities { get; }
+        IReadOnlyDictionary<string, DataSetClass> Classes { get; }
+        IReadOnlyDictionary<string, DataSetAlignment> Alignments { get; }
+        IReadOnlyDictionary<string, DataSetFact> Facts { get; }
+        IReadOnlyDictionary<string, DataSetSave> Saves { get; }
+        IReadOnlyDictionary<string, DataSetAbilityScore> AbilityScores { get; }
+        IReadOnlyDictionary<string, DataSetVariable> Variables { get; }
+        IReadOnlyDictionary<string, DataSetAbilityCategory> AbilityCategories { get; }
+        IReadOnlyDictionary<string, DataSetDomain> Domains { get; }
+        IReadOnlyDictionary<string, DataSetEquipmentModifier> EquipmentModifiers { get; }
+        IReadOnlyDictionary<string, DataSetEquipment> Equipment { get; }
+    }
+
+    public interface IDataSet : IDataContainer
     {
         DataSetInformation? DataSetInformation { get; }
-        IImmutableDictionary<string, DataSetAbility> Abilities { get; }
-        ImmutableDictionary<string, DataSetClass> Classes { get; }
-        ImmutableDictionary<string, DataSetAlignment> Alignments { get; }
-        ImmutableDictionary<string, DataSetFact> Facts { get; }
-        ImmutableDictionary<string, DataSetSave> Saves { get; }
-        ImmutableDictionary<string, DataSetAbilityScore> AbilityScores { get; }
-        ImmutableDictionary<string, DataSetVariable> Variables { get; }
-        ImmutableDictionary<string, DataSetAbilityCategory> AbilityCategories { get; }
     }
 }

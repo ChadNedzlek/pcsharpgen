@@ -13,12 +13,12 @@ using Splat;
 
 namespace Primordially.PluginCore.Data
 {
-    public class DataSetLoader : IEnableLogger
+    public class DataModuleLoader : IEnableLogger
     {
         private readonly string _rootPath;
         private readonly DataSetStrictness _strictness;
 
-        public DataSetLoader(string rootPath, DataSetStrictness strictness = DataSetStrictness.Strict)
+        public DataModuleLoader(string rootPath, DataSetStrictness strictness = DataSetStrictness.Strict)
         {
             _rootPath = rootPath;
             _strictness = strictness;
@@ -26,49 +26,49 @@ namespace Primordially.PluginCore.Data
 
         public IDataSet LoadData(string path)
         {
-            DataSetBuilder dataSet = PrepareEnvironment(out Lua _, out DataSetInteractions interactions);
+            DataModuleBuilder dataModule = PrepareEnvironment(out Lua _, out DataSetInteractions interactions);
             interactions.ImportFile(path);
-            return dataSet.Build();
+            return dataModule.Build();
         }
 
         public IDataSet LoadString(string data)
         {
-            DataSetBuilder dataSet = PrepareEnvironment(out Lua lua, out DataSetInteractions _);
+            DataModuleBuilder dataModule = PrepareEnvironment(out Lua lua, out DataSetInteractions _);
             lua.DoString(data);
-            return dataSet.Build();
+            return dataModule.Build();
         }
 
-        private DataSetBuilder PrepareEnvironment(out Lua lua, out DataSetInteractions interactions)
+        private DataModuleBuilder PrepareEnvironment(out Lua lua, out DataSetInteractions interactions)
         {
             lua = new Lua();
-            DataSetBuilder dataSet = new DataSetBuilder(lua, this);
-            interactions = new DataSetInteractions(dataSet, lua, this);
+            DataModuleBuilder dataModule = new DataModuleBuilder(lua);
+            interactions = new DataSetInteractions(dataModule, lua, this);
             lua.State.Encoding = Encoding.UTF8;
             lua.DoString("import = function() end");
             LuaRegistrationHelper.TaggedInstanceMethods(lua, interactions);
-            return dataSet;
+            return dataModule;
         }
 
         private class DataSetInteractions : IEnableLogger
         {
-            private readonly DataSetBuilder _dataSet;
-            private readonly DataSetLoader _dataSetLoader;
+            private readonly DataModuleBuilder _dataModule;
+            private readonly DataModuleLoader _dataModuleLoader;
 
             private readonly Stack<string> _file = new Stack<string>();
             private readonly Lua _lua;
             private DataSourceInformation? _sourceInfo;
 
-            public DataSetInteractions(DataSetBuilder dataSet, Lua lua, DataSetLoader dataSetLoader)
+            public DataSetInteractions(DataModuleBuilder dataModule, Lua lua, DataModuleLoader dataModuleLoader)
             {
-                _dataSet = dataSet;
+                _dataModule = dataModule;
                 _lua = lua;
-                _dataSetLoader = dataSetLoader;
+                _dataModuleLoader = dataModuleLoader;
             }
 
             [LuaGlobal]
             public void ImportFile(string path)
             {
-                var basePath = _file.Count == 0 ? _dataSetLoader._rootPath : _file.Peek();
+                var basePath = _file.Count == 0 ? _dataModuleLoader._rootPath : _file.Peek();
                 var newPath = ResolvePath(Path.GetDirectoryName(basePath)!, path);
                 if (!File.Exists(newPath))
                 {
@@ -94,10 +94,26 @@ namespace Primordially.PluginCore.Data
             {
                 if (path.StartsWith("@"))
                 {
-                    return Path.Combine(_dataSetLoader._rootPath, path.Substring(2));
+                    return Path.Combine(_dataModuleLoader._rootPath, path.Substring(2));
                 }
 
                 return Path.Combine(currentFile, path);
+            }
+
+            [LuaGlobal]
+            public void ImportDataSet(string path)
+            {
+                var basePath = _file.Count == 0 ? _dataModuleLoader._rootPath : _file.Peek();
+                var newPath = ResolvePath(Path.GetDirectoryName(basePath)!, path);
+                if (!File.Exists(newPath))
+                {
+                    ReportError($"Could not find ImportDataSet target at {newPath}");
+                    return;
+                }
+
+                DataModuleLoader loader = new DataModuleLoader(_dataModuleLoader._rootPath, _dataModuleLoader._strictness);
+                var dataSet = loader.LoadData(newPath);
+                _dataModule.ImportedDataSets.Add(dataSet);
             }
 
             [LuaGlobal]
@@ -116,15 +132,15 @@ namespace Primordially.PluginCore.Data
             public void DefineClass(LuaTable table)
             {
                 string name = (string) table["Name"];
-                if (_dataSet.Classes.ContainsKey(name))
+                if (_dataModule.Classes.ContainsKey(name))
                 {
                     ReportError($"Ability with DefineClass with Name '{name}' is called more than once");
-                    _dataSet.Classes.Remove(name);
+                    _dataModule.Classes.Remove(name);
                 }
 
                 UnboundClass dataSetClass = ParseClass(table);
 
-                _dataSet.Classes.Add(name, dataSetClass);
+                _dataModule.Classes.Add(name, dataSetClass);
             }
 
             [LuaGlobal]
@@ -136,14 +152,14 @@ namespace Primordially.PluginCore.Data
                     (string) table["Abbreviation"],
                     (string) table["SortKey"]
                 );
-                _dataSet.Alignments.Add(key, alignment);
+                _dataModule.Alignments.Add(key, alignment);
             }
 
             [LuaGlobal]
             public void DefineDomain(LuaTable table)
             {
                 string name = (string) table["Name"];
-                _dataSet.Domains.Add(
+                _dataModule.Domains.Add(
                     name,
                     new UnboundDomain(
                         name,
@@ -162,8 +178,8 @@ namespace Primordially.PluginCore.Data
             public void ModifyDomain(LuaTable table)
             {
                 string name = (string) table["Name"];
-                var existing = _dataSet.Domains[name];
-                _dataSet.Domains[name] = 
+                var existing = _dataModule.Domains[name];
+                _dataModule.Domains[name] = 
                     existing.MergeWith(
                     new UnboundDomain(
                         name,
@@ -194,26 +210,26 @@ namespace Primordially.PluginCore.Data
                     (string?) table["DisplayName"],
                     (string?) table["Explanation"]
                 );
-                if (_dataSet.Facts.ContainsKey(key))
+                if (_dataModule.Facts.ContainsKey(key))
                 {
                     ReportError($"Fact {key} is defined twice");
-                    _dataSet.Facts.Remove(key);
+                    _dataModule.Facts.Remove(key);
                 }
 
-                _dataSet.Facts.Add(key, fact);
+                _dataModule.Facts.Add(key, fact);
             }
 
             [LuaGlobal]
             public void DefineSkill(LuaTable table)
             {
                 string key = (string) table["Name"];
-                if (_dataSet.Skills.ContainsKey(key))
+                if (_dataModule.Skills.ContainsKey(key))
                 {
                     ReportError($"Duplicate skill '{key}' defined");
-                    _dataSet.Skills.Remove(key);
+                    _dataModule.Skills.Remove(key);
                 }
 
-                _dataSet.Skills.Add(key, ParseSkill(table));
+                _dataModule.Skills.Add(key, ParseSkill(table));
             }
 
             private UnboundSkill ParseSkill(LuaTable table)
@@ -232,7 +248,7 @@ namespace Primordially.PluginCore.Data
             public void DefineEquipment(LuaTable table)
             {
                 string name = (string) table["Name"];
-                _dataSet.Equipment.Add(
+                _dataModule.Equipment.Add(
                     name,
                     new UnboundEquipment(
                         name,
@@ -275,7 +291,7 @@ namespace Primordially.PluginCore.Data
             {
                 string key = (string) table["Key"];
                 LuaTable? autoEquip = (LuaTable?) table["AutomaticEquipment"];
-                _dataSet.EquipmentModifiers.Add(
+                _dataModule.EquipmentModifiers.Add(
                     key,
                     new UnboundEquipmentModifier(
                         ParseList(table["Bonuses"], ParseBonus),
@@ -350,7 +366,7 @@ namespace Primordially.PluginCore.Data
             public void DefineSave(LuaTable table)
             {
                 var name = (string) table["Name"];
-                _dataSet.Saves.Add(
+                _dataModule.Saves.Add(
                     name,
                     new DataSetSave(
                         name,
@@ -364,7 +380,7 @@ namespace Primordially.PluginCore.Data
             public void DefineStat(LuaTable table)
             {
                 var key = (string) table["Key"];
-                _dataSet.AbilityScores.Add(
+                _dataModule.AbilityScores.Add(
                     key,
                     new UnboundAbilityScore(
                         (string) table["Name"],
@@ -379,7 +395,7 @@ namespace Primordially.PluginCore.Data
                                 return new DataSetModDefinition(
                                     (string) t["Target"],
                                     (string) t["Action"],
-                                    ParseFormula(t["Value"])
+                                    (DataSetFormula) t["Value"]
                                 );
                             }
                         ),
@@ -393,7 +409,7 @@ namespace Primordially.PluginCore.Data
             [LuaGlobal]
             public void DefineVariable(LuaTable table)
             {
-                _dataSet.Variables.Add(
+                _dataModule.Variables.Add(
                     (string) table["Name"],
                     new DataSetVariable(
                         (string) table["Name"],
@@ -409,13 +425,13 @@ namespace Primordially.PluginCore.Data
             {
                 string name = (string) table["Name"];
 
-                if (_dataSet.AbilityCategories.ContainsKey(name))
+                if (_dataModule.AbilityCategories.ContainsKey(name))
                 {
                     ReportError($"Ability Category {name} is defined twice");
-                    _dataSet.AbilityCategories.Remove(name);
+                    _dataModule.AbilityCategories.Remove(name);
                 }
 
-                _dataSet.AbilityCategories.Add(
+                _dataModule.AbilityCategories.Add(
                     name,
                     new DataSetAbilityCategory(
                         name,
@@ -510,7 +526,7 @@ namespace Primordially.PluginCore.Data
 
             private void ReportError(string message)
             {
-                switch (_dataSetLoader._strictness)
+                switch (_dataModuleLoader._strictness)
                 {
                     case DataSetStrictness.Strict:
                         _lua.State.Error(message);
@@ -838,7 +854,7 @@ namespace Primordially.PluginCore.Data
                     arg => (LuaFunction) arg
                 );
 
-                _dataSet.DataSetInformation = new DataSetInformation(
+                _dataModule.DataSetInformation = new DataSetInformation(
                     (string) table["Name"],
                     ParseSource((LuaTable) table["SourceInfo"]),
                     (string) table["GameMode"],
@@ -873,13 +889,13 @@ namespace Primordially.PluginCore.Data
                 if (key == null)
                     key = (string) table["Name"];
 
-                if (_dataSet.Abilities.ContainsKey(key))
+                if (_dataModule.Abilities.ContainsKey(key))
                 {
                     ReportError($"Ability with DefineAbility with key '{key}' is called more than once");
-                    _dataSet.Abilities.Remove(key);
+                    _dataModule.Abilities.Remove(key);
                 }
 
-                _dataSet.Abilities.Add(key, ParseAbility(table));
+                _dataModule.Abilities.Add(key, ParseAbility(table));
             }
 
             [LuaGlobal]
@@ -889,7 +905,7 @@ namespace Primordially.PluginCore.Data
                 if (key == null)
                     key = (string) table["Name"];
 
-                if (!_dataSet.Abilities.TryGetValue(key, out UnboundAbility? ability))
+                if (!_dataModule.Abilities.TryGetValue(key, out UnboundAbility? ability))
                 {
                     ReportError($"No ability with Key '{key}' found");
                     DefineAbility(table);
@@ -898,8 +914,8 @@ namespace Primordially.PluginCore.Data
 
                 UnboundAbility newAbility = ParseAbility(table);
 
-                _dataSet.Abilities.Remove(key);
-                _dataSet.Abilities.Add(key, ability.MergedWith(newAbility));
+                _dataModule.Abilities.Remove(key);
+                _dataModule.Abilities.Add(key, ability.MergedWith(newAbility));
             }
 
             private static readonly ImmutableHashSet<string> s_knownAbilityKeys = ImmutableHashSet.Create(
@@ -923,7 +939,7 @@ namespace Primordially.PluginCore.Data
                 "Types",
                 "Visible"
             );
-
+            
             private UnboundAbility ParseAbility(LuaTable table)
             {
                 foreach (var unknownKey in table.Keys.Cast<string>().Where(k => !s_knownAbilityKeys.Contains(k)))
@@ -1023,16 +1039,13 @@ namespace Primordially.PluginCore.Data
             #endregion
         }
 
-        private sealed class DataSetBuilder
+        private sealed class DataModuleBuilder
         {
-
             private readonly Lua _luaContext;
-            private readonly DataSetLoader _dataSetLoader;
 
-            internal DataSetBuilder(Lua luaContext, DataSetLoader dataSetLoader)
+            internal DataModuleBuilder(Lua luaContext)
             {
                 _luaContext = luaContext;
-                _dataSetLoader = dataSetLoader;
             }
 
             public DataSetInformation? DataSetInformation { get; set; }
@@ -1073,7 +1086,9 @@ namespace Primordially.PluginCore.Data
             public Dictionary<string, UnboundEquipmentModifier> EquipmentModifiers { get; } =
                 new Dictionary<string, UnboundEquipmentModifier>(StringComparer.OrdinalIgnoreCase);
 
-            public DataSet Build()
+            public List<IDataSet> ImportedDataSets { get; } = new List<IDataSet>();
+
+            public DataModule Build()
             {
                 Binder binder = new Binder(this);
                 return binder.Build();
@@ -1081,7 +1096,7 @@ namespace Primordially.PluginCore.Data
 
             private class Binder : IBinder
             {
-                private readonly DataSetBuilder _builder;
+                private readonly DataModuleBuilder _builder;
 
                 private abstract class TypeBinder
                 {
@@ -1090,10 +1105,10 @@ namespace Primordially.PluginCore.Data
                     public static TypeBinder<TUnbound, TBound> Create<TUnbound, TBound>(
                         Binder binder,
                         Dictionary<string, TUnbound> unbound,
-                        ImmutableDictionary<string, TBound>.Builder bound
-                    ) where TUnbound : IRequiresBinding<TBound>
+                        ImmutableDictionary<string, TBound>.Builder bound,
+                        TypeBinder<TUnbound, TBound>.TryLookup tryLookup) where TUnbound : IRequiresBinding<TBound>
                     {
-                        return new TypeBinder<TUnbound, TBound>(binder, unbound, bound);
+                        return new TypeBinder<TUnbound, TBound>(binder, unbound, bound, tryLookup);
                     }
 
                     public abstract object Bind(string key);
@@ -1101,19 +1116,24 @@ namespace Primordially.PluginCore.Data
 
                 private class TypeBinder<TUnbound, TBound> : TypeBinder where TUnbound : IRequiresBinding<TBound>
                 {
+                    public delegate bool TryLookup(IDataContainer container, string key, [MaybeNullWhen(false)] out TBound bound);
+
                     public override Type BoundType => typeof(TBound);
                     private readonly Binder _binder;
                     private readonly Dictionary<string, TUnbound> _unbound;
                     private readonly ImmutableDictionary<string, TBound>.Builder _bound;
+                    private readonly TryLookup _tryLookup;
 
                     public TypeBinder(
                         Binder binder,
                         Dictionary<string, TUnbound> unbound,
-                        ImmutableDictionary<string, TBound>.Builder bound)
+                        ImmutableDictionary<string, TBound>.Builder bound,
+                        TryLookup tryLookup)
                     {
                         _binder = binder;
                         _unbound = unbound;
                         _bound = bound;
+                        _tryLookup = tryLookup;
                     }
 
                     public override object Bind(string key)
@@ -1121,22 +1141,35 @@ namespace Primordially.PluginCore.Data
                         return Bind(key, _unbound, _bound)!;
                     }
 
-                    public TBound Bind(string key, Dictionary<string, TUnbound> unbound, ImmutableDictionary<string, TBound>.Builder bound) 
+                    public TBound Bind(
+                        string key,
+                        Dictionary<string, TUnbound> unboundItems,
+                        ImmutableDictionary<string, TBound>.Builder boundItems)
                     {
-                        if (bound.TryGetValue(key, out TBound preBound))
+                        if (boundItems.TryGetValue(key, out TBound bound))
                         {
-                            return preBound;
+                            return bound;
                         }
 
-                        TUnbound u = unbound[key];
-                        unbound.Remove(key);
-                        TBound b = u.Bind(_binder);
-                        bound.Add(key, b);
-                        return b;
+                        if (unboundItems.TryGetValue(key, out var unbound))
+                        {
+                            unboundItems.Remove(key);
+                            bound = unbound.Bind(_binder);
+                            boundItems.Add(key, bound);
+                            return bound;
+                        }
+
+                        foreach (var set in _binder._importedDataSets)
+                        {
+                            if (_tryLookup(set, key, out bound))
+                                return bound;
+                        }
+
+                        throw new KeyNotFoundException();
                     }
                 }
 
-                public Binder(DataSetBuilder builder)
+                public Binder(DataModuleBuilder builder)
                 {
                     _builder = builder;
                     _abilities = ImmutableDictionary.CreateBuilder<string, DataSetAbility>(_builder.Abilities.Comparer);
@@ -1145,15 +1178,18 @@ namespace Primordially.PluginCore.Data
                     _domains = ImmutableDictionary.CreateBuilder<string, DataSetDomain>(_builder.Classes.Comparer);
                     _equipmentModifiers = ImmutableDictionary.CreateBuilder<string, DataSetEquipmentModifier>(_builder.Classes.Comparer);
                     _equipment = ImmutableDictionary.CreateBuilder<string, DataSetEquipment>(_builder.Classes.Comparer);
+                    _importedDataSets = _builder.ImportedDataSets.ToImmutableList();
 
                     var allBinders = new TypeBinder[]
                     {
-                        TypeBinder.Create(this, _builder.Abilities, _abilities), 
-                        TypeBinder.Create(this, _builder.Classes, _classes), 
-                        TypeBinder.Create(this, _builder.AbilityScores, _abilityScores), 
-                        TypeBinder.Create(this, _builder.Domains, _domains), 
-                        TypeBinder.Create(this, _builder.Equipment, _equipment), 
-                        TypeBinder.Create(this, _builder.EquipmentModifiers, _equipmentModifiers), 
+                        #nullable disable
+                        TypeBinder.Create(this, _builder.Abilities, _abilities, (IDataContainer s, string k, out DataSetAbility v) => s.Abilities.TryGetValue(k, out v)), 
+                        TypeBinder.Create(this, _builder.Classes, _classes, (IDataContainer s, string k, out DataSetClass v) => s.Classes.TryGetValue(k, out v)), 
+                        TypeBinder.Create(this, _builder.AbilityScores, _abilityScores, (IDataContainer s, string k, out DataSetAbilityScore v) => s.AbilityScores.TryGetValue(k, out v)), 
+                        TypeBinder.Create(this, _builder.Domains, _domains, (IDataContainer s, string k, out DataSetDomain v) => s.Domains.TryGetValue(k, out v)), 
+                        TypeBinder.Create(this, _builder.Equipment, _equipment,(IDataContainer s, string k, out DataSetEquipment v) => s.Equipment.TryGetValue(k, out v)), 
+                        TypeBinder.Create(this, _builder.EquipmentModifiers, _equipmentModifiers, (IDataContainer s, string k, out DataSetEquipmentModifier v) => s.EquipmentModifiers.TryGetValue(k, out v)), 
+                        #nullable restore
                     };
 
                     _binders = allBinders.ToDictionary(b => b.BoundType);
@@ -1166,6 +1202,7 @@ namespace Primordially.PluginCore.Data
                 private readonly ImmutableDictionary<string, DataSetDomain>.Builder _domains;
                 private readonly ImmutableDictionary<string, DataSetEquipmentModifier>.Builder _equipmentModifiers;
                 private readonly ImmutableDictionary<string, DataSetEquipment>.Builder _equipment;
+                private readonly ImmutableList<IDataSet> _importedDataSets;
 
                 [return: NotNullIfNotNull("key")]
                 public TBound? Bind<TBound>(string? key) where TBound : class
@@ -1189,9 +1226,9 @@ namespace Primordially.PluginCore.Data
                     return bound.ToImmutable();
                 }
 
-                public DataSet Build()
+                public DataModule Build()
                 {
-                    return new DataSet(
+                    return new DataModule(
                         _builder._luaContext,
                         _builder.DataSetInformation,
                         BindAll(_builder.Abilities, _abilities),
@@ -1204,17 +1241,18 @@ namespace Primordially.PluginCore.Data
                         _builder.AbilityCategories.ToImmutable(),
                         BindAll(_builder.Domains, _domains),
                         BindAll(_builder.EquipmentModifiers, _equipmentModifiers),
-                        BindAll(_builder.Equipment, _equipment)
+                        BindAll(_builder.Equipment, _equipment),
+                        _importedDataSets
                     );
                 }
             }
         }
 
-        private sealed class DataSet : IDataSet
+        private sealed class DataModule : IDataSet
         {
             private readonly Lua _luaContext;
 
-            public DataSet(
+            public DataModule(
                 Lua luaContext,
                 DataSetInformation? dataSetInformation,
                 IImmutableDictionary<string, DataSetAbility> abilities,
@@ -1227,7 +1265,8 @@ namespace Primordially.PluginCore.Data
                 ImmutableDictionary<string, DataSetAbilityCategory> abilityCategories,
                 ImmutableDictionary<string, DataSetDomain> domains,
                 ImmutableDictionary<string, DataSetEquipmentModifier> equipmentModifiers,
-                ImmutableDictionary<string, DataSetEquipment> equipment)
+                ImmutableDictionary<string, DataSetEquipment> equipment,
+                ImmutableList<IDataSet> importedDataSets)
             {
                 _luaContext = luaContext;
                 DataSetInformation = dataSetInformation;
@@ -1242,21 +1281,23 @@ namespace Primordially.PluginCore.Data
                 Domains = domains;
                 EquipmentModifiers = equipmentModifiers;
                 Equipment = equipment;
+                ImportedDataSets = importedDataSets;
             }
 
-            public ImmutableDictionary<string, DataSetClass> Classes { get; }
-            public ImmutableDictionary<string, DataSetAlignment> Alignments { get; }
-            public ImmutableDictionary<string, DataSetFact> Facts { get; }
-            public ImmutableDictionary<string, DataSetSave> Saves { get; }
-            public ImmutableDictionary<string, DataSetAbilityScore> AbilityScores { get; }
-            public ImmutableDictionary<string, DataSetVariable> Variables { get; }
-            public ImmutableDictionary<string, DataSetAbilityCategory> AbilityCategories { get; }
-            public ImmutableDictionary<string, DataSetDomain> Domains { get; }
-            public ImmutableDictionary<string, DataSetEquipmentModifier> EquipmentModifiers { get; }
-            public ImmutableDictionary<string, DataSetEquipment> Equipment { get; }
+            public IReadOnlyDictionary<string, DataSetClass> Classes { get; }
+            public IReadOnlyDictionary<string, DataSetAlignment> Alignments { get; }
+            public IReadOnlyDictionary<string, DataSetFact> Facts { get; }
+            public IReadOnlyDictionary<string, DataSetSave> Saves { get; }
+            public IReadOnlyDictionary<string, DataSetAbilityScore> AbilityScores { get; }
+            public IReadOnlyDictionary<string, DataSetVariable> Variables { get; }
+            public IReadOnlyDictionary<string, DataSetAbilityCategory> AbilityCategories { get; }
+            public IReadOnlyDictionary<string, DataSetDomain> Domains { get; }
+            public IReadOnlyDictionary<string, DataSetEquipmentModifier> EquipmentModifiers { get; }
+            public IReadOnlyDictionary<string, DataSetEquipment> Equipment { get; }
+            public IReadOnlyDictionary<string, DataSetAbility> Abilities { get; }
+            public ImmutableList<IDataSet> ImportedDataSets { get; }
 
             public DataSetInformation? DataSetInformation { get; }
-            public IImmutableDictionary<string, DataSetAbility> Abilities { get; }
 
             public void Dispose()
             {
@@ -2028,5 +2069,45 @@ namespace Primordially.PluginCore.Data
 
     internal class StatBonusInterface
     {
+    }
+
+    public class DataFiles : IDataContainer
+    {
+        public DataFiles(ImmutableList<IDataSet> dataSets)
+        {
+            DataSets = dataSets;
+            Abilities = MergedImmutableDictionary.Create(StringComparer.OrdinalIgnoreCase, dataSets.Select(d => d.Abilities));
+            Classes = MergedImmutableDictionary.Create(StringComparer.OrdinalIgnoreCase, dataSets.Select(d => d.Classes));
+            Alignments = MergedImmutableDictionary.Create(StringComparer.OrdinalIgnoreCase, dataSets.Select(d => d.Alignments));
+            Facts = MergedImmutableDictionary.Create(StringComparer.OrdinalIgnoreCase, dataSets.Select(d => d.Facts));
+            Saves = MergedImmutableDictionary.Create(StringComparer.OrdinalIgnoreCase, dataSets.Select(d => d.Saves));
+            AbilityScores = MergedImmutableDictionary.Create(StringComparer.OrdinalIgnoreCase, dataSets.Select(d => d.AbilityScores));
+            Variables = MergedImmutableDictionary.Create(StringComparer.OrdinalIgnoreCase, dataSets.Select(d => d.Variables));
+            AbilityCategories = MergedImmutableDictionary.Create(StringComparer.OrdinalIgnoreCase, dataSets.Select(d => d.AbilityCategories));
+            Domains = MergedImmutableDictionary.Create(StringComparer.OrdinalIgnoreCase, dataSets.Select(d => d.Domains));
+            EquipmentModifiers = MergedImmutableDictionary.Create(StringComparer.OrdinalIgnoreCase, dataSets.Select(d => d.EquipmentModifiers));
+            Equipment = MergedImmutableDictionary.Create(StringComparer.OrdinalIgnoreCase, dataSets.Select(d => d.Equipment));
+        }
+
+        public void Dispose()
+        {
+            foreach (var items in DataSets)
+            {
+                items.Dispose();
+            }
+        }
+
+        public ImmutableList<IDataSet> DataSets { get; }
+        public IReadOnlyDictionary<string, DataSetAbility> Abilities { get; }
+        public IReadOnlyDictionary<string, DataSetClass> Classes { get; }
+        public IReadOnlyDictionary<string, DataSetAlignment> Alignments { get; }
+        public IReadOnlyDictionary<string, DataSetFact> Facts { get; }
+        public IReadOnlyDictionary<string, DataSetSave> Saves { get; }
+        public IReadOnlyDictionary<string, DataSetAbilityScore> AbilityScores { get; }
+        public IReadOnlyDictionary<string, DataSetVariable> Variables { get; }
+        public IReadOnlyDictionary<string, DataSetAbilityCategory> AbilityCategories { get; }
+        public IReadOnlyDictionary<string, DataSetDomain> Domains { get; }
+        public IReadOnlyDictionary<string, DataSetEquipmentModifier> EquipmentModifiers { get; }
+        public IReadOnlyDictionary<string, DataSetEquipment> Equipment { get; }
     }
 }

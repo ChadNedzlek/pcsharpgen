@@ -23,10 +23,10 @@ namespace Primordially.ValidatePlugin
                 return 2;
             }
 
-            //Locator.CurrentMutable.RegisterConstant((ILogger) new ConsoleLogger());
+            Locator.CurrentMutable.RegisterConstant((ILogger) new ConsoleLogger());
 
             Stopwatch watch = Stopwatch.StartNew();
-            DataSetLoader loader = new DataSetLoader(Path.GetDirectoryName(path)!, DataSetStrictness.Lax);
+            DataModuleLoader loader = new DataModuleLoader(Path.GetDirectoryName(path)!, DataSetStrictness.Lax);
             var dataSet = loader.LoadData(path);
             watch.Stop();
 

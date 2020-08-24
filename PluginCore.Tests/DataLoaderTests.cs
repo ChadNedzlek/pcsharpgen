@@ -18,14 +18,14 @@ namespace Primordially.PluginCore.Tests
         [Test]
         public void InvalidLuaThrows()
         {
-            DataSetLoader loader = new DataSetLoader(@"C:\Users\Chad Nedzlek\source\repos\primordially\Data", DataSetStrictness.Strict);
+            DataModuleLoader loader = new DataModuleLoader(@"C:\Users\Chad Nedzlek\source\repos\primordially\Data", DataSetStrictness.Strict);
             loader.Invoking(l => l.LoadString(@"UndefinedMethod()")).Should().Throw<LuaScriptException>();
         }
 
         [Test]
         public void ParseMinimalFact()
         {
-          DataSetLoader loader = new DataSetLoader(@"C:\Users\Chad Nedzlek\source\repos\primordially\Data", DataSetStrictness.Strict);
+          DataModuleLoader loader = new DataModuleLoader(@"C:\Users\Chad Nedzlek\source\repos\primordially\Data", DataSetStrictness.Strict);
           var dataSet = loader.LoadString(@"DefineFact({Category=""TESTCAT"",Key=""TestKey"",DataFormat=""String""})");
           dataSet.Facts.Should().HaveCount(1);
           dataSet.Facts.Should().ContainKey("TESTCAT|TestKey");
@@ -42,7 +42,7 @@ namespace Primordially.PluginCore.Tests
         [Test]
         public void ParseDoubleFact()
         {
-          DataSetLoader loader = new DataSetLoader(@"C:\Users\Chad Nedzlek\source\repos\primordially\Data", DataSetStrictness.Strict);
+          DataModuleLoader loader = new DataModuleLoader(@"C:\Users\Chad Nedzlek\source\repos\primordially\Data", DataSetStrictness.Strict);
           string doubleFactString = @"DefineFact({Category=""TESTCAT"",Key=""TestKey"",DataFormat=""String""})
 DefineFact({Category=""TESTCAT"",Key=""TestKey"",DataFormat=""String""})
 ";
@@ -52,7 +52,7 @@ DefineFact({Category=""TESTCAT"",Key=""TestKey"",DataFormat=""String""})
         [Test]
         public void ParseCompleteFact()
         {
-            DataSetLoader loader = new DataSetLoader(@"C:\Users\Chad Nedzlek\source\repos\primordially\Data", DataSetStrictness.Strict);
+            DataModuleLoader loader = new DataModuleLoader(@"C:\Users\Chad Nedzlek\source\repos\primordially\Data", DataSetStrictness.Strict);
             var dataSet = loader.LoadString(@"DefineFact({
 Category=""TESTCAT"",
 Key=""TestKey"",
@@ -78,7 +78,7 @@ Visible=false
         [Test]
         public void ParseStat()
         {
-            DataSetLoader loader = new DataSetLoader(@"C:\Users\Chad Nedzlek\source\repos\primordially\Data", DataSetStrictness.Strict);
+            DataModuleLoader loader = new DataModuleLoader(@"C:\Users\Chad Nedzlek\source\repos\primordially\Data", DataSetStrictness.Strict);
             var dataSet = loader.LoadString(@"DefineStat({
 Name=""TestStatA"",
 SortKey=""T1"",
