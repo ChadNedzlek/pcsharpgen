@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Mono.Options" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PluginCore\PluginCore.csproj" />
   </ItemGroup>
 

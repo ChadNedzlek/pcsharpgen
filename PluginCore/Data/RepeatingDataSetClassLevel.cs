@@ -1,4 +1,6 @@
-﻿namespace Primordially.PluginCore.Data
+﻿using Primordially.PluginCore.Data.Model;
+
+namespace Primordially.PluginCore.Data
 {
     internal class RepeatingDataSetClassLevelBase
     {

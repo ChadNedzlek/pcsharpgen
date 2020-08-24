@@ -9,6 +9,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using NLua;
+using Primordially.PluginCore.Data.Choosers;
+using Primordially.PluginCore.Data.LuaInterfaces;
+using Primordially.PluginCore.Data.Model;
 using Splat;
 
 namespace Primordially.PluginCore.Data
